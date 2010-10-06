@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<project name="MIMGPML" default="install" basedir="..">
+	
+	<!-- always be java 1.5 compatible -->
+	<property name="ant.build.javac.target" value="1.5" />
+	<property name="ant.build.javac.source" value="1.5" />
+
+	<property name="base.name" value="MIMGPML" />
+	<property name="jar.name" value="${base.name}.jar" />
+	
+	<property environment="env" />
+	<property name="install.dir" value="${env.HOME}${file.separator}.PathVisio${file.separator}plugins" />
+	<!--<property name="pathvisio.dir" value="${basedir}${file.separator}pathvisio" />-->
+	<property name="pathvisio.dir" value="${basedir}${file.separator}mim_pathvisio${file.separator}" />
+	<property name="project.dir" value="${basedir}${file.separator}mim_gpml${file.separator}" />
+	<property name="lib.dir" value="${basedir}${file.separator}mim_gpml${file.separator}lib${file.separator}" />
+	<property name="schema.dir" value="${basedir}${file.separator}sandbox${file.separator}mim_xsd${file.separator}" />
+		
+	<path id="project.class.path">
+		<pathelement location="${pathvisio.dir}pathvisio.jar" />
+		<pathelement location="build" />
+		<fileset dir="${pathvisio.dir}lib">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	
+	<path id="test.class.path">
+        <path refid="project.class.path" /> 		
+		<pathelement location="${pathvisio.dir}lib${file.separator}junit.jar" />
+	</path>	
+
+	<taskdef name="xmlbean" 
+		classname="org.apache.xmlbeans.impl.tool.XMLBean" 
+		classpathref="project.class.path"/>
+	
+	<target name="build-apis"> 
+		<delete file="${lib.dir}mimVis.jar" />
+		<xmlbean schema="${schema.dir}mim_vis7.xsd" javasource="1.5" 
+			destfile="${lib.dir}mimVis.jar" 
+			classpathref="project.class.path"/>
+	</target>
+	
+	<target name="prepare" depends="dist-clean">
+		<mkdir dir="${project.dir}build" />
+		<fail message="Can't find ${pathvisio.dir}pathvisio.jar, please specify the path to pathvisio with -Dpathvisio.dir=....">
+			<condition>
+				<not>
+					<available file="${pathvisio.dir}pathvisio.jar" />
+				</not>
+			</condition>
+		</fail>
+	</target>
+
+	<target name="build" depends="prepare">
+		<property name="project.class.path" refid="project.class.path"/>
+		<echo message="${project.class.path}"/>
+		<javac srcdir="${project.dir}src${file.separator}main${file.separator}java" includes="**" debug="true" destdir="${project.dir}build" source="1.5">
+			<classpath refid="project.class.path" />
+		</javac>
+	</target>
+
+	<target name="test" depends="build">
+		<javac srcdir="${project.dir}src${file.separator}test${file.separator}java" debug="true" destdir="${project.dir}build" source="1.5">
+			<classpath refid="test.class.path" />
+		</javac>
+		<junit printsummary="on" haltonfailure="true" fork="true">
+			<formatter type="brief" usefile="false" />
+			<classpath refid="test.class.path" />
+			<batchtest>
+				<fileset dir="${project.dir}src${file.separator}test${file.separator}java">
+					<include name="**/*Test*.java" />
+				</fileset>
+			</batchtest>
+		</junit>
+	</target>
+
+	<target name="jar" depends="build">
+		<manifestclasspath property="manifest.cp" jarfile="MIMGPML.jar">
+			<classpath refid="project.class.path" />
+		</manifestclasspath>
+		<unjar dest="${project.dir}build">
+			<fileset dir="${project.dir}lib" includes="**/*.jar"/>
+		</unjar>		
+		<jar jarfile="${project.dir}${jar.name}">
+			<manifest>
+				<attribute name="PathVisio-Plugin-Class" value="gov.nih.nci.lmp.mimGpml.MIMGPMLPlugin"/>
+			</manifest>
+			<fileset dir="${project.dir}build" includes="**/*.*" />
+		</jar>
+	</target>
+
+	<target name="install" depends="jar">
+		<copy toDir="${install.dir}">
+			<fileset dir="${project.dir}">
+				<include name="${jar.name}" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="clean">
+		<delete dir="${project.dir}build" />
+	</target>
+
+	<target name="dist-clean" depends="clean">
+		<delete file="${jar.name}" />
+	</target>
+
+</project>

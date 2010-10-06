@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://genmapp.org/GPML/2010a" Name="New Pathway" Version="20100813">
+  <Graphics BoardWidth="677.6" BoardHeight="440.0" />
+  <DataNode TextLabel="CAMK" GraphId="d1073" Type="SimplePhysicalEntity" GroupRef="b47cc">
+    <Attribute Key="NumberOfAnchors" Value="3" />
+    <Graphics CenterX="242.0" CenterY="272.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Kinase" GraphId="e5781" Type="EntityFeature" GroupRef="b47cc">
+    <Attribute Key="NumberOfAnchors" Value="3" />
+    <Graphics CenterX="352.0" CenterY="272.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Reg" GraphId="e42e1" Type="EntityFeature" GroupRef="b47cc">
+    <Attribute Key="NumberOfAnchors" Value="3" />
+    <Graphics CenterX="459.0" CenterY="272.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="P" GraphId="b50a2" Type="Modifier">
+    <Attribute Key="Number" Value="nnn" />
+    <Graphics CenterX="257.0" CenterY="188.0" Width="20.0" Height="20.0" ZOrder="32768" FillColor="Transparent" FontSize="10" Valign="Middle" ShapeType="None" LineThickness="0.0" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="SPE" GraphId="f5d70" Type="SimplePhysicalEntity">
+    <Attribute Key="NumberOfAnchors" Value="3" />
+    <Graphics CenterX="352.0" CenterY="211.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="CAM" GraphId="ffe14" Type="SimplePhysicalEntity">
+    <Attribute Key="NumberOfAnchors" Value="3" />
+    <Graphics CenterX="586.0" CenterY="301.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Ca++" GraphId="b47a4" Type="Modifier">
+    <Attribute Key="Number" Value="nnn" />
+    <Graphics CenterX="586.0" CenterY="237.0" Width="26.0" Height="20.0" ZOrder="32768" FillColor="Transparent" FontSize="10" Valign="Middle" ShapeType="None" LineThickness="0.0" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="SPE" GraphId="c4bba" Type="SimplePhysicalEntity">
+    <Attribute Key="NumberOfAnchors" Value="3" />
+    <Graphics CenterX="394.0" CenterY="390.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="P" GraphId="a567c" Type="Modifier">
+    <Attribute Key="Number" Value="nnn" />
+    <Graphics CenterX="288.0" CenterY="390.0" Width="20.0" Height="20.0" ZOrder="32768" FillColor="Transparent" FontSize="10" Valign="Middle" ShapeType="None" LineThickness="0.0" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <Line GroupRef="b47cc">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="272.0" Y="272.0" GraphRef="d1073" RelX="1.0" RelY="0.0" ArrowHead="mim-covalent-binding" />
+      <Point X="322.0" Y="272.0" GraphRef="e5781" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+  </Line>
+  <Line GroupRef="b47cc">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="382.0" Y="272.0" GraphRef="e5781" RelX="1.0" RelY="0.0" ArrowHead="mim-next-feature" />
+      <Point X="429.0" Y="272.0" GraphRef="e42e1" RelX="-1.0" RelY="0.0" ArrowHead="mim-next-feature" />
+    </Graphics>
+  </Line>
+  <Line>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="257.0" Y="198.0" GraphRef="b50a2" RelX="0.0" RelY="1.0" />
+      <Point X="257.0" Y="262.0" GraphRef="d1073" RelX="0.5" RelY="-1.0" ArrowHead="mim-covalent-modification" />
+      <Anchor Position="0.203125" Shape="None" GraphId="aec4a" />
+      <Anchor Position="0.4375" Shape="None" GraphId="ffcab" />
+      <Anchor Position="0.703125" Shape="Circle" GraphId="b8c43" />
+    </Graphics>
+  </Line>
+  <Line>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="257.0" Y="211.0" GraphRef="aec4a" RelX="0.0" RelY="0.0" ArrowHead="mim-cleavage" />
+      <Point X="322.0" Y="211.0" GraphRef="f5d70" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+  </Line>
+  <Line>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="586.0" Y="247.0" GraphRef="b47a4" RelX="0.0" RelY="1.0" ArrowHead="mim-covalent-modification" />
+      <Point X="586.0" Y="291.0" GraphRef="ffe14" RelX="0.0" RelY="-1.0" ArrowHead="mim-covalent-modification" />
+      <Anchor Position="0.4" Shape="Circle" GraphId="fecee" />
+    </Graphics>
+  </Line>
+  <Line>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="352.0" Y="282.0" GraphRef="e5781" RelX="0.0" RelY="1.0" ArrowHead="mim-reversable-binding" />
+      <Point X="459.0" Y="282.0" GraphRef="e42e1" RelX="0.0" RelY="1.0" ArrowHead="mim-reversable-binding" />
+      <Anchor Position="0.870748299319728" Shape="None" GraphId="ffea4" />
+      <Anchor Position="0.4" Shape="None" GraphId="fe083" />
+      <Anchor Position="0.22727272727272727" Shape="Circle" GraphId="ffa35" />
+    </Graphics>
+  </Line>
+  <Line>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="586.0" Y="264.6" GraphRef="fecee" RelX="0.0" RelY="0.0" />
+      <Point X="530.0" Y="266.3" />
+      <Point X="530.0" Y="267.0" />
+      <Point X="530.0" Y="301.0" GraphRef="aae4c" RelX="0.0" RelY="0.0" ArrowHead="mim-necessary-stimulation" />
+    </Graphics>
+  </Line>
+  <Line>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="337.0" Y="282.0" GraphRef="e5781" RelX="-0.5" RelY="1.0" />
+      <Point X="337.0" Y="390.0" GraphRef="d3839" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Anchor Position="0.6574074074074074" Shape="None" GraphId="e5ff6" />
+      <Anchor Position="0.4" Shape="None" GraphId="eaf77" />
+    </Graphics>
+  </Line>
+  <Line>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="298.0" Y="390.0" GraphRef="a567c" RelX="1.0" RelY="0.0" />
+      <Point X="364.0" Y="390.0" GraphRef="c4bba" RelX="-1.0" RelY="0.0" ArrowHead="mim-covalent-modification" />
+      <Anchor Position="0.5909090909090909" Shape="None" GraphId="d3839" />
+    </Graphics>
+  </Line>
+  <Line>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="257.0" Y="226.0" GraphRef="ffcab" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="161.0" Y="289.5" />
+      <Point X="337.0" Y="353.0" GraphRef="e5ff6" RelX="0.0" RelY="0.0" ArrowHead="mim-branching-right" />
+      <Anchor Position="0.4" Shape="Intermolecular" />
+    </Graphics>
+  </Line>
+  <Line>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="257.0" Y="243.0" GraphRef="b8c43" RelX="0.0" RelY="0.0" />
+      <Point X="512.0" Y="280.1484375" />
+      <Point X="451.4" Y="317.0" />
+      <Point X="390.8" Y="302.0" GraphRef="fe083" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+  </Line>
+  <Line>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="365.4090909090909" Y="302.0" GraphRef="ffa35" RelX="0.0" RelY="0.0" />
+      <Point X="337.0" Y="325.2" GraphRef="eaf77" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+  </Line>
+  <Line>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="459.0" Y="301.0" GraphRef="ffea4" RelX="0.0" RelY="0.0" ArrowHead="mim-branching-left" />
+      <Point X="476.0" Y="301.0" />
+      <Point X="556.0" Y="301.0" GraphRef="ffe14" RelX="-1.0" RelY="0.0" ArrowHead="mim-reversable-binding" />
+      <Anchor Position="0.7319587628865981" Shape="None" GraphId="aae4c" />
+    </Graphics>
+  </Line>
+  <Group GroupId="b47cc" Style="EntityWithFeatures" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+</Pathway>
+

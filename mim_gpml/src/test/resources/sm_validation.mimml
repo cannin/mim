@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mimVis:Diagram width="346.5" height="174.9" xmlns:mimVis="http://lmp.nci.nih.gov/mim/mimVisLevel1">
+    <mimVis:EntityGlyph position="0.7183098591549295" color="000000" groupRef="" type="ExplicitComplex" visId="cdb03"/>
+    <mimVis:EntityGlyph visId="fdd63" centerX="154.0" centerY="104.0" width="60.0" height="20.0" color="000000" groupRef="" type="SimplePhysicalEntity" displayName="A">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="f73f9" centerX="285.0" centerY="104.0" width="60.0" height="20.0" color="000000" groupRef="" type="SimplePhysicalEntity" displayName="B">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="e05f6" centerX="285.0" centerY="149.0" width="20.0" height="20.0" color="000000" groupRef="" type="Modifier" displayName="P">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="Source" value="sourceId"/>
+        <mimVis:GenericProperty key="Target" value="targetId"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:InteractionGlyph visId="id2b7d1bec" color="000000" groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="184.0" y="104.0" arrowHead="NonCovalentReversibleBinding" visRef="fdd63" relX="1.0" relY="0.0"/>
+        <mimVis:Point x="255.0" y="104.0" arrowHead="NonCovalentReversibleBinding" visRef="f73f9" relX="-1.0" relY="0.0"/>
+        <mimVis:anchorRef>fb137</mimVis:anchorRef>
+        <mimVis:anchorRef>cdb03</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="ida24335d1" color="000000" groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="154.0" y="94.0" arrowHead="Line" visRef="fdd63" relX="0.0" relY="-1.0"/>
+        <mimVis:Point x="167.5" y="74.0" visRef=""/>
+        <mimVis:Point x="181.0" y="74.0" visRef=""/>
+        <mimVis:Point x="194.5" y="74.0" visRef=""/>
+        <mimVis:Point x="216.76923076923077" y="104.0" arrowHead="Stimulation" visRef="fb137" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idf3839a07" color="000000" groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="285.0" y="94.0" arrowHead="Line" visRef="f73f9" relX="0.0" relY="-1.0"/>
+        <mimVis:Point x="272.5" y="73.0" visRef=""/>
+        <mimVis:Point x="260.0" y="73.0" visRef=""/>
+        <mimVis:Point x="247.5" y="73.0" visRef=""/>
+        <mimVis:Point x="235.0" y="104.0" arrowHead="StochiometricConversion" visRef="cdb03" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id7d9b8710" color="000000" groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="285.0" y="114.0" arrowHead="CovalentModification" visRef="f73f9" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="285.0" y="139.0" arrowHead="Line" visRef="e05f6" relX="0.0" relY="-1.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:Anchor visId="fb137" position="0.46153846153846156" type="Invisible"/>
+</mimVis:Diagram>

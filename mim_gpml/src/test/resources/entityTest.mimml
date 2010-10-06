@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mimVis:Diagram width="127.6" height="83.6" xmlns:mimVis="http://lmp.nci.nih.gov/mim/mimVisLevel1">
+    <mimVis:EntityGlyph visId="a1d49" centerX="86.0" centerY="66.0" width="60.0" height="20.0" color="000000" groupRef="" type="SimplePhysicalEntity" displayName="SPE">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+        <mimVis:mimBioRef>b1152</mimVis:mimBioRef>
+        <mimVis:mimBioRef>d7dc6</mimVis:mimBioRef>
+    </mimVis:EntityGlyph>
+    <mimVis:MimBio>
+        <mimVis:title>New Pathway</mimVis:title>
+        <mimVis:identifier>20100922</mimVis:identifier>
+        <mimVis:RelationshipXRef visId="d7dc6" type="other">
+            <mimVis:db>HUGO</mimVis:db>
+            <mimVis:id>TP53</mimVis:id>
+        </mimVis:RelationshipXRef>
+        <mimVis:EntityControlledVocabulary visId="b1152">
+            <mimVis:type>Protein</mimVis:type>
+        </mimVis:EntityControlledVocabulary>
+    </mimVis:MimBio>
+</mimVis:Diagram>

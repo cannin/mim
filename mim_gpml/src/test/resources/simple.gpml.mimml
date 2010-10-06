@@ -1,0 +1,42 @@
+<mimVis:Diagram mimVis:width="577.5" mimVis:height="194.7" xmlns:mimVis="http://lmp.nci.nih.gov/mim/mimVisLevel1">
+    <mimVis:EntityGlyph entityType="SimplePhysicalEntity" mimVis:visId="e46ed" mimVis:displayName="GeneProduct" centerX="301.0" centerY="167.0" mimVis:width="80.0" mimVis:height="20.0">
+        <mimVis:mimBioRef>ded35</mimVis:mimBioRef>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph entityType="SimplePhysicalEntity" mimVis:visId="d0fec" mimVis:displayName="GeneProduct" centerX="485.0" centerY="124.0" mimVis:width="80.0" mimVis:height="20.0">
+        <mimVis:mimBioRef>c4718</mimVis:mimBioRef>
+    </mimVis:EntityGlyph>
+    <mimVis:InteractionGlyph mimVis:visId="e46ed" mimVis:color="000000">
+        <mimVis:GenericProperty key="relX" value="0.0"/>
+        <mimVis:GenericProperty key="relY" value="0.0"/>
+        <mimVis:GenericProperty key="relX" value="0.0"/>
+        <mimVis:GenericProperty key="relY" value="0.0"/>
+        <mimVis:Point x="0.0" y="0.0" arrowHead="Line" mimVis:visRef=""/>
+        <mimVis:Point x="0.0" y="0.0" arrowHead="Line" mimVis:visRef=""/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph mimVis:visId="d0fec" mimVis:color="000000">
+        <mimVis:GenericProperty key="relX" value="0.0"/>
+        <mimVis:GenericProperty key="relY" value="0.0"/>
+        <mimVis:GenericProperty key="relX" value="0.0"/>
+        <mimVis:GenericProperty key="relY" value="0.0"/>
+        <mimVis:Point x="0.0" y="0.0" arrowHead="Line" mimVis:visRef=""/>
+        <mimVis:Point x="0.0" y="0.0" arrowHead="Line" mimVis:visRef=""/>
+    </mimVis:InteractionGlyph>
+    <mimVis:MimBio>
+        <mimBio:Dataset xmlns:mimBio="http://lmp.nci.nih.gov/mim/mimBioLevel1">
+            <mimBio:title>New Pathway</mimBio:title>
+            <mimBio:description/>
+            <mimBio:SimplePhysicalEntity mimBio:bioId="ded35">
+                <mimBio:standardName>GeneProduct</mimBio:standardName>
+            </mimBio:SimplePhysicalEntity>
+            <mimBio:SimplePhysicalEntity mimBio:bioId="c4718">
+                <mimBio:standardName>GeneProduct</mimBio:standardName>
+            </mimBio:SimplePhysicalEntity>
+            <mimBio:ControlledVocabulary mimBio:bioId="b1f83">
+                <mimBio:term>GeneProduct</mimBio:term>
+            </mimBio:ControlledVocabulary>
+            <mimBio:ControlledVocabulary mimBio:bioId="ba081">
+                <mimBio:term>GeneProduct</mimBio:term>
+            </mimBio:ControlledVocabulary>
+        </mimBio:Dataset>
+    </mimVis:MimBio>
+</mimVis:Diagram>
