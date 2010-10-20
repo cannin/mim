@@ -1,3 +1,42 @@
+/**
+ * The information, opinions, data, and statements contained herein are not 
+ * necessarily those of the U.S. Government or the National Institutes of Health (NIH) 
+ * and should not be interpreted, acted on, or represented as such.
+ * 
+ * Reference herein to any specific commercial product, process, or service by 
+ * trade name, trademark, manufacturer, or otherwise, does not necessarily 
+ * constitute or imply its endorsement, recommendation, or favoring by the U.S. 
+ * Government, NIH, or any of their employees and contractors.
+ * 
+ * The U.S. Government, NIH and their employees and contractors do not make 
+ * any warranty, express or implied, including the warranties of merchantability 
+ * and fitness for a particular purpose with respect to this document. In addition, 
+ * the U.S. Government, NIH, and their employees and contractors assume no legal 
+ * liability for the accuracy, completeness, or usefulness of any information, 
+ * apparatus, product, or process disclosed herein and do not represent that use 
+ * of such information, apparatus, product or process would not infringe on 
+ * privately owned rights.
+ * 
+ * This document is sponsored by the NIH, along with private companies and other 
+ * organizations. Accordingly, other parties may retain all rights to publish or 
+ * reproduce these documents or to allow others to do so. This document may be 
+ * protected under the U.S. and foreign Copyright laws. 
+ * 
+ * Permission to reproduce may be required.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * you may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at 
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0 
+ *  
+ * Unless required by applicable law or agreed to in writing, software 
+ * distributed under the License is distributed on an "AS IS" BASIS, 
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+ * See the License for the specific language governing permissions and 
+ * limitations under the License.
+ *
+ */
 package gov.nih.nci.lmp.mimplugin;
 
 import java.awt.event.ActionEvent;
@@ -30,7 +69,13 @@ import org.pathvisio.view.*;
 import org.pathvisio.view.Graphics;
 
 /**
- * A tutorial implementation of a PathVisio plug-in
+ * A MIM plugin supporting the 
+ * 
+ * @author Margot Sunshine 
+ * @author Augustin Luna <augustin@mail.nih.gov>
+ * 
+ * @version 1.0
+ * @since 1.0
  */
 public class MimPlugin implements Plugin, Engine.ApplicationEventListener
 {
@@ -534,7 +579,7 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
 
 
             public void selectionEvent(SelectionBox.SelectionEvent e) {
-                System.out.println("MImPlugin add feature selection event");
+                System.out.println("MimPlugin add feature selection event");
                 for (VPathwayElement ve:e.selection) {
                     if (ve instanceof Group) {
                         addFeature((Group)ve);
@@ -551,7 +596,7 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
 
             public void actionPerformed(ActionEvent arg0)
             {
-                System.out.println("add feature action performed");
+                System.out.println("MimPlugin add feature action performed");
                 if (elt instanceof Group) {
                     Group group = ((Group)elt);
                     String groupRef = group.getPathwayElement().getGroupId();
