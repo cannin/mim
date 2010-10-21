@@ -105,28 +105,28 @@ public class EntityImportTest {
 	public void testPathwayDataNodeCenterXImport() {
 		PathwayElement pwElem = pw.getElementById("a1d49");
 		
-		assertEquals(86.0, pwElem.getMCenterX());
+		assertEquals(86.0, pwElem.getMCenterX(), 0);
 	}
 
 	@Test
 	public void testPathwayDataNodeCenterYImport() {
 		PathwayElement pwElem = pw.getElementById("a1d49");
 		
-		assertEquals(66.0, pwElem.getMCenterY());
+		assertEquals(66.0, pwElem.getMCenterY(), 0);
 	}
 	
 	@Test
 	public void testPathwayDataNodeWidthImport() {
 		PathwayElement pwElem = pw.getElementById("a1d49");
 		
-		assertEquals(60.0, pwElem.getMWidth());
+		assertEquals(60.0, pwElem.getMWidth(), 0);
 	}
 
 	@Test
 	public void testPathwayDataNodeHeightImport() {
 		PathwayElement pwElem = pw.getElementById("a1d49");
 		
-		assertEquals(20.0, pwElem.getMHeight());
+		assertEquals(20.0, pwElem.getMHeight(), 0);
 	}
 	
 	@Test

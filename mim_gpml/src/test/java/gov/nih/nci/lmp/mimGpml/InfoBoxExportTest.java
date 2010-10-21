@@ -131,7 +131,7 @@ public class InfoBoxExportTest {
 	 */
 	@Test
 	public void testDiagramWidthExport() {
-		assertEquals(0.0, dia.getWidth());
+		assertEquals(0.0, dia.getWidth(), 0);
 	}
 
 	/**
@@ -139,7 +139,7 @@ public class InfoBoxExportTest {
 	 */
 	@Test
 	public void testDiagramHeightExport() {
-		assertEquals(0.0, dia.getHeight());
+		assertEquals(0.0, dia.getHeight(), 0);
 	}
 
 	/**

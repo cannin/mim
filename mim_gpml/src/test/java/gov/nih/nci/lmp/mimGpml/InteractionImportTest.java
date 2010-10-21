@@ -164,7 +164,7 @@ public class InteractionImportTest {
 		PathwayElement pwElem = pw.getElementById("idbcc10920");
 		MPoint mp = pwElem.getMPoints().get(0);
 		
-		assertEquals(295.0, mp.getX());
+		assertEquals(295.0, mp.getX(), 0);
 	}
 
 	@Test
@@ -172,7 +172,7 @@ public class InteractionImportTest {
 		PathwayElement pwElem = pw.getElementById("idbcc10920");
 		MPoint mp = pwElem.getMPoints().get(0);
 
-		assertEquals(81.0, mp.getY());
+		assertEquals(81.0, mp.getY(), 0);
 	}
 
 	@Test
@@ -180,7 +180,7 @@ public class InteractionImportTest {
 		PathwayElement pwElem = pw.getElementById("idbcc10920");
 		MPoint mp = pwElem.getMPoints().get(0);
 
-		assertEquals(-1.0, mp.getRelX());
+		assertEquals(-1.0, mp.getRelX(), 0);
 	}
 
 	@Test
@@ -188,7 +188,7 @@ public class InteractionImportTest {
 		PathwayElement pwElem = pw.getElementById("idbcc10920");
 		MPoint mp = pwElem.getMPoints().get(0);
 
-		assertEquals(0.0, mp.getRelY());
+		assertEquals(0.0, mp.getRelY(), 0);
 	}
 	
 	@Ignore("During this test arrowheads seem to always be set to 'Line'")
@@ -229,7 +229,7 @@ public class InteractionImportTest {
 		PathwayElement pwElem = pw.getElementById("idbcc10920");
 		MAnchor ma = pwElem.getMAnchors().get(1);
 		
-		assertEquals(0.5225752508361204, ma.getPosition());
+		assertEquals(0.5225752508361204, ma.getPosition(), 0);
 	}
 
 	//TODO: Resolve naming differences 
@@ -286,42 +286,6 @@ public class InteractionImportTest {
 //
 //		assertTrue(isExplicitComplex);
 //	}
-
-	@Test
-	public void testPathwayLineBioPaxRefImport() {
-		PathwayElement pwElem = pw.getElementById("idbcc10920");
-		
-		//TODO: Remove
-		PathwayElement biopax = pw.getBiopax();
-		Document biopaxDoc = biopax.getBiopax(); 
-		
-		if(biopax == null) {
-			biopax = PathwayElement.createPathwayElement(ObjectType.BIOPAX);
-			pw.add(biopax);
-		}
-		
-		XMLOutputter out = new XMLOutputter();
-		Logger.log.debug("BP: " + out.outputString(biopaxDoc));
-		
-		SAXBuilder builder = new SAXBuilder(); 
-		
-		String str = "<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\" xmlns:owl=\"http://www.w3.org/2002/07/owl#\" xmlns:bp=\"http://www.biopax.org/release/biopax-level3.owl#\" xml:base=\"http://genmapp.org/GPML/2010a#\"><bp:PublicationXref rdf:id=\"ef7\"><bp:ID rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">123</bp:ID><bp:DB rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">PubMed</bp:DB><bp:TITLE rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">NOT THIS</bp:TITLE><bp:SOURCE rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">Br J Surg</bp:SOURCE><bp:YEAR rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">1975</bp:YEAR><bp:AUTHORS rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">Keighley MR</bp:AUTHORS><bp:AUTHORS rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">Asquith P</bp:AUTHORS><bp:AUTHORS rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">Edwards JA</bp:AUTHORS><bp:AUTHORS rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">Alexander-Williams J</bp:AUTHORS></bp:PublicationXref></rdf:RDF>";		
-		Reader in = new StringReader(str); 
-		
-		try { 
-			Document doc = builder.build(in);			
-			biopax.setBiopax(doc);
-		} catch (JDOMException e) {
-			Logger.log.debug("A: " + e.getMessage());
-		} catch (IOException e) {
-			Logger.log.debug("B: " + e.getMessage());			
-		}
-		
-		biopaxDoc = biopax.getBiopax(); 
-		Logger.log.debug("BP2: " + out.outputString(biopaxDoc));
-		
-		assertEquals("ef7", pwElem.getBiopaxRefs().get(0).toString());
-	}
 
 	@Test
 	public void testPathwayBioPaxPublicationXRefBioIdImport() {

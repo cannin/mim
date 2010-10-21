@@ -69,8 +69,6 @@ import org.apache.commons.collections.map.MultiKeyMap;
 import org.apache.commons.collections.BidiMap;
 import org.apache.commons.collections.bidimap.DualHashBidiMap;
 
-import org.jdom.Element;
-import org.jdom.output.XMLOutputter;
 import org.pathvisio.biopax.reflect.BiopaxElement;
 import org.pathvisio.debug.Logger;
 import org.pathvisio.model.AnchorType;
@@ -92,6 +90,8 @@ import org.pathvisio.preferences.PreferenceManager;
  * Methods for the export of MIMML.
  * 
  * @author Augustin Luna <augustin@mail.nih.gov>
+ * @author Margot Sunshine 
+ * 
  * @version 1.0
  * @since 1.0
  * 

@@ -55,6 +55,8 @@ import org.pathvisio.model.PathwayImporter;
  * Initiate the MIMML format within Pathvisio 
  * 
  * @author Augustin Luna <augustin@mail.nih.gov>
+ * @author Margot Sunshine 
+ * 
  * @version 1.0
  * @since 1.0
  * 

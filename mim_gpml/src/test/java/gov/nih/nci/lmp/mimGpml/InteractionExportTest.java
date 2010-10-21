@@ -41,8 +41,6 @@ package gov.nih.nci.lmp.mimGpml;
 
 import gov.nih.nci.lmp.mim.mimVisLevel1.*;
 
-import org.apache.xmlbeans.*;
-
 import java.io.File;
 import java.util.List;
 import java.util.ArrayList;
@@ -52,8 +50,6 @@ import org.pathvisio.model.ConverterException;
 import org.pathvisio.model.Pathway;
 import org.pathvisio.model.PathwayElement;
 import org.pathvisio.view.MIMShapes;
-
-import org.jdom.JDOMException;
 
 import org.jdom.Document;
 import org.jdom.output.XMLOutputter;
@@ -232,7 +228,7 @@ public class InteractionExportTest {
 	public void testDiagramInteractionGlyphPointXExport() {
 		InteractionGlyphType o = (InteractionGlyphType) CommonHelper.getVisXmlObjectById(visDoc, "idbcc10920");
 
-		assertEquals(295.0, o.getPointArray(0).getX());
+		assertEquals(295.0, o.getPointArray(0).getX(), 0);
 	}
 
 	/**
@@ -242,7 +238,7 @@ public class InteractionExportTest {
 	public void testDiagramInteractionGlyphPointYExport() {
 		InteractionGlyphType o = (InteractionGlyphType) CommonHelper.getVisXmlObjectById(visDoc, "idbcc10920");
 
-		assertEquals(81.0, o.getPointArray(0).getY());
+		assertEquals(81.0, o.getPointArray(0).getY(), 0);
 	}
 
 	/**
@@ -252,7 +248,7 @@ public class InteractionExportTest {
 	public void testDiagramInteractionGlyphRelXExport() {
 		InteractionGlyphType o = (InteractionGlyphType) CommonHelper.getVisXmlObjectById(visDoc, "idbcc10920");
 
-		assertEquals(-1.0, o.getPointArray(0).getRelX());
+		assertEquals(-1.0, o.getPointArray(0).getRelX(), 0);
 	}
 
 	/**
@@ -262,7 +258,7 @@ public class InteractionExportTest {
 	public void testDiagramInteractionGlyphRelYExport() {
 		InteractionGlyphType o = (InteractionGlyphType) CommonHelper.getVisXmlObjectById(visDoc, "idbcc10920");
 
-		assertEquals(0.0, o.getPointArray(0).getRelY());
+		assertEquals(0.0, o.getPointArray(0).getRelY(), 0);
 	}
 
 	/**
@@ -310,7 +306,7 @@ public class InteractionExportTest {
 	 */
 	@Test
 	public void testDiagramInteractionAnchorPositionExport() {
-		assertEquals(0.5225752508361204, dia.getAnchorArray(1).getPosition());
+		assertEquals(0.5225752508361204, dia.getAnchorArray(1).getPosition(), 0);
 	}
 
 	/**
@@ -324,12 +320,13 @@ public class InteractionExportTest {
 
 	/**
 	 * Test diagram interaction anchor annotation label export.
+	 * POSTPONED
 	 */
-	@Ignore("Not a current feature in Pathvisio")
-	@Test
-	public void testDiagramInteractionAnchorAnnotationLabelExport() {
-		assertEquals("???", dia.getAnchorArray(1).getAnnotationLabel());
-	}
+//	@Ignore("Not a current feature in Pathvisio")
+//	@Test
+//	public void testDiagramInteractionAnchorAnnotationLabelExport() {
+//		assertEquals("???", dia.getAnchorArray(1).getAnnotationLabel());
+//	}
 
 	/**
 	 * Test diagram interaction anchor export.

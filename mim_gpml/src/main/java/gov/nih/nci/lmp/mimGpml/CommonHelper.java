@@ -64,6 +64,8 @@ import org.pathvisio.debug.Logger;
  * A utility class of helper methods and variables used in both import and export.
  * 
  * @author Augustin Luna <augustin@mail.nih.gov>
+ * @author Margot Sunshine 
+ * 
  * @version 1.0
  * @since 1.0
  */
@@ -71,13 +73,6 @@ public abstract class CommonHelper {
 
 	/** Namespace for MIM-Vis. */
 	public static final String MIM_VIS_NS = "http://lmp.nci.nih.gov/mim/mimVisLevel1";
-
-	/**
-	 * Prevents instantiation of a new common helper.
-	 */
-	protected CommonHelper() {
-		throw new UnsupportedOperationException();
-	}
 
 	/**
 	 * Initialize the interaction types. This is the mapping from the GPML to
@@ -337,11 +332,38 @@ public abstract class CommonHelper {
 	 */
 	public static String convertColorToHex(Color color) {
 
-		String rgb = Integer.toHexString(color.getRGB());
-		String hexColorStr = rgb.substring(2, rgb.length());
+		String rgbColorStr = Integer.toHexString(color.getRGB());
+		String hexColorStr = rgbColorStr.substring(2, rgbColorStr.length());
 
-		return hexColorStr;
+		Logger.log.debug("RGB color: " + rgbColorStr);
+		Logger.log.debug("Hex color: " + hexColorStr);
+
+		return hexColorStr.toUpperCase();
 	}
+	
+	/**
+	 * Convert hex string to color.
+	 * 
+	 * @param hexStr
+	 *            the hex string for a color
+	 * @return the color object
+	 */
+	public static Color convertHexToColor(String hexStr) {
+		
+		Color color = null; 
+		
+		// Color.decode() only works if there is a '#' at the start
+		if(hexStr.charAt(0) == '#') {
+			Logger.log.debug("Not appending '#'");
+			color = Color.decode(hexStr);
+		} else {
+			Logger.log.debug("Appending '#'");
+			color = Color.decode("#" + hexStr);
+		}
+
+		return color;
+	}
+	
 
 	// TODO: Get by Id, Get GenericProperty by Key
 }

@@ -91,14 +91,14 @@ public class InfoBoxImportTest {
 	public void testPathwayWidthImport() {
 		PathwayElement pwElem = pw.getDataObjects().get(0);
 		
-		assertEquals(0.0, pwElem.getMBoardWidth());
+		assertEquals(0.0, pwElem.getMBoardWidth(), 0);
 	}
 	
 	@Test
 	public void testPathwayHeightImport() {
 		PathwayElement pwElem = pw.getDataObjects().get(0);
 		
-		assertEquals(0.0, pwElem.getMBoardHeight());
+		assertEquals(0.0, pwElem.getMBoardHeight(), 0);
 	}
 
 	@Test

@@ -41,7 +41,6 @@ package gov.nih.nci.lmp.mimGpml;
 
 import gov.nih.nci.lmp.mim.mimVisLevel1.*;
 
-import org.apache.xmlbeans.*;
 
 import java.io.File;
 import java.util.List;
@@ -51,8 +50,6 @@ import org.pathvisio.debug.Logger;
 import org.pathvisio.model.ConverterException;
 import org.pathvisio.model.Pathway;
 import org.pathvisio.view.MIMShapes;
-
-import org.jdom.JDOMException;
 
 import org.junit.*;
 
@@ -120,22 +117,22 @@ public class EntityExportTest {
 	
 	@Test
 	public void testDiagramEntityCenterXExport() {
-		assertEquals(86.0, dia.getEntityGlyphArray(0).getCenterX());
+		assertEquals(86.0, dia.getEntityGlyphArray(0).getCenterX(), 0);
 	}
 
 	@Test
 	public void testDiagramEntityCenterYExport() {
-		assertEquals(66.0, dia.getEntityGlyphArray(0).getCenterY());
+		assertEquals(66.0, dia.getEntityGlyphArray(0).getCenterY(), 0);
 	}
 
 	@Test
 	public void testDiagramEntityWidthExport() {
-		assertEquals(60.0, dia.getEntityGlyphArray(0).getWidth());
+		assertEquals(60.0, dia.getEntityGlyphArray(0).getWidth(), 0);
 	}
 
 	@Test
 	public void testDiagramEntityHeightExport() {
-		assertEquals(20.0, dia.getEntityGlyphArray(0).getHeight());
+		assertEquals(20.0, dia.getEntityGlyphArray(0).getHeight(), 0);
 	}
 
 	@Test

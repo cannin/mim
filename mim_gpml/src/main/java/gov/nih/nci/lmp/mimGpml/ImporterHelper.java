@@ -62,9 +62,6 @@ import org.bridgedb.DataSource;
 import org.apache.commons.collections.BidiMap;
 import org.apache.commons.collections.bidimap.DualHashBidiMap;
 
-import org.jdom.Document;
-import org.jdom.JDOMException;
-import org.jdom.input.SAXBuilder;
 import org.pathvisio.debug.Logger;
 import org.pathvisio.model.AnchorType;
 import org.pathvisio.model.ConnectorType;
@@ -86,10 +83,16 @@ import org.pathvisio.biopax.BiopaxElementManager;
 import org.pathvisio.biopax.reflect.PublicationXref;
 import org.pathvisio.util.FileUtils;
 
+import java.io.BufferedReader;
+import java.io.*;
+
+
 /**
  * Class for the import of MIMML.
  * 
  * @author Augustin Luna <augustin@mail.nih.gov>
+ * @author Margot Sunshine 
+ * 
  * @version 1.0
  * @since 1.0
  * 
@@ -124,13 +127,35 @@ public class ImporterHelper extends CommonHelper {
 	 * @param xmlfile
 	 *            the xmlfile
 	 */
-	public void parseDiagramXml(File xmlfile) throws XmlException, IOException {
+	public void parseDiagramXml(File xmlFile) throws XmlException, IOException {
 
+		Logger.log.trace("Entering parseDiagramXml");
+		
+		StringBuilder contents = new StringBuilder(); 
+		
 		try {
-			this.visDoc = DiagramDocument.Factory.parse(xmlfile);
+			
+			BufferedReader input = new BufferedReader(new FileReader(xmlFile));
+			
+			try {
+				String line = null; 
+				
+				while ((line = input.readLine()) != null) {
+					contents.append(line);
+					contents.append(System.getProperty("line.separator"));
+				}
+			} finally {
+				input.close();
+			}
+			
+			String fileStr = contents.toString(); 
+			
+			Logger.log.debug(fileStr);
+			
+			this.visDoc = DiagramDocument.Factory.parse(xmlFile);
 			this.dia = this.visDoc.getDiagram();
-			System.out.println("\n\nVisDoc: ");
-			visDoc.save(System.out, getXmlOptions());
+			//System.out.println("\n\nVisDoc: ");
+			//visDoc.save(System.out, getXmlOptions());
 		} catch (XmlException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -214,48 +239,51 @@ public class ImporterHelper extends CommonHelper {
 		info.setMHeight(dia.getWidth());
 		info.setMWidth(dia.getHeight());
 
-		if (dia.getMimBio().isSetTitle()) {
-			info.setMapInfoName(dia.getMimBio().getTitle());
-		}
-
-		if (dia.getMimBio().isSetIdentifier()) {
-			info.setVersion(dia.getMimBio().getIdentifier());
-		}
-
-		if (dia.getMimBio().isSetRights()) {
-			info.setCopyright(dia.getMimBio().getRights());
-		}
-
-		if (dia.getMimBio().isSetSource()) {
-			info.setMapInfoDataSource(dia.getMimBio().getSource());
-		}
-
-		if (dia.getMimBio().isSetDescription()) {
-			info.addComment(dia.getMimBio().getDescription(), "");
-		}
-
-		if (dia.getMimBio().sizeOfCreatorArray() > 0) {
-			String str = "";
-
-			for (String s : dia.getMimBio().getCreatorList()) {
-				str += s;
+		// Check for the case where there is no MIMBio element
+		if(dia.isSetMimBio()) {
+			if (dia.getMimBio().isSetTitle()) {
+				info.setMapInfoName(dia.getMimBio().getTitle());
 			}
-
-			info.setAuthor(str);
-		}
-
-		if (dia.getMimBio().sizeOfContributorArray() > 0) {
-			String str = "";
-
-			for (String s : dia.getMimBio().getContributorList()) {
-				str += s;
+	
+			if (dia.getMimBio().isSetIdentifier()) {
+				info.setVersion(dia.getMimBio().getIdentifier());
 			}
-
-			info.setMaintainer(str);
-		}
-
-		if (dia.getMimBio().getModified() != null) {
-			info.setLastModified(dia.getMimBio().getModified().toString());
+	
+			if (dia.getMimBio().isSetRights()) {
+				info.setCopyright(dia.getMimBio().getRights());
+			}
+	
+			if (dia.getMimBio().isSetSource()) {
+				info.setMapInfoDataSource(dia.getMimBio().getSource());
+			}
+	
+			if (dia.getMimBio().isSetDescription()) {
+				info.addComment(dia.getMimBio().getDescription(), "");
+			}
+	
+			if (dia.getMimBio().sizeOfCreatorArray() > 0) {
+				String str = "";
+	
+				for (String s : dia.getMimBio().getCreatorList()) {
+					str += s;
+				}
+	
+				info.setAuthor(str);
+			}
+	
+			if (dia.getMimBio().sizeOfContributorArray() > 0) {
+				String str = "";
+	
+				for (String s : dia.getMimBio().getContributorList()) {
+					str += s;
+				}
+	
+				info.setMaintainer(str);
+			}
+	
+			if (dia.getMimBio().getModified() != null) {
+				info.setLastModified(dia.getMimBio().getModified().toString());
+			}
 		}
 
 		// TODO: Map XRefs
@@ -305,8 +333,7 @@ public class ImporterHelper extends CommonHelper {
 				pwElem.setMCenterY(glyph.getCenterY());
 				pwElem.setGroupRef(glyph.getGroupRef());
 
-				Color glyphColor = Color.decode(glyph.getColor());
-				pwElem.setColor(glyphColor);
+				pwElem.setColor(convertHexToColor(glyph.getColor()));
 
 				/*
 				 * Set GPML dynamic properties
@@ -356,8 +383,7 @@ public class ImporterHelper extends CommonHelper {
 				pwElem.setMCenterY(glyph.getCenterY());
 				pwElem.setGroupRef(glyph.getGroupRef());
 
-				Color glyphColor = Color.decode(glyph.getColor());
-				pwElem.setColor(glyphColor);
+				pwElem.setColor(convertHexToColor(glyph.getColor()));
 
 				/*
 				 * Set GPML dynamic properties
@@ -407,8 +433,7 @@ public class ImporterHelper extends CommonHelper {
 				pwElem.setMCenterY(glyph.getCenterY());
 				pwElem.setGroupRef(glyph.getGroupRef());
 
-				Color glyphColor = Color.decode(glyph.getColor());
-				pwElem.setColor(glyphColor);
+				pwElem.setColor(convertHexToColor(glyph.getColor()));
 
 				/*
 				 * Set GPML dynamic properties
@@ -458,8 +483,7 @@ public class ImporterHelper extends CommonHelper {
 				pwElem.setMCenterY(glyph.getCenterY());
 				pwElem.setGroupRef(glyph.getGroupRef());
 
-				Color glyphColor = Color.decode(glyph.getColor());
-				pwElem.setColor(glyphColor);
+				pwElem.setColor(convertHexToColor(glyph.getColor()));
 
 				/*
 				 * Set GPML dynamic properties
@@ -508,8 +532,7 @@ public class ImporterHelper extends CommonHelper {
 				pwElem.setMCenterY(glyph.getCenterY());
 				pwElem.setGroupRef(glyph.getGroupRef());
 
-				Color glyphColor = Color.decode(glyph.getColor());
-				pwElem.setColor(glyphColor);
+				pwElem.setColor(convertHexToColor(glyph.getColor()));
 
 				/*
 				 * Set GPML dynamic properties
@@ -569,8 +592,7 @@ public class ImporterHelper extends CommonHelper {
 				pwElem.setMCenterY(glyph.getCenterY());
 				pwElem.setGroupRef(glyph.getGroupRef());
 
-				Color glyphColor = Color.decode(glyph.getColor());
-				pwElem.setColor(glyphColor);
+				pwElem.setColor(convertHexToColor(glyph.getColor()));
 
 				/*
 				 * Set GPML dynamic properties
@@ -589,7 +611,7 @@ public class ImporterHelper extends CommonHelper {
 				pwElem.setShapeType(ShapeType.fromName("RestrictedCopy"));
 
 				// Needs to be set for the glyph to be filled
-				pwElem.setFillColor(glyphColor);
+				pwElem.setFillColor(convertHexToColor(glyph.getColor()));
 
 				// Map RelationshipXRefs
 				mapRelationshipXRefs(glyph, pwElem);
@@ -614,8 +636,9 @@ public class ImporterHelper extends CommonHelper {
 
 			PathwayElement pwElem = PathwayElement
 					.createPathwayElement(ObjectType.LINE);
-			Color glyphColor = Color.decode(glyph.getColor());
-			pwElem.setColor(glyphColor);
+			
+			pwElem.setColor(convertHexToColor(glyph.getColor()));
+		
 			pwElem.setGraphId(glyph.getVisId());
 			pwElem.setGroupRef(glyph.getGroupRef());
 
@@ -820,7 +843,7 @@ public class ImporterHelper extends CommonHelper {
 				// GroupStyle.GROUP yields "None"
 				pwElem.setGroupStyle(GroupStyle.GROUP);
 			} else if (grp.getType().equals(GroupEnumType.ENTITY_WITH_FEATURES)) {
-				pwElem.setGroupStyle(GroupStyle.create("EntityWithFeatures", true, true));
+				pwElem.setGroupStyle(GroupStyle.create("EntityWithFeatures", true));
 			} else {
 				Logger.log.error("Unknown group type: " + grp.getType());
 			}

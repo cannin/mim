@@ -11,10 +11,10 @@
 	<property environment="env" />
 	<property name="install.dir" value="${env.HOME}${file.separator}.PathVisio${file.separator}plugins" />
 	<!--<property name="pathvisio.dir" value="${basedir}${file.separator}pathvisio" />-->
-	<property name="pathvisio.dir" value="${basedir}${file.separator}mim_pathvisio${file.separator}" />
+	<property name="pathvisio.dir" value="${basedir}${file.separator}pathvisio208${file.separator}" />
 	<property name="project.dir" value="${basedir}${file.separator}mim_gpml${file.separator}" />
 	<property name="lib.dir" value="${basedir}${file.separator}mim_gpml${file.separator}lib${file.separator}" />
-	<property name="schema.dir" value="${basedir}${file.separator}sandbox${file.separator}mim_xsd${file.separator}" />
+	<property name="schema.dir" value="${basedir}${file.separator}mim_lib${file.separator}schema${file.separator}" />
 		
 	<path id="project.class.path">
 		<pathelement location="${pathvisio.dir}pathvisio.jar" />
@@ -38,7 +38,7 @@
 	
 	<target name="build-apis"> 
 		<delete file="${lib.dir}mimVis.jar" />
-		<xmlbean schema="${schema.dir}mim_vis7.xsd" javasource="1.5" 
+		<xmlbean schema="${schema.dir}mim_vis.xsd" javasource="1.5" 
 			destfile="${lib.dir}mimVis.jar" 
 			classpathref="project.class.path"/>
 	</target>
@@ -82,7 +82,7 @@
 			<classpath refid="project.class.path" />
 		</manifestclasspath>
 		<unjar dest="${project.dir}build">
-			<fileset dir="${project.dir}lib" includes="**/*.jar"/>
+			<fileset dir="${project.dir}lib" includes="**/*.jar" excludes="**/junit*.jar"/>
 		</unjar>		
 		<jar jarfile="${project.dir}${jar.name}">
 			<manifest>
