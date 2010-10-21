@@ -96,7 +96,7 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
     private static DataNodeType SOURCE_SINK_DATANODE;
     private static DataNodeType ENTITY_FEATURE;
     private static DataNodeType SIMPLE_ENTITY;
-    public static final GroupStyle SIMPLE_ENTITY_GROUP = GroupStyle.create("EntityWithFeatures", true, true);
+    public static final GroupStyle SIMPLE_ENTITY_GROUP = GroupStyle.create("EntityWithFeatures", true);
     public static final GroupStyle IMPLICIT_COMPLEX = GroupStyle.create("ImplicitComplex");
     
     public void init(PvDesktop desktop)

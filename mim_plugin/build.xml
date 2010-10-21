@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="MIMPathvisio" default="build-install" basedir="..">
+<project name="MIMPathvisio" default="build-install" basedir=".">
 	<!-- always be java 1.5 compatible -->
 	<property name="ant.build.javac.target" value="1.5" />
 	<property name="ant.build.javac.source" value="1.5" />
@@ -8,42 +8,42 @@
 	<property name="jar.name" value="${base.name}.jar" />
 	
 	<property environment="env" />
-	<property name="install.dir" value="${env.HOME}${file.separator}.PathVisio${file.separator}plugins${file.separator}" />
-	<property name="win.install.dir" value="${env.USERPROFILE}${file.separator}.PathVisio${file.separator}plugins${file.separator}" />
-	<property name="project.dir" value="${basedir}${file.separator}mim_plugin${file.separator}" />	
-	<property name="pathvisio.dir" value="${basedir}${file.separator}mim_pathvisio_new${file.separator}" />
-	<property name="images.dir" value="${basedir}${file.separator}mim_plugin${file.separator}images${file.separator}" />
+	<property name="install.dir" value="${env.HOME}/.PathVisio/plugins/" />
+	<property name="pathvisio.dir" value="${env.HOME}/Documents/workspace/pathvisio208/" />
+	<property name="lib.dir" value="${env.HOME}/Documents/workspace/mim_pathvisio/lib/" />
+	<property name="images.dir" value="${env.HOME}/Documents/workspace/mim_plugin/images/" />
 	
 	<!--<property name="webstart.dir" value="build/webstart" />-->
 	
 	<path id="project.class.path">
-		<path id="project.class.path">
-			<pathelement location="${pathvisio.dir}pathvisio.jar" />
-			<pathelement location="${project.dir}build" />
-		</path>
+		<pathelement location="${pathvisio.dir}/pathvisio.jar" />
+		<pathelement location="build" />
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
 	</path>
 	
 	<path id="test.class.path">
         <path refid="project.class.path" /> 		
-        <pathelement location="${project.dir}build" /> 
+        <pathelement location="build" /> 
 	</path>	
 	
 	<target name="prepare">
-		<mkdir dir="${project.dir}build" />
-		<copy todir="${project.dir}build${file.separator}images">
+		<mkdir dir="build" />
+		<copy todir="build/images">
 			<fileset dir="${images.dir}"/>
 		</copy>
-		<fail message="Can't find ${pathvisio.dir}pathvisio.jar, please specify the path to pathvisio with -Dpathvisio.dir=....">
+		<fail message="Can't find ${pathvisio.dir}/pathvisio.jar, please specify the path to pathvisio with -Dpathvisio.dir=....">
 			<condition>
 				<not>
-					<available file="${pathvisio.dir}pathvisio.jar" />
+					<available file="${pathvisio.dir}/pathvisio.jar" />
 				</not>
 			</condition>
 		</fail>
 	</target>
 
 	<target name="build" depends="prepare">
-		<javac srcdir="${project.dir}src" includes="**" debug="true" destdir="${project.dir}build">
+		<javac srcdir="src" includes="**" debug="true" destdir="build">
 			<classpath refid="project.class.path" />
 		</javac>
 	</target>
@@ -52,8 +52,8 @@
 		<manifestclasspath property="manifest.cp" jarfile="${jar.name}">
 			<classpath refid="project.class.path" />
 		</manifestclasspath>
-		<jar jarfile="${project.dir}${jar.name}">
-			<fileset dir="${project.dir}build" includes="**/*.*" />
+		<jar jarfile="${jar.name}">
+			<fileset dir="build" includes="**/*.*" />
 			<manifest>
 				<attribute name="PathVisio-Plugin-Class" value="gov.nih.nci.lmp.mimplugin.MimPlugin"/>
 			</manifest>
@@ -63,7 +63,7 @@
 	<target name="install">
 		<copy toDir="${install.dir}">
 			<fileset dir=".">
-				<include name="${project.dir}${jar.name}" />
+				<include name="${jar.name}" />
 			</fileset>
 		</copy>
 	</target>
@@ -71,17 +71,17 @@
 	<target name="build-install" depends="jar">
 		<copy toDir="${install.dir}">
 			<fileset dir=".">
-				<include name="${project.dir}${jar.name}" />
+				<include name="${jar.name}" />
 			</fileset>
 		</copy>
 	</target>
 	
 	<target name="clean">
-		<delete dir="${project.dir}build" />
+		<delete dir="build" />
 	</target>
 
 	<target name="dist-clean" depends="clean">
-		<delete file="${project.dir}${jar.name}" />
+		<delete file="${jar.name}" />
 	</target>
 
 </project>
