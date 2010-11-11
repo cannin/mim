@@ -782,28 +782,7 @@ public class ImporterHelper extends CommonHelper {
 					Logger.log.debug("Imported Ec: " + mimEc.getVisId());
 				}
 			}
-
-//			PathwayElement biopax = pw.getBiopax();
-//			
-//			SAXBuilder builder = new SAXBuilder(); 
-//			
-//			String str = "<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\" xmlns:owl=\"http://www.w3.org/2002/07/owl#\" xmlns:bp=\"http://www.biopax.org/release/biopax-level3.owl#\" xml:base=\"http://genmapp.org/GPML/2010a#\"><bp:PublicationXref rdf:id=\"ef7\"><bp:ID rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">123</bp:ID><bp:DB rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">PubMed</bp:DB><bp:TITLE rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">THIS IS RIGHT</bp:TITLE><bp:SOURCE rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">Br J Surg</bp:SOURCE><bp:YEAR rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">1975</bp:YEAR><bp:AUTHORS rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">Keighley MR</bp:AUTHORS><bp:AUTHORS rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">Asquith P</bp:AUTHORS><bp:AUTHORS rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">Edwards JA</bp:AUTHORS><bp:AUTHORS rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">Alexander-Williams J</bp:AUTHORS></bp:PublicationXref></rdf:RDF>";		
-//			Reader in = new StringReader(str); 
-//			
-//			try { 
-//				Document doc = builder.build(in);			
-//				biopax.setBiopax(doc);
-//			} catch (JDOMException e) {
-//				Logger.log.debug("A: " + e.getMessage());
-//			} catch (IOException e) {
-//				Logger.log.debug("B: " + e.getMessage());			
-//			}
-//			
-//			List<String> list = new ArrayList<String>();
-//			list.add("THE MIMBIOREF");
-//			
-//			pwElem.setBiopaxRefs(list);			
-
+			
 			// Map PublicationXRefs
 			List<String> mimBioRefs = mapPublicationXRefs(glyph, pwElem);
 			pwElem.setBiopaxRefs(mimBioRefs);

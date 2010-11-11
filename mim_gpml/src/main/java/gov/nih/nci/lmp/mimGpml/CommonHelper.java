@@ -87,13 +87,14 @@ public abstract class CommonHelper {
 				ArrowHeadEnumType.NECESSARY_STIMULATION);
 		arrowHash.put("mim-stimulation", ArrowHeadEnumType.STIMULATION);
 		arrowHash.put("mim-inhibition", ArrowHeadEnumType.INHIBITION);
+		arrowHash.put("mim-absolute-inhibition", ArrowHeadEnumType.ABSOLUTE_INHIBITION);		
 		arrowHash.put("mim-catalysis", ArrowHeadEnumType.CATALYSIS);
 		arrowHash.put("mim-cleavage", ArrowHeadEnumType.COVALENT_BOND_CLEAVAGE);
-		arrowHash.put("mim-reversible-binding",
+		arrowHash.put("mim-binding",
 				ArrowHeadEnumType.NON_COVALENT_REVERSIBLE_BINDING);
 		arrowHash.put("mim-covalent-bond",
 				ArrowHeadEnumType.COVALENT_IRREVERSIBLE_BINDING);
-		arrowHash.put("mim-covalent-modification",
+		arrowHash.put("mim-modification",
 				ArrowHeadEnumType.COVALENT_MODIFICATION);
 		arrowHash.put("mim-production-wo-loss",
 				ArrowHeadEnumType.PRODUCTION_WITHOUT_LOSS);
@@ -108,9 +109,9 @@ public abstract class CommonHelper {
 		arrowHash.put("mim-branching-left", ArrowHeadEnumType.BRANCHING_LEFT);
 		arrowHash.put("mim-state-combination",
 				ArrowHeadEnumType.STATE_COMBINATION);
-
-		// TODO: Not handled yet: mim-binding, mim-modification
-
+		
+		//TODO: To be added in a future MIM specification
+		//arrowHash.put("mim-gap", ArrowHeadEnumType.GAP);
 		return arrowHash;
 	}
 
@@ -308,7 +309,7 @@ public abstract class CommonHelper {
 		}
 		return isXmlValid;
 	}
-
+	
 	/**
 	 * Receives the collection containing errors found during validation and
 	 * print the errors to the console.

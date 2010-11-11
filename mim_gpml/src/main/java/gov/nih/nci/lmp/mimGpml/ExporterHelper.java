@@ -47,6 +47,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -69,6 +70,7 @@ import org.apache.commons.collections.map.MultiKeyMap;
 import org.apache.commons.collections.BidiMap;
 import org.apache.commons.collections.bidimap.DualHashBidiMap;
 
+import org.pathvisio.biopax.BiopaxElementManager;
 import org.pathvisio.biopax.reflect.BiopaxElement;
 import org.pathvisio.debug.Logger;
 import org.pathvisio.model.AnchorType;
@@ -213,9 +215,9 @@ public class ExporterHelper extends CommonHelper {
 			case GROUP:
 				mapGroup(pwElem);
 				break;
-			// case BIOPAX:
-			// mapBiopax(pwElem);
-			// break;
+			case BIOPAX:
+				mapBiopax(pwElem);
+				break;
 			// case INFOBOX:
 			// e = new Element ("InfoBox", getGpmlNamespace());
 			// updateSimpleCenter (o, e);
@@ -529,7 +531,7 @@ public class ExporterHelper extends CommonHelper {
 		}
 
 		// Map BioPAX publication cross-references
-		ArrayList<String> mimBioRefIds = mapBiopaxPublicationXRef(pwElem);
+		ArrayList<String> mimBioRefIds = mapBiopaxRefs(pwElem);
 
 		for (String id : mimBioRefIds) {
 			if (isNotBlank(id)) {
@@ -865,39 +867,24 @@ public class ExporterHelper extends CommonHelper {
 			return null;
 		}
 	}
-
+	
 	/**
-	 * Map Biopax PublicationXRef.
+	 * Map Biopax elements.
 	 * 
 	 * @param pwElem
 	 *            the pathway element
-	 * @return the list of mimBioRef IDs that should be added for the element
-	 *         being converted
 	 */
-	private ArrayList<String> mapBiopaxPublicationXRef(PathwayElement pwElem) {
-
-		// TODO: Remove this. Failed attempt at grabbing protected variable.
-//		org.jdom.Document bp = pwElem.getBiopax();
-//		String s = new XMLOutputter().outputString(bp);
-//		Logger.log.debug("BP doc: " + s);
-//		
-//		if(pwElem.getBiopax() != null) {
-//			org.jdom.Document bp = pwElem.getBiopax();
-//			String s = new XMLOutputter().outputString(bp);
-//			Logger.log.debug("BP doc: " + s);
-//		} else {
-//			Logger.log.debug("No");			
-//		}
+	private void mapBiopax(PathwayElement pwElem) {
+		BiopaxElementManager refMgr = pw.getBiopaxElementManager();
 		
-		ArrayList<String> mimBioRefIds = new ArrayList<String>();
+		Collection<BiopaxElement> bpElemColl = refMgr.getElements();
 
-		for (org.pathvisio.biopax.reflect.PublicationXref gpmlPubXRef : pwElem
-				.getBiopaxReferenceManager().getPublicationXRefs()) {
+		for (org.pathvisio.biopax.reflect.BiopaxElement bpElem : bpElemColl) {
+			org.pathvisio.biopax.reflect.PublicationXref gpmlPubXRef = (org.pathvisio.biopax.reflect.PublicationXref) bpElem; 
+			
 			PublicationXRefType mimPubXRef = mb.addNewPublicationXRef();
 
 			mimPubXRef.setVisId(gpmlPubXRef.getId());
-			// Add ID to the list being returned
-			mimBioRefIds.add(gpmlPubXRef.getId());
 
 			for (String author : gpmlPubXRef.getAuthors()) {
 				mimPubXRef.addAuthor(author);
@@ -912,6 +899,25 @@ public class ExporterHelper extends CommonHelper {
 			mimPubXRef.setDb("PubMed");
 
 			mimPubXRef.setJournal(gpmlPubXRef.getSource());
+		}
+	}
+
+	/**
+	 * Map Biopax references.
+	 * 
+	 * @param pwElem
+	 *            the pathway element
+	 * @return the list of mimBioRef IDs that should be added for the element
+	 *         being converted
+	 */
+	private ArrayList<String> mapBiopaxRefs(PathwayElement pwElem) {
+		ArrayList<String> mimBioRefIds = new ArrayList<String>();
+		
+		for (org.pathvisio.biopax.reflect.PublicationXref gpmlPubXRef : pwElem
+				.getBiopaxReferenceManager().getPublicationXRefs()) {
+
+			// Add ID to the list being returned
+			mimBioRefIds.add(gpmlPubXRef.getId());
 		}
 
 		return mimBioRefIds;

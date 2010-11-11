@@ -3,17 +3,17 @@
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/test/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/pathvisio208"/>
-	<classpathentry kind="lib" path="lib/commons-collections-3.2.1.jar"/>
 	<classpathentry kind="lib" path="lib/jsr173_1.0_api.jar"/>
-	<classpathentry kind="lib" path="lib/junit-4.8.1.jar"/>
 	<classpathentry kind="lib" path="lib/mimVis.jar"/>
 	<classpathentry kind="lib" path="lib/xbean.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/pathvisio208"/>
+	<classpathentry kind="lib" path="lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="/pathvisio208/lib/jdom.jar"/>
 	<classpathentry kind="lib" path="/pathvisio208/lib/org.bridgedb.bio.jar"/>
 	<classpathentry kind="lib" path="/pathvisio208/lib/org.bridgedb.jar"/>
 	<classpathentry kind="lib" path="/pathvisio208/lib/org.bridgedb.rdb.construct.jar"/>
 	<classpathentry kind="lib" path="/pathvisio208/lib/org.bridgedb.rdb.jar"/>
 	<classpathentry kind="lib" path="/pathvisio208/lib/org.bridgedb.webservice.bridgerest.jar"/>
-	<classpathentry kind="lib" path="/pathvisio208/lib/jdom.jar"/>
+	<classpathentry kind="lib" path="lib/junit-4.8.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
