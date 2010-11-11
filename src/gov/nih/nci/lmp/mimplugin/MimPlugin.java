@@ -65,6 +65,7 @@ import org.pathvisio.preferences.Preference;
 import org.pathvisio.preferences.PreferenceManager;
 import org.pathvisio.debug.Logger;
 import org.pathvisio.model.*;
+import org.pathvisio.util.Resources;
 import org.pathvisio.view.*;
 import org.pathvisio.view.Graphics;
 
@@ -248,7 +249,7 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
             return null;
         }
 
-        private final String IMG_CONCEPTUAL_ENTITY = "images"+ File.separator +"ce.gif";
+        private final String IMG_CONCEPTUAL_ENTITY = "images/ce.gif";
     
         public URL getIconLocation()
         {
@@ -306,7 +307,7 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
             return null;
         }
 
-        private final String IMG_MODIFIER = "images"+ File.separator +"modifier.gif";
+        private final String IMG_MODIFIER = "images/modifier.gif";
 
         public URL getIconLocation()
         {
@@ -360,7 +361,7 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
 			return null;
 		}
 
-        private final String IMG_RESTRICTED_COPY = "images"+ File.separator +"dot.gif";
+        private final String IMG_RESTRICTED_COPY = "images/dot.gif";
 
         public URL getIconLocation()
         {
@@ -516,7 +517,7 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
 			return null;
 		}
 
-        private final String IMG_SOURCE_SINK = "images"+ File.separator +"null.gif";
+        private final String IMG_SOURCE_SINK = "images/null.gif";
 
         public URL getIconLocation()
         {
@@ -656,9 +657,11 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
 			return null;
 		}
 
+		private final String IMG_SPE = "images/SPE.gif";
+		
         public URL getIconLocation()
         {
-            return MimPlugin.class.getClassLoader().getResource("images"+ File.separator +"SPE.gif");
+            return MimPlugin.class.getClassLoader().getResource(IMG_SPE);
         }
 
         public void postInsert(PathwayElement[] newElements) {
@@ -716,10 +719,12 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
 			// size of the new object
 			return null;
 		}
+        
+        private final String IMG_EF = "images/SPE.gif";
                
         public URL getIconLocation()
         {
-            return MimPlugin.class.getClassLoader().getResource("images"+ File.separator +"SPE.gif");
+            return MimPlugin.class.getClassLoader().getResource(IMG_EF);
         }
 
         public void postInsert(PathwayElement[] newElements) {
@@ -773,9 +778,11 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
 			return null;
 		}
 
+		private final String IMG_SPE_W_FEATURE = "images/SPE_w_feature.gif";
+		
         public URL getIconLocation()
         {
-            return MimPlugin.class.getClassLoader().getResource("images"+ File.separator +"SPE_w_feature.gif");
+            return MimPlugin.class.getClassLoader().getResource(IMG_SPE_W_FEATURE);
         }
 
         public void postInsert(PathwayElement[] newElements) {

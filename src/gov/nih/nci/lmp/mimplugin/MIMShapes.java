@@ -61,20 +61,24 @@ import org.pathvisio.view.ArrowShape;
  */
 public class MIMShapes
 {
-	public static final LineType MIM_NECESSARY_STIMULATION = LineType.create ("mim-necessary-stimulation", "Arrow");
-    public static final LineType MIM_BINDING = LineType.create ("mim-reversible-binding", "Arrow");
-    public static final LineType MIM_CONVERSION = LineType.create ("mim-conversion", "Arrow");
-    public static final LineType MIM_STIMULATION = LineType.create ("mim-stimulation", "Arrow");
-    public static final LineType MIM_CATALYSIS =LineType.create ("mim-catalysis", "Arrow");
-    public static final LineType MIM_INHIBITION = LineType.create ("mim-inhibition", "Arrow");
+	/*
+	 * Line types that have been commented out are already included in Pathvisio
+	 * It would be better that they be defined solely in this plugin 
+	 */
+	//public static final LineType MIM_NECESSARY_STIMULATION = LineType.create ("mim-necessary-stimulation", "Arrow");
+    //public static final LineType MIM_REVERSIBLE_BINDING = LineType.create ("mim-reversible-binding", "Arrow");
+    //public static final LineType MIM_CONVERSION = LineType.create ("mim-conversion", "Arrow");
+    //public static final LineType MIM_STIMULATION = LineType.create ("mim-stimulation", "Arrow");
+    //public static final LineType MIM_CATALYSIS =LineType.create ("mim-catalysis", "Arrow");
+    //public static final LineType MIM_INHIBITION = LineType.create ("mim-inhibition", "Arrow");
     public static final LineType MIM_ABSOLUTE_INHIBITION = LineType.create ("mim-absolute-inhibition", "Arrow");
-    public static final LineType MIM_CLEAVAGE = LineType.create ("mim-cleavage", "Arrow");
-    public static final LineType MIM_COVALENT_BOND = LineType.create ("mim-covalent-binding", "Arrow");
-    public static final LineType MIM_BRANCHING_LEFT = LineType.create ("mim-branching-left", null);
-    public static final LineType MIM_BRANCHING_RIGHT = LineType.create ("mim-branching-right", null);
-    public static final LineType MIM_TRANSLATION = LineType.create ("mim-transcription-translation", "Arrow");
-    public static final LineType MIM_GAP = LineType.create ("mim-gap", null);
-    public static final LineType MIM_COVALENT_MOD = LineType.create ("mim-covalent-modification", "Arrow");
+    //public static final LineType MIM_CLEAVAGE = LineType.create ("mim-cleavage", "Arrow");
+    //public static final LineType MIM_COVALENT_BINDING = LineType.create ("mim-covalent-binding", "Arrow");
+    //public static final LineType MIM_BRANCHING_LEFT = LineType.create ("mim-branching-left", null);
+    //public static final LineType MIM_BRANCHING_RIGHT = LineType.create ("mim-branching-right", null);
+    //public static final LineType MIM_TRANSLATION = LineType.create ("mim-transcription-translation", "Arrow");
+    //public static final LineType MIM_GAP = LineType.create ("mim-gap", null);
+    //public static final LineType MIM_COVALENT_MOD = LineType.create ("mim-covalent-modification", "Arrow");
     public static final LineType MIM_PRODUCTION_WO_LOSS = LineType.create ("mim-production-wo-loss", "Arrow");
     public static final LineType MIM_FIRST_FEATURE = LineType.create ("mim-first-feature", "Arrow");
     public static final LineType MIM_NEXT_FEATURE = LineType.create ("mim-next-feature", "Arrow");
@@ -86,20 +90,20 @@ public class MIMShapes
 		ShapeRegistry.registerShape ("mim-degradation", getPluggableShape (MIM_DEGRADATION));
 		ShapeRegistry.registerShape ("mim-interaction", getPluggableShape (MIM_INTERACTION));
 
-		ShapeRegistry.registerArrow (MIM_NECESSARY_STIMULATION.getName(), getMIMNecessary(), ArrowShape.FillType.OPEN, ARROWWIDTH);
-		ShapeRegistry.registerArrow (MIM_BINDING.getName(), getMIMBinding(), ArrowShape.FillType.CLOSED);
-		ShapeRegistry.registerArrow (MIM_CONVERSION.getName(), getMIMConversion(), ArrowShape.FillType.CLOSED, ARROWWIDTH);
-		ShapeRegistry.registerArrow (MIM_STIMULATION.getName(), getMIMStimulation(), ArrowShape.FillType.OPEN, ARROWWIDTH);
-		ShapeRegistry.registerArrow (MIM_CATALYSIS.getName(), getMIMCatalysis(), ArrowShape.FillType.OPEN, CATALYSIS_DIAM + CATALYSIS_GAP);
-        ShapeRegistry.registerArrow (MIM_CLEAVAGE.getName(), getMIMCleavage(), ArrowShape.FillType.WIRE,CLEAVAGE_FIRST);
-        ShapeRegistry.registerArrow (MIM_BRANCHING_LEFT.getName(), getMIMBranching(LEFT), ArrowShape.FillType.OPEN, BRANCH_LOCATION);
-        ShapeRegistry.registerArrow (MIM_BRANCHING_RIGHT.getName(), getMIMBranching(RIGHT), ArrowShape.FillType.OPEN, BRANCH_LOCATION);
-		ShapeRegistry.registerArrow (MIM_INHIBITION.getName(), getMIMInhibition(),  ArrowShape.FillType.OPEN,TBARWIDTH + TBAR_GAP);
+//		ShapeRegistry.registerArrow (MIM_NECESSARY_STIMULATION.getName(), getMIMNecessary(), ArrowShape.FillType.OPEN, ARROWWIDTH);
+//		ShapeRegistry.registerArrow (MIM_REVERSIBLE_BINDING.getName(), getMIMBinding(), ArrowShape.FillType.CLOSED);
+//		ShapeRegistry.registerArrow (MIM_CONVERSION.getName(), getMIMConversion(), ArrowShape.FillType.CLOSED, ARROWWIDTH);
+//		ShapeRegistry.registerArrow (MIM_STIMULATION.getName(), getMIMStimulation(), ArrowShape.FillType.OPEN, ARROWWIDTH);
+//		ShapeRegistry.registerArrow (MIM_CATALYSIS.getName(), getMIMCatalysis(), ArrowShape.FillType.OPEN, CATALYSIS_DIAM + CATALYSIS_GAP);
+//      ShapeRegistry.registerArrow (MIM_CLEAVAGE.getName(), getMIMCleavage(), ArrowShape.FillType.WIRE,CLEAVAGE_FIRST);
+//      ShapeRegistry.registerArrow (MIM_BRANCHING_LEFT.getName(), getMIMBranching(LEFT), ArrowShape.FillType.OPEN, BRANCH_LOCATION);
+//      ShapeRegistry.registerArrow (MIM_BRANCHING_RIGHT.getName(), getMIMBranching(RIGHT), ArrowShape.FillType.OPEN, BRANCH_LOCATION);
+//		ShapeRegistry.registerArrow (MIM_INHIBITION.getName(), getMIMInhibition(),  ArrowShape.FillType.OPEN,TBARWIDTH + TBAR_GAP);
 		ShapeRegistry.registerArrow (MIM_ABSOLUTE_INHIBITION.getName(), getMIMAbsoluteInhibition(),  ArrowShape.FillType.OPEN, TBARWIDTH + TBAR_GAP);
-		ShapeRegistry.registerArrow (MIM_COVALENT_BOND.getName(), getMIMCovalentBond(), ArrowShape.FillType.OPEN);
-        ShapeRegistry.registerArrow (MIM_TRANSLATION.getName(), getMIMTranslation(), ArrowShape.FillType.WIRE, ARROWWIDTH + ARROWHEIGHT);
-        ShapeRegistry.registerArrow (MIM_GAP.getName(), getMIMGap(), ArrowShape.FillType.OPEN, 10);
-        ShapeRegistry.registerArrow (MIM_COVALENT_MOD.getName(), getMIMBinding(), ArrowShape.FillType.CLOSED);
+//		ShapeRegistry.registerArrow (MIM_COVALENT_BINDING.getName(), getMIMCovalentBond(), ArrowShape.FillType.OPEN);
+//        ShapeRegistry.registerArrow (MIM_TRANSLATION.getName(), getMIMTranslation(), ArrowShape.FillType.WIRE, ARROWWIDTH + ARROWHEIGHT);
+//        ShapeRegistry.registerArrow (MIM_GAP.getName(), getMIMGap(), ArrowShape.FillType.OPEN, 10);
+//        ShapeRegistry.registerArrow (MIM_COVALENT_MOD.getName(), getMIMBinding(), ArrowShape.FillType.CLOSED);
         ShapeRegistry.registerArrow (MIM_PRODUCTION_WO_LOSS.getName(), getMIMStimulation(), ArrowShape.FillType.OPEN, ARROWWIDTH);
         ShapeRegistry.registerArrow (MIM_FIRST_FEATURE.getName(), getMIMCovalentBond(), ArrowShape.FillType.OPEN);
         ShapeRegistry.registerArrow (MIM_NEXT_FEATURE.getName(), getLine(), ArrowShape.FillType.OPEN);
