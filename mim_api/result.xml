@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<fileset date="2010/11/17">
+<file name="chk2-8-6-2010.mimml">
+<svrl:schematron-output xmlns:iso="http://purl.oclc.org/dsdl/schematron"
+                        xmlns:sch="http://www.ascc.net/xml/schematron"
+                        xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                        xmlns:schold="http://www.ascc.net/xml/schematron"
+                        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:mimVis="http://lmp.nci.nih.gov/mim/mimVisLevel1"
+                        title="mimml_validation"
+                        schemaVersion="0.1"
+                        phase="attribute-validation"><!--   
+		   
+		 chk2-8-6-2010.mimml  
+		 file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_lib/test-files--><svrl:ns-prefix-in-attribute-values uri="http://lmp.nci.nih.gov/mim/mimVisLevel1" prefix="mimVis"/>
+   <svrl:ns-prefix-in-attribute-values uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
+   <svrl:active-pattern id="check-spe" name="check-spe"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:active-pattern id="check-ef" name="check-ef"/>
+   <svrl:active-pattern id="check-mod" name="check-mod"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:active-pattern id="check-ce" name="check-ce"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ConceptualEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ConceptualEntity']"/>
+   <svrl:active-pattern id="check-ss" name="check-ss"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SourceSink']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SourceSink']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SourceSink']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SourceSink']"/>
+   <svrl:active-pattern id="check-rc" name="check-rc"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='RestrictedCopy']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='RestrictedCopy']"/>
+   <svrl:active-pattern id="check-ec" name="check-ec"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:active-pattern id="check-ic" name="check-ic"/>
+   <svrl:active-pattern id="check-mod-format" name="check-mod-format"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:active-pattern id="check-ef-format" name="check-ef-format"/>
+   <svrl:active-pattern id="check-int-visref" name="check-int-visref"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:active-pattern id="check-ncrb" name="check-ncrb"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-cib" name="check-cib"/>
+   <svrl:active-pattern id="check-cvm" name="check-cvm"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-sti" name="check-sti"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-nsti" name="check-nsti"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-inh" name="check-inh"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-ainh" name="check-ainh"/>
+   <svrl:active-pattern id="check-pwol" name="check-pwol"/>
+   <svrl:active-pattern id="check-stc" name="check-stc"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StochiometricConversion'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StochiometricConversion'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StochiometricConversion'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StochiometricConversion'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StochiometricConversion'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-tmp" name="check-tmp"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='TemplateReaction'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='TemplateReaction'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-cat" name="check-cat"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Catalysis'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Catalysis'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Catalysis'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-cle" name="check-cle"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentBondCleavage'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentBondCleavage'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-comb" name="check-comb"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StateCombination'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-fef" name="check-fef"/>
+   <svrl:active-pattern id="check-nef" name="check-nef"/>
+   <svrl:active-pattern id="check-excluded-int" name="check-excluded-int"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:active-pattern id="check-ec-placement" name="check-ec-placement"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:active-pattern id="check-intrans-placement" name="check-intrans-placement"/>
+   <svrl:fired-rule context="mimVis:Anchor[@type='InTrans']"/>
+   <svrl:fired-rule context="mimVis:Anchor[@type='InTrans']"/>
+   <svrl:active-pattern id="validate-ncrb-conn" name="validate-ncrb-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="validate-cvm-conn" name="validate-cvm-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="validate-sti-conn" name="validate-sti-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    )]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="validate-stc-conn" name="validate-stc-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="validate-pwol-conn" name="validate-pwol-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    )]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    )]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    )]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    )]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    )]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    )]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    )]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    )]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    )]"/>
+   <svrl:active-pattern id="validate-cat-conn" name="validate-cat-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis' and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis' and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis' and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:active-pattern id="validate-cle-conn" name="validate-cle-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentBondCleavage'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentBondCleavage'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="validate-branching-interaction-sets"
+                        name="validate-branching-interaction-sets"/>
+   <svrl:active-pattern id="validate-branching-interaction-prohibited-sets"
+                        name="validate-branching-interaction-prohibited-sets"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+</svrl:schematron-output>
+</file>
+<file name="example.mimml">
+<svrl:schematron-output xmlns:iso="http://purl.oclc.org/dsdl/schematron"
+                        xmlns:sch="http://www.ascc.net/xml/schematron"
+                        xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                        xmlns:schold="http://www.ascc.net/xml/schematron"
+                        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:mimVis="http://lmp.nci.nih.gov/mim/mimVisLevel1"
+                        title="mimml_validation"
+                        schemaVersion="0.1"
+                        phase="attribute-validation"><!--   
+		   
+		 example.mimml  
+		 file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_lib/test-files--><svrl:ns-prefix-in-attribute-values uri="http://lmp.nci.nih.gov/mim/mimVisLevel1" prefix="mimVis"/>
+   <svrl:ns-prefix-in-attribute-values uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
+   <svrl:active-pattern id="check-spe" name="check-spe"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:active-pattern id="check-ef" name="check-ef"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='EntityFeature']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='EntityFeature']"/>
+   <svrl:active-pattern id="check-mod" name="check-mod"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:active-pattern id="check-ce" name="check-ce"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ConceptualEntity']"/>
+   <svrl:active-pattern id="check-ss" name="check-ss"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SourceSink']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SourceSink']"/>
+   <svrl:active-pattern id="check-rc" name="check-rc"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='RestrictedCopy']"/>
+   <svrl:active-pattern id="check-ec" name="check-ec"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:active-pattern id="check-ic" name="check-ic"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ImplicitComplex']"/>
+   <svrl:active-pattern id="check-mod-format" name="check-mod-format"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:active-pattern id="check-ef-format" name="check-ef-format"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='EntityFeature']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='EntityFeature']"/>
+   <svrl:active-pattern id="check-int-visref" name="check-int-visref"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:active-pattern id="check-ncrb" name="check-ncrb"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-cib" name="check-cib"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentIrreversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-cvm" name="check-cvm"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-sti" name="check-sti"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-nsti" name="check-nsti"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-inh" name="check-inh"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-ainh" name="check-ainh"/>
+   <svrl:active-pattern id="check-pwol" name="check-pwol"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='ProductionWithoutLoss'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-stc" name="check-stc"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StochiometricConversion'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StochiometricConversion'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-tmp" name="check-tmp"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='TemplateReaction'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-cat" name="check-cat"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Catalysis'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-cle" name="check-cle"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentBondCleavage'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentBondCleavage'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-comb" name="check-comb"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StateCombination'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-fef" name="check-fef"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='FirstFeature'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-nef" name="check-nef"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NextFeature'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-excluded-int" name="check-excluded-int"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:active-pattern id="check-ec-placement" name="check-ec-placement"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:active-pattern id="check-intrans-placement" name="check-intrans-placement"/>
+   <svrl:fired-rule context="mimVis:Anchor[@type='InTrans']"/>
+   <svrl:active-pattern id="validate-ncrb-conn" name="validate-ncrb-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="validate-cvm-conn" name="validate-cvm-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="validate-sti-conn" name="validate-sti-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    )]"/>
+   <svrl:active-pattern id="validate-stc-conn" name="validate-stc-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     ]"/>
+   <svrl:active-pattern id="validate-pwol-conn" name="validate-pwol-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="validate-cat-conn" name="validate-cat-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis' and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="validate-cle-conn" name="validate-cle-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentBondCleavage'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentBondCleavage'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="validate-branching-interaction-sets"
+                        name="validate-branching-interaction-sets"/>
+   <svrl:active-pattern id="validate-branching-interaction-prohibited-sets"
+                        name="validate-branching-interaction-prohibited-sets"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+</svrl:schematron-output>
+</file>
+<file name="camk.mimml">
+<svrl:schematron-output xmlns:iso="http://purl.oclc.org/dsdl/schematron"
+                        xmlns:sch="http://www.ascc.net/xml/schematron"
+                        xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                        xmlns:schold="http://www.ascc.net/xml/schematron"
+                        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:mimVis="http://lmp.nci.nih.gov/mim/mimVisLevel1"
+                        title="mimml_validation"
+                        schemaVersion="0.1"
+                        phase="attribute-validation"><!--   
+		   
+		 camk.mimml  
+		 file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_lib/test-files--><svrl:ns-prefix-in-attribute-values uri="http://lmp.nci.nih.gov/mim/mimVisLevel1" prefix="mimVis"/>
+   <svrl:ns-prefix-in-attribute-values uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
+   <svrl:active-pattern id="check-spe" name="check-spe"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
+   <svrl:active-pattern id="check-ef" name="check-ef"/>
+   <svrl:active-pattern id="check-mod" name="check-mod"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:active-pattern id="check-ce" name="check-ce"/>
+   <svrl:active-pattern id="check-ss" name="check-ss"/>
+   <svrl:active-pattern id="check-rc" name="check-rc"/>
+   <svrl:active-pattern id="check-ec" name="check-ec"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:active-pattern id="check-ic" name="check-ic"/>
+   <svrl:active-pattern id="check-mod-format" name="check-mod-format"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
+   <svrl:active-pattern id="check-ef-format" name="check-ef-format"/>
+   <svrl:active-pattern id="check-int-visref" name="check-int-visref"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:active-pattern id="check-ncrb" name="check-ncrb"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-cib" name="check-cib"/>
+   <svrl:active-pattern id="check-cvm" name="check-cvm"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-sti" name="check-sti"/>
+   <svrl:active-pattern id="check-nsti" name="check-nsti"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-inh" name="check-inh"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-ainh" name="check-ainh"/>
+   <svrl:active-pattern id="check-pwol" name="check-pwol"/>
+   <svrl:active-pattern id="check-stc" name="check-stc"/>
+   <svrl:active-pattern id="check-tmp" name="check-tmp"/>
+   <svrl:active-pattern id="check-cat" name="check-cat"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Catalysis'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-cle" name="check-cle"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentBondCleavage'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-comb" name="check-comb"/>
+   <svrl:active-pattern id="check-fef" name="check-fef"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='FirstFeature'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-nef" name="check-nef"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NextFeature'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="check-excluded-int" name="check-excluded-int"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph"/>
+   <svrl:active-pattern id="check-ec-placement" name="check-ec-placement"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
+   <svrl:active-pattern id="check-intrans-placement" name="check-intrans-placement"/>
+   <svrl:fired-rule context="mimVis:Anchor[@type='InTrans']"/>
+   <svrl:active-pattern id="validate-ncrb-conn" name="validate-ncrb-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="validate-cvm-conn" name="validate-cvm-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="validate-sti-conn" name="validate-sti-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="validate-stc-conn" name="validate-stc-conn"/>
+   <svrl:active-pattern id="validate-pwol-conn" name="validate-pwol-conn"/>
+   <svrl:active-pattern id="validate-cat-conn" name="validate-cat-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis' and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
+   <svrl:active-pattern id="validate-cle-conn" name="validate-cle-conn"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentBondCleavage'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
+   <svrl:active-pattern id="validate-branching-interaction-sets"
+                        name="validate-branching-interaction-sets"/>
+   <svrl:active-pattern id="validate-branching-interaction-prohibited-sets"
+                        name="validate-branching-interaction-prohibited-sets"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+   <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
+</svrl:schematron-output>
+</file>
+</fileset>

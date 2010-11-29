@@ -1,0 +1,297 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>MIM software</title>
+  <link href="mim.css" rel="stylesheet" type="text/css"/>
+  <link type="text/css" rel="stylesheet" href="styles/shCoreDefault.css"/>
+  <script type="text/javascript" src="scripts/shCore.js"></script>
+  <script type="text/javascript" src="scripts/shBrushJava.js"></script>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+</head><body>
+
+<div id="overallbox">
+<a name="global_nav"></a>
+<div id="logo"><a href="http://discover.nci.nih.gov/mim/mim_pathvisio.html">MIM API</a></div>
+
+<div id="nav"> 
+	<ul>
+		<li><a href="#introduction">Introduction</a></li>
+		<li><a href="#usage">Usage</a></li>
+		<li><a href="#samples">Code Samples</a></li>
+		<li><a href="#downloads">Downloads</a></li>
+		<li><a href="#authors">Authors</a></li>
+	</ul>
+</div>
+
+<div class="box">
+<h1><a name="introduction"></a>What are the MIM software components?</h1>
+
+<p>
+Several MIM software components have been developed to help developers integrate support for the MIM notation into their software projects. A new specification provides more detailed information regarding the properties of individual MIM elements. Building upon this specification, a computerized format is provided as a standardized method for the storage and exchange of MIM diagrams, and it is accompanied by an application programming interface (API), generated through XMLBeans, to help integrate MIM support into other projects. Additionally, a mechanism is provided to determine if MIM diagrams are valid using Schematron.</p>
+
+<h1>What is the MIM notation?</h1>
+<p>The MIM notation is a graphical notation for biological systems for the representation of networks containing multi-protein complexes, protein modifications, and enzymes that are substrates of other enzymes. This graphical representation makes it possible to view all of the many interactions in which a given molecule may be involved, and it can portray competing interactions, which are common in bioregulatory networks. One aim of the MIM notation is to standardize diagrams of biological systems with a fixed set of glyphs with specific semantics. The specific semantics of the MIM notation can be translated into other standardized formats.</p> 
+
+<h1>What do MIM diagrams look like?</h1>
+<p>Here are three sample images: 
+	<ul>
+		<li>the <a href="img/camk.png">regulation of CAMK</a> and the effect on the phosphorylation of various substrates by the kinase domain of CaMK</li>
+		<li>the <a href="img/chk2.png">activation of Chk2</a> in response to double strand breaks</li>
+		<li>an <a href="img/example.png">example diagram</a> (shown below) showing all the various elements of the MIM notation, as implemented.</li>
+	</ul>
+	<img class="diagram" alt="example diagram" src="img/example.png"/>
+</p> 
+
+<h1>Who are the intended users of the MIM software components?</h1>
+<p>Programmers wanting to develop software for the MIM notation or to include support for the notation in their software project.</p>
+
+<h1>What are the main features of the provided MIM software?</h1>
+<p>
+	<ul>
+		<li>Provides a standardized schema for the various graphical and non-graphical elements of the MIM notation</li>
+		<li>Provides a Java API for parsing, creating, and manipulating instances of MIMML</li>
+		<li>Provides a mechanism for the validation of MIMML datasets</li>
+		<li>Free and open source</li>
+	</ul>
+</p>
+
+<br/>
+<a href="#global_nav"/><img class="topLink" alt="up_arrow.png" src="img/up_arrow.png"/>
+</div>
+<div class="box">
+
+<h1><a name="usage"></a>Where can I find the MIMML schema?</h1>
+<p>Links to the MIM schema are provided below. A more readable version of the schema is also provided as a web page documentation; conversion to readable format was done using a stylesheet created by the <a href="http://neuroml.org">NeuroML</a> project.
+	<h2>Level 1:</h2>
+	<ul>	
+		<li><a href="../mim_vis.xsd">mimvis.xsd</a> <a href="../mim_vis.html">(As HTML)</a></li>
+	</ul>
+</p>
+
+<h1>Where can I find examples of MIMML datasets?</h1>
+Example diagrams are provided as <a href="downloads">MIMML</a> files. 
+
+<h1>What is the MIM API?</h1> 
+<p>The MIM API provides a mechanism for binding MIMML elements to Java objects and provides JavaBeans-style methods such as "getFoo()" and "setFoo()", thereby providing a mechanism for parsing, creating, and manipulating MIMML documents. The MIM API are automatically derived from the MIM XML schemas using Apache Foundation's <a href="http://xmlbeans.apache.org">XMLBeans</a> using version 2.4.0 of XMLBeans. XMLBeans provides a mechanism for binding XML to Java types and provides JavaBeans-style methods such as "getFoo" and "setFoo", thereby providing a mechanism for parsing, creating, and manipulating XML documents.</p>
+
+<h1>How do I install the MIM API?</h1>
+<p>To be used by a Java a program, the mimVis.jar must exist in the classpath a Java program; the Jar file can be downloaded <a href="downloads">here.</a>. Additionally, XMLBeans has two additionally dependencies: jsr173_1.0_api.jar and xbean.jar </p>
+
+<h1>Where can I find code samples of using the MIM API?</h1>
+<p>Sample code is provided on this page in the <a href="samples">Code Samples</a> section. Javadoc documentation is a provided as part of the <a href="downloads">SVN repository</a>.</p>
+
+
+
+<h1>Are there bindings for programming languages besides Java?</h1>
+<p>Currently, we do not maintain any other language bindings. One framework capable of generating bindings for C++ is <a href="http://www.codesynthesis.com/products/xsd/">CodeSynthesis XSD</a>.</p>
+
+<h1>Is there a way to validate MIM diagrams?</h1>
+<p><a href="http://www.schematron.com/">Schematron</a> is a rule-based validation language for finding patterns in XML trees. Assertions about the presence or absence of these patterns can be used to determine that a document adheres to a given rule set. The Schematron validation schema can be used wherever Extensible Stylesheet Language Family Transformations (XSLT) may be used with XML pipelines and may be used with other standard XML manipulation tools.</p>
+
+<h1>How do I know if my diagram is drawn correctly according to the MIM notation?</h1>
+<p>Validation of MIMML files is done using a <a href="http://www.schematron.com/">Schematron</a>-formatted rule set. The rule set can be used in any environment with an <a href="http://en.wikipedia.org/wiki/Xslt">XSLT</a> processor. The rule set is processed into an XSLT stylesheet that is then run against a MIMML file to generate a validation report. The sample command below uses the <a href="http://xalan.apache.org/index.html">Xalan XSLT processor</a>
+
+</p><pre>Xalan mimml_validation.sch ./schematron/iso_svrl_for_xslt1.xsl &gt; mimml_validation.xsl; Xalan example.mimml mimml_validation.xsl</pre> 
+<br/>
+<a href="#global_nav"/><img class="topLink" alt="up_arrow.png" src="img/up_arrow.png"/>
+</div>
+<div class="box">
+
+<h1><a name="samples"></a>Code Samples</h1> 
+The Java code below shows some of the major functionality of the MIM API and below the code are instructions on the compilation of the example. 
+
+<h2>Source Code</h2>
+
+The toy example shows how to build a diagram from scratch, how to export the diagram to an XML file, and how to import a valid MIMML file into a diagram object. 
+
+<pre class="brush: java">
+package gov.nih.nci.lmp.mim.mimExample;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.util.HashMap;
+
+import org.apache.xmlbeans.XmlOptions;
+
+import gov.nih.nci.lmp.mim.mimVisLevel1.*;
+
+/**
+ * An class that shows an toy example for the usage of the MIM API.
+ */
+public class CaCamExample {
+
+	/** The MIM-Vis doc. */
+	public DiagramDocument visDoc;
+
+	/**
+	 * Create a DiagramDocument from scratch for the binding of the simple
+	 * physical entity (SPE), Ca++, binding reversibly to another SPE, CaM.
+	 */
+	public void createCaCam() {
+		visDoc = DiagramDocument.Factory.newInstance();
+
+		// Create a new diagram to go with the document and set its properties.
+		DiagramType dia = visDoc.addNewDiagram();
+		dia.setWidth(84.7);
+		dia.setHeight(146.3);
+
+		// Create a new entity and add it to the diagram.
+		EntityGlyphType ca = dia.addNewEntityGlyph();
+		ca.setVisId("b4357");
+		ca.setCenterX(47.0);
+		ca.setCenterY(38.0);
+		ca.setWidth(60.0);
+		ca.setHeight(20.0);
+		ca.setColor("000000");
+		// This shows the way to access enumerated sets from the schema.
+		ca.setType(EntityGlyphType.Type.SIMPLE_PHYSICAL_ENTITY);
+		ca.setDisplayName("Ca++");
+
+		EntityGlyphType cam = dia.addNewEntityGlyph();
+		cam.setVisId("a6fc4");
+		cam.setCenterX(47.0);
+		cam.setCenterY(123.0);
+		cam.setWidth(60.0);
+		cam.setHeight(20.0);
+		cam.setColor("000000");
+		cam.setType(EntityGlyphType.Type.SIMPLE_PHYSICAL_ENTITY);
+		cam.setDisplayName("CaM");
+
+		InteractionGlyphType binding = dia.addNewInteractionGlyph();
+		binding.setVisId("id4f7e9fd7");
+		binding.setColor("000000");
+		// Points are used to connect entities to interactions
+		// and dictate the connection point on entities
+		InteractionGlyphType.Point pt1 = binding.addNewPoint();
+		pt1.setX(47.0);
+		pt1.setY(48.0);
+		pt1.setArrowHead(ArrowHeadEnumType.NON_COVALENT_REVERSIBLE_BINDING);
+		pt1.setVisRef("b4357");
+		//
+		pt1.setRelX(0.0);
+		pt1.setRelY(1.0);
+
+		InteractionGlyphType.Point pt2 = binding.addNewPoint();
+		pt2.setX(47.0);
+		pt2.setY(113.0);
+		pt2.setArrowHead(ArrowHeadEnumType.NON_COVALENT_REVERSIBLE_BINDING);
+		pt2.setVisRef("a6fc4");
+		pt2.setRelX(0.0);
+		pt2.setRelY(-1.0);
+	}
+
+	/**
+	 * Export file from the DiagramDocument visDoc provided by the MIM API.
+	 * 
+	 * @param file
+	 */
+	public void exportFile(File file) {
+		// Set some default export parameters
+		XmlOptions xmlOptions = new XmlOptions();
+
+		try {
+			OutputStream output = new FileOutputStream(file);
+
+			visDoc.save(output, xmlOptions);
+
+			output.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Import file into the DiagramDocument visDoc provided by the MIM API.
+	 * 
+	 * @param file
+	 */
+	public void importFile(File file) {
+		try {
+			visDoc = DiagramDocument.Factory.parse(file);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		
+		System.out.println("==SUCCESS==");
+
+		System.out.println("Number of Entities: "
+				+ visDoc.getDiagram().sizeOfEntityGlyphArray());
+		System.out.println("Number of Interactions: "
+				+ visDoc.getDiagram().sizeOfInteractionGlyphArray());
+		System.out.println(visDoc.xmlText());
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		CaCamExample c = new CaCamExample();
+		File f = new File(args[1]);
+
+		if (args[0].equals("-e")) {
+			c.createCaCam();
+			c.exportFile(f);
+		} else if (args[0].equals("-i")) {
+			c.importFile(f);
+		}
+	}
+}
+</pre>
+
+<h2>Compilation</h2>
+Below is the command-line for compiling the example given above; assuming the same directory structure that exists in <a href="downloads">MIM API SVN repository</a>. The classpath requires the three .jar files. jsr173_1.0_api.jar and xbean.jar are available from the project SVN repository or can be downloaded as part of <a href="http://xmlbeans.apache.org">XMLBeans</a>. The MIM API, mimVis.jar, is available through the SVN repository in the <a href="downloads">downloads</a> section. Additionally, an <a href="http://ant.apache.org">Ant</a> target <strong>compile-example</strong> is also provided as part of the build.xml in the project SVN repository.  
+
+<pre>javac -classpath lib/jsr173_1.0_api.jar:lib/xbean.jar:mimVis.jar -d build/ src/gov/nih/nci/lmp/mim/mimExample/CaCamExample.java</pre>
+
+<br/>
+<a href="#global_nav"/><img class="topLink" alt="up_arrow.png" src="img/up_arrow.png"/>
+</div>
+
+<div class="box">
+
+<h1><a name="downloads"></a>Where can I download the MIM Pathvisio plugin and how can I get the source code for my own project?</h1>
+
+<ul>
+  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_spec/mim_spec.doc">Download the MIM specification</a><strong>Not available</strong></li>
+  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_lib/mim_vis.xsd">Download the MIM schema</a></li>
+  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_lib/MIMVis.jar">Download the MIM API .jar file</a></li>
+  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/">An online subversion repository browser for source code to MIM-related projects</a></li>  
+  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_lib/validation/mimml_validation.sch">Download the MIMML Schematron rule set</a> <strong>Not currently available</strong></li>
+  <li>Download MIMML files: <a href="files/chk2.mimml">Chk2</a> and <a href="files/example.mimml">MIM example</a> diagrams</li>
+  <li><a href="mailto:?Subject=Interesting%20Diagram%20Editor:%20the MIM Pathvisio plugin&amp;Body=Hi%2C%0D%0A%0D%0AI%20think%20you%27ll%20find%20the%20the MIM Pathvisio plugin%20interesting,%0D%0Ahttp://discover.nci.nih.gov/mim/mim_pathvisio.html%20It%20creates%20publishable-quality%20diagrams%20of%20biological%20systems%20using%20the%20MIM%20graphical%20notation.%20Check%20it%20out%21%0D%0A%0D%0ARegards%2C%0D%0A">Tell a friend</a></li>
+  <li><a href="http://www.schematron.com">Learn about Schematron</a></li>
+  <li><a href="http://xmlbeans.apache.org">Learn about XMLBeans</a></li>
+  <li><a href="mailto:augustin@mail.nih.gov?subject=MIM%20Software%20Bug%20Report">Report a bug</a></li>
+</ul>
+
+<a href="#global_nav"/><img class="topLink" alt="up arrow" src="img/up_arrow.png"/>
+</div>
+
+<div class="box">
+<h1><a name="authors"></a>Authors</h1>
+<p>
+Augustin Luna, BS<br/>
+2005-2007: Postbaccalaureate Intramural Research Training Award Fellow<br/>
+Clinical Brain Disorders Branch (CBDB)/Genes, Cognition, and Psychosis
+Program (GCAP), National Institute of Mental Health (NIMH), National
+Institutes of Health (NIH) <br/><br/>
+2007-Current: Pre-Doctoral Intramural Research Training Award Fellow<br/>
+Center for Cancer Research (CCR), Laboratory of Molecular Pharmacology (LMP), National Cancer Institute (NCI), National
+Institutes of Health (NIH) <br/><br/>
+BS, Biomedical Engineering, Georgia Institute of Technology <br/>
+PhD candidate, Bioinformatics, Boston University<br/>
+</p>
+<p>Margot Sunshine<br/>
+SRA
+</p>
+<p><a href="http://www3.cancer.gov/intra/lmp/kwkbio.htm">Kurt Kohn</a></p>
+<p><a href="http://www3.cancer.gov/intra/lmp/MABIO.HTM">Mirit Aladjem</a></p>
+<br/>
+<a href="#global_nav"/><img class="topLink" alt="up_arrow.png" src="img/up_arrow.png"/>
+</div>
+</div>
+
+</body></html>
