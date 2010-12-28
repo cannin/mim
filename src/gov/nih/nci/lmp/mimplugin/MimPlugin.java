@@ -88,9 +88,9 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
     private Action entityToolbarAction;
     private Action entityWithFeatureToolbarAction;
     private static AnchorType INTRANS_ANCHOR;
-    private static ShapeType RESTRICTED_COPY;
-    private static ShapeType CONCEPTUAL_ENTITY;
-    private static ShapeType SOURCE_SINK;
+    public static IShape RESTRICTED_COPY;
+    public static IShape CONCEPTUAL_ENTITY;
+    public static IShape SOURCE_SINK;
     private static DataNodeType CONCEPTUAL_ENTITY_DATANODE;
     private static DataNodeType MODIFIER;
     private static DataNodeType RESTRICTED_COPY_DATANODE;
@@ -115,17 +115,14 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
         SIMPLE_ENTITY = DataNodeType.create("SimplePhysicalEntity");
         ENTITY_FEATURE = DataNodeType.create("EntityFeature");
 
-        SOURCE_SINK = ShapeType.create("SourceSink", "SourceSink", false, false);
         GeneralPath p = new GeneralPath(new Ellipse2D.Double (-6, -6, 12, 12));
         p.moveTo(7, -7);
 		p.lineTo(-7, 7);
-        ShapeRegistry.registerShape (SOURCE_SINK.getName(), p);
+        SOURCE_SINK = new AbstractShape (p, "SourceSink", "SourceSink", false, false);
 
-        RESTRICTED_COPY = ShapeType.create("RestrictedCopy", "RestrictedCopy", false, false);
-        ShapeRegistry.registerShape (RESTRICTED_COPY.getName(), new Ellipse2D.Double (0, 0, 10, 10));
+        RESTRICTED_COPY = new AbstractShape (new Ellipse2D.Double (0, 0, 10, 10), "RestrictedCopy", "RestrictedCopy", false, false);
 
-        CONCEPTUAL_ENTITY = ShapeType.create("ConceptualEntity", "ConceptualEntity", true, false);
-        ShapeRegistry.registerShape (CONCEPTUAL_ENTITY.getName(), new Rectangle2D.Double (0, 0, 70, 20));
+        CONCEPTUAL_ENTITY = new AbstractShape (new Rectangle2D.Double (0, 0, 70, 20), "ConceptualEntity", "ConceptualEntity", true, false);
 
         GroupPainterRegistry.registerPainter(SIMPLE_ENTITY_GROUP.toString(), featurePainter);
         GroupPainterRegistry.registerPainter(IMPLICIT_COMPLEX.toString(), implicitPainter);
