@@ -26,7 +26,7 @@ pre {
    font-size: 11px;
    padding: 0px 0px 0px 0px;
    border: 1px solid #999999;
-   overflow: hidden;
+   overflow: auto;
 }
 /* IE Fixes */
 * html body pre {

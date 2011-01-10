@@ -46,12 +46,7 @@ limitations under the License.
  -->
 <xsd:schema xmlns:mimVis="http://lmp.nci.nih.gov/mim/mimVisLevel1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://lmp.nci.nih.gov/mim/mimVisLevel1">
 	<xsd:annotation>
-		<xsd:documentation>
-			The MIM Visual (MIM-Vis) XML schema. The schema represents 
-			components of MIM diagrams and provides additional components to 
-			support metadata related to MIM diagrams. This schema is based on the GPML 2008/2010 XSD schemas with modifications 
-			primarily for validation purposes. 
-		</xsd:documentation>
+		<xsd:documentation>The MIM Visual (MIM-Vis) XML schema. The schema represents components of MIM diagrams and provides additional components to support metadata related to MIM diagrams. This schema is based on the GPML 2008/2010 XSD schemas with modifications primarily for validation purposes.</xsd:documentation>
     </xsd:annotation>
 
 	<!-- XML ELEMENT DEFINITIONS -->
@@ -109,10 +104,7 @@ limitations under the License.
 	<!-- Start: DimensionType -->
 	<xsd:simpleType name="DimensionType">
         <xsd:annotation>
-            <xsd:documentation>
-            	Use DimensionType for mimVis:width and mimVis:height. 
-            	Values cannot be negative
-            </xsd:documentation>
+            <xsd:documentation>Use DimensionType for mimVis:width and mimVis:height. Values cannot be negative.</xsd:documentation>
         </xsd:annotation>	
 		<xsd:restriction base="xsd:double">
 			<xsd:minInclusive value="0"/>
@@ -131,9 +123,7 @@ limitations under the License.
 	<!-- Start: ColorType -->
 	<xsd:simpleType name="ColorType">
         <xsd:annotation>
-            <xsd:documentation>
-				Colors should be retained as hex values (e.g. web color values)
-			</xsd:documentation>
+            <xsd:documentation>Colors should be retained as hex values (e.g. web color values).</xsd:documentation>
         </xsd:annotation>	
 		<xsd:restriction base="xsd:string">
 			<xsd:pattern value="#?[a-fA-F0-9]{6}"/>
@@ -144,9 +134,7 @@ limitations under the License.
 	<!--  Start: ArrowHeadEnumType -->
 	<xsd:simpleType name="ArrowHeadEnumType">
 		<xsd:annotation>
-            <xsd:documentation>
-				"Line" represents not having an arrowhead at the end of a line. 
-            </xsd:documentation>
+            <xsd:documentation>"Line" represents not having an arrowhead at the end of a line.</xsd:documentation>
         </xsd:annotation>	
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="CovalentModification"/>
@@ -174,11 +162,7 @@ limitations under the License.
 	<!--  Start: GroupEnumType -->
 	<xsd:simpleType name="GroupEnumType">
 	    <xsd:annotation>
-            <xsd:documentation>
-				Possible group types 
-				EntityWithFeatures may be removed in the future
-				Generic is provided for "other" grouping needs by developers 
-				Entities may only participate in one group
+            <xsd:documentation>Possible group types: 1) EntityWithFeatures may be removed in the future, 2) Generic is provided for "other" grouping needs by developers, and 3) Entities may only participate in one group
 			</xsd:documentation>
         </xsd:annotation>
 		<xsd:restriction base="xsd:string">
@@ -192,10 +176,7 @@ limitations under the License.
 	<!--  Start: CommentGroup -->
 	<xsd:group name="CommentGroup">
         <xsd:annotation>
-            <xsd:documentation>
-				Comments should not be used for MIM annotations. 
-				CommentGroup should be used for all content not included by this schema. 
-				GenericProperty allows non-MIM content key-value pairings for this schema
+            <xsd:documentation>Comments should not be used for MIM annotations. CommentGroup should be used for all content not included by this schema. GenericProperty allows non-MIM content key-value pairings for this schema
             </xsd:documentation>
         </xsd:annotation>	
 		<xsd:sequence>
@@ -214,9 +195,7 @@ limitations under the License.
 	<!--  Start: DiagramType -->
 	<xsd:complexType name="DiagramType">
         <xsd:annotation>
-            <xsd:documentation>
-				Main document element type for an XML dataset using this schema 
-			</xsd:documentation>
+            <xsd:documentation>Main document element type for an XML dataset using this schema.</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
 			<xsd:group ref="mimVis:CommentGroup"/>	
@@ -235,9 +214,7 @@ limitations under the License.
 	<!-- Start: EntityGlyphType -->
 	<xsd:complexType name="EntityGlyphType">
 		<xsd:annotation>
-            <xsd:documentation>
-            	All entity glyphs are based on this element type.  
-            </xsd:documentation>
+            <xsd:documentation>All entity glyphs are based on this element type.</xsd:documentation>
         </xsd:annotation>	
 		<xsd:sequence>
 			<xsd:group ref="mimVis:CommentGroup"/>	
@@ -245,7 +222,7 @@ limitations under the License.
 		</xsd:sequence>
 		<xsd:attribute name="type" use="required">
 			<xsd:annotation>
-           		<xsd:documentation>?</xsd:documentation>
+				<xsd:documentation>Entity types are taken from the formal MIM specification.</xsd:documentation>
        		</xsd:annotation>
 			<xsd:simpleType>
 				<xsd:restriction base="xsd:string">
@@ -282,14 +259,14 @@ limitations under the License.
 	<!--  End: InteractionGlyphType --> 
 	<xsd:complexType name="InteractionGlyphType">
 		<xsd:annotation>
-            <xsd:documentation>
-            	Line glyphs capable of having multiple changes in direction and 
-            	two arrowheads.
-            </xsd:documentation>
+            <xsd:documentation>Line glyphs capable of having multiple changes in direction and two arrowheads.</xsd:documentation>
         </xsd:annotation>
 		<xsd:sequence>
 			<xsd:group ref="mimVis:CommentGroup"/>
 			<xsd:element name="Point" maxOccurs="unbounded" minOccurs="2">
+				<xsd:annotation>
+					<xsd:documentation>More information regarding the usage of relx and rely can be found here: http://svn.bigcat.unimaas.nl/pathvisio/trunk/rfc/002-connectors.txt</xsd:documentation>
+				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:attribute name="x" type="xsd:double" use="required"/>
 					<xsd:attribute name="y" type="xsd:double" use="required"/>
@@ -311,11 +288,7 @@ limitations under the License.
 	<!-- Start: Anchor Glyphs -->     
 	<xsd:complexType name="AnchorGlyphType">
 		<xsd:annotation>
-            <xsd:documentation>
-				Sizing and exact drawing implementation information should be 
-				described in-software for MIM-specific anchors according to 
-				the MIM graphical notation specification. 
-			</xsd:documentation>
+            <xsd:documentation>Sizing and exact drawing implementation information should be described in-software for MIM-specific anchors according to the MIM graphical notation specification.</xsd:documentation>
         </xsd:annotation>
  		<xsd:sequence>
 			<xsd:element name="mimBioRef" type="xsd:string" maxOccurs="unbounded" minOccurs="0"/>
@@ -327,12 +300,7 @@ limitations under the License.
 		<!-- Only two anchor types are MIM-specific "intrans" and "circle" -->  			
 		<xsd:attribute name="type" use="required">
 			<xsd:annotation>
-           		<xsd:documentation>
-					Only two anchor types are MIM-specific "InTrans" and "Outcome"
-					Annotation anchor allows for the placement of a interaction 
-					annotation label. 
-					Invisible is being used Pathvisio as part of the user interaction.
-				</xsd:documentation>
+           		<xsd:documentation>Only two anchor types are MIM-specific "InTrans" and "Outcome". Annotation anchor allows for the placement of a interaction annotation label. Invisible is being used Pathvisio as part of the user interaction.</xsd:documentation>
        		</xsd:annotation>
 			<xsd:simpleType>
 				<xsd:restriction base="xsd:string">
@@ -351,9 +319,7 @@ limitations under the License.
 	<!-- Start: Group -->
 	<xsd:complexType name="GroupType">
 	    <xsd:annotation>
-            <xsd:documentation>
-				A grouping of entities 
-			</xsd:documentation>
+            <xsd:documentation>A grouping of entities.</xsd:documentation>
        	</xsd:annotation>	
 		<xsd:sequence>
 			<xsd:group ref="mimVis:CommentGroup"/>
@@ -367,15 +333,7 @@ limitations under the License.
 	<!-- Start: MIM Bio Schema -->
 	<xsd:complexType name="MimBioType">
 		<xsd:annotation>
-            <xsd:documentation>
-				Information about cross-references, comments dealing with biology, 
-				semantic information about the interactions should be stored in 
-				MIM Bio using the IDs as the linking mechanism. 
-				Content in this container unlike the Comment or mimVis:GenericProperty
-				will be strictly validated. 
-				
-				The first version will not reference a seperate MIM Bio document. 
-			</xsd:documentation>
+            <xsd:documentation>Information about cross-references, comments dealing with biology, semantic information about the interactions should be stored in MIM Bio using the IDs as the linking mechanism. Content in this container unlike the Comment or mimVis:GenericProperty will be strictly validated. The first version will not reference a seperate MIM Bio document.</xsd:documentation>
         </xsd:annotation>
 		<xsd:sequence>
 			<!--<xsd:any maxOccurs="unbounded" minOccurs="0" namespace="http://lmp.nci.nih.gov/mim/mimBioLevel1"/>-->

@@ -61,24 +61,24 @@ Several MIM software components have been developed to help developers integrate
 <div class="box">
 
 <h1><a name="usage"></a>Where can I find the MIMML schema?</h1>
-<p>Links to the MIM schema are provided below. A more readable version of the schema is also provided as a web page documentation; conversion to readable format was done using a stylesheet created by the <a href="http://neuroml.org">NeuroML</a> project.
+<p>Links to the MIM schema are provided below. Documentation for the schema is also provided in a form similar to Javadoc. 
 	<h2>Level 1:</h2>
 	<ul>	
-		<li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_api/schema/mim_vis.xsd">mimvis.xsd</a> <a href="http://discover.nci.nih.gov/mim/mim_vis.html">(As HTML)</a></li>
+		<li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_api/schema/mim_vis.xsd">mim_vis.xsd</a> <a href="http://discover.nci.nih.gov/mim/docs/index.html">(Documentation)</a></li>
 	</ul>
 </p>
 
 <h1>Where can I find examples of MIMML datasets?</h1>
-Example diagrams are provided as <a href="downloads">MIMML</a> files. 
+Example diagrams are provided as <a href="#downloads">MIMML</a> files. 
 
 <h1>What is the MIM API?</h1> 
 <p>The MIM API provides a mechanism for binding MIMML elements to Java objects and provides JavaBeans-style methods such as "getFoo()" and "setFoo()", thereby providing a mechanism for parsing, creating, and manipulating MIMML documents. The MIM API are automatically derived from the MIM XML schemas using Apache Foundation's <a href="http://xmlbeans.apache.org">XMLBeans</a> using version 2.4.0 of XMLBeans. XMLBeans provides a mechanism for binding XML to Java types and provides JavaBeans-style methods such as "getFoo" and "setFoo", thereby providing a mechanism for parsing, creating, and manipulating XML documents.</p>
 
 <h1>How do I install the MIM API?</h1>
-<p>To be used by a Java a program, the mimVis.jar must exist in the classpath a Java program; the Jar file can be downloaded <a href="downloads">here.</a>. Additionally, XMLBeans has two additionally dependencies: jsr173_1.0_api.jar and xbean.jar </p>
+<p>To be used by a Java a program, the mimVis.jar must exist in the classpath a Java program; the .jar file can be downloaded <a href="#downloads">here</a>. Additionally, XMLBeans has two additionally dependencies: jsr173_1.0_api.jar and xbean.jar </p>
 
 <h1>Where can I find code samples of using the MIM API?</h1>
-<p>Sample code is provided on this page in the <a href="samples">Code Samples</a> section. Javadoc documentation is a provided as part of the <a href="downloads">SVN repository</a>.</p>
+<p>Sample code is provided on this page in the <a href="samples">Code Samples</a> section. Javadoc documentation is a provided as part of the <a href="#downloads">SVN repository</a>.</p>
 
 
 
@@ -242,7 +242,7 @@ public class CaCamExample {
 </pre>
 
 <h2>Compilation</h2>
-Below is the command-line for compiling the example given above; assuming the same directory structure that exists in <a href="downloads">MIM API SVN repository</a>. The classpath requires the three .jar files. jsr173_1.0_api.jar and xbean.jar are available from the project SVN repository or can be downloaded as part of <a href="http://xmlbeans.apache.org">XMLBeans</a>. The MIM API, mimVis.jar, is available through the SVN repository in the <a href="downloads">downloads</a> section. Additionally, an <a href="http://ant.apache.org">Ant</a> target <strong>compile-example</strong> is also provided as part of the build.xml in the project SVN repository.  
+Below is the command-line for compiling the example given above; assuming the same directory structure that exists in <a href="#downloads">MIM API SVN repository</a>. The classpath requires the three .jar files. jsr173_1.0_api.jar and xbean.jar are available from the project SVN repository or can be downloaded as part of <a href="http://xmlbeans.apache.org">XMLBeans</a>. The MIM API, mimVis.jar, is available through the SVN repository in the <a href="#downloads">downloads</a> section. Additionally, an <a href="http://ant.apache.org">Ant</a> target <strong>compile-example</strong> is also provided as part of the build.xml in the project SVN repository.  
 
 <pre>javac -classpath lib/jsr173_1.0_api.jar:lib/xbean.jar:mimVis.jar -d build/ src/gov/nih/nci/lmp/mim/mimExample/CaCamExample.java</pre>
 
@@ -255,10 +255,10 @@ Below is the command-line for compiling the example given above; assuming the sa
 <h1><a name="downloads"></a>Where can I download the MIM Pathvisio plugin and how can I get the source code for my own project?</h1>
 
 <ul>
-  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_lib/mim_vis.xsd">Download the MIM schema</a></li>
-  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_lib/MIMVis.jar">Download the MIM API .jar file</a></li>
+  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_api/schema/mim_vis.xsd">Download the MIM schema</a></li>
+  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_api/mimVis.jar">Download the MIM API .jar file</a></li>
   <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/">An online subversion repository browser for source code to MIM-related projects</a></li>  
-  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_lib/validation/mimml_validation.sch">Download the MIMML Schematron rule set</a> <strong>Not currently available</strong></li>
+  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_api/validation/mimml_validation.sch">Download the MIMML Schematron rule set</a></li>
   <li>Download MIMML files: <a href="files/chk2.mimml">Chk2</a> and <a href="files/example.mimml">MIM example</a> diagrams</li>
   <li><a href="mailto:?Subject=Interesting%20Diagram%20Editor:%20the MIM Pathvisio plugin&amp;Body=Hi%2C%0D%0A%0D%0AI%20think%20you%27ll%20find%20the%20the MIM Pathvisio plugin%20interesting,%0D%0Ahttp://discover.nci.nih.gov/mim/mim_pathvisio.html%20It%20creates%20publishable-quality%20diagrams%20of%20biological%20systems%20using%20the%20MIM%20graphical%20notation.%20Check%20it%20out%21%0D%0A%0D%0ARegards%2C%0D%0A">Tell a friend</a></li>
   <li><a href="http://www.schematron.com">Learn about Schematron</a></li>
