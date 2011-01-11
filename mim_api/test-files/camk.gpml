@@ -92,7 +92,7 @@
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
       <Point X="471.0" Y="204.0" GraphRef="b2418" RelX="-1.0" RelY="0.0" ArrowHead="mim-binding" />
       <Point X="365.0" Y="176.0" GraphRef="d312c" RelX="0.0" RelY="1.0" ArrowHead="mim-binding" />
-      <Anchor Position="0.1834862385321101" Shape="None" GraphId="d03e0" />
+      <Anchor Position="0.1475873544093177" Shape="None" GraphId="d03e0" />
       <Anchor Position="0.80471615720524" Shape="None" GraphId="b739e" />
     </Graphics>
   </Line>
@@ -108,13 +108,13 @@
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0" Color="0000cc">
       <Point X="234.0" Y="270.0" GraphRef="f683d" RelX="1.0" RelY="0.0" />
       <Point X="300.0" Y="270.0" GraphRef="d381d" RelX="-1.0" RelY="0.0" ArrowHead="mim-modification" />
-      <Anchor Position="0.4" Shape="None" GraphId="d3ccb" />
+      <Anchor Position="0.3939393939393939" Shape="None" GraphId="d3ccb" />
     </Graphics>
   </Line>
   <Line GraphId="a3a8f">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0" Color="00cc00">
       <Point X="260.0" Y="177.0" GraphRef="be41c" RelX="-0.5" RelY="1.0" />
-      <Point X="260.4" Y="270.0" GraphRef="d3ccb" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="260.0" Y="270.0" GraphRef="d3ccb" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
       <Anchor Position="0.44080581235634453" Shape="None" GraphId="e089d" />
       <Anchor Position="0.6988983748485381" Shape="None" GraphId="e0e91" />
     </Graphics>
@@ -124,12 +124,12 @@
       <Point X="292.5210296483567" Y="202.16803493449783" GraphRef="c8cfc" RelX="0.0" RelY="0.0" />
       <Point X="289.66315789473686" Y="218.0" />
       <Point X="279.8" Y="217.8856314370413" />
-      <Point X="260.4" Y="217.7712628740826" GraphRef="e089d" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point X="260.0" Y="217.99494054914004" GraphRef="e089d" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
   </Line>
   <Line GraphId="aefde">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0" Color="00cc00">
-      <Point X="260.4" Y="241.87710821085346" GraphRef="e0e91" RelX="0.0" RelY="0.0" ArrowHead="mim-branching-right" />
+      <Point X="260.0" Y="241.99754886091404" GraphRef="e0e91" RelX="0.0" RelY="0.0" ArrowHead="mim-branching-right" />
       <Point X="104.0" Y="185.43855410542673" />
       <Point X="299.0" Y="129.0" GraphRef="f9c9d" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
       <Anchor Position="0.4" Shape="Intermolecular" GraphId="fbcd1" />
@@ -140,7 +140,7 @@
       <Point X="511.0" Y="144.2" GraphRef="a60d7" RelX="0.0" RelY="0.0" />
       <Point X="451.0" Y="164.1" />
       <Point X="451.0" Y="184.0" />
-      <Point X="446.41284403669727" Y="204.0" GraphRef="d03e0" RelX="0.0" RelY="0.0" ArrowHead="mim-necessary-stimulation" />
+      <Point X="451.2232945091514" Y="204.0" GraphRef="d03e0" RelX="0.0" RelY="0.0" ArrowHead="mim-necessary-stimulation" />
     </Graphics>
   </Line>
   <InfoBox CenterX="0.0" CenterY="0.0" />
