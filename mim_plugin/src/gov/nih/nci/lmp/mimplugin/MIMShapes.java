@@ -330,10 +330,10 @@ public class MIMShapes
 	
 	private static java.awt.Shape getMIMAbsoluteInhibition() {
 		GeneralPath path = new GeneralPath(); 
-		path.moveTo (-10, -TBARHEIGHT);
-		path.lineTo (-10, TBARHEIGHT);
-		path.moveTo (-ARROW_NECESSARY_CROSSBAR, -TBARHEIGHT);
-		path.lineTo (-ARROW_NECESSARY_CROSSBAR, TBARHEIGHT);
+		path.moveTo (0, -TBARHEIGHT / 2);
+		path.lineTo (0, TBARHEIGHT / 2);
+		path.moveTo (-ARROW_NECESSARY_CROSSBAR, -TBARHEIGHT / 2);
+		path.lineTo (-ARROW_NECESSARY_CROSSBAR, TBARHEIGHT / 2);
 		return path;
 	}
 
