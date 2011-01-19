@@ -82,8 +82,8 @@ import org.pathvisio.biopax.BiopaxReferenceManager;
 import org.pathvisio.biopax.BiopaxElementManager;
 import org.pathvisio.biopax.reflect.PublicationXref;
 import org.pathvisio.util.FileUtils;
+import org.pathvisio.view.ShapeRegistry;
 
-import java.io.BufferedReader;
 import java.io.*;
 
 
@@ -498,8 +498,7 @@ public class ImporterHelper extends CommonHelper {
 					}
 				}
 
-				pwElem.setShapeType(ShapeType.create("ConceptualEntity",
-						"ConceptualEntity", true, false));
+				pwElem.setShapeType(ShapeRegistry.fromName("ConceptualEntity"));
 
 				// Map RelationshipXRefs
 				mapRelationshipXRefs(glyph, pwElem);
@@ -549,7 +548,7 @@ public class ImporterHelper extends CommonHelper {
 
 				// Set ShapeType
 				// pwElem.setShapeType(ShapeType.fromName("SourceSink"));
-				pwElem.setShapeType(ShapeType.fromName("SourceSink"));
+				pwElem.setShapeType(ShapeRegistry.fromName("SourceSink"));
 
 				/*
 				 * DEBUG Make sure that the SourceSink ShapeType has been
@@ -608,7 +607,7 @@ public class ImporterHelper extends CommonHelper {
 				}
 
 				// Set ShapeType
-				pwElem.setShapeType(ShapeType.fromName("RestrictedCopy"));
+				pwElem.setShapeType(ShapeRegistry.fromName("RestrictedCopy"));
 
 				// Needs to be set for the glyph to be filled
 				pwElem.setFillColor(convertHexToColor(glyph.getColor()));
