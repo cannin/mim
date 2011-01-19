@@ -9,8 +9,8 @@
 	
 	<property environment="env" />
 	<property name="install.dir" value="${env.HOME}/.PathVisio/plugins" />
-	<property name="pathvisio.dir" value="../pathvisio208" />
-	<property name="lib.dir" value="../pathvisio208/lib" />
+	<property name="pathvisio.dir" value="../pathvisio" />
+	<property name="lib.dir" value="../pathvisio/lib" />
 	<property name="images.dir" value="images" />
 	
 	<!--<property name="webstart.dir" value="build/webstart" />-->
