@@ -47,6 +47,7 @@ public class MimObjectsPane extends ObjectsPane {
     private static final LineType MIM_NEXT_FEATURE = LineType.create ("mim-next-feature", "Arrow");    
     private static DataNodeType ENTITY_FEATURE;
     private static DataNodeType SIMPLE_ENTITY;
+    private static DataNodeType MODIFIER;
     private static final int TBARHEIGHT = 15;
     private static final int ARROW_NECESSARY_CROSSBAR = 6;
     private static final int TBARWIDTH = 1;
@@ -66,13 +67,11 @@ public class MimObjectsPane extends ObjectsPane {
         addButtons(new Action[] {
                 new CommonActions.NewElementAction(e, entityWithFeatureTemplate),
             }, "Template", COLNUM);
-        addButtons(new Action[] {
-                new CommonActions.NewElementAction(e, new LabelTemplate()),
-            }, "Label", COLNUM);
+        addButtons(getMimAdditional(e), "Other glyphs", COLNUM);
     }
 
     private Action[] getMimEntities(Engine e) {
-        DataNodeType MODIFIER = DataNodeType.create("Modifier");
+        MODIFIER = DataNodeType.create("Modifier");
         DataNodeType CONCEPTUAL_ENTITY_DATANODE = DataNodeType.create("ConceptualEntity");
         DataNodeType RESTRICTED_COPY_DATANODE = DataNodeType.create("RestrictedCopy");
         DataNodeType SOURCE_SINK_DATANODE = DataNodeType.create("SourceSink");
@@ -113,7 +112,7 @@ public class MimObjectsPane extends ObjectsPane {
         ShapeRegistry.registerArrow (MIM_PRODUCTION_WO_LOSS.getName(), getMIMStimulation(), ArrowShape.FillType.OPEN, ARROWWIDTH);
         return new Action[] {
 				 new CommonActions.NewElementAction(e, new MimConnectorTemplate(
-						 "Non-covalent reversible binding", "mim-binding", MIMShapes.MIM_BINDING, MIMShapes.MIM_BINDING)
+						 "Non-covalent reversible binding", "mim-ncrb", MIMShapes.MIM_BINDING, MIMShapes.MIM_BINDING)
 				 ),
 				 new CommonActions.NewElementAction(e, new MimConnectorTemplate(
 						 "Covalent modification", "mim-modification", LineType.LINE, MIMShapes.MIM_MODIFICATION)
@@ -128,7 +127,7 @@ public class MimObjectsPane extends ObjectsPane {
 						 "Production without loss", "mim-production-wo-loss", LineType.LINE, MIM_PRODUCTION_WO_LOSS)
 				 ),
                  new CommonActions.NewElementAction(e, new MimConnectorTemplate(
-						 "Template reaction (transcription-translation)", "mim-binding", LineType.LINE, MIMShapes.MIM_TRANSLATION)
+						 "Template reaction (transcription-translation)", "mim-tmp", LineType.LINE, MIMShapes.MIM_TRANSLATION)
 				 )
 		 };
     }
@@ -168,7 +167,7 @@ public class MimObjectsPane extends ObjectsPane {
         ShapeRegistry.registerArrow (MIM_NEXT_FEATURE.getName(), getLine(), ArrowShape.FillType.OPEN);
         return new Action[] {
                 new CommonActions.NewElementAction(e, new MimConnectorTemplate(
-						 "First feature", "mim-covalent-bond", MIM_FIRST_FEATURE, MIM_NEXT_FEATURE)
+						 "First feature", "mim-nfe", MIM_FIRST_FEATURE, MIM_NEXT_FEATURE)
 				),
                 new CommonActions.NewElementAction(e, new MimConnectorTemplate(
 						 "Next feature", "mim-next-feature", MIM_NEXT_FEATURE, MIM_NEXT_FEATURE)
@@ -180,7 +179,7 @@ public class MimObjectsPane extends ObjectsPane {
         return new Action[] {
  				 new CommonActions.NewElementAction(e, new LabelTemplate()),
                  new CommonActions.NewElementAction(e, new MimConnectorTemplate(
-						 "State combination", "mim-state-combination", LineType.LINE, LineType.LINE)
+						 "State combination", "mim-state-combination", LineType.LINE, LineType.LINE, ConnectorType.STRAIGHT)
 				 ),
 		 };
     }
@@ -191,7 +190,12 @@ public class MimObjectsPane extends ObjectsPane {
 
         MimConnectorTemplate (String desc, String image, LineType startType, LineType endType)
         {
-            super (desc, LineStyle.SOLID, startType, endType, ConnectorType.ELBOW);
+            this (desc, image, startType, endType, ConnectorType.ELBOW);
+        }
+
+        MimConnectorTemplate (String desc, String image, LineType startType, LineType endType, ConnectorType connector)
+        {
+            super (desc, LineStyle.SOLID, startType, endType, connector);
             this.image = image;
             this.desc = desc;
         }
@@ -362,7 +366,7 @@ public class MimObjectsPane extends ObjectsPane {
 			return null;
 		}
 
-		private final String IMG_SPE_W_FEATURE = "images/SPE_w_feature.gif";
+		private final String IMG_SPE_W_FEATURE = "build/images/mim-ef_tmpl.gif";
 
         public URL getIconLocation()
         {
