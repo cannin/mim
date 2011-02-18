@@ -78,17 +78,15 @@ import org.pathvisio.view.MIMShapes;
  */
 public class MimPlugin implements Plugin, Engine.ApplicationEventListener
 {
-	private PvDesktop desktop;
+//	private PvDesktop desktop;
     private static AnchorType INTRANS_ANCHOR;
     public static final GroupStyle SIMPLE_ENTITY_GROUP = GroupStyle.create("EntityWithFeatures", true);
-    public static final GroupStyle IMPLICIT_COMPLEX = GroupStyle.create("ImplicitComplex");
     private static MimObjectsPane mimObjectsPane;
 
     public void init(PvDesktop desktop)
 	{
-		// save the desktop reference so we can use it later
-		this.desktop = desktop;
-        MIMShapes.registerShapes();
+        MimObjectsPane.registerShapes();
+        MimImplicitComplexGroup.registerGroup();
         Engine e = desktop.getSwingEngine().getEngine();
         
         // add new anchor;
@@ -96,7 +94,6 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
         ShapeRegistry.registerAnchor(INTRANS_ANCHOR.getName(), getIntranAnchorShape());
 
         GroupPainterRegistry.registerPainter(SIMPLE_ENTITY_GROUP.toString(), featurePainter);
-        GroupPainterRegistry.registerPainter(IMPLICIT_COMPLEX.toString(), implicitPainter);
 
         PropertyDisplayManager.setVisible(StaticProperty.HEIGHT, false);
         PropertyDisplayManager.setVisible(StaticProperty.WIDTH, false);
@@ -104,7 +101,7 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
         // register a hook so we can modify the right-click menu
         desktop.addPathwayElementMenuHook(new InTransOption());
         desktop.addPathwayElementMenuHook(new NewFeatureOption());
-        desktop.addPathwayElementMenuHook(new ImplicitComplexOption());
+        desktop.addPathwayElementMenuHook(new MimImplicitComplexGroup(desktop));
         // get rid of existing object panel
         ObjectsPane objectsPane = desktop.getSwingEngine().getApplicationPanel().getObjectsPane();
         desktop.getSideBarTabbedPane().remove(objectsPane);
@@ -112,11 +109,12 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
         mimObjectsPane = new MimObjectsPane(desktop, e);
 		desktop.getSideBarTabbedPane().add("MIM", mimObjectsPane);
         /* show mim pane to top*/
-        if (!PreferenceManager.getCurrent().get(MIMPreference.PREFERRED_PANEL).equals("MIM")) {
-            int panelId = desktop.getSideBarTabbedPane().indexOfTab(PreferenceManager.getCurrent().get(MIMPreference.PREFERRED_PANEL));
-            desktop.getSideBarTabbedPane().setSelectedComponent(desktop.getSideBarTabbedPane().getComponentAt(panelId));
-        } else {
-            desktop.getSideBarTabbedPane().setSelectedComponent(mimObjectsPane);
+        desktop.getSideBarTabbedPane().setSelectedComponent(mimObjectsPane);
+        if (!PreferenceManager.getCurrent().get(MimPreferencesDlg.MIMPreference.PREFERRED_PANEL).equals("MIM")) {
+            int panelId = desktop.getSideBarTabbedPane().indexOfTab(PreferenceManager.getCurrent().get(MimPreferencesDlg.MIMPreference.PREFERRED_PANEL));
+            if (panelId < -1) {
+                desktop.getSideBarTabbedPane().setSelectedComponent(desktop.getSideBarTabbedPane().getComponentAt(panelId));
+            }
         }
 
         // register a lister so we get notified when a pathway is opened
@@ -124,7 +122,7 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
 
         // set the initial enabled / disabled state of the action
         updateState();
-        createMimPreferenceDlg();
+        new MimPreferencesDlg(desktop);
         
         // add dynamic property to allow the user to identify the start of 
         // of an interaction 
@@ -258,25 +256,6 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
         rec.lineTo(SEGMENT_SIZE * 2, -SEGMENT_SIZE);
         return rec;
     }
-
-
-    /*
-     * Code for handeling MIM preferences
-     */
-    private void createMimPreferenceDlg() {
-        PreferencesDlg dlg = desktop.getPreferencesDlg();
-        PreferenceManager.getCurrent().get(MIMPreference.SHOW_COMMENT_LABELS);
-        PreferenceManager.getCurrent().get(MIMPreference.COMMENT_REFERENCE);
-        PreferenceManager.getCurrent().get(MIMPreference.PREFERRED_PANEL);
-//        PreferenceManager.getCurrent().set(MIMPreference.SHOW_COMMENT_LABELS, "true");
-//        PreferenceManager.getCurrent().set(MIMPreference.COMMENT_REFERENCE, "true");
-//        PreferenceManager.getCurrent().set(MIMPreference.PREFERRED_PANEL, "MIM");
-        dlg.addPanel("MIM Plugin",
-                        dlg.builder().booleanField(MIMPreference.SHOW_COMMENT_LABELS, "Show Comment Labels")
-                                .booleanField(MIMPreference.COMMENT_REFERENCE, "Attach References to Comments").
-                stringField(MIMPreference.PREFERRED_PANEL, "Select pane to appear on top").build());
-    }
-
 
     /**
      * Add new Feature to group menu
@@ -422,9 +401,9 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
 			// size of the new object
 			return null;
 		}
-        
+
         private final String IMG_EF = "build/images/SPE.gif";
-               
+
         public URL getIconLocation()
         {
             return MimPlugin.class.getClassLoader().getResource(IMG_EF);
@@ -435,106 +414,6 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
         }
     }
 
-   /**
-     * Add new Feature to group menu
-     */
-    public class ImplicitComplexOption implements PathwayElementMenuListener.PathwayElementMenuHook {
-        VPathway vPathway;
-        Group group;
-       /**
-        * This method is called whenever the user right-clicks
-        * on an element in the Pathway.
-        * VPathwayElement contains the object that was clicked on.
-        */
-       public void pathwayElementMenuHook(VPathwayElement e, JPopupMenu menu)
-       {
-           if (e instanceof SelectionBox) {
-                ComplexAction showImplicitComplexAction = new ComplexAction();
-
-                   // pass the clicked element to the action object
-//                   showImplicitComplexAction.setElement(e);
-                   // Insert action into the menu.
-                   // NB: this is optional, we can choose e.g.
-                   // to insert only when the clicked element is a certain type.
-
-                   menu.add (showImplicitComplexAction);
-           }
-
-       }
-
-    private class ComplexAction extends GroupActionBase {
-		public ComplexAction() {
-			super(
-				"Create implicit complex", "Break implicit complex",
-				"Create an implicit complex from selected elements",
-				"Break selected implicit complex",
-				MimPlugin.IMPLICIT_COMPLEX,
-				KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P,
-						Toolkit.getDefaultToolkit().getMenuShortcutKeyMask())
-				);
-		}
-	}
-
-	private class GroupActionBase extends AbstractAction implements SelectionBox.SelectionListener {
-		private String groupLbl, ungroupLbl, groupTt, ungroupTt;
-		private GroupStyle groupStyle;
-        protected VPathway vPathway;
-
-        public GroupActionBase(String groupLbl, String ungroupLbl,
-				String groupTt, String ungroupTt,
-				GroupStyle style, KeyStroke keyStroke) {
-			super();
-			this.groupStyle = style;
-			this.groupLbl = groupLbl;
-			this.ungroupLbl = ungroupLbl;
-			this.groupTt = groupTt;
-			this.ungroupTt = ungroupTt;
-            vPathway = desktop.getSwingEngine().getEngine().getActiveVPathway();
-            vPathway.addSelectionListener(this);
-			putValue(NAME, groupLbl);
-			putValue(SHORT_DESCRIPTION, groupTt);
-			putValue(ACCELERATOR_KEY, keyStroke);
-			setLabel();
-		}
-
-		public void actionPerformed(ActionEvent e) {
-			if(!isEnabled()) return; //Don't perform action if not enabled
-			Group g = vPathway.toggleGroup(vPathway.getSelectedGraphics());
-			if(g != null) {
-				g.getPathwayElement().setGroupStyle(groupStyle);
-			}
-		}
-
-		public void selectionEvent(SelectionBox.SelectionEvent e) {
-			switch(e.type) {
-			case SelectionBox.SelectionEvent.OBJECT_ADDED:
-			case SelectionBox.SelectionEvent.OBJECT_REMOVED:
-			case SelectionBox.SelectionEvent.SELECTION_CLEARED:
-				setLabel();
-			}
-		}
-
-		private void setLabel() {
-			int unGrouped = 0;
-			List<Graphics> selection = vPathway.getSelectedGraphics();
-			for(Graphics g : selection) {
-				if(g.getPathwayElement().getGroupRef() == null) {
-					unGrouped++;
-				}
-			}
-			setEnabled(true);
-			if(unGrouped >= 2) {
-				putValue(Action.NAME, groupLbl);
-				putValue(SHORT_DESCRIPTION, groupTt);
-			} else {
-				putValue(Action.NAME, ungroupLbl);
-				putValue(SHORT_DESCRIPTION, ungroupTt);
-			}
-		}
-	}
-    }
-
-    
     static final Property MIM_INTERACTION_START = new Property () {
         //A unique id for the property
         public String getId() {
@@ -556,7 +435,7 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
                 return false;
         }
     };
-    
+
     static final Property MIM_DATABASE_RELATIONSHIP = new Property () {
         //A unique id for the property
         public String getId() {
@@ -577,7 +456,7 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
         public boolean isCollection() {
                 return false;
         }
-    };    
+    };
 
     static final Property MIM_ENTITY_CONTROLLED_VOCABULARY = new Property () {
         //A unique id for the property
@@ -599,47 +478,7 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
         public boolean isCollection() {
                 return false;
         }
-    }; 
-    
-    private static GroupPainter implicitPainter = new GroupPainter() {
-         public void drawGroup(Graphics2D g, Group group, int flags) {
-             boolean mouseover = (flags & Group.FLAG_MOUSEOVER) != 0;
-             boolean anchors = (flags & Group.FLAG_ANCHORSVISIBLE) != 0;
-             boolean selected = (flags & Group.FLAG_SELECTED) != 0;
-             Rectangle2D rect = group.getVBounds();
-
-             int sw = 1;
-             int arc = (int)rect.getWidth()/8;
-             if (rect.getHeight() > rect.getWidth()) {
-                 arc = (int)rect.getHeight()/8;
-             }
-             //fill
-             g.setColor(Color.WHITE);
-             g.fillRoundRect((int) rect.getX(), (int) rect.getY(),
-                     (int) rect.getWidth(), (int) rect.getHeight(), arc, arc);
-             //border
-             g.setColor(Color.GRAY);
-//            g.setStroke(new BasicStroke(sw, BasicStroke.CAP_SQUARE,
-//                    BasicStroke.JOIN_MITER, 1, new float[] { 4, 2 }, 0));
-             g.drawRoundRect((int) rect.getX() , (int) rect.getY() ,
-                     (int) rect.getWidth() - sw, (int) rect.getHeight() - sw, arc, arc);
-
-             //User hint is drawn on mouseover, if it fits within the group bounds
-             if(mouseover && !anchors) {
-                 //Draw a hint to tell the user that click selects group
-                 String hint = selected ? "Drag to move group" : "Click to select group";
-
-                 Rectangle2D tb = g.getFontMetrics().getStringBounds(hint, g);
-
-                 if(tb.getWidth() <= rect.getWidth()) {
-                     int yoffset = (int)rect.getY();
-                     int xoffset = (int)rect.getX() + (int)(rect.getWidth() / 2) - (int)(tb.getWidth() / 2);
-                     yoffset += (int)(rect.getHeight() / 2) + (int)(tb.getHeight() / 2);
-                     g.drawString(hint, xoffset, yoffset);
-                 }
-             }
-         }
-     };
+    };
 
        private static GroupPainter featurePainter = new GroupPainter() {
          public void drawGroup(Graphics2D g, Group group, int flags) {
@@ -675,28 +514,5 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
              }
          }
      };
-
-    public enum MIMPreference implements Preference
-    {
-        SHOW_COMMENT_LABELS(Boolean.toString(true)),
-        COMMENT_REFERENCE(Boolean.toString(true)),
-        PREFERRED_PANEL("MIM");
-
-        MIMPreference(String defaultValue) {
-            this.defaultValue = defaultValue;
-        }
-
-        MIMPreference(File defaultValue)
-        {
-            this.defaultValue = "" + defaultValue;
-        }
-
-        private String defaultValue = Boolean.toString(false);
-
-        public String getDefault() {
-            return defaultValue;
-        }
-
-    }
 
 }
