@@ -36,18 +36,25 @@ import org.pathvisio.view.VPathwayElement;
 import org.pathvisio.view.VPathway;
 
 /**
- * Created by IntelliJ IDEA.
- * User: margots
- * Date: Feb 11, 2011
- * Time: 10:18:06 AM
- * To change this template use File | Settings | File Templates.
+ * Part of MIM plugin supporting the Mim Objects pane
+ *
+ * @author Margot Sunshine
+ * @author Augustin Luna <augustin@mail.nih.gov>
+ *
+ * @version 1.0
+ * @since 1.0
  */
 public class MimObjectsPane extends ObjectsPane {
     private static final LineType MIM_FIRST_FEATURE = LineType.create ("mim-first-feature", "Arrow");
     private static final LineType MIM_NEXT_FEATURE = LineType.create ("mim-next-feature", "Arrow");    
-    private static DataNodeType ENTITY_FEATURE;
-    private static DataNodeType SIMPLE_ENTITY;
-    private static DataNodeType MODIFIER;
+    private static final LineType MIM_ABSOLUTE_INHIBITION = LineType.create ("mim-absolute-inhibition", "Arrow");
+    private static final LineType MIM_PRODUCTION_WO_LOSS = LineType.create ("mim-production-wo-loss", "Arrow");
+    private static DataNodeType ENTITY_FEATURE = DataNodeType.create("EntityFeature");
+    private static DataNodeType SIMPLE_ENTITY = DataNodeType.create("SimplePhysicalEntity");
+    private static DataNodeType MODIFIER = DataNodeType.create("Modifier");
+    private static DataNodeType CONCEPTUAL_ENTITY_DATANODE = DataNodeType.create("ConceptualEntity");
+    private static DataNodeType RESTRICTED_COPY_DATANODE = DataNodeType.create("RestrictedCopy");
+    private static DataNodeType SOURCE_SINK_DATANODE = DataNodeType.create("SourceSink");
     private static final int TBARHEIGHT = 15;
     private static final int ARROW_NECESSARY_CROSSBAR = 6;
     private static final int TBARWIDTH = 1;
@@ -70,13 +77,15 @@ public class MimObjectsPane extends ObjectsPane {
         addButtons(getMimAdditional(e), "Other glyphs", COLNUM);
     }
 
+        public static void registerShapes()
+        {
+            ShapeRegistry.registerArrow (MIM_ABSOLUTE_INHIBITION.getName(), getMIMAbsoluteInhibition(),  ArrowShape.FillType.OPEN, TBARWIDTH + TBAR_GAP);
+            ShapeRegistry.registerArrow (MIM_PRODUCTION_WO_LOSS.getName(), getMIMStimulation(), ArrowShape.FillType.OPEN, ARROWWIDTH);
+            ShapeRegistry.registerArrow (MIM_FIRST_FEATURE.getName(), getMIMCovalentBond(), ArrowShape.FillType.OPEN);
+            ShapeRegistry.registerArrow (MIM_NEXT_FEATURE.getName(), getLine(), ArrowShape.FillType.OPEN);
+        }
+
     private Action[] getMimEntities(Engine e) {
-        MODIFIER = DataNodeType.create("Modifier");
-        DataNodeType CONCEPTUAL_ENTITY_DATANODE = DataNodeType.create("ConceptualEntity");
-        DataNodeType RESTRICTED_COPY_DATANODE = DataNodeType.create("RestrictedCopy");
-        DataNodeType SOURCE_SINK_DATANODE = DataNodeType.create("SourceSink");
-        SIMPLE_ENTITY = DataNodeType.create("SimplePhysicalEntity");
-        ENTITY_FEATURE = DataNodeType.create("EntityFeature");
         GeneralPath p = new GeneralPath(new Ellipse2D.Double (-6, -6, 12, 12));
         p.moveTo(7, -7);
 		p.lineTo(-7, 7);
@@ -108,8 +117,6 @@ public class MimObjectsPane extends ObjectsPane {
     }
 
     private Action[] getMimReactions(Engine e) {
-        LineType MIM_PRODUCTION_WO_LOSS = LineType.create ("mim-production-wo-loss", "Arrow");
-        ShapeRegistry.registerArrow (MIM_PRODUCTION_WO_LOSS.getName(), getMIMStimulation(), ArrowShape.FillType.OPEN, ARROWWIDTH);
         return new Action[] {
 				 new CommonActions.NewElementAction(e, new MimConnectorTemplate(
 						 "Non-covalent reversible binding", "mim-ncrb", MIMShapes.MIM_BINDING, MIMShapes.MIM_BINDING)
@@ -133,8 +140,6 @@ public class MimObjectsPane extends ObjectsPane {
     }
 
     private Action[] getMimContingencies(Engine e) {
-        LineType MIM_ABSOLUTE_INHIBITION = LineType.create ("mim-absolute-inhibition", "Arrow");
-        ShapeRegistry.registerArrow (MIM_ABSOLUTE_INHIBITION.getName(), getMIMAbsoluteInhibition(),  ArrowShape.FillType.OPEN, TBARWIDTH + TBAR_GAP);
         return new Action[] {
 				 new CommonActions.NewElementAction(e, new LineTemplate(
 						 "Stimulation", LineStyle.SOLID, LineType.LINE, MIMShapes.MIM_STIMULATION, ConnectorType.ELBOW)
@@ -163,8 +168,6 @@ public class MimObjectsPane extends ObjectsPane {
     }
 
     private Action[] getFeatureConnectors(Engine e) {
-        ShapeRegistry.registerArrow (MIM_FIRST_FEATURE.getName(), getMIMCovalentBond(), ArrowShape.FillType.OPEN);
-        ShapeRegistry.registerArrow (MIM_NEXT_FEATURE.getName(), getLine(), ArrowShape.FillType.OPEN);
         return new Action[] {
                 new CommonActions.NewElementAction(e, new MimConnectorTemplate(
 						 "First feature", "mim-nfe", MIM_FIRST_FEATURE, MIM_NEXT_FEATURE)
