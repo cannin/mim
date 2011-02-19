@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/pathvisio"/>
+	<classpathentry kind="lib" path="/pathvisio/lib/jdom.jar"/>
+	<classpathentry kind="lib" path="/pathvisio/lib/org.bridgedb.bio.jar"/>
+	<classpathentry kind="lib" path="/pathvisio/lib/org.bridgedb.jar"/>
+	<classpathentry kind="lib" path="/pathvisio/lib/org.bridgedb.rdb.construct.jar"/>
+	<classpathentry kind="lib" path="/pathvisio/lib/org.bridgedb.rdb.jar"/>
+	<classpathentry kind="lib" path="/pathvisio/lib/org.bridgedb.webservice.bridgerest.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
