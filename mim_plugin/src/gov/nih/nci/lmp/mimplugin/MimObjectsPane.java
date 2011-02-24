@@ -55,6 +55,9 @@ public class MimObjectsPane extends ObjectsPane {
     private static DataNodeType CONCEPTUAL_ENTITY_DATANODE = DataNodeType.create("ConceptualEntity");
     private static DataNodeType RESTRICTED_COPY_DATANODE = DataNodeType.create("RestrictedCopy");
     private static DataNodeType SOURCE_SINK_DATANODE = DataNodeType.create("SourceSink");
+    private static IShape SOURCE_SINK;
+    private static IShape RESTRICTED_COPY = new AbstractShape (new Ellipse2D.Double (0, 0, 10, 10), "RestrictedCopy", "RestrictedCopy", false, false);
+    private static IShape CONCEPTUAL_ENTITY = new AbstractShape (new Rectangle2D.Double (0, 0, 70, 20), "ConceptualEntity", "ConceptualEntity", true, false);;
     private static final int TBARHEIGHT = 15;
     private static final int ARROW_NECESSARY_CROSSBAR = 6;
     private static final int TBARWIDTH = 1;
@@ -83,15 +86,16 @@ public class MimObjectsPane extends ObjectsPane {
             ShapeRegistry.registerArrow (MIM_PRODUCTION_WO_LOSS.getName(), getMIMStimulation(), ArrowShape.FillType.OPEN, ARROWWIDTH);
             ShapeRegistry.registerArrow (MIM_FIRST_FEATURE.getName(), getMIMCovalentBond(), ArrowShape.FillType.OPEN);
             ShapeRegistry.registerArrow (MIM_NEXT_FEATURE.getName(), getLine(), ArrowShape.FillType.OPEN);
+            GeneralPath p = new GeneralPath(new Ellipse2D.Double (-6, -6, 12, 12));
+             p.moveTo(7, -7);
+             p.lineTo(-7, 7);
+             SOURCE_SINK = new AbstractShape(p, "SourceSink", "SourceSink", false, false);
+            ShapeRegistry.registerShape(SOURCE_SINK);
+            ShapeRegistry.registerShape(RESTRICTED_COPY);
+            ShapeRegistry.registerShape(RESTRICTED_COPY);
         }
 
     private Action[] getMimEntities(Engine e) {
-        GeneralPath p = new GeneralPath(new Ellipse2D.Double (-6, -6, 12, 12));
-        p.moveTo(7, -7);
-		p.lineTo(-7, 7);
-        IShape SOURCE_SINK = new AbstractShape(p, "SourceSink", "SourceSink", false, false);
-        IShape RESTRICTED_COPY = new AbstractShape (new Ellipse2D.Double (0, 0, 10, 10), "RestrictedCopy", "RestrictedCopy", false, false);
-        IShape CONCEPTUAL_ENTITY = new AbstractShape (new Rectangle2D.Double (0, 0, 70, 20), "ConceptualEntity", "ConceptualEntity", true, false);
         MIMEntityTemplate speTemplate = new MIMEntityTemplate(ShapeType.ROUNDED_RECTANGLE, "Simple physical entity", SIMPLE_ENTITY, 60.0, 20.0, "SPE");
         speTemplate.addDynamicProperty("NumberOfAnchors","3");
         MIMEntityTemplate conceptualEntity = new MIMEntityTemplate(CONCEPTUAL_ENTITY, "Conceptual entity", CONCEPTUAL_ENTITY_DATANODE, 70.0, 20.0, "CE");
@@ -217,7 +221,7 @@ public class MimObjectsPane extends ObjectsPane {
 
         public URL getIconLocation()
         {
-            String resName = "build/images/" + image + ".gif";
+            String resName = "images/" + image + ".gif";
             URL url = MimPlugin.class.getClassLoader().getResource(resName);
             if (url == null) Logger.log.error ("Couldn't load resource '" + resName + "'");
             return  url;
@@ -305,7 +309,7 @@ public class MimObjectsPane extends ObjectsPane {
             if (dnType != null) {
                 image = dnType.getName();
             }
-            String resName = "build/images/" + image + ".gif";
+            String resName = "images/" + image + ".gif";
             Logger.log.info("image location " + resName);
             URL url = MimPlugin.class.getClassLoader().getResource(resName);
             Logger.log.info("url " + url);
@@ -369,7 +373,7 @@ public class MimObjectsPane extends ObjectsPane {
 			return null;
 		}
 
-		private final String IMG_SPE_W_FEATURE = "build/images/mim-ef_tmpl.gif";
+		private final String IMG_SPE_W_FEATURE = "images/mim-ef_tmpl.gif";
 
         public URL getIconLocation()
         {
