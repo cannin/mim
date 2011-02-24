@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mimVis:Diagram width="0.0" height="0.0" xmlns:mimVis="http://lmp.nci.nih.gov/mim/mimVisLevel1">
+    <mimVis:MimBio>
+        <mimVis:title>Title</mimVis:title>
+        <mimVis:identifier>Identifier</mimVis:identifier>
+        <mimVis:creator>Creator</mimVis:creator>
+        <mimVis:contributor>Contributor</mimVis:contributor>
+        <mimVis:description>Description</mimVis:description>
+        <mimVis:rights>Rights</mimVis:rights>
+        <mimVis:source>Source</mimVis:source>
+        <mimVis:modified>2001-01-01</mimVis:modified>
+    </mimVis:MimBio>
+</mimVis:Diagram>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mimVis:Diagram width="414.7" height="425.7" xmlns:mimVis="http://lmp.nci.nih.gov/mim/mimVisLevel1">
+    <mimVis:EntityGlyph visId="ffd4a" centerX="325.0" centerY="81.0" width="60.0" height="20.0" color="000000" groupRef="a0fa5" type="SimplePhysicalEntity" displayName="A">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="bfd93" centerX="339.0" centerY="369.0" width="60.0" height="20.0" color="000000" groupRef="a0fa5" type="SimplePhysicalEntity" displayName="B">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="c6311" position="0.22240802675585283" color="000000" groupRef="a0fa5" type="ExplicitComplex"/>
+    <mimVis:InteractionGlyph visId="idbcc10920" color="000000" groupRef="a0fa5">
+        <mimVis:Comment>LineComment</mimVis:Comment>
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:GenericProperty key="DatabaseRelationship" value=""/>
+        <mimVis:GenericProperty key="InteractionStart" value="visId"/>
+        <mimVis:Point x="295.0" y="81.0" arrowHead="NonCovalentReversibleBinding" visRef="ffd4a" relX="-1.0" relY="0.0"/>
+        <mimVis:Point x="228.0" y="152.25" visRef=""/>
+        <mimVis:Point x="324.0" y="223.5" visRef=""/>
+        <mimVis:Point x="420.0" y="296.25" visRef=""/>
+        <mimVis:Point x="369.0" y="369.0" arrowHead="NonCovalentReversibleBinding" visRef="bfd93" relX="1.0" relY="0.0"/>
+        <mimVis:anchorRef>f5b5a</mimVis:anchorRef>
+        <mimVis:anchorRef>ece74</mimVis:anchorRef>
+        <mimVis:anchorRef>c6311</mimVis:anchorRef>
+        <mimVis:mimBioRef>ef7</mimVis:mimBioRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:Group visId="a0fa5" type="Generic"/>
+    <mimVis:Anchor visId="f5b5a" position="0.8026755852842808" type="Invisible"/>
+    <mimVis:Anchor visId="ece74" position="0.5225752508361204" type="InTrans"/>
+    <mimVis:MimBio>
+        <mimVis:title>New Pathway</mimVis:title>
+        <mimVis:identifier>20100917</mimVis:identifier>
+        <mimVis:PublicationXRef visId="ef7">
+            <mimVis:db>PubMed</mimVis:db>
+            <mimVis:id>123</mimVis:id>
+            <mimVis:title>The importance of an innervated and intact antrum and pylorus in preventing postoperative duodenogastric reflux and gastritis.</mimVis:title>
+            <mimVis:author>Keighley MR</mimVis:author>
+            <mimVis:author>Asquith P</mimVis:author>
+            <mimVis:author>Edwards JA</mimVis:author>
+            <mimVis:author>Alexander-Williams J</mimVis:author>
+            <mimVis:year>1975</mimVis:year>
+            <mimVis:journal>Br J Surg</mimVis:journal>
+        </mimVis:PublicationXRef>
+    </mimVis:MimBio>
+</mimVis:Diagram>

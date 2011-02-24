@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://genmapp.org/GPML/2010a" Name="New Pathway" Version="20100909">
+  <Graphics BoardWidth="346.5" BoardHeight="174.9" />
+  <DataNode TextLabel="A" GraphId="fdd63" Type="SimplePhysicalEntity">
+    <Attribute Key="NumberOfAnchors" Value="3" />
+    <Graphics CenterX="154.0" CenterY="104.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="B" GraphId="f73f9" Type="SimplePhysicalEntity">
+    <Attribute Key="NumberOfAnchors" Value="3" />
+    <Graphics CenterX="285.0" CenterY="104.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="P" GraphId="e05f6" Type="Modifier">
+    <Attribute Key="Number" Value="nnn" />
+    <Attribute Key="Source" Value="sourceId" />
+    <Attribute Key="Target" Value="targetId" />
+    <Graphics CenterX="285.0" CenterY="149.0" Width="20.0" Height="20.0" ZOrder="32768" FillColor="Transparent" FontSize="10" Valign="Middle" ShapeType="None" LineThickness="0.0" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <Line GraphId="id2b7d1bec">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="184.0" Y="104.0" GraphRef="fdd63" RelX="1.0" RelY="0.0" ArrowHead="mim-reversible-binding" />
+      <Point X="255.0" Y="104.0" GraphRef="f73f9" RelX="-1.0" RelY="0.0" ArrowHead="mim-reversible-binding" />
+      <Anchor Position="0.46153846153846156" Shape="None" GraphId="fb137" />
+      <Anchor Position="0.7183098591549295" Shape="Circle" GraphId="cdb03" />
+    </Graphics>
+  </Line>
+  <Line GraphId="ida24335d1">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="154.0" Y="94.0" GraphRef="fdd63" RelX="0.0" RelY="-1.0" />
+      <Point X="167.5" Y="74.0" />
+      <Point X="181.0" Y="74.0" />
+      <Point X="194.5" Y="74.0" />
+      <Point X="216.76923076923077" Y="104.0" GraphRef="fb137" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+  </Line>
+  <Line>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="285.0" Y="94.0" GraphRef="f73f9" RelX="0.0" RelY="-1.0" />
+      <Point X="272.5" Y="73.0" />
+      <Point X="260.0" Y="73.0" />
+      <Point X="247.5" Y="73.0" />
+      <Point X="235.0" Y="104.0" GraphRef="cdb03" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+  </Line>
+  <Line>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="285.0" Y="114.0" GraphRef="f73f9" RelX="0.0" RelY="1.0" ArrowHead="mim-covalent-modification" />
+      <Point X="285.0" Y="139.0" GraphRef="e05f6" RelX="0.0" RelY="-1.0" />
+    </Graphics>
+  </Line>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+</Pathway>
+
