@@ -66,6 +66,7 @@ import org.pathvisio.model.*;
 import org.pathvisio.view.*;
 import org.pathvisio.view.Graphics;
 import org.pathvisio.view.MIMShapes;
+import gov.nih.nci.lmp.mimGpml.MIMFormat;
 
 /**
  * A MIM plugin supporting the 
@@ -119,7 +120,10 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
 
         // register a lister so we get notified when a pathway is opened
         desktop.getSwingEngine().getEngine().addApplicationEventListener(this);
-
+		// create MIM format plugin
+        MIMFormat format = new MIMFormat();
+		desktop.getSwingEngine().getEngine().addPathwayExporter(format);
+		desktop.getSwingEngine().getEngine().addPathwayImporter(format);
         // set the initial enabled / disabled state of the action
         updateState();
         new MimPreferencesDlg(desktop);
@@ -402,7 +406,7 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
 			return null;
 		}
 
-        private final String IMG_EF = "build/images/SPE.gif";
+        private final String IMG_EF = "images/SPE.gif";
 
         public URL getIconLocation()
         {
