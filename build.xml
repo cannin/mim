@@ -1,17 +1,19 @@
 <?xml version="1.0"?>
-<project name="MIMPathvisio" default="build-install" basedir=".">
+<project name="MIMPlugin" default="build-install" basedir=".">
 	<!-- always be java 1.5 compatible -->
 	<property name="ant.build.javac.target" value="1.5" />
 	<property name="ant.build.javac.source" value="1.5" />
 
-	<property name="base.name" value="MIMPathvisio" />
+	<property name="base.name" value="MIMPlugin" />
 	<property name="jar.name" value="${base.name}.jar" />
-	
-	<property environment="env" />
+    <property name="build.mimplugins.dir" value="build/mimplugins"/>
+
+    <property environment="env" />
 	<property name="install.dir" value="${env.HOME}/.PathVisio/plugins" />
-	<property name="pathvisio.dir" value="../pathvisio" />
-	<property name="lib.dir" value="../pathvisio/lib" />
-	<property name="images.dir" value="images" />
+	<property name="pathvisio.dir" value="C:/Projects/pathvisio_new_201101" />
+	<property name="lib.dir" value="${pathvisio.dir}/lib" />
+    <property name="mim.lib" value="lib"/>
+    <property name="images.dir" value="images" />
 	
 	<!--<property name="webstart.dir" value="build/webstart" />-->
 	
@@ -22,9 +24,21 @@
 			<include name="**/*.jar" />
 		</fileset>
 	</path>
-	
-	<path id="test.class.path">
-        <path refid="project.class.path" /> 		
+
+    <path id="mim.path">
+       <path refid="project.class.path"/>
+       <pathelement location="${build.mimplugins.dir}"/>
+       <fileset dir="${mim.lib}">
+         <include name="commons-collections-3.2.1.jar"/>
+         <include name="jsr173_1.0_api.jar"/>
+         <include name="junit-4.8.1.jar"/>
+         <include name="mimVis.jar" />
+         <include name="xbean.jar"/>
+       </fileset>
+     </path>
+
+    <path id="test.class.path">
+        <path refid="project.class.path" />
         <pathelement location="build" /> 
 	</path>	
 	
@@ -44,11 +58,11 @@
 
 	<target name="build" depends="prepare">
 		<javac srcdir="src" includes="**" debug="true" destdir="build">
-			<classpath refid="project.class.path" />
+			<classpath refid="mim.path" />
 		</javac>
 	</target>
 
-	<target name="jar" depends="build">
+    <target name="jar" depends="build">
 		<manifestclasspath property="manifest.cp" jarfile="${jar.name}">
 			<classpath refid="project.class.path" />
 		</manifestclasspath>
