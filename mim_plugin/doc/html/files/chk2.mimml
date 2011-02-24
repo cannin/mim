@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mimVis:Diagram width="1158.3" height="924.0" xmlns:mimVis="http://lmp.nci.nih.gov/mim/mimVisLevel1">
+    <mimVis:EntityGlyph visId="acbf3" position="0.5235291979303687" color="0000CC" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="ec05a" position="0.8383232794314079" color="0000CC" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="ca6af" position="0.4" color="0000CC" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="c7c3b" position="0.5588235294117647" color="0000CC" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="c03e4" position="0.726027397260274" color="0000CC" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="a801f" position="0.667132867132867" color="0000CC" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="dafed" position="0.6404494382022472" color="000000" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="b38fd" position="0.7428571428571429" color="000000" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="e9480" position="0.37974683544303806" color="000000" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="ccb4f" position="0.5504587155963298" color="0000CC" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="b7b15" position="0.7272727272727275" color="0000CC" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="ddc9a" position="0.5098039215686274" color="0000CC" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="a4a81" position="0.5909090909090908" color="0000CC" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="a3849" position="0.6041666666666667" color="0000CC" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="e1df6" position="0.627906976744186" color="0000CC" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="dc974" position="0.5142857142857142" color="0000CC" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="c362f" position="0.55" color="000000" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="eed41" position="0.7580645161290323" color="000000" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="b8e21" position="0.014211885978037643" color="000000" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="d198d" position="0.04135338253612828" color="000000" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="f1327" position="0.2037135662897579" color="000000" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="e1fe7" position="0.7633802816901408" color="000000" type="ExplicitComplex"/>
+    <mimVis:EntityGlyph visId="d73bd" centerX="675.6666666666666" centerY="115.33333333333329" width="216.0" height="20.000000000000018" color="000000" type="SimplePhysicalEntity" displayName="Chromatin with DSB">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="16"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="e4900" centerX="376.16666666666663" centerY="90.99999999999979" width="103.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="Repaired chromatin">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="c0757" centerX="758.166666666667" centerY="168.6666666666667" width="45.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="H2AX">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="a482c" centerX="721.5" centerY="484.0" width="105.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="Chk2">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="6"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="d8200" centerX="876.5000000000002" centerY="524.3333333333334" width="51.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="PP2C">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="f0d55" centerX="932.3333333333328" centerY="524.0" width="48.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="Wip1">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="e9bc4" centerX="661.0" centerY="305.0" width="74.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="ATM">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="6"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="a3266" centerX="684.0" centerY="673.0" width="64.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="p53">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="5"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="af6a1" centerX="540.0" centerY="632.0" width="66.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="MdmX">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="5"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="e519f" centerX="540.0" centerY="722.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="Mdm2">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="ff34a" centerX="568.0" centerY="772.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="p21cip1">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="ac0d0" centerX="568.0" centerY="797.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="Gadd45">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="a414a" centerX="755.0" centerY="755.0" width="42.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="Bax">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="feda1" centerX="754.5" centerY="780.0" width="41.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="Noxa">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="bbd04" centerX="754.5" centerY="805.0" width="39.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="Puma">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="b6866" centerX="754.5" centerY="830.0" width="39.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="Fas">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="cc654" centerX="810.5" centerY="705.0" width="37.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="PML">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="f4fd1" centerX="933.0" centerY="665.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="E2F1">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="5"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="d7032" centerX="933.0" centerY="777.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="ARF">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="cb355" centerX="1023.0" centerY="699.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="p73">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="ebfdd" centerX="1023.0" centerY="731.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="ApafI">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="de47d" centerX="880.5" centerY="718.0" width="35.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="ASPP">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="e5323" centerX="359.0" centerY="721.0" width="40.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="Cdks">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="df1cc" centerX="353.0" centerY="638.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="Cdc25C">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="ad9b8" centerX="351.0" centerY="534.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="Cdc25A">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="a388d" centerX="783.0" centerY="586.0" width="48.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="PP2A">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="dd670" centerX="329.0" centerY="331.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="53BP1">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="ab7eb" centerX="403.0" centerY="332.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="MDC1">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="b6157" centerX="480.0" centerY="332.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="MRN">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="e76ad" centerX="441.0" centerY="421.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="BRCA1">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="c47fd" centerX="862.0" centerY="314.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="DNA-PK">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="ab6e1" centerX="583.0" centerY="242.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="Tip60HAT">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="a9d2b" centerX="758.5" centerY="244.00000000000014" width="41.0" height="20.0" color="0000CC" type="Modifier" displayName="P:S139">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="f67c2" centerX="684.0" centerY="398.0" width="34.0" height="12.0" color="0000CC" type="Modifier" displayName="P:T68">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="e9fdb" centerX="714.0" centerY="426.0" width="46.0" height="12.0" color="0000CC" type="Modifier" displayName="P:T383/7">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="e4cb3" centerX="759.5" centerY="431.5" width="39.0" height="13.0" color="0000CC" type="Modifier" displayName="P:S516">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="db794" centerX="687.5" centerY="237.5" width="39.0" height="13.0" color="0000CC" type="Modifier" displayName="P:S1981">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="c6b4f" centerX="663.0" centerY="604.5" width="38.0" height="15.0" color="0000CC" type="Modifier" displayName="P:S15">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="d1e1e" centerX="695.0" centerY="604.5" width="38.0" height="15.0" color="0000CC" type="Modifier" displayName="P:S20">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="de881" centerX="518.0" centerY="563.5" width="38.0" height="15.0" color="0000CC" type="Modifier" displayName="P:S367">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="fe5a3" centerX="562.0" centerY="591.5" width="18.0" height="15.0" color="0000CC" type="Modifier" displayName="P">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="a4856" centerX="913.0" centerY="601.5" width="38.0" height="15.0" color="0000CC" type="Modifier" displayName="P:S31">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="cb898" centerX="953.0" centerY="601.5" width="38.0" height="15.0" color="0000CC" type="Modifier" displayName="P:S364">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="dd0d2" centerX="801.0" centerY="636.5" width="38.0" height="15.0" color="0000CC" type="Modifier" displayName="P:S117">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="cf612" centerX="338.0" centerY="572.5" width="38.0" height="15.0" color="0000CC" type="Modifier" displayName="P:S216">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="e2de7" centerX="336.0" centerY="473.5" width="38.0" height="15.0" color="0000CC" type="Modifier" displayName="P:S123">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="b93e4" centerX="783.0" centerY="534.5" width="16.0" height="13.0" color="0000CC" type="Modifier" displayName="P">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="e1e05" centerX="344.0" centerY="274.5" width="18.0" height="15.0" color="0000CC" type="Modifier" displayName="P">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="cb0a4" centerX="418.0" centerY="275.5" width="18.0" height="15.0" color="0000CC" type="Modifier" displayName="P">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="c9f15" centerX="495.0" centerY="274.5" width="18.0" height="15.0" color="0000CC" type="Modifier" displayName="P">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="f9d4d" centerX="456.0" centerY="466.5" width="18.0" height="15.0" color="0000CC" type="Modifier" displayName="P">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="f2106" centerX="426.0" centerY="466.5" width="34.0" height="15.0" color="0000CC" type="Modifier" displayName="P:S988">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="f828f" centerX="388.0" centerY="797.0" width="116.0" height="20.0" color="000000" type="ConceptualEntity" displayName="Cell Cycle Checkpoint">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="ConceptualEntity"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="f9e1a" centerX="877.0" centerY="830.0" width="96.0" height="20.0" color="000000" type="ConceptualEntity" displayName="Apoptosis">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="6"/>
+        <mimVis:GenericProperty key="ShapeType" value="ConceptualEntity"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="fa959" centerX="591.0" centerY="673.0" width="15.0" height="15.0" color="CC0000" type="SourceSink">
+        <mimVis:GenericProperty key="ShapeType" value="SourceSink"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="acdb7" centerX="430.0" centerY="632.0" width="15.0" height="15.0" color="CC0000" type="SourceSink">
+        <mimVis:GenericProperty key="ShapeType" value="SourceSink"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="b2315" centerX="275.0" centerY="638.0" width="15.0" height="15.0" color="CC0000" type="SourceSink">
+        <mimVis:GenericProperty key="ShapeType" value="SourceSink"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="f88dd" centerX="272.0" centerY="534.0" width="15.0" height="15.0" color="CC0000" type="SourceSink">
+        <mimVis:GenericProperty key="ShapeType" value="SourceSink"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="a3c8d" centerX="680.0" centerY="364.0" width="10.0" height="10.0" color="000000" type="RestrictedCopy">
+        <mimVis:GenericProperty key="ShapeType" value="RestrictedCopy"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="d285e" centerX="758.0" centerY="538.0" width="10.0" height="10.0" color="000000" type="RestrictedCopy">
+        <mimVis:GenericProperty key="ShapeType" value="RestrictedCopy"/>
+    </mimVis:EntityGlyph>
+    <mimVis:InteractionGlyph visId="idc1b882bc" color="000000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="580.37256936466" y="105.33333587646484" arrowHead="Line" visRef="d73bd" relX="-0.8823529411764706" relY="-1.0"/>
+        <mimVis:Point x="427.6666564941406" y="91.0" arrowHead="StochiometricConversion" visRef="e4900" relX="1.0" relY="0.0"/>
+        <mimVis:anchorRef>c40c5</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id2aeef0b" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="758.1666870117188" y="178.6666717529297" arrowHead="CovalentModification" visRef="c0757" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="758.5" y="234.0" arrowHead="Line" visRef="a9d2b" relX="0.0" relY="-1.0"/>
+        <mimVis:anchorRef>c6b38</mimVis:anchorRef>
+        <mimVis:anchorRef>dec56</mimVis:anchorRef>
+        <mimVis:anchorRef>acbf3</mimVis:anchorRef>
+        <mimVis:anchorRef>ec05a</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id6cbd7db5" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="684.0" y="404.0" arrowHead="Line" visRef="f67c2" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="684.0" y="474.0" arrowHead="CovalentModification" visRef="a482c" relX="-0.7142857142857143" relY="-1.0"/>
+        <mimVis:anchorRef>c0fc6</mimVis:anchorRef>
+        <mimVis:anchorRef>a190b</mimVis:anchorRef>
+        <mimVis:anchorRef>ca6af</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id7483b612" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="714.0" y="432.0" arrowHead="Line" visRef="e9fdb" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="714.0" y="474.0" arrowHead="CovalentModification" visRef="a482c" relX="-0.1428571428571429" relY="-1.0"/>
+        <mimVis:anchorRef>c5149</mimVis:anchorRef>
+        <mimVis:anchorRef>c7c3b</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id74b3ea0a" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="759.5" y="438.0" arrowHead="Line" visRef="e4cb3" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="759.25" y="458.6666666666667"/>
+        <mimVis:Point x="759.0" y="474.0" arrowHead="CovalentModification" visRef="a482c" relX="0.7142857142857142" relY="-1.0"/>
+        <mimVis:anchorRef>ecfd8</mimVis:anchorRef>
+        <mimVis:anchorRef>c03e4</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id37b4ef1d" color="CC0033">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="920.3333129882812" y="514.0" arrowHead="Line" visRef="f0d55" relX="-0.5" relY="-1.0"/>
+        <mimVis:Point x="684.0" y="411.46666666666664" arrowHead="CovalentBondCleavage" visRef="c0fc6" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>c1e9b</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id4aa7d774" color="CC0033">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="876.5" y="514.3333129882812" arrowHead="Line" visRef="d8200" relX="0.0" relY="-1.0"/>
+        <mimVis:Point x="876.6666666666666" y="411.46666666666664" arrowHead="BranchingRight" visRef="c1e9b" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id998a0c73" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="624.0" y="305.0" arrowHead="Line" visRef="e9bc4" relX="-1.0" relY="0.0"/>
+        <mimVis:Point x="605.0" y="390.25"/>
+        <mimVis:Point x="605.0" y="475.5"/>
+        <mimVis:Point x="605.0" y="549.4013761467891"/>
+        <mimVis:Point x="663.0" y="623.302752293578" arrowHead="Catalysis" visRef="e9f49" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>d2c04</mimVis:anchorRef>
+        <mimVis:anchorRef>f7cb0</mimVis:anchorRef>
+        <mimVis:anchorRef>c39ab</mimVis:anchorRef>
+        <mimVis:anchorRef>df166</mimVis:anchorRef>
+        <mimVis:anchorRef>df2c9</mimVis:anchorRef>
+        <mimVis:anchorRef>f8a62</mimVis:anchorRef>
+        <mimVis:anchorRef>fe98f</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idd2185b71" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="687.5" y="244.0" arrowHead="Line" visRef="db794" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="687.4285714285714" y="295.0" arrowHead="CovalentModification" visRef="e9bc4" relX="0.7142857142857142" relY="-1.0"/>
+        <mimVis:anchorRef>b25c2</mimVis:anchorRef>
+        <mimVis:anchorRef>a801f</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="f033a" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="655.7142857142857" y="295.0" arrowHead="Line" visRef="e9bc4" relX="-0.1428571428571429" relY="-1.0"/>
+        <mimVis:Point x="655.8571428571429" y="274.0"/>
+        <mimVis:Point x="656.0" y="265.38392857142856"/>
+        <mimVis:Point x="687.5" y="256.7678571428571" arrowHead="Catalysis" visRef="b25c2" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>b7890</mimVis:anchorRef>
+        <mimVis:anchorRef>edb08</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="ida92d7b98" color="000000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="679.5" y="315.0" arrowHead="NonCovalentReversibleBinding" visRef="e9bc4" relX="0.5" relY="1.0"/>
+        <mimVis:Point x="680.0" y="359.0" arrowHead="NonCovalentReversibleBinding" visRef="a3c8d" relX="0.0" relY="-1.0"/>
+        <mimVis:anchorRef>f6ad3</mimVis:anchorRef>
+        <mimVis:anchorRef>dafed</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id72f7426" color="CC0000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="687.4285714285714" y="278.0" arrowHead="Line" visRef="a801f" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="679.5" y="332.8" arrowHead="Inhibition" visRef="f6ad3" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id11397e7c" color="000000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="540.0" y="642.0" arrowHead="NonCovalentReversibleBinding" visRef="af6a1" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="540.0" y="712.0" arrowHead="NonCovalentReversibleBinding" visRef="e519f" relX="0.0" relY="-1.0"/>
+        <mimVis:anchorRef>b38fd</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="ida1533334" color="000000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="570.0" y="722.0" arrowHead="NonCovalentReversibleBinding" visRef="e519f" relX="1.0" relY="0.0"/>
+        <mimVis:Point x="662.6666666666666" y="683.0" arrowHead="NonCovalentReversibleBinding" visRef="a3266" relX="-0.6666666666666667" relY="1.0"/>
+        <mimVis:anchorRef>e9480</mimVis:anchorRef>
+        <mimVis:anchorRef>e97b3</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id3ff5b476" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="663.0" y="612.0" arrowHead="Line" visRef="c6b4f" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="662.6666666666666" y="663.0" arrowHead="CovalentModification" visRef="a3266" relX="-0.6666666666666667" relY="-1.0"/>
+        <mimVis:anchorRef>ccb4f</mimVis:anchorRef>
+        <mimVis:anchorRef>e9f49</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id823c4ef4" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="695.0" y="612.0" arrowHead="Line" visRef="d1e1e" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="694.6666666666666" y="663.0" arrowHead="CovalentModification" visRef="a3266" relX="0.33333333333333326" relY="-1.0"/>
+        <mimVis:anchorRef>b7b15</mimVis:anchorRef>
+        <mimVis:anchorRef>a46d7</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id3b2e6910" color="CC0000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="652.0" y="673.0" arrowHead="Line" visRef="a3266" relX="-1.0" relY="0.0"/>
+        <mimVis:Point x="598.5" y="673.0" arrowHead="StochiometricConversion" visRef="fa959" relX="1.0" relY="0.0"/>
+        <mimVis:anchorRef>b498e</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id2e1fa3fa" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="620.0" y="722.0" arrowHead="Line" visRef="e9480" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="620.0" y="702.0"/>
+        <mimVis:Point x="620.0" y="696.0"/>
+        <mimVis:Point x="620.0" y="690.0"/>
+        <mimVis:Point x="620.0" y="673.0" arrowHead="Stimulation" visRef="b498e" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>e98e0</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idd3bce82b" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="540.0" y="694.0" arrowHead="Line" visRef="b38fd" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="620.0" y="694.4375" arrowHead="Stimulation" visRef="e98e0" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="fde87" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="518.0" y="571.0" arrowHead="Line" visRef="de881" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="518.0" y="622.0" arrowHead="CovalentModification" visRef="af6a1" relX="-0.6666666666666667" relY="-1.0"/>
+        <mimVis:anchorRef>ddc9a</mimVis:anchorRef>
+        <mimVis:anchorRef>decb2</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="c5d0e" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="562.0" y="599.0" arrowHead="Line" visRef="fe5a3" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="562.0" y="622.0" arrowHead="CovalentModification" visRef="af6a1" relX="0.6666666666666665" relY="-1.0"/>
+        <mimVis:anchorRef>a0a34</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="a91e1" color="CC0000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="507.0" y="632.0" arrowHead="Line" visRef="af6a1" relX="-1.0" relY="0.0"/>
+        <mimVis:Point x="437.5" y="632.0" arrowHead="StochiometricConversion" visRef="acdb7" relX="1.0" relY="0.0"/>
+        <mimVis:anchorRef>b38c6</mimVis:anchorRef>
+        <mimVis:anchorRef>b9c27</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id1d8feb8b" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="518.0" y="597.0" arrowHead="Line" visRef="ddc9a" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="476.0" y="605.0"/>
+        <mimVis:Point x="475.91121495327104" y="613.0"/>
+        <mimVis:Point x="475.8224299065421" y="632.0" arrowHead="Stimulation" visRef="b38c6" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id52b276a8" color="CC0000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="662.6666666666666" y="639.9235474006116" arrowHead="Line" visRef="ccb4f" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="639.0" y="663.9617737003058"/>
+        <mimVis:Point x="639.0" y="688.0"/>
+        <mimVis:Point x="639.0" y="722.0" arrowHead="Inhibition" visRef="e97b3" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>ffc5e</mimVis:anchorRef>
+        <mimVis:anchorRef>a3860</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="ida1ec46ae" color="CC0000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="694.6666666666666" y="649.0" arrowHead="Line" visRef="b7b15" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="682.0" y="649.0"/>
+        <mimVis:Point x="639.0" y="649.0" arrowHead="BranchingRight" visRef="ffc5e" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id3a315e9d" color="CC00CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="684.0" y="683.0" arrowHead="Line" visRef="a3266" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="735.0" y="830.0" arrowHead="TemplateReaction" visRef="b6866" relX="-1.0" relY="0.0"/>
+        <mimVis:anchorRef>e67fe</mimVis:anchorRef>
+        <mimVis:anchorRef>a78cf</mimVis:anchorRef>
+        <mimVis:anchorRef>a4fe0</mimVis:anchorRef>
+        <mimVis:anchorRef>e7792</mimVis:anchorRef>
+        <mimVis:anchorRef>be4be</mimVis:anchorRef>
+        <mimVis:anchorRef>fdeaa</mimVis:anchorRef>
+        <mimVis:anchorRef>ea117</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id236f110d" color="CC00CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="684.0" y="805.0" arrowHead="BranchingLeft" visRef="e67fe" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="735.0" y="805.0" arrowHead="TemplateReaction" visRef="bbd04" relX="-1.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idd640bfc5" color="CC00CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="684.0" y="728.0" arrowHead="BranchingRight" visRef="be4be" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="656.0" y="762.5"/>
+        <mimVis:Point x="598.0" y="797.0" arrowHead="TemplateReaction" visRef="ac0d0" relX="1.0" relY="0.0"/>
+        <mimVis:anchorRef>bb799</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="ida13d01a8" color="CC00CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="684.0" y="780.0" arrowHead="BranchingLeft" visRef="a4fe0" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="734.0" y="780.0" arrowHead="TemplateReaction" visRef="feda1" relX="-1.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id7538f12" color="CC00CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="656.0" y="772.0" arrowHead="BranchingRight" visRef="bb799" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="638.0" y="772.0"/>
+        <mimVis:Point x="598.0" y="772.0" arrowHead="TemplateReaction" visRef="ff34a" relX="1.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="ide9519258" color="CC00CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="684.0" y="755.0" arrowHead="BranchingLeft" visRef="e7792" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="734.0" y="755.0" arrowHead="TemplateReaction" visRef="a414a" relX="-1.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id1d42d2" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="605.0" y="605.0" arrowHead="BranchingRight" visRef="d2c04" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="592.0" y="605.0"/>
+        <mimVis:Point x="562.0" y="605.0" arrowHead="Catalysis" visRef="a0a34" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idc501a41" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="605.0" y="437.3333333333333" arrowHead="BranchingLeft" visRef="f7cb0" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="684.0" y="446.93333333333334" arrowHead="Catalysis" visRef="a190b" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="d6db2" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="913.0" y="609.0" arrowHead="Line" visRef="a4856" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="913.0" y="655.0" arrowHead="CovalentModification" visRef="f4fd1" relX="-0.6666666666666667" relY="-1.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="bbf4e" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="953.0" y="609.0" arrowHead="Line" visRef="cb898" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="953.0" y="655.0" arrowHead="CovalentModification" visRef="f4fd1" relX="0.6666666666666665" relY="-1.0"/>
+        <mimVis:anchorRef>ede67</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="feab6" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="801.0" y="644.0" arrowHead="Line" visRef="dd0d2" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="801.25" y="695.0" arrowHead="CovalentModification" visRef="cc654" relX="-0.5" relY="-1.0"/>
+        <mimVis:anchorRef>a4a81</mimVis:anchorRef>
+        <mimVis:anchorRef>be5aa</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id8bce6a7b" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="829.0" y="705.0" arrowHead="Line" visRef="cc654" relX="1.0" relY="0.0"/>
+        <mimVis:Point x="856.4285714285714" y="820.0" arrowHead="Stimulation" visRef="f9e1a" relX="-0.4285714285714286" relY="-1.0"/>
+        <mimVis:anchorRef>aad72</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id3ec7f7c6" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="801.25" y="674.0340909090909" arrowHead="Line" visRef="a4a81" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="821.25" y="674.0170454545455"/>
+        <mimVis:Point x="833.3430591982016" y="674.0"/>
+        <mimVis:Point x="845.4361183964031" y="705.0" arrowHead="Stimulation" visRef="aad72" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id1b449487" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="705.3333333333334" y="683.0" arrowHead="Line" visRef="a3266" relX="0.6666666666666665" relY="1.0"/>
+        <mimVis:Point x="774.0238095238095" y="723.0"/>
+        <mimVis:Point x="842.7142857142857" y="820.0" arrowHead="Stimulation" visRef="f9e1a" relX="-0.7142857142857143" relY="-1.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id325bc23e" color="CC00CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="933.0" y="675.0" arrowHead="Line" visRef="f4fd1" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="933.0" y="767.0" arrowHead="TemplateReaction" visRef="d7032" relX="0.0" relY="-1.0"/>
+        <mimVis:anchorRef>f0f50</mimVis:anchorRef>
+        <mimVis:anchorRef>bc239</mimVis:anchorRef>
+        <mimVis:anchorRef>d9478</mimVis:anchorRef>
+        <mimVis:anchorRef>df8ed</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id49885102" color="CC00CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="933.0" y="699.0" arrowHead="BranchingLeft" visRef="f0f50" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="993.0" y="699.0" arrowHead="TemplateReaction" visRef="cb355" relX="-1.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id44286e31" color="CC00CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="933.0" y="731.0" arrowHead="BranchingLeft" visRef="bc239" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="993.0" y="731.0" arrowHead="TemplateReaction" visRef="ebfdd" relX="-1.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id7de53285" color="CC00CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="933.0" y="717.0" arrowHead="BranchingRight" visRef="d9478" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="925.0" y="717.5"/>
+        <mimVis:Point x="898.0" y="718.0" arrowHead="TemplateReaction" visRef="de47d" relX="1.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="e717e" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="338.0" y="580.0" arrowHead="Line" visRef="cf612" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="338.0" y="628.0" arrowHead="CovalentModification" visRef="df1cc" relX="-0.5" relY="-1.0"/>
+        <mimVis:anchorRef>a3849</mimVis:anchorRef>
+        <mimVis:anchorRef>e2498</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="aebc1" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="336.0" y="481.0" arrowHead="Line" visRef="e2de7" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="336.0" y="524.0" arrowHead="CovalentModification" visRef="ad9b8" relX="-0.5" relY="-1.0"/>
+        <mimVis:anchorRef>e1df6</mimVis:anchorRef>
+        <mimVis:anchorRef>d1091</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="a72b0" color="CC0000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="323.0" y="638.0" arrowHead="Line" visRef="df1cc" relX="-1.0" relY="0.0"/>
+        <mimVis:Point x="282.5" y="638.0" arrowHead="StochiometricConversion" visRef="b2315" relX="1.0" relY="0.0"/>
+        <mimVis:anchorRef>b1e73</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="bc043" color="CC0000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="321.0" y="534.0" arrowHead="Line" visRef="ad9b8" relX="-1.0" relY="0.0"/>
+        <mimVis:Point x="279.5" y="534.0" arrowHead="StochiometricConversion" visRef="f88dd" relX="1.0" relY="0.0"/>
+        <mimVis:anchorRef>fb829</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idef243a97" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="336.0" y="508.0" arrowHead="Line" visRef="e1df6" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="306.0" y="510.5"/>
+        <mimVis:Point x="306.0" y="513.0"/>
+        <mimVis:Point x="306.0" y="534.0" arrowHead="Stimulation" visRef="fb829" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id2464b432" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="338.0" y="609.0" arrowHead="Line" visRef="a3849" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="306.0" y="613.0"/>
+        <mimVis:Point x="306.0" y="617.0"/>
+        <mimVis:Point x="306.0" y="638.0" arrowHead="Stimulation" visRef="b1e73" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id85bef5e0" color="CC0000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="359.0" y="731.0" arrowHead="Line" visRef="e5323" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="359.0" y="787.0" arrowHead="Inhibition" visRef="f828f" relX="-0.5" relY="-1.0"/>
+        <mimVis:anchorRef>d3b09</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id9f37ecef" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="381.0" y="534.0" arrowHead="Line" visRef="ad9b8" relX="1.0" relY="0.0"/>
+        <mimVis:Point x="405.0" y="643.7"/>
+        <mimVis:Point x="359.0" y="753.4" arrowHead="Stimulation" visRef="d3b09" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>f2610</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idbf62156a" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="383.0" y="638.0" arrowHead="Line" visRef="df1cc" relX="1.0" relY="0.0"/>
+        <mimVis:Point x="396.0" y="637.8533807829181"/>
+        <mimVis:Point x="405.0" y="637.7067615658362" arrowHead="BranchingLeft" visRef="f2610" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id855c71e" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="729.0" y="494.0" arrowHead="Line" visRef="a482c" relX="0.1428571428571428" relY="1.0"/>
+        <mimVis:Point x="747.5" y="665.0"/>
+        <mimVis:Point x="766.0" y="665.0"/>
+        <mimVis:Point x="801.25" y="665.0" arrowHead="Catalysis" visRef="be5aa" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>b37dd</mimVis:anchorRef>
+        <mimVis:anchorRef>faea5</mimVis:anchorRef>
+        <mimVis:anchorRef>ffdf4</mimVis:anchorRef>
+        <mimVis:anchorRef>eeba4</mimVis:anchorRef>
+        <mimVis:anchorRef>a9bff</mimVis:anchorRef>
+        <mimVis:anchorRef>a90d1</mimVis:anchorRef>
+        <mimVis:anchorRef>cfb32</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="ida30793f2" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="729.0" y="621.4759467758445" arrowHead="BranchingLeft" visRef="b37dd" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="953.0" y="622.0" arrowHead="Catalysis" visRef="ede67" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idaf2119b9" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="729.0" y="634.8552361396304" arrowHead="BranchingRight" visRef="faea5" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="716.0" y="635.5596534358143"/>
+        <mimVis:Point x="694.6666666666666" y="635.6850152905198" arrowHead="Catalysis" visRef="a46d7" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idb770e38e" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="729.0" y="581.639713408393" arrowHead="BranchingRight" visRef="ffdf4" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="680.0" y="582.0"/>
+        <mimVis:Point x="518.0" y="582.0" arrowHead="Catalysis" visRef="decb2" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id5d62c35f" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="729.0" y="525.0" arrowHead="BranchingRight" visRef="eeba4" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="393.0" y="511.6"/>
+        <mimVis:Point x="336.0" y="498.2" arrowHead="Catalysis" visRef="d1091" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>b8b03</mimVis:anchorRef>
+        <mimVis:anchorRef>e2322</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idaef080ff" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="434.00000000000006" y="525.0" arrowHead="BranchingLeft" visRef="e2322" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="396.0" y="589.0"/>
+        <mimVis:Point x="358.0" y="589.0"/>
+        <mimVis:Point x="338.0" y="589.0" arrowHead="Catalysis" visRef="e2498" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idbd88121" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="538.0" y="797.0" arrowHead="Line" visRef="ac0d0" relX="-1.0" relY="0.0"/>
+        <mimVis:Point x="446.0" y="797.0" arrowHead="Stimulation" visRef="f828f" relX="1.0" relY="0.0"/>
+        <mimVis:anchorRef>c5625</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idc9caf752" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="538.0" y="772.0" arrowHead="Line" visRef="ff34a" relX="-1.0" relY="0.0"/>
+        <mimVis:Point x="474.0" y="797.0" arrowHead="BranchingLeft" visRef="c5625" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id8fbf2ee4" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="774.0" y="830.0" arrowHead="Line" visRef="b6866" relX="1.0" relY="0.0"/>
+        <mimVis:Point x="829.0" y="830.0" arrowHead="Stimulation" visRef="f9e1a" relX="-1.0" relY="0.0"/>
+        <mimVis:anchorRef>c7d48</mimVis:anchorRef>
+        <mimVis:anchorRef>f4908</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id579469c" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="774.0" y="805.0" arrowHead="Line" visRef="bbd04" relX="1.0" relY="0.0"/>
+        <mimVis:Point x="808.0" y="805.0" arrowHead="BranchingLeft" visRef="f4fe1" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id2ace4a9f" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="775.0" y="780.0" arrowHead="Line" visRef="feda1" relX="1.0" relY="0.0"/>
+        <mimVis:Point x="808.0" y="780.0" arrowHead="BranchingLeft" visRef="eb6c9" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id1635941b" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="776.0" y="755.0" arrowHead="Line" visRef="a414a" relX="1.0" relY="0.0"/>
+        <mimVis:Point x="808.0" y="775.0"/>
+        <mimVis:Point x="808.0" y="795.0"/>
+        <mimVis:Point x="808.0" y="830.0" arrowHead="BranchingRight" visRef="c7d48" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>eb6c9</mimVis:anchorRef>
+        <mimVis:anchorRef>f4fe1</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="af27d" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="783.0" y="541.0" arrowHead="Line" visRef="b93e4" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="783.0" y="576.0" arrowHead="CovalentModification" visRef="a388d" relX="0.0" relY="-1.0"/>
+        <mimVis:anchorRef>a4fc7</mimVis:anchorRef>
+        <mimVis:anchorRef>dc974</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idc1b313fa" color="CC0000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="807.0" y="586.0" arrowHead="Line" visRef="a388d" relX="1.0" relY="0.0"/>
+        <mimVis:Point x="980.0" y="389.373529399885"/>
+        <mimVis:Point x="758.1666870117188" y="192.74705879977003" arrowHead="CovalentBondCleavage" visRef="c6b38" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>ad5eb</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id65dfbb43" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="729.0" y="553.7543500511771" arrowHead="BranchingLeft" visRef="a9bff" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="783.0" y="554.0" arrowHead="Catalysis" visRef="a4fc7" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="ide656513c" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="783.0" y="559.0" arrowHead="Line" visRef="dc974" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="803.0" y="559.5"/>
+        <mimVis:Point x="815.3684503901895" y="559.0"/>
+        <mimVis:Point x="825.5477998632252" y="586.0" arrowHead="Stimulation" visRef="ad5eb" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idb5802e0c" color="000000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="880.5" y="728.0" arrowHead="Line" visRef="de47d" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="684.0" y="735.0" arrowHead="Stimulation" visRef="fdeaa" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id97e308c" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="1053.0" y="699.0" arrowHead="Line" visRef="cb355" relX="1.0" relY="0.0"/>
+        <mimVis:Point x="1062.0" y="764.5"/>
+        <mimVis:Point x="925.0" y="830.0" arrowHead="Stimulation" visRef="f9e1a" relX="1.0" relY="0.0"/>
+        <mimVis:anchorRef>b5d6f</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id7b9c2270" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="1023.0" y="741.0" arrowHead="Line" visRef="ebfdd" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="1022.9392857142857" y="830.0" arrowHead="BranchingLeft" visRef="b5d6f" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id59531bc3" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="639.0" y="698.0" arrowHead="BranchingLeft" visRef="a3860" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="684.0" y="698.0" arrowHead="Stimulation" visRef="ea117" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id3cb9ff61" color="000000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="759.0" y="494.0" arrowHead="NonCovalentReversibleBinding" visRef="a482c" relX="0.7142857142857142" relY="1.0"/>
+        <mimVis:Point x="758.0" y="533.0" arrowHead="NonCovalentReversibleBinding" visRef="d285e" relX="0.0" relY="-1.0"/>
+        <mimVis:anchorRef>c362f</mimVis:anchorRef>
+        <mimVis:anchorRef>a0201</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id4c8b7fff" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="729.0" y="501.96724667349025" arrowHead="BranchingLeft" visRef="cfb32" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="798.0" y="475.6502900034118"/>
+        <mimVis:Point x="759.5" y="449.3333333333333" arrowHead="Catalysis" visRef="ecfd8" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>e348d</mimVis:anchorRef>
+        <mimVis:anchorRef>c49fb</mimVis:anchorRef>
+        <mimVis:anchorRef>c183b</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id8ef2e9" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="758.0" y="515.0" arrowHead="Line" visRef="c362f" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="818.0" y="490.08653484600256"/>
+        <mimVis:Point x="798.0" y="465.1730696920052" arrowHead="NecessaryStimulation" visRef="e348d" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id7ceaff6f" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="714.0" y="455.47058823529414" arrowHead="Line" visRef="c7c3b" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="654.0" y="483.2941176470588"/>
+        <mimVis:Point x="729.0" y="511.92630501535314" arrowHead="NecessaryStimulation" visRef="a90d1" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>eeec1</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id4b85173d" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="759.0" y="464.0" arrowHead="Line" visRef="c03e4" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="746.0" y="464.0"/>
+        <mimVis:Point x="654.0" y="464.5374625246459" arrowHead="BranchingRight" visRef="eeec1" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id3d90ab41" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="684.0" y="432.0" arrowHead="Line" visRef="ca6af" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="640.0" y="476.0"/>
+        <mimVis:Point x="758.0" y="523.0" arrowHead="Stimulation" visRef="a0201" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id6668dba8" color="CC00CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="933.0" y="683.0" arrowHead="BranchingLeft" visRef="df8ed" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="1005.0" y="583.5"/>
+        <mimVis:Point x="774.0" y="484.0" arrowHead="TemplateReaction" visRef="a482c" relX="1.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="c6434" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="344.0" y="282.0" arrowHead="Line" visRef="e1e05" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="344.0" y="321.0" arrowHead="CovalentModification" visRef="dd670" relX="0.5" relY="-1.0"/>
+        <mimVis:anchorRef>e1f92</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="acbdb" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="418.0" y="283.0" arrowHead="Line" visRef="cb0a4" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="418.0" y="322.0" arrowHead="CovalentModification" visRef="ab7eb" relX="0.5" relY="-1.0"/>
+        <mimVis:anchorRef>e444d</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="e2c64" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="495.0" y="282.0" arrowHead="Line" visRef="c9f15" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="495.0" y="322.0" arrowHead="CovalentModification" visRef="b6157" relX="0.5" relY="-1.0"/>
+        <mimVis:anchorRef>d0a25</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="aa971" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="456.0" y="459.0" arrowHead="Line" visRef="f9d4d" relX="0.0" relY="-1.0"/>
+        <mimVis:Point x="456.0" y="431.0" arrowHead="CovalentModification" visRef="e76ad" relX="0.5" relY="1.0"/>
+        <mimVis:anchorRef>d07de</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="aca9e" color="0000CC">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="426.0" y="459.0" arrowHead="Line" visRef="f2106" relX="0.0" relY="-1.0"/>
+        <mimVis:Point x="426.0" y="431.0" arrowHead="CovalentModification" visRef="e76ad" relX="-0.5" relY="1.0"/>
+        <mimVis:anchorRef>ff601</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idedf1a224" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="605.0" y="403.0" arrowHead="BranchingRight" visRef="c39ab" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="578.6666666666666" y="355.83333333333337"/>
+        <mimVis:Point x="495.0" y="308.6666666666667" arrowHead="Catalysis" visRef="d0a25" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>ed400</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id9c2768e9" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="605.0" y="449.0" arrowHead="BranchingRight" visRef="fe98f" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="571.0" y="449.0510752688172"/>
+        <mimVis:Point x="541.0" y="449.10215053763443"/>
+        <mimVis:Point x="511.0" y="449.0510752688172"/>
+        <mimVis:Point x="456.0" y="449.0" arrowHead="Catalysis" visRef="d07de" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id8caeaa3c" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="523.0958333333333" y="308.6666666666667" arrowHead="BranchingRight" visRef="ed400" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="418.0" y="298.6666666666667" arrowHead="Catalysis" visRef="e444d" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>aa3fa</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="ide07e8b66" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="444.2003896536697" y="298.6666666666667" arrowHead="BranchingRight" visRef="aa3fa" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="344.0" y="287.3333333333333" arrowHead="Catalysis" visRef="e1f92" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idef64b740" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="466.2280554914076" y="525.0" arrowHead="BranchingRight" visRef="b8b03" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="426.0" y="451.69565217391306" arrowHead="Catalysis" visRef="ff601" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id9aeada15" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="605.0" y="376.0" arrowHead="BranchingLeft" visRef="df166" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="797.3333333333334" y="281.85087906686886"/>
+        <mimVis:Point x="758.5" y="217.8859722739772" arrowHead="Catalysis" visRef="dec56" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>a16e2</mimVis:anchorRef>
+        <mimVis:anchorRef>e35df</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id12b8e74" color="CC0000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="680.0" y="343.0" arrowHead="Line" visRef="dafed" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="646.0" y="343.0"/>
+        <mimVis:Point x="605.0" y="343.0" arrowHead="Inhibition" visRef="df2c9" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idb6fe5cc1" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="832.0" y="314.0" arrowHead="Line" visRef="c47fd" relX="-1.0" relY="0.0"/>
+        <mimVis:Point x="797.3333333333334" y="314.1830598018992" arrowHead="BranchingLeft" visRef="a16e2" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id4292e636" color="009900">
+        <mimVis:Comment>DNA double-strand breaks (DSB) induce the phosphorylation of histone H2AX on S139 by ATM and DNA-PK (Burma et al., 2001, Lou et al., 2004, Paull et al., 2000, Redon et al., 2002, Rogakou et al., 1998). By convention phosphorylated H2AX is referred to as gamma-H2AX (g-H2AX) (Rogakou et al., 1998).
+
+g-H2AX forms DNA damage foci detected by immunofluorescence microscopy.</mimVis:Comment>
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="720.1372752470129" y="125.33333587646484" arrowHead="Line" visRef="d73bd" relX="0.4117647058823528" relY="1.0"/>
+        <mimVis:Point x="797.3333333333334" y="261.922048843171" arrowHead="Stimulation" visRef="e35df" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id29e81377" color="000000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="465.0" y="375.0" arrowHead="StateCombination" visRef="d198d" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="485.0" y="375.0"/>
+        <mimVis:Point x="515.5" y="375.0"/>
+        <mimVis:Point x="546.0" y="332.0" arrowHead="StateCombination" visRef="e1fe7" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>eed41</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idd2cc9614" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="583.0" y="252.0" arrowHead="Line" visRef="ab6e1" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="656.0" y="263.0" arrowHead="NecessaryStimulation" visRef="b7890" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>cbefd</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idfe4ea5fa" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="546.0" y="362.0" arrowHead="Line" visRef="eed41" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="588.0" y="322.0"/>
+        <mimVis:Point x="591.5" y="282.0"/>
+        <mimVis:Point x="588.0" y="263.0" arrowHead="NecessaryStimulation" visRef="cbefd" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idb7c978f2" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="411.0" y="421.0" arrowHead="Line" visRef="e76ad" relX="-1.0" relY="0.0"/>
+        <mimVis:Point x="249.0" y="609.0"/>
+        <mimVis:Point x="330.0" y="797.0" arrowHead="Stimulation" visRef="f828f" relX="-1.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id6a5dfed7" color="000000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="465.0" y="342.0" arrowHead="NonCovalentReversibleBinding" visRef="b6157" relX="-0.5" relY="1.0"/>
+        <mimVis:Point x="369.83333333333337" y="386.0"/>
+        <mimVis:Point x="274.6666666666667" y="250.66666793823242"/>
+        <mimVis:Point x="567.6666870117188" y="115.33333587646484" arrowHead="NonCovalentReversibleBinding" visRef="d73bd" relX="-1.0" relY="0.0"/>
+        <mimVis:anchorRef>afff9</mimVis:anchorRef>
+        <mimVis:anchorRef>ebc84</mimVis:anchorRef>
+        <mimVis:anchorRef>b8e21</mimVis:anchorRef>
+        <mimVis:anchorRef>cf016</mimVis:anchorRef>
+        <mimVis:anchorRef>d198d</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id1be69d31" color="000000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="441.0" y="411.0" arrowHead="NonCovalentReversibleBinding" visRef="e76ad" relX="0.0" relY="-1.0"/>
+        <mimVis:Point x="441.16666666666663" y="401.0"/>
+        <mimVis:Point x="441.0" y="386.0" arrowHead="BranchingRight" visRef="ebc84" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id6e2130ec" color="000000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="329.0" y="341.0" arrowHead="NonCovalentReversibleBinding" visRef="dd670" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="338.7532279203348" y="374.6666666666667"/>
+        <mimVis:Point x="329.0" y="386.0" arrowHead="BranchingLeft" visRef="afff9" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id4268c2b" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="465.0" y="322.0" arrowHead="Line" visRef="b6157" relX="-0.5" relY="-1.0"/>
+        <mimVis:Point x="464.8247574770744" y="101.0"/>
+        <mimVis:Point x="464.64951495414886" y="91.0" arrowHead="Stimulation" visRef="c40c5" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>b35a5</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="ide59a5e01" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="465.0" y="353.3410852634729" arrowHead="Line" visRef="b8e21" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="532.0" y="330.17054263173645"/>
+        <mimVis:Point x="532.0" y="307.0"/>
+        <mimVis:Point x="532.0" y="287.7640878108226"/>
+        <mimVis:Point x="465.0" y="250.0" arrowHead="NecessaryStimulation" visRef="b35a5" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id1100bedf" color="000000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="758.2549223058364" y="125.33333587646484" arrowHead="NonCovalentReversibleBinding" visRef="d73bd" relX="0.7647058823529411" relY="1.0"/>
+        <mimVis:Point x="758.1666870117188" y="158.6666717529297" arrowHead="NonCovalentReversibleBinding" visRef="c0757" relX="0.0" relY="-1.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="ide69d9eb8" color="000000">
+        <mimVis:Comment>g-H2AX induces the recruitment/activation to the DSB sites of the sensor proteins with BRCT domains (shown in the pink box [B1-C2]; see annotations 2a-c) to the DSB foci (Glover et al., 2004, Manke et al., 2003, Stucki et al., 2006).
+
+g-H2AX is required for MDC1 focus formation as it binds directly to MDC1 (Stewart et al., 2003, Stucki et al., 2005).</mimVis:Comment>
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="388.0" y="322.0" arrowHead="NonCovalentReversibleBinding" visRef="ab7eb" relX="-0.5" relY="-1.0"/>
+        <mimVis:Point x="536.0" y="207.0"/>
+        <mimVis:Point x="684.0" y="207.2382354010348"/>
+        <mimVis:Point x="758.5" y="207.47647080206963" arrowHead="NonCovalentReversibleBinding" visRef="acbf3" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>f1327</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="idc835bd5e" color="009900">
+        <mimVis:Comment>MDC1 is required for the formation of foci involving the other BRCT proteins: Nbs1, 53BP1 and BRCA1, suggesting that MDC1 functions upstream of the other BRCT proteins and is required for their focal accumulation (Goldberg et al., 2003, Lou et al., 2003, Stewart et al., 2003, Stucki et al., 2006).
+
+The trimeric Mre11-Rad50-Nbs1 (MRN) complex binds to DSB and forms foci rapidly and independently of ATM following DSB (Mirzoeva et al., 2001, Mirzoeva et al., 2003). This process involves binding of the FHA/BRCT domain of Nbs1 to g-H2AX (Kobayashi et al., 2002).
+
+53BP1 and BRCA1 focus formation also requires H2AX (Celeste et al., 2002). By contrast, g-H2AX focus formation is 53BP1-independent (DiTullio et al., 2002).</mimVis:Comment>
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="388.0" y="223.0" arrowHead="Line" visRef="f1327" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="274.6666666666667" y="223.0" arrowHead="Stimulation" visRef="cf016" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id6d8e7d45" color="000000">
+        <mimVis:Comment>The Mre11-Rad50-Nbs1 complex is represented as MRN (B2). Each Nbs1(also referred to as Nibrin) molecule recruits a dimer of Mre11 &amp; Rad50 to the DSB focus with the CTD of Nbs1 bound to Mre11 (Nakanishi et al., 2002, Tauchi et al., 2001). Nbs1 also translocates the Mre11-Rad50 complex to the nucleus (Desai-Mehta et al., 2001).
+
+Nbs1 has been shown to recruit ATM to DSB through direct binding involving the c-terminus of Nbs1 (Falck et al., 2005, You et al., 2005).</mimVis:Comment>
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="645.1428571428571" y="315.0" arrowHead="NonCovalentReversibleBinding" visRef="e9bc4" relX="-0.4285714285714286" relY="1.0"/>
+        <mimVis:Point x="510.0" y="332.0" arrowHead="NonCovalentReversibleBinding" visRef="b6157" relX="1.0" relY="0.0"/>
+        <mimVis:anchorRef>e1fe7</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id747724a" color="009900">
+        <mimVis:Comment>g-H2AX activates ATM, which suggests a positive feedback loop between g-H2AX and ATM (possibly involving DNA-PKcs) (Stucki et al., 2006).</mimVis:Comment>
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="758.5" y="225.0" arrowHead="Line" visRef="ec05a" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="731.0" y="275.0"/>
+        <mimVis:Point x="605.0" y="325.0" arrowHead="Stimulation" visRef="f8a62" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph visId="id7bb82175" color="009900">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="786.0" y="449.3333333333333" arrowHead="BranchingRight" visRef="c183b" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="714.0" y="438.6666666666667" arrowHead="Catalysis" visRef="c5149" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:Anchor visId="c40c5" position="0.7785977922109402" type="Invisible"/>
+    <mimVis:Anchor visId="c6b38" position="0.252941200229959" type="Invisible"/>
+    <mimVis:Anchor visId="dec56" position="0.7105263157894737" type="Invisible"/>
+    <mimVis:Anchor visId="c0fc6" position="0.10666666666666667" type="Invisible"/>
+    <mimVis:Anchor visId="a190b" position="0.6133333333333333" type="Invisible"/>
+    <mimVis:Anchor visId="c5149" position="0.15873015873015917" type="Invisible"/>
+    <mimVis:Anchor visId="ecfd8" position="0.3105022831050223" type="Invisible"/>
+    <mimVis:Anchor visId="c1e9b" position="0.4314380929546875" type="Invisible"/>
+    <mimVis:Anchor visId="d2c04" position="0.806976420349053" type="Invisible"/>
+    <mimVis:Anchor visId="f7cb0" position="0.38282893922515154" type="Invisible"/>
+    <mimVis:Anchor visId="c39ab" position="0.2959756776828816" type="Invisible"/>
+    <mimVis:Anchor visId="df166" position="0.22767359821760116" type="Invisible"/>
+    <mimVis:Anchor visId="df2c9" position="0.1441932788711474" type="Invisible"/>
+    <mimVis:Anchor visId="f8a62" position="0.09865855922762717" type="Invisible"/>
+    <mimVis:Anchor visId="fe98f" position="0.4123421834385444" type="Invisible"/>
+    <mimVis:Anchor visId="b25c2" position="0.25" type="Invisible"/>
+    <mimVis:Anchor visId="b7890" position="0.4611068604947719" type="Invisible"/>
+    <mimVis:Anchor visId="edb08" position="0.28088072770551725" type="InTrans"/>
+    <mimVis:Anchor visId="f6ad3" position="0.4" type="Invisible"/>
+    <mimVis:Anchor visId="e97b3" position="0.5240506329113925" type="Invisible"/>
+    <mimVis:Anchor visId="e9f49" position="0.2201834862385319" type="Invisible"/>
+    <mimVis:Anchor visId="a46d7" position="0.46788990825688026" type="Invisible"/>
+    <mimVis:Anchor visId="b498e" position="0.5981308411214953" type="Invisible"/>
+    <mimVis:Anchor visId="e98e0" position="0.5625" type="Invisible"/>
+    <mimVis:Anchor visId="decb2" position="0.21568627450980393" type="Invisible"/>
+    <mimVis:Anchor visId="a0a34" position="0.2608695652173913" type="Invisible"/>
+    <mimVis:Anchor visId="b38c6" position="0.4485981308411215" type="Invisible"/>
+    <mimVis:Anchor visId="b9c27" position="0.460431654676259" type="Invisible"/>
+    <mimVis:Anchor visId="ffc5e" position="0.30964775290647223" type="Invisible"/>
+    <mimVis:Anchor visId="a3860" position="0.7730348776678814" type="Invisible"/>
+    <mimVis:Anchor visId="e67fe" position="0.6161616161616162" type="Invisible"/>
+    <mimVis:Anchor visId="a78cf" position="0.5757575757575757" type="Invisible"/>
+    <mimVis:Anchor visId="a4fe0" position="0.4898989898989899" type="Invisible"/>
+    <mimVis:Anchor visId="e7792" position="0.36363636363636365" type="Invisible"/>
+    <mimVis:Anchor visId="be4be" position="0.2272727272727273" type="Invisible"/>
+    <mimVis:Anchor visId="fdeaa" position="0.26262626262626265" type="Invisible"/>
+    <mimVis:Anchor visId="ea117" position="0.07575757575757576" type="Invisible"/>
+    <mimVis:Anchor visId="bb799" position="0.46451612903225803" type="Invisible"/>
+    <mimVis:Anchor visId="ede67" position="0.2826086956521739" type="Invisible"/>
+    <mimVis:Anchor visId="be5aa" position="0.41463414634146345" type="Invisible"/>
+    <mimVis:Anchor visId="aad72" position="0.1153990258523792" type="Invisible"/>
+    <mimVis:Anchor visId="f0f50" position="0.2608695652173913" type="Invisible"/>
+    <mimVis:Anchor visId="bc239" position="0.6086956521739131" type="Invisible"/>
+    <mimVis:Anchor visId="d9478" position="0.4565217391304348" type="Invisible"/>
+    <mimVis:Anchor visId="df8ed" position="0.08695652173913043" type="Invisible"/>
+    <mimVis:Anchor visId="e2498" position="0.1875" type="Invisible"/>
+    <mimVis:Anchor visId="d1091" position="0.4" type="Invisible"/>
+    <mimVis:Anchor visId="b1e73" position="0.41975308641975306" type="Invisible"/>
+    <mimVis:Anchor visId="fb829" position="0.3614457831325301" type="Invisible"/>
+    <mimVis:Anchor visId="d3b09" position="0.4" type="Invisible"/>
+    <mimVis:Anchor visId="f2610" position="0.44128113879003555" type="Invisible"/>
+    <mimVis:Anchor visId="b37dd" position="0.5240532241555783" type="Invisible"/>
+    <mimVis:Anchor visId="faea5" position="0.5790554414784395" type="Invisible"/>
+    <mimVis:Anchor visId="ffdf4" position="0.3602865916069601" type="Invisible"/>
+    <mimVis:Anchor visId="eeba4" position="0.12744090441932168" type="Invisible"/>
+    <mimVis:Anchor visId="a9bff" position="0.24564994882292732" type="Invisible"/>
+    <mimVis:Anchor visId="a90d1" position="0.0736949846468782" type="Invisible"/>
+    <mimVis:Anchor visId="cfb32" position="0.032753326509723645" type="Invisible"/>
+    <mimVis:Anchor visId="b8b03" position="0.6259455562377142" type="Invisible"/>
+    <mimVis:Anchor visId="e2322" position="0.7027155788470699" type="Invisible"/>
+    <mimVis:Anchor visId="c5625" position="0.6956521739130436" type="Invisible"/>
+    <mimVis:Anchor visId="c7d48" position="0.6181818181818182" type="Invisible"/>
+    <mimVis:Anchor visId="f4908" position="0.36363636363636365" type="Invisible"/>
+    <mimVis:Anchor visId="eb6c9" position="0.5327102803738317" type="Invisible"/>
+    <mimVis:Anchor visId="f4fe1" position="0.7663551401869159" type="Invisible"/>
+    <mimVis:Anchor visId="a4fc7" position="0.37142857142857144" type="Invisible"/>
+    <mimVis:Anchor visId="ad5eb" position="0.023535240926545273" type="Invisible"/>
+    <mimVis:Anchor visId="b5d6f" position="0.6464285714285714" type="Invisible"/>
+    <mimVis:Anchor visId="a0201" position="0.75" type="Invisible"/>
+    <mimVis:Anchor visId="e348d" position="0.6606606606606606" type="Invisible"/>
+    <mimVis:Anchor visId="c49fb" position="0.3063665737202446" type="InTrans"/>
+    <mimVis:Anchor visId="c183b" position="0.8345135053078443" type="Invisible"/>
+    <mimVis:Anchor visId="eeec1" position="0.3607459492509936" type="Invisible"/>
+    <mimVis:Anchor visId="e1f92" position="0.13675213675213627" type="Invisible"/>
+    <mimVis:Anchor visId="e444d" position="0.40170940170940217" type="Invisible"/>
+    <mimVis:Anchor visId="d0a25" position="0.6666666666666672" type="Invisible"/>
+    <mimVis:Anchor visId="d07de" position="0.35714285714285715" type="Invisible"/>
+    <mimVis:Anchor visId="ff601" position="0.2608695652173913" type="Invisible"/>
+    <mimVis:Anchor visId="ed400" position="0.8625" type="Invisible"/>
+    <mimVis:Anchor visId="aa3fa" position="0.7723602245635621" type="Invisible"/>
+    <mimVis:Anchor visId="a16e2" position="0.652871506838863" type="Invisible"/>
+    <mimVis:Anchor visId="e35df" position="0.7871217065315546" type="Invisible"/>
+    <mimVis:Anchor visId="cbefd" position="0.19047619047619047" type="Invisible"/>
+    <mimVis:Anchor visId="afff9" position="0.22556390474251792" type="Invisible"/>
+    <mimVis:Anchor visId="ebc84" position="0.08521303068050676" type="Invisible"/>
+    <mimVis:Anchor visId="cf016" position="0.4979114341723728" type="Invisible"/>
+    <mimVis:Anchor visId="b35a5" position="0.31121611863372745" type="Invisible"/>
+    <mimVis:MimBio>
+        <mimVis:title>New Pathway</mimVis:title>
+        <mimVis:identifier>20100804</mimVis:identifier>
+    </mimVis:MimBio>
+</mimVis:Diagram>
