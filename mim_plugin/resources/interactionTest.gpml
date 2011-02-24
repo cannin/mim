@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://genmapp.org/GPML/2010a" Name="New Pathway" Version="20100917">
+  <Graphics BoardWidth="414.7" BoardHeight="425.7" />
+  <DataNode TextLabel="A" GraphId="ffd4a" Type="SimplePhysicalEntity" GroupRef="a0fa5">
+    <Attribute Key="NumberOfAnchors" Value="3" />
+    <Graphics CenterX="325.0" CenterY="81.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="B" GraphId="bfd93" Type="SimplePhysicalEntity" GroupRef="a0fa5">
+    <Attribute Key="NumberOfAnchors" Value="3" />
+    <Graphics CenterX="339.0" CenterY="369.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <Line GraphId="idbcc10920" GroupRef="a0fa5">
+    <Comment>LineComment</Comment>
+    <BiopaxRef>ef7</BiopaxRef>
+    <Attribute Key="DatabaseRelationship" Value="" />
+    <Attribute Key="InteractionStart" Value="visId" />
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="295.0" Y="81.0" GraphRef="ffd4a" RelX="-1.0" RelY="0.0" ArrowHead="mim-reversible-binding" />
+      <Point X="228.0" Y="152.25" />
+      <Point X="324.0" Y="223.5" />
+      <Point X="420.0" Y="296.25" />
+      <Point X="369.0" Y="369.0" GraphRef="bfd93" RelX="1.0" RelY="0.0" ArrowHead="mim-reversible-binding" />
+      <Anchor Position="0.8026755852842808" Shape="None" />
+      <Anchor Position="0.5225752508361204" Shape="Intermolecular" GraphId="ece74" />
+      <Anchor Position="0.22240802675585283" Shape="Circle" />
+    </Graphics>
+  </Line>
+  <Group GroupId="a0fa5" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ef7">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The importance of an innervated and intact antrum and pylorus in preventing postoperative duodenogastric reflux and gastritis.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Br J Surg</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1975</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keighley MR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asquith P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edwards JA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alexander-Williams J</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>
+

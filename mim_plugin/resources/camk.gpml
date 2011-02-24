@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://genmapp.org/GPML/2010a" Name="This is a title" Data-Source="DataSource" Version="20091103" Author="Author" Maintainer="Maintainer" Email="Email" Last-Modified="2010-12-01">
+  <Comment>This is a description</Comment>
+  <Graphics BoardWidth="606.1" BoardHeight="308.0" />
+  <DataNode TextLabel="CAMK" GraphId="ca53d" Type="GeneProduct">
+    <Graphics CenterX="166.0" CenterY="167.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="CAS" ID="camk_dbid" />
+  </DataNode>
+  <DataNode TextLabel="Kinase" GraphId="be41c" Type="GeneProduct">
+    <Graphics CenterX="280.0" CenterY="167.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="CAS" ID="kinase_dbid" />
+  </DataNode>
+  <DataNode TextLabel="Reg" GraphId="d312c" Type="GeneProduct">
+    <Graphics CenterX="389.0" CenterY="167.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="CAS" ID="reg_dbid" />
+  </DataNode>
+  <DataNode TextLabel="CAM" GraphId="b2418" Type="GeneProduct">
+    <Graphics CenterX="511.0" CenterY="204.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Phtase" GraphId="b3858" Type="GeneProduct">
+    <Graphics CenterX="388.0" CenterY="113.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Substrates" GraphId="d381d" Type="GeneProduct">
+    <Graphics CenterX="340.0" CenterY="270.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <Line GraphId="b756a">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="206.0" Y="167.0" GraphRef="ca53d" RelX="1.0" RelY="0.0" ArrowHead="mim-covalent-bond" />
+      <Point X="240.0" Y="167.0" GraphRef="be41c" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+  </Line>
+  <Line GraphId="beb81">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="320.0" Y="167.0" GraphRef="be41c" RelX="1.0" RelY="0.0" />
+      <Point X="349.0" Y="167.0" GraphRef="d312c" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+  </Line>
+  <Line GraphId="a02db">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="389.0" Y="195.0" GraphRef="f3135" RelX="0.0" RelY="0.0" ArrowHead="mim-branching-left" />
+      <Point X="334.5" Y="204.0" />
+      <Point X="280.0" Y="177.0" GraphRef="be41c" RelX="0.0" RelY="1.0" ArrowHead="mim-binding" />
+      <Anchor Position="0.47368421052631576" Shape="None" GraphId="c55ac" />
+      <Anchor Position="0.6578947368421053" Shape="Circle" GraphId="c8cfc" />
+    </Graphics>
+  </Line>
+  <Line GraphId="fb763">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="510.0" Y="105.0" GraphRef="bae09" RelX="0.0" RelY="1.0" ArrowHead="mim-binding" />
+      <Point X="511.0" Y="194.0" GraphRef="b2418" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+      <Anchor Position="0.4" Shape="Circle" GraphId="a60d7" />
+    </Graphics>
+  </Line>
+  <Line GraphId="cd6b0">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="300.0" Y="157.0" GraphRef="be41c" RelX="0.5" RelY="-1.0" ArrowHead="mim-modification" />
+      <Point X="300.0" Y="101.0" GraphRef="ff56c" RelX="0.0" RelY="1.0" />
+      <Anchor Position="0.30357142857142855" Shape="Circle" GraphId="a37e6" />
+      <Anchor Position="0.7948717948717948" Shape="None" GraphId="b6ece" />
+      <Anchor Position="0.5" Shape="None" GraphId="f9c9d" />
+    </Graphics>
+  </Line>
+  <Line GraphId="f8ac5">
+    <BiopaxRef>a9e</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="348.0" Y="113.0" GraphRef="b3858" RelX="-1.0" RelY="0.0" />
+      <Point X="313.0" Y="112.74358974358975" />
+      <Point X="300.0" Y="112.48717948717949" GraphRef="b6ece" RelX="0.0" RelY="0.0" ArrowHead="mim-cleavage" />
+    </Graphics>
+  </Line>
+  <Line GraphId="c7f41">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="471.0" Y="204.0" GraphRef="b2418" RelX="-1.0" RelY="0.0" ArrowHead="mim-modification" />
+      <Point X="450.0" Y="204.0" />
+      <Point X="419.5" Y="204.0" />
+      <Point X="389.0" Y="195.0" GraphRef="f3135" RelX="0.0" RelY="0.0" ArrowHead="mim-branching-right" />
+      <Anchor Position="0.2345679012345679" Shape="None" GraphId="d03e0" />
+    </Graphics>
+  </Line>
+  <Line GraphId="fc57e">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="300.0" Y="140.0" GraphRef="a37e6" RelX="0.0" RelY="0.0" />
+      <Point X="441.0" Y="183.0" />
+      <Point X="385.1578947368421" Y="226.0" />
+      <Point X="329.3157894736842" Y="204.0" GraphRef="c55ac" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+  </Line>
+  <Line GraphId="a54b3">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="233.0" Y="270.0" GraphRef="d6434" RelX="1.0" RelY="0.0" />
+      <Point X="300.0" Y="270.0" GraphRef="d381d" RelX="-1.0" RelY="0.0" ArrowHead="mim-modification" />
+      <Anchor Position="0.4" Shape="None" GraphId="d3ccb" />
+    </Graphics>
+  </Line>
+  <Line GraphId="a3a8f">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="260.0" Y="177.0" GraphRef="be41c" RelX="-0.5" RelY="1.0" />
+      <Point X="259.8" Y="270.0" GraphRef="d3ccb" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Anchor Position="0.4408350522138874" Shape="None" GraphId="e089d" />
+      <Anchor Position="0.6988983748485381" Shape="None" GraphId="e0e91" />
+    </Graphics>
+  </Line>
+  <Line GraphId="b4e30">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="302.60526315789474" Y="204.0" GraphRef="c8cfc" RelX="0.0" RelY="0.0" />
+      <Point X="299.0" Y="218.0" />
+      <Point X="279.8" Y="187.42360955666754" />
+      <Point X="259.8" Y="217.8858268663343" GraphRef="e089d" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+  </Line>
+  <Line GraphId="aefde">
+    <BiopaxRef>be8</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="259.8" Y="241.93732853588375" GraphRef="e0e91" RelX="0.0" RelY="0.0" ArrowHead="mim-branching-right" />
+      <Point X="104.0" Y="185.46866426794188" />
+      <Point X="300.0" Y="129.0" GraphRef="f9c9d" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+  </Line>
+  <Line GraphId="aa2b5">
+    <BiopaxRef>b79</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="511.0" Y="140.0" GraphRef="a60d7" RelX="0.0" RelY="0.0" />
+      <Point X="451.0" Y="162.3" />
+      <Point X="449.94444444444446" Y="184.0" />
+      <Point X="449.65432098765433" Y="204.0" GraphRef="d03e0" RelX="0.0" RelY="0.0" ArrowHead="mim-necessary-stimulation" />
+    </Graphics>
+  </Line>
+  <Line GraphId="de95c">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="389.0" Y="177.0" GraphRef="d312c" RelX="0.0" RelY="1.0" ArrowHead="mim-binding" />
+      <Point X="389.0" Y="195.0" />
+      <Anchor Position="1.0" Shape="None" GraphId="f3135" />
+    </Graphics>
+  </Line>
+  <Line GraphId="a3a7e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="247.0" Y="138.0" />
+      <Point X="257.0" Y="121.0" />
+    </Graphics>
+  </Line>
+  <Line GraphId="a3b21">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="254.0" Y="138.0" />
+      <Point X="264.0" Y="121.0" />
+    </Graphics>
+  </Line>
+  <Label TextLabel="Ca++" GraphId="bae09">
+    <Graphics CenterX="510.0" CenterY="95.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="P" GraphId="ff56c">
+    <Graphics CenterX="300.0" CenterY="91.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="P" GraphId="d6434">
+    <Graphics CenterX="213.0" CenterY="270.0" Width="40.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="be8">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1222</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N-hydroxyamobarbital: the second major metabolite of amobarbital in man.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drug Metab Dispos</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1975</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tang BK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inaba T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kalow W</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a9e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23423</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physicochemical properties of glycyrrhizic acid in aqueous media II: Effect on flocculation-deflocculation behavior of suspensions of sulfathiazole and graphite.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Pharm Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1978</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Otsuka A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yonezawa Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nakamura Y</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b79">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123456</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[The laboratory in programs for enteric infection control]</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bol Oficina Sanit Panam</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1975</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grados OB</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>
+

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mimVis:Diagram mimVis:width="733.7" mimVis:height="447.7" xmlns:mimVis="http://lmp.nci.nih.gov/mim/mimVisLevel1">
+    <mimVis:EntityGlyph mimVis:visId="b3612" centerX="322.0" centerY="269.0" mimVis:width="60.0" mimVis:height="20.0" mimVis:color="000000" mimVis:groupRef="" entityType="SimplePhysicalEntity" mimVis:displayName="CAMK">
+        <mimVis:GenericProperty key="NextFeature" value="c9b45"/>
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph mimVis:visId="f4e66" centerX="500.0" centerY="203.0" mimVis:width="60.0" mimVis:height="20.0" mimVis:color="000000" mimVis:groupRef="" entityType="SimplePhysicalEntity" mimVis:displayName="Phtase">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph mimVis:visId="a805d" centerX="637.0" centerY="310.0" mimVis:width="60.0" mimVis:height="20.0" mimVis:color="000000" mimVis:groupRef="" entityType="SimplePhysicalEntity" mimVis:displayName="CAM">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph mimVis:visId="b6168" centerX="458.0" centerY="397.0" mimVis:width="60.0" mimVis:height="20.0" mimVis:color="000000" mimVis:groupRef="" entityType="SimplePhysicalEntity" mimVis:displayName="Substrates">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph mimVis:visId="c9b45" centerX="405.0" centerY="269.0" mimVis:width="60.0" mimVis:height="20.0" mimVis:color="000000" mimVis:groupRef="" entityType="EntityFeature" mimVis:displayName="Kinase">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph mimVis:visId="da10c" centerX="484.0" centerY="267.0" mimVis:width="60.0" mimVis:height="20.0" mimVis:color="000000" mimVis:groupRef="" entityType="EntityFeature" mimVis:displayName="Reg">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph mimVis:visId="b8fbb" centerX="636.5" centerY="215.0" mimVis:width="25.0" mimVis:height="20.0" mimVis:color="000000" mimVis:groupRef="" entityType="Modifier" mimVis:displayName="Ca++">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph mimVis:visId="e9218" centerX="405.0" centerY="169.0" mimVis:width="20.0" mimVis:height="20.0" mimVis:color="000000" mimVis:groupRef="" entityType="Modifier" mimVis:displayName="P">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph mimVis:visId="d75df" centerX="355.0" centerY="397.0" mimVis:width="20.0" mimVis:height="20.0" mimVis:color="000000" mimVis:groupRef="" entityType="Modifier" mimVis:displayName="P">
+        <mimVis:GenericProperty key="Number" value="nnn"/>
+        <mimVis:GenericProperty key="ShapeType" value="None"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph mimVis:visId="da6f2" mimVis:position="0.4" mimVis:color="000000" mimVis:groupRef="" entityType="ExplicitComplex"/>
+    <mimVis:EntityGlyph mimVis:visId="abe89" mimVis:position="0.45930232558139533" mimVis:color="000000" mimVis:groupRef="" entityType="ExplicitComplex"/>
+    <mimVis:EntityGlyph mimVis:visId="c8d13" mimVis:position="0.7375" mimVis:color="000000" mimVis:groupRef="" entityType="ExplicitComplex"/>
+    <mimVis:InteractionGlyph mimVis:visId="id254ea36e" mimVis:color="000000" mimVis:groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="435.0" y="269.0" arrowHead="NextFeatureArrow" mimVis:visRef="c9b45" relX="1.0" relY="0.0"/>
+        <mimVis:Point x="454.0" y="267.0" arrowHead="NextFeatureArrow" mimVis:visRef="da10c" relX="-1.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph mimVis:visId="id51d4113e" mimVis:color="000000" mimVis:groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="636.5" y="225.0" arrowHead="ReversibleNonCovalentBindingArrow" mimVis:visRef="b8fbb" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="636.75" y="238.0" mimVis:visRef=""/>
+        <mimVis:Point x="637.0" y="300.0" arrowHead="ReversibleNonCovalentBindingArrow" mimVis:visRef="a805d" relX="0.0" relY="-1.0"/>
+        <mimVis:anchorRef>da6f2</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph mimVis:visId="idbf47065b" mimVis:color="000000" mimVis:groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="405.0" y="279.0" arrowHead="ReversibleNonCovalentBindingArrow" mimVis:visRef="c9b45" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="444.5" y="317.0" mimVis:visRef=""/>
+        <mimVis:Point x="484.0" y="277.0" arrowHead="ReversibleNonCovalentBindingArrow" mimVis:visRef="da10c" relX="0.0" relY="1.0"/>
+        <mimVis:anchorRef>dd93a</mimVis:anchorRef>
+        <mimVis:anchorRef>abe89</mimVis:anchorRef>
+        <mimVis:anchorRef>dab59</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph mimVis:visId="id826355f" mimVis:color="000000" mimVis:groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="365.0" y="397.0" arrowHead="Line" mimVis:visRef="d75df" relX="1.0" relY="0.0"/>
+        <mimVis:Point x="428.0" y="397.0" arrowHead="CovalentModificationArrow" mimVis:visRef="b6168" relX="-1.0" relY="0.0"/>
+        <mimVis:anchorRef>ce726</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph mimVis:visId="idcbb36238" mimVis:color="000000" mimVis:groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="390.0" y="279.0" arrowHead="Line" mimVis:visRef="c9b45" relX="-0.5" relY="1.0"/>
+        <mimVis:Point x="390.2" y="397.0" arrowHead="CatalysisArrow" mimVis:visRef="ce726" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>d5472</mimVis:anchorRef>
+        <mimVis:anchorRef>d5603</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph mimVis:visId="ide0be2a3e" mimVis:color="000000" mimVis:groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="405.0" y="179.0" arrowHead="Line" mimVis:visRef="e9218" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="405.0" y="259.0" arrowHead="CovalentModificationArrow" mimVis:visRef="c9b45" relX="0.0" relY="-1.0"/>
+        <mimVis:anchorRef>e3964</mimVis:anchorRef>
+        <mimVis:anchorRef>c8d13</mimVis:anchorRef>
+        <mimVis:anchorRef>e31b6</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph mimVis:visId="idbe4ca776" mimVis:color="000000" mimVis:groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="405.0" y="204.0" arrowHead="CovalentBondCleavageArrow" mimVis:visRef="e3964" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="470.0" y="203.0" arrowHead="Line" mimVis:visRef="f4e66" relX="-1.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph mimVis:visId="idd0a0c5a6" mimVis:color="000000" mimVis:groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="390.2" y="373.0" arrowHead="BranchingRightArrow" mimVis:visRef="d5472" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="184.0" y="298.5" mimVis:visRef=""/>
+        <mimVis:Point x="405.0" y="224.0" arrowHead="CatalysisArrow" mimVis:visRef="e31b6" relX="0.0" relY="0.0"/>
+        <mimVis:anchorRef>df289</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph mimVis:visId="id39ce41ac" mimVis:color="000000" mimVis:groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="484.0" y="309.26027397260276" arrowHead="BranchingLeftArrow" mimVis:visRef="dab59" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="543.0" y="309.83561643835617" mimVis:visRef=""/>
+        <mimVis:Point x="607.0" y="310.0" arrowHead="ReversibleNonCovalentBindingArrow" mimVis:visRef="a805d" relX="-1.0" relY="0.0"/>
+        <mimVis:anchorRef>ee444</mimVis:anchorRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph mimVis:visId="id81958164" mimVis:color="000000" mimVis:groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="637.0" y="254.7" arrowHead="Line" mimVis:visRef="da6f2" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="533.0" y="259.85" mimVis:visRef=""/>
+        <mimVis:Point x="532.5657534246575" y="264.0" mimVis:visRef=""/>
+        <mimVis:Point x="533.4958904109589" y="309.26027397260276" arrowHead="NecessaryStimulationArrow" mimVis:visRef="ee444" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph mimVis:visId="ideecc00c3" mimVis:color="000000" mimVis:groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="405.0" y="238.0" arrowHead="Line" mimVis:visRef="c8d13" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="560.0" y="300.0" mimVis:visRef=""/>
+        <mimVis:Point x="505.0" y="362.0" mimVis:visRef=""/>
+        <mimVis:Point x="465.5813953488372" y="317.0" arrowHead="InhibitionArrow" mimVis:visRef="dd93a" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph mimVis:visId="id6831ae4" mimVis:color="000000" mimVis:groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="439.11046511627904" y="317.0" arrowHead="Line" mimVis:visRef="abe89" relX="0.0" relY="0.0"/>
+        <mimVis:Point x="390.2" y="351.0" arrowHead="InhibitionArrow" mimVis:visRef="d5603" relX="0.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:InteractionGlyph mimVis:visId="idbd4cba1a" mimVis:color="000000" mimVis:groupRef="">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="352.0" y="269.0" arrowHead="FirstFeatureArrow" mimVis:visRef="b3612" relX="1.0" relY="0.0"/>
+        <mimVis:Point x="375.0" y="269.0" arrowHead="Line" mimVis:visRef="c9b45" relX="-1.0" relY="0.0"/>
+    </mimVis:InteractionGlyph>
+    <mimVis:Anchor mimVis:visId="dd93a" mimVis:position="0.627906976744186" anchorType="InvisibleAnchor"/>
+    <mimVis:Anchor mimVis:visId="dab59" mimVis:position="0.7945205479452053" anchorType="InvisibleAnchor"/>
+    <mimVis:Anchor mimVis:visId="ce726" mimVis:position="0.4" anchorType="InvisibleAnchor"/>
+    <mimVis:Anchor mimVis:visId="d5472" mimVis:position="0.7969543147208122" anchorType="InvisibleAnchor"/>
+    <mimVis:Anchor mimVis:visId="d5603" mimVis:position="0.61082910321489" anchorType="InvisibleAnchor"/>
+    <mimVis:Anchor mimVis:visId="e3964" mimVis:position="0.3125" anchorType="InvisibleAnchor"/>
+    <mimVis:Anchor mimVis:visId="e31b6" mimVis:position="0.5625" anchorType="InvisibleAnchor"/>
+    <mimVis:Anchor mimVis:visId="df289" mimVis:position="0.4" anchorType="InTransAnchor"/>
+    <mimVis:Anchor mimVis:visId="ee444" mimVis:position="0.4" anchorType="InvisibleAnchor"/>
+    <mimVis:MimBio>
+        <mimBio:Dataset xmlns:mimBio="http://lmp.nci.nih.gov/mim/mimBioLevel1">
+            <mimBio:title>camk_new</mimBio:title>
+            <mimBio:SimplePhysicalEntity mimBio:bioId="adf85">
+                <mimBio:standardName>CAMK</mimBio:standardName>
+            </mimBio:SimplePhysicalEntity>
+            <mimBio:SimplePhysicalEntity mimBio:bioId="b7373">
+                <mimBio:standardName>Phtase</mimBio:standardName>
+            </mimBio:SimplePhysicalEntity>
+            <mimBio:SimplePhysicalEntity mimBio:bioId="b23ac">
+                <mimBio:standardName>CAM</mimBio:standardName>
+            </mimBio:SimplePhysicalEntity>
+            <mimBio:SimplePhysicalEntity mimBio:bioId="a40e8">
+                <mimBio:standardName>Substrates</mimBio:standardName>
+            </mimBio:SimplePhysicalEntity>
+            <mimBio:SimplePhysicalEntity mimBio:bioId="bb3ab">
+                <mimBio:standardName>Kinase</mimBio:standardName>
+            </mimBio:SimplePhysicalEntity>
+            <mimBio:SimplePhysicalEntity mimBio:bioId="e417e">
+                <mimBio:standardName>Reg</mimBio:standardName>
+            </mimBio:SimplePhysicalEntity>
+            <mimBio:SimplePhysicalEntity mimBio:bioId="eb546">
+                <mimBio:standardName>Ca++</mimBio:standardName>
+            </mimBio:SimplePhysicalEntity>
+            <mimBio:SimplePhysicalEntity mimBio:bioId="f453c">
+                <mimBio:standardName>P</mimBio:standardName>
+            </mimBio:SimplePhysicalEntity>
+            <mimBio:SimplePhysicalEntity mimBio:bioId="b1d6e">
+                <mimBio:standardName>P</mimBio:standardName>
+            </mimBio:SimplePhysicalEntity>
+            <mimBio:ControlledVocabulary mimBio:bioId="d6509">
+                <mimBio:term>SimplePhysicalEntity</mimBio:term>
+            </mimBio:ControlledVocabulary>
+            <mimBio:ControlledVocabulary mimBio:bioId="eaca4">
+                <mimBio:term>SimplePhysicalEntity</mimBio:term>
+            </mimBio:ControlledVocabulary>
+            <mimBio:ControlledVocabulary mimBio:bioId="e7993">
+                <mimBio:term>SimplePhysicalEntity</mimBio:term>
+            </mimBio:ControlledVocabulary>
+            <mimBio:ControlledVocabulary mimBio:bioId="bd59b">
+                <mimBio:term>SimplePhysicalEntity</mimBio:term>
+            </mimBio:ControlledVocabulary>
+            <mimBio:ControlledVocabulary mimBio:bioId="c4504">
+                <mimBio:term>EntityFeature</mimBio:term>
+            </mimBio:ControlledVocabulary>
+            <mimBio:ControlledVocabulary mimBio:bioId="f50c1">
+                <mimBio:term>EntityFeature</mimBio:term>
+            </mimBio:ControlledVocabulary>
+            <mimBio:ControlledVocabulary mimBio:bioId="eda98">
+                <mimBio:term>Modifier</mimBio:term>
+            </mimBio:ControlledVocabulary>
+            <mimBio:ControlledVocabulary mimBio:bioId="a2784">
+                <mimBio:term>Modifier</mimBio:term>
+            </mimBio:ControlledVocabulary>
+            <mimBio:ControlledVocabulary mimBio:bioId="b199a">
+                <mimBio:term>Modifier</mimBio:term>
+            </mimBio:ControlledVocabulary>
+        </mimBio:Dataset>
+    </mimVis:MimBio>
+</mimVis:Diagram>

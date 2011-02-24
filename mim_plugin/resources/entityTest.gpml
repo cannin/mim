@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://genmapp.org/GPML/2010a" Name="New Pathway" Version="20100922">
+  <Graphics BoardWidth="127.6" BoardHeight="83.6" />
+  <DataNode TextLabel="SPE" GraphId="a1d49" Type="SimplePhysicalEntity">
+    <Attribute Key="DatabaseRelationship" Value="other" />
+    <Attribute Key="EntityControlledVocabulary" Value="Protein" />
+    <Attribute Key="NumberOfAnchors" Value="3" />
+    <Graphics CenterX="86.0" CenterY="66.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
+    <Xref Database="HUGO" ID="TP53" />
+  </DataNode>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+</Pathway>
+
