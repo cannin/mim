@@ -108,10 +108,10 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
         desktop.getSideBarTabbedPane().remove(objectsPane);
 
         mimObjectsPane = new MimObjectsPane(desktop, e);
-		desktop.getSideBarTabbedPane().add("MIM", mimObjectsPane);
+		desktop.getSideBarTabbedPane().add("MIM Glyphs", mimObjectsPane);
         /* show mim pane to top*/
         desktop.getSideBarTabbedPane().setSelectedComponent(mimObjectsPane);
-        if (!PreferenceManager.getCurrent().get(MimPreferencesDlg.MIMPreference.PREFERRED_PANEL).equals("MIM")) {
+        if (!PreferenceManager.getCurrent().get(MimPreferencesDlg.MIMPreference.PREFERRED_PANEL).equals("MIM Glyphs")) {
             int panelId = desktop.getSideBarTabbedPane().indexOfTab(PreferenceManager.getCurrent().get(MimPreferencesDlg.MIMPreference.PREFERRED_PANEL));
             if (panelId < -1) {
                 desktop.getSideBarTabbedPane().setSelectedComponent(desktop.getSideBarTabbedPane().getComponentAt(panelId));

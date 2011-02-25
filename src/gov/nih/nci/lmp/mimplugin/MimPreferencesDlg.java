@@ -27,7 +27,7 @@ public class MimPreferencesDlg {
     public enum MIMPreference implements Preference {
         SHOW_COMMENT_LABELS(Boolean.toString(true)),
         COMMENT_REFERENCE(Boolean.toString(true)),
-        PREFERRED_PANEL("MIM");
+        PREFERRED_PANEL("MIM Glyphs");
 
         MIMPreference(String defaultValue) {
             this.defaultValue = defaultValue;
@@ -59,7 +59,4 @@ public class MimPreferencesDlg {
                                 .booleanField(MIMPreference.COMMENT_REFERENCE, "Attach References to Comments").
                 stringField(MIMPreference.PREFERRED_PANEL, "Select pane to appear on top").build());
     }
-
-
-
 }
