@@ -128,18 +128,22 @@ public class InfoBoxExportTest {
 	
 	/**
 	 * Test diagram width export.
+	 * 
+	 * NOTE: Minimum board size seems to be 30.
 	 */
 	@Test
 	public void testDiagramWidthExport() {
-		assertEquals(0.0, dia.getWidth(), 0);
+		assertEquals(30.0, dia.getWidth(), 0);
 	}
 
 	/**
 	 * Test diagram height export.
+	 * 
+	 * NOTE: Minimum board size seems to be 30.
 	 */
 	@Test
 	public void testDiagramHeightExport() {
-		assertEquals(0.0, dia.getHeight(), 0);
+		assertEquals(30.0, dia.getHeight(), 0);
 	}
 
 	/**

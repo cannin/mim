@@ -1,0 +1,6 @@
+A Pathvisio plugin that supports drawing diagrams using the Molecular 
+Interaction Map (MIM) notation. Major features include the addition of a panel 
+providing MIM-specific glyphs and support for the MIMML file format which can be 
+used for exchange diagrams with other MIM-compatible tools. Users have the 
+ability to annotate diagram elements with comments, literature references, and 
+links to external databases. 

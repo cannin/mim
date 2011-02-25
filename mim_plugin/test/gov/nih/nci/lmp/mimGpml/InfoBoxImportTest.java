@@ -87,18 +87,28 @@ public class InfoBoxImportTest {
 		pw = helper.getPw();
 	}
 	
+	/**
+	 * Test diagram height import.
+	 * 
+	 * NOTE: Minimum board size seems to be 30.
+	 */
 	@Test
 	public void testPathwayWidthImport() {
 		PathwayElement pwElem = pw.getDataObjects().get(0);
 		
-		assertEquals(0.0, pwElem.getMBoardWidth(), 0);
+		assertEquals(30.0, pwElem.getMBoardWidth(), 0);
 	}
 	
+	/**
+	 * Test diagram height import.
+	 * 
+	 * NOTE: Minimum board size seems to be 30.
+	 */
 	@Test
 	public void testPathwayHeightImport() {
 		PathwayElement pwElem = pw.getDataObjects().get(0);
 		
-		assertEquals(0.0, pwElem.getMBoardHeight(), 0);
+		assertEquals(30.0, pwElem.getMBoardHeight(), 0);
 	}
 
 	@Test

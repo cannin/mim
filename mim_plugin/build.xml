@@ -10,12 +10,10 @@
 
     <property environment="env" />
 	<property name="install.dir" value="${env.HOME}/.PathVisio/plugins" />
-	<property name="pathvisio.dir" value="C:/Projects/pathvisio_new_201101" />
+	<property name="pathvisio.dir" value="../pathvisio" />
 	<property name="lib.dir" value="${pathvisio.dir}/lib" />
     <property name="mim.lib" value="lib"/>
     <property name="images.dir" value="images" />
-	
-	<!--<property name="webstart.dir" value="build/webstart" />-->
 	
 	<path id="project.class.path">
 		<pathelement location="${pathvisio.dir}/pathvisio.jar" />
