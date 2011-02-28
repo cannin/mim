@@ -59,22 +59,30 @@ The MIM (Molecular Interaction Map) plugin for <a href="http://www.pathvisio.org
 </div>
 <div class="box">
 
-<h1><a name="usage"></a>How do I install the MIM Pathvisio plugin?</h1>
+<h1><a name="usage"></a>How do I install the Pathvisio-MIM plugin?</h1>
 
-<p>The MIM Pathvisio plugin requires the installation of Pathvisio, freely available diagram editor for biological systems, found <a href="http://www.pathvisio.org/">here</a> for Linux, Windows, or MacOS. The MIM Pathvisio plugin uses two Java .jar files that can be downloaded <a href="#downloads">here.</a> These .jar files must be placed in the plugins folder of Pathvisio:</p>
+<p><strong><a href="http://www.java.com/getjava/index.jsp">Java</a> for the usage of Pathvisio.</strong> The MIM Pathvisio plugin requires the installation of Pathvisio, freely available diagram editor for biological systems, found <a href="http://www.pathvisio.org/">here</a> for Linux, Windows, or MacOS. There are two ways of installing Pathvisio with the MIM plugin.</p>
 
-<p>In <strong>Windows XP,</strong> make sure that you have downloaded the .jar files to the following location. The word <strong>USER</strong> should be the name of the user for whom the plugin will be installed. 
+<h2>Option 1: First-Time Pathvisio Users</h2>
+
+The easiest installation option is to use our <a href="#downloads"">Pathvisio with MIM installer</a>. This will install both Pathvisio and MIM. This cross-platform installer has been tested on Windows and MacOS; it should be compatible with Linux. 
+
+<h2>Option 2: Users with Pathvisio Installed</h2>
+
+<p>The MIM Pathvisio plugin uses MIMPlugin.jar file that can be downloaded <a href="#downloads">here</a>. This .jar file must be placed in the plugins folder of Pathvisio:</p>
+
+<p>In <strong>Windows XP,</strong> make sure that you have downloaded the .jar file to the following location. The word <strong>USER</strong> should be the name of the user for whom the plugin will be installed. 
 </p><pre>C:\Documents and Settings\USER\.Pathvisio\plugins</pre>
 
-In <strong>Windows Vista/7,</strong> make sure that you have downloaded the .jar files to the following location. The word <strong>USER</strong> should be the name of the user for whom the plugin will be installed. 
+In <strong>Windows Vista/7,</strong> make sure that you have downloaded the .jar file to the following location. The word <strong>USER</strong> should be the name of the user for whom the plugin will be installed. 
 </p><pre>C:\Users\USER\.Pathvisio\plugins</pre>
 
-In <strong>OS X/Unix/Linux,</strong> make sure that you have downloaded the .jar files to the following location. The  <strong>~</strong> symbol represents the home directory of the user for whom the plugin will be installed. 
+In <strong>OS X/Unix/Linux,</strong> make sure that you have downloaded the .jar file to the following location. The  <strong>~</strong> symbol represents the home directory of the user for whom the plugin will be installed. 
 <pre>~/.Pathvisio/plugins</pre>
 
-Any errors in loading the .jar files will be logged in the <strong>Pathvisio.log</strong> file located in the <strong>.Pathvisio</strong> folder. 
+Any errors in loading the .jar file will be logged in the <strong>Pathvisio.log</strong> file located in the <strong>.Pathvisio</strong> folder. 
 
-The MIM Pathvisio plugin can be uninstalled by deleting the MIM plugin .jar files.
+The MIM Pathvisio plugin can be uninstalled by deleting the MIM plugin .jar file.
 
 <h1><a name="usage"></a>How is the MIM Pathvisio plugin used?</h1>
 
@@ -122,7 +130,7 @@ section. Example diagrams are provided as <a href="#downloads">MIMML</a> files.
 <p>MIM interactions are lines in Pathvisio with the correct start and end line types. Both the start and end line types must correspond to a MIM interaction. For example, a catalysis interaction is a line with <strong>mim-catalysis</strong> and a <strong>Line</strong> line types; either line type may be chosen as the start or end type. In the case of non-covalent reversible binding, both ends of the interactions must use the mim-binding line types.</p>
 
 <h1>How do I know which MIM glyph I should use?</h1> 
-<p>Below are example of possible uses for MIM entity glyphs; a detailed explanation of the MIM notation and glyph usage can be found in the [[MIM_SPECIFICATION]]. 
+<p>Below are example of possible uses for MIM entity glyphs; a detailed explanation of the MIM notation and glyph usage can be found in the  <a href="http://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM specification</a>; for a quick reference sheet of the MIM glyphs click <a href="http://discover.nci.nih.gov/mim/mapDesc.html">here</a>. 
 	<h2>Entity Glyphs</h2>
 	<ul>
 		<li>Simple physical entity: Protein or DNA</li>
@@ -183,6 +191,23 @@ section. Example diagrams are provided as <a href="#downloads">MIMML</a> files.
 <h1>How do I draw branched interactions?</h1> 
 <p>Examples of the proper usage of branched interactions are shown in the <a href="#example">example</a> diagram. For instance, entity G is converted into entities N and the degradation products represented by the sink glyph. Graphically, the source of a branched interaction is represented as the direction of the branch. Currently, this semantic is not reproduced in MIMML files. Users may indicate the start of a branched interaction using the <strong>Interaction Start</strong> property in the Properties panel when an interaction is selected in Pathvisio.</p>
 
+<h1>How do I draw anchors on lines?</h1>
+<p></p>
+
+<h1>How do I draw intermolecular glyphs?</h1>
+<p></p>
+
+<h1>How do I increase the number of anchor points for an entity?</h1>
+<p></p>
+
+<h1>How do I change the labels on entities?</h1>
+<p></p>
+
+<h1>How can I connect entities to external databases?</h1>
+<p></p>
+
+
+
 <h1>How do I incorporate the the MIM figures into my publication?</h1>
 <p>The listing below shows the most common scenarios for inclusion of a
 figure into a publication; methods will vary based on the intended
@@ -210,7 +235,7 @@ Ghostscript can be used to convert PDF and EPS files into a variety of
 raster formats such as JPG, BMP, PNG, etc. The following commandline
 converts an EPS image into a JPG image; the resulting image has a
 resolution of 300 DPI and pixel dimension of 1050x1050 pixels. Further
-information on the usage of Ghostscript can be found <a href="http://www.cs.wisc.edu/%7Eghost/doc/AFPL/8.00/Use.htm">here.</a> <strong>FILENAME</strong> must be changed to the appropriate filename. 
+information on the usage of Ghostscript can be found <a href="http://www.cs.wisc.edu/%7Eghost/doc/AFPL/8.00/Use.htm">here</a>. <strong>FILENAME</strong> must be changed to the appropriate filename. 
 <pre>gs -q -dNOPAUSE -dSAFER -dBATCH -r300 -g1050x1050 -sOutputFile=FILENAME.jpg -sDEVICE=jpeg FILENAME.eps
 </pre> 
 </li>
@@ -222,7 +247,15 @@ information on the usage of Ghostscript can be found <a href="http://www.cs.wisc
 <div class="box">
 <h1><a name="file_formats"></a>What file types are used by the MIM Pathvisio plugin?</h1>
 
-<p>Users of the MIM Pathvisio plugin can import diagrams in any format that is supported Pathvisio, which includes Pathvisio's native formats GPML (.gpml) or GenMAPP (.mapp), and an additional <a href="http://pathvisio.com/wiki/BiopaxPluginHelp">Biopax plugin</a> supports the <a href="http://www.biopax.org">BioPAX format</a>. The MIM Pathvisio Plugin add the capability to import and export the MIMML format which is based on the GPML format with modifications to support the validation of MIM diagrams represented by the MIMML files. The MIMML format is capable of representing the subset of the glyphs available in Pathvisio that exist in the MIM notation.</p>
+<p>Users of the MIM Pathvisio plugin can import diagrams in any format that is supported Pathvisio, which includes Pathvisio's native formats GPML (.gpml) or GenMAPP (.mapp), and an additional <a href="http://pathvisio.com/wiki/BiopaxPluginHelp">Biopax plugin</a> supports the <a href="http://www.biopax.org">BioPAX format</a>. The MIM Pathvisio plugin adds the capability to import and export the MIMML format which is based on the GPML format with modifications to support the validation of MIM diagrams represented by the MIMML files. The MIMML format is capable of representing the subset of the glyphs available in Pathvisio that exist in the MIM notation. This MIM-specific format is used in the validation of MIM diagrams.</p>
+
+<h1>How do I import and export to the MIM format?</h1>
+<p>
+	<ul>
+		<li>File -> Import provides an option to import MIMML files.</li>
+		<li>File -> Export provides an option to import MIMML files.</li>
+	</ul> 
+</p>
 
 <p>Validation of MIMML files is done using a <a href="http://www.schematron.com/">Schematron</a>-formatted rule set. The rule set can be used in any environment with an <a href="http://en.wikipedia.org/wiki/Xslt">XSLT</a> processor. The rule set is processed into an XSLT stylesheet that is then run against a MIMML file to generate a validation report. The sample command below uses the <a href="http://xalan.apache.org/index.html">Xalan XSLT processor</a>
 
@@ -237,10 +270,10 @@ information on the usage of Ghostscript can be found <a href="http://www.cs.wisc
 <h1><a name="downloads"></a>Where can I download the MIM Pathvisio plugin and how can I get the source code for my own project?</h1>
 
 <ul>
-  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_plugin/MIMPathvisio.jar">Download the MIM Pathvisio .jar file to add MIM-specific glyphs to Pathvisio</a></li>
-  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_gpml/MIMGPML.jar">Download the MIM Pathvisio .jar file to add MIMML import and export capability to Pathvisio</a>
+  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_plugin/installer/Pathvisio-MIM_2.0.11-Setup.jar">Pathvisio with MIM installer</a></li>
+  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_plugin/MIMPlugin.jar">Download the MIMPlugin.jar file to add MIM-specific features to Pathvisio</a></li>
   <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/">An online subversion repository browser for the MIM source code</a></li>  
-  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/">Download the MIMML Schematron rule set</a> <strong>Not currently available</strong></li>
+  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_api/validation/mimml_validation.sch">Download the MIMML Schematron rule set</a></li>
   <li>Download MIMML files: <a href="files/chk2.mimml">Chk2</a> and <a href="files/example.mimml">MIM example</a> diagrams</li>
   <li><a href="mailto:?Subject=Interesting%20Diagram%20Editor:%20the MIM Pathvisio plugin&amp;Body=Hi%2C%0D%0A%0D%0AI%20think%20you%27ll%20find%20the%20the MIM Pathvisio plugin%20interesting,%0D%0Ahttp://discover.nci.nih.gov/mim/mim_pathvisio.html%20It%20creates%20publishable-quality%20diagrams%20of%20biological%20systems%20using%20the%20MIM%20graphical%20notation.%20Check%20it%20out%21%0D%0A%0D%0ARegards%2C%0D%0A">Tell a friend</a></li>
   <li><a href="http://www.pathvisio.org/">Learn about Pathvisio and Wikipathways</a></li>
