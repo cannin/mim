@@ -64,6 +64,9 @@
 		<manifestclasspath property="manifest.cp" jarfile="${jar.name}">
 			<classpath refid="project.class.path" />
 		</manifestclasspath>
+		<unjar dest="build">
+			<fileset dir="lib" includes="**/*.jar" excludes="**/junit*.jar"/>
+		</unjar>	
 		<jar jarfile="${jar.name}">
 			<fileset dir="build" includes="**/*.*" />
 			<manifest>
