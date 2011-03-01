@@ -985,7 +985,7 @@ public class ExporterHelper extends CommonHelper {
 	/**
 	 * Convert data node.
 	 * 
-	 * @param gpmlDataNodeType
+	 * @param gpmlGroupType
 	 *            the gpml data node type
 	 * @return the schema type
 	 */
