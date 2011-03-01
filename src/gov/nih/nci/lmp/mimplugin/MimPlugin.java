@@ -48,24 +48,22 @@ import java.net.URL;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.EnumSet;
-import java.io.File;
 
 import javax.swing.*;
+import edu.stanford.ejalbert.BrowserLauncher;
 
 import org.pathvisio.ApplicationEvent;
 import org.pathvisio.gui.swing.PvDesktop;
 import org.pathvisio.gui.swing.PathwayElementMenuListener;
-import org.pathvisio.gui.swing.PreferencesDlg;
 import org.pathvisio.gui.swing.ObjectsPane;
 import org.pathvisio.gui.swing.propertypanel.PropertyDisplayManager;
 import org.pathvisio.plugin.Plugin;
 import org.pathvisio.Engine;
-import org.pathvisio.preferences.Preference;
+import org.pathvisio.debug.Logger;
 import org.pathvisio.preferences.PreferenceManager;
 import org.pathvisio.model.*;
 import org.pathvisio.view.*;
 import org.pathvisio.view.Graphics;
-import org.pathvisio.view.MIMShapes;
 import gov.nih.nci.lmp.mimGpml.MIMFormat;
 
 /**
@@ -83,9 +81,11 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
     private static AnchorType INTRANS_ANCHOR;
     public static final GroupStyle SIMPLE_ENTITY_GROUP = GroupStyle.create("EntityWithFeatures", true);
     private static MimObjectsPane mimObjectsPane;
+    private PvDesktop desktop;
 
     public void init(PvDesktop desktop)
 	{
+        this.desktop = desktop;
         MimObjectsPane.registerShapes();
         MimImplicitComplexGroup.registerGroup();
         Engine e = desktop.getSwingEngine().getEngine();
@@ -98,6 +98,8 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
 
         PropertyDisplayManager.setVisible(StaticProperty.HEIGHT, false);
         PropertyDisplayManager.setVisible(StaticProperty.WIDTH, false);
+        Action mimHelpAction = new MimHelpAction();
+        desktop.registerMenuAction ("Help", mimHelpAction);
 
         // register a hook so we can modify the right-click menu
         desktop.addPathwayElementMenuHook(new InTransOption());
@@ -113,7 +115,8 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
         desktop.getSideBarTabbedPane().setSelectedComponent(mimObjectsPane);
         if (!PreferenceManager.getCurrent().get(MimPreferencesDlg.MIMPreference.PREFERRED_PANEL).equals("MIM Glyphs")) {
             int panelId = desktop.getSideBarTabbedPane().indexOfTab(PreferenceManager.getCurrent().get(MimPreferencesDlg.MIMPreference.PREFERRED_PANEL));
-            if (panelId < -1) {
+            Logger.log.info("preference manager preferred panel" + panelId);
+            if (panelId > -1) {
                 desktop.getSideBarTabbedPane().setSelectedComponent(desktop.getSideBarTabbedPane().getComponentAt(panelId));
             }
         }
@@ -153,7 +156,35 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
                 EnumSet.of(ObjectType.DATANODE)
         );
 	}
+       /**
+         * Display a welcome message when this action is triggered.
+         */
+        private class MimHelpAction extends AbstractAction
+        {
+                MimHelpAction()
+                {
+                        // The NAME property of an action is used as
+                        // the label of the menu item
+                        putValue (NAME, "MIM Help");
+                }
 
+                /**
+                 *  called when the user selects the menu item
+                 */
+                public void actionPerformed(ActionEvent arg0)
+                {                      
+                    String url = "HTTP://discover.nci.nih.gov/mim/mim_pathvisio.html";
+                        try
+                        {
+                            BrowserLauncher bl = new BrowserLauncher(null);
+                            bl.openURLinBrowser(url);
+                        }
+                        catch (Exception ex)
+                        {
+                            ex.printStackTrace();
+                        }
+                }
+        }
     public void done() {}
 
     /**
