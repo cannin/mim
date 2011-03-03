@@ -16,5 +16,6 @@
 	<classpathentry kind="lib" path="/pathvisio/lib/org.bridgedb.rdb.jar"/>
 	<classpathentry kind="lib" path="/pathvisio/lib/org.bridgedb.webservice.bridgerest.jar"/>
 	<classpathentry kind="lib" path="/pathvisio/lib/jdom.jar"/>
+	<classpathentry kind="lib" path="/pathvisio/lib/BrowserLauncher.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
