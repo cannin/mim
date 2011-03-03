@@ -760,7 +760,7 @@ public class ExporterHelper extends CommonHelper {
 		String mimBioRelXRefId = mapRelationshipXRef(pwElem);
 
 		// TODO: Add the ImplicitComplex group style
-		if (pwElem.getGroupStyle().toString().equals("Complex")) {
+		if (pwElem.getGroupStyle().toString().equals("ImplicitComplex")) {
 
 			EntityGlyphType ic = dia.addNewEntityGlyph();
 			ic.setVisId(pwElem.getGroupId());
