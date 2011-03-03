@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>MIM Pathvisio</title>
-  <link href="mim_pathvisio.css" rel="stylesheet" type="text/css">
+  <link href="mim.css" rel="stylesheet" type="text/css">
 </head><body>
 
 <div id="overallbox">
@@ -13,22 +13,22 @@
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#usage">Usage</a></li>
 <li><a href="#usage_tips">Usage Tips</a></li>
-<li><a href="#downloads">Download</a></li>
 <li><a href="#file_formats">File Formats</a></li>
+<li><a href="#downloads">Download</a></li>
 <li><a href="#authors">Authors</a></li>
 </div>
 
 <div class="box">
 <h1><a name="introduction"></a>What is the MIM Pathvisio plugin?</h1>
 
-<p>
+<p><a href="#downloads"><img class="floatRight" alt="mim_download.png" width="225px" height="200px" src="img/mim_download.png"></a> 
 The MIM (Molecular Interaction Map) plugin for <a href="http://www.pathvisio.org/">Pathvisio</a> allows users to produce diagrams of bioregulatory systems according to an implementation of notation first developed by Kurt Kohn in 1999. The plugin has two main features: 1) it provides users with the glyphs necessary to draw MIM diagrams and 2) it allows users to import and export to the MIM Markup Language (MIMML) format, a format developed to exchange MIM diagrams between MIM compatible tools and used to validate MIM diagrams. Diagrams produced using the MIM Pathvisio plugin can be exported into several image formats including PDF, PNG, SVG, and TIFF.</p>
 
 <h1>What is the MIM notation?</h1>
 <p>The MIM notation is a graphical notation for biological systems for the representation of networks containing multi-protein complexes, protein modifications, and enzymes that are substrates of other enzymes. This graphical representation makes it possible to view all of the many interactions in which a given molecule may be involved, and it can portray competing interactions, which are common in bioregulatory networks. One aim of the MIM notation is to standardize diagrams of biological systems with a fixed set of glyphs with specific semantics. The specific semantics of the MIM notation can be translated into other standardized formats.</p> 
 
 <h1><a name="example"></a>What do the MIM diagrams look like?</h1>
-<p>Here are two sample images: the <a href="img/chk2.png">activation of Chk2 in response to double strand breaks</a> and an <a href="img/example.png">example diagram</a> (shown below) showing all the various elements of the MIM notation, as implemented.<img class="diagram" alt="example diagram" src="img/example.png"></p> 
+<p>Here are two sample images: the <a href="img/chk2.png">activation of Chk2 in response to double strand breaks</a> and an <a href="img/example.png">example diagram</a> (shown below) showing all the various elements of the MIM notation, as implemented.<img class="diagram" alt="example diagram" width="65%" height="65%"  src="img/example.png"></p> 
 
 <h1>Who are the intended users of the MIM Pathvisio plugin?</h1>
 <p>Researchers interested in using the MIM notation to diagram their biological systems. This would include researchers that want their diagrams to have a well-defined semantic attached to the elements in their diagrams. Because the MIM notation is a graphical notation for bioregulatory networks in general, the type of experiment or study is irrelevant.
@@ -54,40 +54,42 @@ The MIM (Molecular Interaction Map) plugin for <a href="http://www.pathvisio.org
 	</ul>
 </p>
 
-<br>
-<a href="#global_nav"><img class="topLink" alt="up_arrow.png" src="img/up_arrow.png"></a>
-</div>
-<div class="box">
-
 <h1><a name="usage"></a>How do I install the Pathvisio-MIM plugin?</h1>
 
-<p><strong><a href="http://www.java.com/getjava/index.jsp">Java</a> for the usage of Pathvisio.</strong> The MIM Pathvisio plugin requires the installation of Pathvisio, freely available diagram editor for biological systems, found <a href="http://www.pathvisio.org/">here</a> for Linux, Windows, or MacOS. There are two ways of installing Pathvisio with the MIM plugin.</p>
+<p><strong><a href="http://www.java.com/getjava/index.jsp">Java</a> for the usage of Pathvisio.</strong> The MIM Pathvisio plugin requires the installation of Pathvisio, freely available diagram editor for biological systems, found <a href="http://www.pathvisio.org/">here</a> for Linux, Windows, or MacOS. There are two ways of installing Pathvisio with the MIM plugin:</p>
 
-<h2>Option 1: First-Time Pathvisio Users</h2>
+<ol>
+	<li><strong>Option 1: First-Time Pathvisio Users:</strong><p>The easiest installation option is to use our <a href="#downloads"">Pathvisio with MIM installer</a>. This will install both Pathvisio and MIM. This cross-platform installer has been tested on Windows and MacOS; it should be compatible with Linux.</p></li>
 
-The easiest installation option is to use our <a href="#downloads"">Pathvisio with MIM installer</a>. This will install both Pathvisio and MIM. This cross-platform installer has been tested on Windows and MacOS; it should be compatible with Linux. 
-
-<h2>Option 2: Users with Pathvisio Installed</h2>
-
-<p>The MIM Pathvisio plugin uses MIMPlugin.jar file that can be downloaded <a href="#downloads">here</a>. This .jar file must be placed in the plugins folder of Pathvisio:</p>
-
-<p>In <strong>Windows XP,</strong> make sure that you have downloaded the .jar file to the following location. The word <strong>USER</strong> should be the name of the user for whom the plugin will be installed. 
-</p><pre>C:\Documents and Settings\USER\.Pathvisio\plugins</pre>
-
-In <strong>Windows Vista/7,</strong> make sure that you have downloaded the .jar file to the following location. The word <strong>USER</strong> should be the name of the user for whom the plugin will be installed. 
-</p><pre>C:\Users\USER\.Pathvisio\plugins</pre>
-
-In <strong>OS X/Unix/Linux,</strong> make sure that you have downloaded the .jar file to the following location. The  <strong>~</strong> symbol represents the home directory of the user for whom the plugin will be installed. 
-<pre>~/.Pathvisio/plugins</pre>
+	<li><strong>Option 2: Users with Pathvisio Installed:</strong><p>The MIM Pathvisio plugin uses MIMPlugin.jar file that can be downloaded <a href="#downloads">here</a>. This .jar file must be placed in the plugins folder of Pathvisio:</p>
+		<p>In <strong>Windows XP,</strong> make sure that you have downloaded the .jar file to the following location. The word <strong>USER</strong> should be the name of the user for whom the plugin will be installed.</p> 
+		<pre>C:\Documents and Settings\USER\.Pathvisio\plugins</pre>
+		
+		<p>In <strong>Windows Vista/7,</strong> make sure that you have downloaded the .jar file to the following location. The word <strong>USER</strong> should be the name of the user for whom the plugin will be installed.</p> 
+		<pre>C:\Users\USER\.Pathvisio\plugins</pre>
+		
+		<p>In <strong>OS X/Unix/Linux,</strong> make sure that you have downloaded the .jar file to the following location. The  <strong>~</strong> symbol represents the home directory of the user for whom the plugin will be installed.</p> 
+		<pre>~/.Pathvisio/plugins</pre>
+	</li>
+</ol>
 
 Any errors in loading the .jar file will be logged in the <strong>Pathvisio.log</strong> file located in the <strong>.Pathvisio</strong> folder. 
 
 The MIM Pathvisio plugin can be uninstalled by deleting the MIM plugin .jar file.
 
+<br>
+<a href="#global_nav"><img class="topLink" alt="up_arrow.png" src="img/up_arrow.png"></a>
+</div>
+<div class="box">
+
 <h1><a name="usage"></a>How is the MIM Pathvisio plugin used?</h1>
 
 <p>
-Once the MIM Pathvisio plugin has been installed, the MIM Pathvisio plugin will be loaded whenever Pathvisio is run. The user interface of Pathvisio should have two additions, which are shown below. A new toolbar should be visible near the top of the Pathvisio editor. From left to right, the glyphs are simple physical entity, simple physical entity with features, conceptual entity, source/sink, modifier, and restricted copy. Additionally, the MIM Pathvisio plugin adds a series of MIM-specific line types available to a user when a line is selected. The MIM-specific line types are prefixed with <strong>mim-</strong> and include the following: 
+Once the MIM Pathvisio plugin has been installed, the MIM Pathvisio plugin will be loaded whenever Pathvisio is run. 
+
+When the MIM plugin is loaded the <strong>MIM Glyphs</strong> panel should be visible which includes the glyphs used in the notation; this includes both entity and interaction glyphs. First-time users should look at this quick reference sheet that gives an <a href="http://discover.nci.nih.gov/mim/mapDesc.html">overview of the MIM glyphs</a>; a detailed specification is also <a href="http://discover.nci.nih.gov/mim/formal_mim_spec.pdf">available.</a>
+
+Additionally, the MIM-specific line types will also appear in the <strong>Properties</strong> panel; these are prefixed with <strong>mim-</strong> and include the following: 
 
 <ul>
 	<li>mim-necessary-stimulation</li>
@@ -110,7 +112,7 @@ Once the MIM Pathvisio plugin has been installed, the MIM Pathvisio plugin will 
 	<li>mim-state-combination</li>
 </ul>
 
-<img class="diagram" alt="plugin interface" src="img/mim_plugin.png">
+<img class="diagram" alt="plugin interface" width="75%" height="75%" src="img/mim_plugin.png">
 </p>
 
 <p>Explanation of the MIM Pathvisio plugin input files is provided in the <a href="#file_formats">file formats</a>
@@ -118,18 +120,50 @@ section. Example diagrams are provided as <a href="#downloads">MIMML</a> files.
 
 </p>
 
+<h1>Basic Usage of Pathvisio MIM: How do I ...?</h1> 
+
+<p>Instructional videos are provided for the basic techniques needed to use the Pathvisio MIM plugin. A <font color="red"><strong>RED</strong></font> dot in the videos indicates a <strong>left mouse click</strong> and a <font color="blue"><strong>BLUE</strong></font> dot indicates a <strong>right mouse click</strong>. In addition to these videos, Pathvisio provides <a href="http://www.pathvisio.org/wiki/PathVisioHelp">documentation</a> for many of its capabilities.</p>
+
+<h2>Drawing MIM Diagrams</h2>
+<ul>
+	<li>Drawing and Labeling Entities and Adding External References
+		<p><iframe title="YouTube video player" width="480" height="390" src="http://www.youtube.com/embed/DPwymnhVCnA" frameborder="0" allowfullscreen></iframe></p>
+	</li>
+	<li>Drawing Explicit and Implicit Complexes
+		<p><iframe title="YouTube video player" width="480" height="390" src="http://www.youtube.com/embed/25a-XlOkd1g" frameborder="0" allowfullscreen></iframe></p>
+	</li>
+	<li>Drawing Interactions including Contingencies and Branching
+		<p><iframe title="YouTube video player" width="480" height="390" src="http://www.youtube.com/embed/d671gOTMLIc" frameborder="0" allowfullscreen></iframe></p>
+	</li> 
+	<li>Drawing Covalent Modifications and Intermolecular Glyphs 
+		<p><iframe title="YouTube video player" width="480" height="390" src="http://www.youtube.com/embed/bejTtp_2p2A" frameborder="0" allowfullscreen></iframe></p>
+	</li>
+	<li>Drawing a Protein with Features (e.g. Domains, Motifs, Sites)
+		<p><iframe title="YouTube video player" width="480" height="390" src="http://www.youtube.com/embed/JYomzSvMk_c" frameborder="0" allowfullscreen></iframe></p>
+	</li>
+</ul>
+
+<h2>Annotating MIM Diagrams</h2>
+<ul>
+	<li>Adding Diagram Metadata
+		<p><iframe title="YouTube video player" width="480" height="390" src="http://www.youtube.com/embed/w9-bwJsr2P4" frameborder="0" allowfullscreen></iframe></p>
+	</li>
+	<li>Adding Comments and References to Interactions
+		<p><iframe title="YouTube video player" width="480" height="390" src="http://www.youtube.com/embed/V0UCclZqlaM" frameborder="0" allowfullscreen></iframe></p>
+	</li>
+	<li>Increasing the Number of Entity Anchor Points
+		<p><iframe title="YouTube video player" width="480" height="390" src="http://www.youtube.com/embed/bmp04B5hxUI" frameborder="0" allowfullscreen></iframe></p>
+	</li>
+	<li>Exporting and Importing the MIMML Format
+		<p><iframe title="YouTube video player" width="480" height="390" src="http://www.youtube.com/embed/zzWmpyD8scg" frameborder="0" allowfullscreen></iframe></p>
+	</li>
+</ul> 
 <br>
 <a href="#global_nav"><img class="topLink" alt="up_arrow.png" src="img/up_arrow.png"></a>
 </div>
 <div class="box">
 
-<h1><a name="usage_tips"></a>How do I ...?</h1> 
-<p>Pathvisio provides <a href="http://www.pathvisio.org/wiki/PathVisioHelp">documentation</a> for many of its capabilities. This document describes the usage of the features specific to the MIM Pathvisio plugin.</p>
-
-<h1>How do I draw a MIM interaction?</h1>
-<p>MIM interactions are lines in Pathvisio with the correct start and end line types. Both the start and end line types must correspond to a MIM interaction. For example, a catalysis interaction is a line with <strong>mim-catalysis</strong> and a <strong>Line</strong> line types; either line type may be chosen as the start or end type. In the case of non-covalent reversible binding, both ends of the interactions must use the mim-binding line types.</p>
-
-<h1>How do I know which MIM glyph I should use?</h1> 
+<h1><a name="usage_tips">How do I know which MIM glyph I should use?</a></h1> 
 <p>Below are example of possible uses for MIM entity glyphs; a detailed explanation of the MIM notation and glyph usage can be found in the  <a href="http://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM specification</a>; for a quick reference sheet of the MIM glyphs click <a href="http://discover.nci.nih.gov/mim/mapDesc.html">here</a>. 
 	<h2>Entity Glyphs</h2>
 	<ul>
@@ -155,9 +189,6 @@ section. Example diagrams are provided as <a href="#downloads">MIMML</a> files.
 		<li>SmallMolecule</li>
 	</ul>
 </p>
-
-<h1>How do I draw proteins with domains?</h1> 
-<p>A protein with domains is presented as a simple physical entity connected to an interaction with a first-feature arrowhead pointing towards the protein that will possess domains. On the opposite end of the interaction an entity feature should be attached via the Line line type; the entity feature will represent the protein domain. Entity features are created first producing a simple physical entity and then change its <strong>Type</strong> in the Properties panel. Subsequent domains are connected by interactions with next-feature arrowheads on the end connected to the next feature and a Line line type on the other end. The <a href="#example">example</a> diagram shows an entity with two features B and C that could be used to graphically represent a protein with two domains.</p>
 
 <h1>How do I indicate the location of a domain within a protein?</h1> 
 <p>Protein domains are represented as features of a simple physical entity. Entity A in the <a href="#example">example</a> diagram has two entity features B and C. Entity feature C is a region on simple physical entity A that extends from position 10 to position 20. The labels of entity features should have one of the following formats: X, Y:X, Y:X:Z, or X:Z; where X is a text label, Y is an integer start location value, and Z is an integer end location value.</p>
@@ -191,23 +222,6 @@ section. Example diagrams are provided as <a href="#downloads">MIMML</a> files.
 <h1>How do I draw branched interactions?</h1> 
 <p>Examples of the proper usage of branched interactions are shown in the <a href="#example">example</a> diagram. For instance, entity G is converted into entities N and the degradation products represented by the sink glyph. Graphically, the source of a branched interaction is represented as the direction of the branch. Currently, this semantic is not reproduced in MIMML files. Users may indicate the start of a branched interaction using the <strong>Interaction Start</strong> property in the Properties panel when an interaction is selected in Pathvisio.</p>
 
-<h1>How do I draw anchors on lines?</h1>
-<p></p>
-
-<h1>How do I draw intermolecular glyphs?</h1>
-<p></p>
-
-<h1>How do I increase the number of anchor points for an entity?</h1>
-<p></p>
-
-<h1>How do I change the labels on entities?</h1>
-<p></p>
-
-<h1>How can I connect entities to external databases?</h1>
-<p></p>
-
-
-
 <h1>How do I incorporate the the MIM figures into my publication?</h1>
 <p>The listing below shows the most common scenarios for inclusion of a
 figure into a publication; methods will vary based on the intended
@@ -229,16 +243,6 @@ publication type:
 \end{document}
 </pre> 
 </li>
-
-<li><strong>Conversion of PDF/EPS file into other formats using Ghostscript</strong>:
-Ghostscript can be used to convert PDF and EPS files into a variety of
-raster formats such as JPG, BMP, PNG, etc. The following commandline
-converts an EPS image into a JPG image; the resulting image has a
-resolution of 300 DPI and pixel dimension of 1050x1050 pixels. Further
-information on the usage of Ghostscript can be found <a href="http://www.cs.wisc.edu/%7Eghost/doc/AFPL/8.00/Use.htm">here</a>. <strong>FILENAME</strong> must be changed to the appropriate filename. 
-<pre>gs -q -dNOPAUSE -dSAFER -dBATCH -r300 -g1050x1050 -sOutputFile=FILENAME.jpg -sDEVICE=jpeg FILENAME.eps
-</pre> 
-</li>
 </ol>
 <br>
 <a href="#global_nav"><img class="topLink" alt="up_arrow.png" src="img/up_arrow.png"></a>
@@ -249,13 +253,7 @@ information on the usage of Ghostscript can be found <a href="http://www.cs.wisc
 
 <p>Users of the MIM Pathvisio plugin can import diagrams in any format that is supported Pathvisio, which includes Pathvisio's native formats GPML (.gpml) or GenMAPP (.mapp), and an additional <a href="http://pathvisio.com/wiki/BiopaxPluginHelp">Biopax plugin</a> supports the <a href="http://www.biopax.org">BioPAX format</a>. The MIM Pathvisio plugin adds the capability to import and export the MIMML format which is based on the GPML format with modifications to support the validation of MIM diagrams represented by the MIMML files. The MIMML format is capable of representing the subset of the glyphs available in Pathvisio that exist in the MIM notation. This MIM-specific format is used in the validation of MIM diagrams.</p>
 
-<h1>How do I import and export to the MIM format?</h1>
-<p>
-	<ul>
-		<li>File -> Import provides an option to import MIMML files.</li>
-		<li>File -> Export provides an option to import MIMML files.</li>
-	</ul> 
-</p>
+<h1>How do I validate MIM diagrams?</h1>
 
 <p>Validation of MIMML files is done using a <a href="http://www.schematron.com/">Schematron</a>-formatted rule set. The rule set can be used in any environment with an <a href="http://en.wikipedia.org/wiki/Xslt">XSLT</a> processor. The rule set is processed into an XSLT stylesheet that is then run against a MIMML file to generate a validation report. The sample command below uses the <a href="http://xalan.apache.org/index.html">Xalan XSLT processor</a>
 
@@ -267,11 +265,11 @@ information on the usage of Ghostscript can be found <a href="http://www.cs.wisc
 
 <div class="box">
 
-<h1><a name="downloads"></a>Where can I download the MIM Pathvisio plugin and how can I get the source code for my own project?</h1>
+<h1><a name="downloads"></a>Where can I download the MIM Pathvisio plugin and the source code?</h1>
 
 <ul>
-  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_plugin/installer/Pathvisio-MIM_2.0.11-Setup.jar">Pathvisio with MIM installer</a></li>
-  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_plugin/MIMPlugin.jar">Download the MIMPlugin.jar file to add MIM-specific features to Pathvisio</a></li>
+  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_plugin/installer/Pathvisio-MIM_2.0.11-Setup.jar">Download Pathvisio with MIM installer</a></li>
+  <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_plugin/MIMPlugin.jar">Download the just the MIM Plugin .jar file</a></li>
   <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/">An online subversion repository browser for the MIM source code</a></li>  
   <li><a href="https://ncisvn.nci.nih.gov/svn/mim/trunk/mim_api/validation/mimml_validation.sch">Download the MIMML Schematron rule set</a></li>
   <li>Download MIMML files: <a href="files/chk2.mimml">Chk2</a> and <a href="files/example.mimml">MIM example</a> diagrams</li>
@@ -298,7 +296,9 @@ Institutes of Health (NIH) <br><br>
 BS, Biomedical Engineering, Georgia Institute of Technology <br>
 PhD candidate, Bioinformatics, Boston University<br>
 </p>
-<p>Margot Sunshine</p>
+<p>Margot Sunshine<br/>
+SRA International
+</p>
 <p><a href="http://www3.cancer.gov/intra/lmp/kwkbio.htm">Kurt Kohn</a></p>
 <p><a href="http://www3.cancer.gov/intra/lmp/MABIO.HTM">Mirit Aladjem</a></p>
 <br>
