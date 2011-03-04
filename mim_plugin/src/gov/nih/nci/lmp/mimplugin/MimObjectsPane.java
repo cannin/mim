@@ -163,7 +163,7 @@ public class MimObjectsPane extends ObjectsPane {
     private Action[] getMimCatalyticInteractions(Engine e) {
         return new Action[] {
  				 new CommonActions.NewElementAction(e, new LineTemplate(
-						 "Cleavage", LineStyle.SOLID, LineType.LINE, MIMShapes.MIM_CLEAVAGE, ConnectorType.STRAIGHT)
+						 "Cleavage", LineStyle.SOLID, LineType.LINE, MIMShapes.MIM_CLEAVAGE, ConnectorType.ELBOW)
 				 ),
                  new CommonActions.NewElementAction(e, new LineTemplate(
 						 "Catalysis", LineStyle.SOLID, LineType.LINE, MIMShapes.MIM_CATALYSIS, ConnectorType.ELBOW)
@@ -186,7 +186,7 @@ public class MimObjectsPane extends ObjectsPane {
         return new Action[] {
  				 new CommonActions.NewElementAction(e, new LabelTemplate()),
                  new CommonActions.NewElementAction(e, new MimConnectorTemplate(
-						 "State combination", "mim-state-combination", LineType.LINE, LineType.LINE, ConnectorType.STRAIGHT)
+						 "State combination", "mim-state-combination", LineType.LINE, LineType.LINE, ConnectorType.ELBOW)
 				 ),
 		 };
     }
