@@ -55,6 +55,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.Arrays;
 
+import org.apache.commons.collections.MultiMap;
+import org.apache.commons.collections.map.MultiValueMap;
+
 import org.pathvisio.biopax.BiopaxElementManager;
 import org.pathvisio.biopax.reflect.BiopaxElement;
 import org.pathvisio.model.PathwayElement.Comment;
@@ -63,60 +66,105 @@ import org.pathvisio.model.ObjectType;
 import org.pathvisio.model.Pathway;
 import org.pathvisio.model.PathwayElement;
 
-// TODO: Auto-generated Javadoc
 /**
- * Exports comments with references format
+ * Exports annotations
  * 
  * @author Augustin Luna <augustin@mail.nih.gov>
  */
-public class CommentExporterHelper {
+public class AnnotationExporterHelper {
 
 	/** The Pathvisio pathway. */
 	private final Pathway pw;
 
-	/** The Pathvisio pathway. */
-	private String comments;
-
+	/** The Pathvisio commentMap. */
+	private String annotations;
+	
+	/** The Pathvisio commentMap. */
+	private MultiMap commentsMap;
+	
+	/** The Pathvisio dataSourceMap. */
+	private MultiMap dataSourcesMap;
+	
 	/**
 	 * Instantiates a new exporter helper.
 	 * 
 	 * @param pw
 	 *            the pathway
 	 */
-	CommentExporterHelper(Pathway pw) {
+	@SuppressWarnings("unchecked")
+	AnnotationExporterHelper(Pathway pw) {
 		this.pw = pw;
-		System.out.println("Exporting Comments");
-
-		ArrayList<String> allComments = new ArrayList<String>();
+		System.out.println("Exporting Annotations");
 		
+		commentsMap = new MultiValueMap();
+		dataSourcesMap = new MultiValueMap();
+
 		for (PathwayElement pwElem : pw.getDataObjects()) {
-//			if (pwElem.getObjectType() == ObjectType.BIOPAX) {
-//				comments = generateCommentsWithRef(pwElem);
-//			} else 
-				
 			if (pwElem.getObjectType() == ObjectType.LINE) {
-				allComments.addAll(generateComments(pwElem));
+				commentsMap.putAll(generateCommentMap(pwElem));
 			}
+			
+			if (pwElem.getObjectType() == ObjectType.DATANODE) {
+				dataSourcesMap.putAll(generateDataSourceMap(pwElem));
+			}			
 		}
 		
-		comments = "";
+		formatAnnotations(); 
+	}
+	
+	/**
+	 * Format annotations.
+	 */
+	@SuppressWarnings("unchecked")
+	private void formatAnnotations() {
+		annotations = "--- # Annotations\n";
+		annotations += "lines:\n";
+		
+		Iterator commentsItr = commentsMap.keySet().iterator();
 		
 		// Looks for PMID at the end of comments
-		for (String comment : allComments) {
-			String pattern = "\\[\\[(\\d+)\\]\\]";
+		while (commentsItr.hasNext()) {
+			String graphId = (String) commentsItr.next(); 
+			
+			ArrayList<String> tmpList = (ArrayList<String>) commentsMap.get(graphId);
 
-			// Create a Pattern object
-			Pattern r = Pattern.compile(pattern);
-
-			// Now create matcher object.
-			Matcher m = r.matcher(comment);
-			if (m.find()) {
-				comments += "PMID: " + m.group(1) + "\n";
-				comments += "Comment: " + comment + "\n\n";
-			} else {
-				comments += "Comment: " + comment + "\n\n";
+			annotations += "  - graphid: " + graphId + "\n";
+			annotations += "    comments: \n";
+			
+			for (String comment : tmpList) {
+				String pattern = "\\[\\[(\\d+)\\]\\]";
+	
+				// Create a Pattern object
+				Pattern r = Pattern.compile(pattern);
+	
+				// Now create matcher object.
+				Matcher m = r.matcher(comment);
+				if (m.find()) {
+					annotations += "      - pmid: " + m.group(1) + "\n";
+					annotations += "        comment: " + comment + "\n";
+				} else {
+					annotations += "      - comment: " + comment + "\n";
+				}
 			}
 		}
+		
+		annotations += "datanodes:\n";
+		
+		Iterator dataSourcesItr = dataSourcesMap.keySet().iterator();
+		
+		// Looks for PMID at the end of comments
+		while (dataSourcesItr.hasNext()) {
+			String graphId = (String) dataSourcesItr.next(); 
+			
+			ArrayList<String> tmpList = (ArrayList<String>) dataSourcesMap.get(graphId);
+			String db = tmpList.get(0);
+			String id = tmpList.get(1);
+			
+			annotations += "  - graphid: " + graphId + "\n";
+			annotations += "    db: " + db + "\n";
+			annotations += "    id: " + id + "\n";
+	
+		}		
 	}
 
 	/**
@@ -133,7 +181,7 @@ public class CommentExporterHelper {
 
 		try {
 			PrintWriter out = new PrintWriter(new FileWriter(file));
-			out.print(comments);
+			out.print(annotations);
 			out.close();
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
@@ -143,29 +191,35 @@ public class CommentExporterHelper {
 	}
 
 	/**
-	 * Generate comments.
+	 * Generate comment map.
 	 *
 	 * @param pwElem the pw elem
 	 * @return the string
 	 */
-	private ArrayList<String> generateComments(PathwayElement pwElem) {
-		ArrayList<String> comments = new ArrayList<String>();
+	private MultiMap generateCommentMap(PathwayElement pwElem) {		
+		MultiMap commentMap = new MultiValueMap();
 		
 		// Map comments
 		for (Comment comment : pwElem.getComments()) {
-			comments.add(comment.toString());
+			commentMap.put(pwElem.getGraphId(), comment.toString());
 		}
 
-//		// Map BioPAX publication cross-references
-//		ArrayList<String> mimBioRefIds = mapBiopaxRefs(pwElem);
-//
-//		for (String id : mimBioRefIds) {
-//			if (isNotBlank(id)) {
-//				Logger.log.info("mimBioRef: " + id);
-//			}
-//		}
+		return commentMap; 
+	}
+	
+	/**
+	 * Generate DataSource map.
+	 *
+	 * @param pwElem the pw elem
+	 * @return the string
+	 */
+	private MultiMap generateDataSourceMap(PathwayElement pwElem) {
+		MultiMap dataSourceMap = new MultiValueMap();
 		
-		return comments; 
+		dataSourceMap.put(pwElem.getGraphId(), pwElem.getDataSource().getFullName());
+		dataSourceMap.put(pwElem.getGraphId(), pwElem.getGeneID());
+
+		return dataSourceMap; 
 	}
 
 //	/**

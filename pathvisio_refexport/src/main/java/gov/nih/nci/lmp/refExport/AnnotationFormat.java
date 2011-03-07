@@ -39,7 +39,7 @@
  */
 package gov.nih.nci.lmp.refExport;
 
-import gov.nih.nci.lmp.refExport.CommentExporterHelper;
+import gov.nih.nci.lmp.refExport.AnnotationExporterHelper;
 
 import java.io.File;
 import java.io.IOException;
@@ -49,11 +49,11 @@ import org.pathvisio.model.Pathway;
 import org.pathvisio.model.PathwayExporter;
 
 /** 
- * Sets up the comment format in Pathvisio
+ * Sets up the annotation format in Pathvisio
  * 
  * @author Augustin Luna <augustin@mail.nih.gov>
  */
-public class CommentFormat implements PathwayExporter {
+public class AnnotationFormat implements PathwayExporter {
 	/** The extensions to add to the Pathvisio interface. */
 	private final String[] EXTENSIONS = new String[] { "txt" };
 
@@ -72,7 +72,7 @@ public class CommentFormat implements PathwayExporter {
 	 * @see org.pathvisio.model.PathwayExporter#getName()
 	 */
 	public String getName() {
-		return "Comments";
+		return "Annotations";
 	}
 	
 	/*
@@ -83,7 +83,7 @@ public class CommentFormat implements PathwayExporter {
 	 */
 	public void doExport(File file, Pathway pathway) throws ConverterException {
 		try {
-			CommentExporterHelper helper = new CommentExporterHelper(pathway);
+			AnnotationExporterHelper helper = new AnnotationExporterHelper(pathway);
 			helper.export(file);
 		} catch (IOException e) {
 			throw new ConverterException(e);

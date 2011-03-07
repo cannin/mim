@@ -12,11 +12,15 @@
 	<property name="install.dir" value="${env.HOME}${file.separator}.PathVisio${file.separator}plugins" />
 	<property name="pathvisio.dir" value="${basedir}${file.separator}pathvisio${file.separator}" />
 	<property name="project.dir" value="${basedir}${file.separator}pathvisio_refexport${file.separator}" />
+    <property name="lib.dir" value="${project.dir}lib"/>
 		
 	<path id="project.class.path">
 		<pathelement location="${pathvisio.dir}pathvisio.jar" />
 		<pathelement location="build" />
 		<fileset dir="${pathvisio.dir}lib">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${lib.dir}">
 			<include name="**/*.jar" />
 		</fileset>
 	</path>
@@ -44,6 +48,9 @@
 		<manifestclasspath property="manifest.cp" jarfile="RefExport.jar">
 			<classpath refid="project.class.path" />
 		</manifestclasspath>	
+		<unjar dest="${project.dir}build">
+			<fileset dir="${lib.dir}" includes="**/*.jar" excludes="**/junit*.jar"/>
+		</unjar>	
 		<jar jarfile="${project.dir}${jar.name}">
 			<manifest>
 				<attribute name="PathVisio-Plugin-Class" value="gov.nih.nci.lmp.refExport.RefPlugin"/>

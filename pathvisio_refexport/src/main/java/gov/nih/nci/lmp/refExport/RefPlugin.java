@@ -64,8 +64,8 @@ public class RefPlugin implements Plugin {
 		PubmedFormat pubmedFormat = new PubmedFormat();
 		desktop.getSwingEngine().getEngine().addPathwayExporter(pubmedFormat);
 
-		CommentFormat commentFormat = new CommentFormat();
-		desktop.getSwingEngine().getEngine().addPathwayExporter(commentFormat);
+		AnnotationFormat annotationFormat = new AnnotationFormat();
+		desktop.getSwingEngine().getEngine().addPathwayExporter(annotationFormat);
 		
 	}
 
