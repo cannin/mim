@@ -76,8 +76,11 @@ public class AnnotationExporterHelper {
 	/** The Pathvisio pathway. */
 	private final Pathway pw;
 
-	/** The Pathvisio commentMap. */
+	/** The Pathvisio annotations. */
 	private String annotations;
+
+	/** The Pathvisio infobox information. */
+	private ArrayList<String> infobox;
 	
 	/** The Pathvisio commentMap. */
 	private MultiMap commentsMap;
@@ -98,7 +101,8 @@ public class AnnotationExporterHelper {
 		
 		commentsMap = new MultiValueMap();
 		dataSourcesMap = new MultiValueMap();
-
+		infobox = new ArrayList<String>();
+		
 		for (PathwayElement pwElem : pw.getDataObjects()) {
 			if (pwElem.getObjectType() == ObjectType.LINE) {
 				commentsMap.putAll(generateCommentMap(pwElem));
@@ -106,7 +110,17 @@ public class AnnotationExporterHelper {
 			
 			if (pwElem.getObjectType() == ObjectType.DATANODE) {
 				dataSourcesMap.putAll(generateDataSourceMap(pwElem));
-			}			
+			}		
+			
+			if (pwElem.getObjectType() == ObjectType.MAPPINFO) {
+				if (isNotBlank(pwElem.getMapInfoName())) {
+					infobox.add(pwElem.getMapInfoName());
+				}
+				
+				if (isNotBlank(pwElem.getVersion())) {
+					infobox.add(pwElem.getVersion());
+				}
+			}				
 		}
 		
 		formatAnnotations(); 
@@ -118,6 +132,12 @@ public class AnnotationExporterHelper {
 	@SuppressWarnings("unchecked")
 	private void formatAnnotations() {
 		annotations = "--- # Annotations\n";
+		
+		if (infobox.size() > 0) {
+			annotations += "title: " + infobox.get(0) + "\n";
+			annotations += "version: " + infobox.get(1) + "\n";		
+		}
+	
 		annotations += "lines:\n";
 		
 		Iterator commentsItr = commentsMap.keySet().iterator();
@@ -216,141 +236,26 @@ public class AnnotationExporterHelper {
 	private MultiMap generateDataSourceMap(PathwayElement pwElem) {
 		MultiMap dataSourceMap = new MultiValueMap();
 		
-		dataSourceMap.put(pwElem.getGraphId(), pwElem.getDataSource().getFullName());
-		dataSourceMap.put(pwElem.getGraphId(), pwElem.getGeneID());
-
+		if (isNotBlank(pwElem.getDataSource().getFullName())) {
+			dataSourceMap.put(pwElem.getGraphId(), pwElem.getDataSource().getFullName());
+			dataSourceMap.put(pwElem.getGraphId(), pwElem.getGeneID());
+		}
+		
 		return dataSourceMap; 
 	}
-
-//	/**
-//	 * Map Biopax references.
-//	 * 
-//	 * @param pwElem
-//	 *            the pathway element
-//	 * @return the list of mimBioRef IDs that should be added for the element
-//	 *         being converted
-//	 */
-//	private ArrayList<String> mapBiopaxRefs(PathwayElement pwElem) {
-//		ArrayList<String> mimBioRefIds = new ArrayList<String>();
-//
-//		for (org.pathvisio.biopax.reflect.PublicationXref gpmlPubXRef : pwElem
-//				.getBiopaxReferenceManager().getPublicationXRefs()) {
-//
-//			gpmlPubXRef.getId() gpmlPubXRef.getPubmedId(); 
-//			
-//			// Add ID to the list being returned
-//			mimBioRefIds.add(gpmlPubXRef.getId());
-//		}
-//
-//		return mimBioRefIds;
-//	}
-
-//	/**
-//	 * Generate comments with references.
-//	 * 
-//	 * @param pwElem
-//	 *            the pw elem
-//	 * @return the string
-//	 */
-//	private String generateCommentsWithRef(PathwayElement pwElem) {
-//		BiopaxElementManager refMgr = pw.getBiopaxElementManager();
-//
-//		Collection<BiopaxElement> bpElemColl = refMgr.getElements();
-//
-//		List<String> bibtexList = new ArrayList<String>();
-//
-//		for (org.pathvisio.biopax.reflect.BiopaxElement bpElem : bpElemColl) {
-//
-//			String bibtexInst = "";
-//
-//			org.pathvisio.biopax.reflect.PublicationXref gpmlPubXRef = (org.pathvisio.biopax.reflect.PublicationXref) bpElem;
-//
-//			bibtexInst = "% " + gpmlPubXRef.getId() + "\n";
-//			bibtexInst += "@Article{pmid" + gpmlPubXRef.getPubmedId() + ",\n";
-//
-//			bibtexInst += "\tauthor = {";
-//
-//			String authorsList = join(gpmlPubXRef.getAuthors(), " and ", true);
-//			bibtexInst += authorsList + "},\n";
-//
-//			bibtexInst += "\tjournal = {" + gpmlPubXRef.getSource() + "},\n";
-//			bibtexInst += "\tpmid = {" + gpmlPubXRef.getPubmedId() + "},\n";
-//			bibtexInst += "\ttitle = {" + gpmlPubXRef.getTitle() + "},\n";
-//			bibtexInst += "\tyear = {" + gpmlPubXRef.getYear() + "}\n";
-//
-//			bibtexInst += "}";
-//
-//			bibtexList.add(bibtexInst);
-//
-//			Logger.log.debug("BibTeX Instance: " + bibtexInst);
-//		}
-//
-//		Set<String> set = new HashSet<String>(bibtexList);
-//		List<String> uniqBibtexList = new ArrayList<String>(set);
-//
-//		String bibtex = join(uniqBibtexList, ",\n", false);
-//
-//		Logger.log.debug("BibTeX: " + bibtex);
-//
-//		return bibtex;
-//	}
-//
-//	/**
-//	 * String join method
-//	 * 
-//	 * @param s
-//	 *            list of strings to be joined
-//	 * @param delimiter
-//	 *            delimiter for string joining
-//	 * @param isAuthor
-//	 *            author flag; author undergo additional processing
-//	 * 
-//	 * @return the joined string
-//	 */
-//	static String join(List<String> s, String delimiter, boolean isAuthor) {
-//		StringBuilder builder = new StringBuilder();
-//		Iterator<String> iter = s.iterator();
-//		while (iter.hasNext()) {
-//			String str = iter.next();
-//
-//			if (isAuthor) {
-//				// author pattern; split on the last space
-//				String pattern = "(.*)\\s([A-Z]+)$";
-//
-//				Pattern r = Pattern.compile(pattern);
-//
-//				Matcher m = r.matcher(str);
-//
-//				if (m.find()) {
-//					String lastNameStr = m.group(1);
-//					String firstNameStr = m.group(2);
-//
-//					Logger.log.debug("FN: " + firstNameStr + " LN: "
-//							+ lastNameStr);
-//
-//					String[] firstNameArr = firstNameStr.split("");
-//					List<String> firstNameList = Arrays.asList(firstNameArr);
-//
-//					String firstName = join(firstNameList, " ", false);
-//
-//					String author = lastNameStr + "," + firstName;
-//
-//					Logger.log.debug("Author: " + str);
-//
-//					builder.append(author);
-//
-//				} else {
-//					Logger.log.debug("No authors");
-//				}
-//			} else {
-//				builder.append(str);
-//			}
-//
-//			if (!iter.hasNext()) {
-//				break;
-//			}
-//			builder.append(delimiter);
-//		}
-//		return builder.toString();
-//	}
+	
+	/**
+	 * Checks if is not blank.
+	 * 
+	 * @param str
+	 *            the str
+	 * @return true, if is not blank
+	 */
+	public static boolean isNotBlank(String str) {
+		if (str != null && !str.equals("")) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
