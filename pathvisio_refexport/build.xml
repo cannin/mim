@@ -11,7 +11,7 @@
 	<property environment="env" />
 	<property name="install.dir" value="${env.HOME}${file.separator}.PathVisio${file.separator}plugins" />
 	<property name="pathvisio.dir" value="${basedir}${file.separator}pathvisio${file.separator}" />
-	<property name="project.dir" value="${basedir}${file.separator}pathvisio_bibtex${file.separator}" />
+	<property name="project.dir" value="${basedir}${file.separator}pathvisio_refexport${file.separator}" />
 		
 	<path id="project.class.path">
 		<pathelement location="${pathvisio.dir}pathvisio.jar" />

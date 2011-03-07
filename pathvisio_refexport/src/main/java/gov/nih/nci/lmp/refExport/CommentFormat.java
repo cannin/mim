@@ -39,39 +39,54 @@
  */
 package gov.nih.nci.lmp.refExport;
 
-import org.pathvisio.gui.swing.PvDesktop;
-import org.pathvisio.plugin.Plugin;
+import gov.nih.nci.lmp.refExport.CommentExporterHelper;
 
-/**
- * The main class for a plugin to export pathway references as BibTeX and Pubmed format.
+import java.io.File;
+import java.io.IOException;
+
+import org.pathvisio.model.ConverterException;
+import org.pathvisio.model.Pathway;
+import org.pathvisio.model.PathwayExporter;
+
+/** 
+ * Sets up the comment format in Pathvisio
  * 
  * @author Augustin Luna <augustin@mail.nih.gov>
  */
-public class RefPlugin implements Plugin {
+public class CommentFormat implements PathwayExporter {
+	/** The extensions to add to the Pathvisio interface. */
+	private final String[] EXTENSIONS = new String[] { "txt" };
 
-	/** The desktop from Pathvisio. */
-	private PvDesktop desktop;
-
-	/* (non-Javadoc)
-	 * @see org.pathvisio.plugin.Plugin#init(org.pathvisio.gui.swing.PvDesktop)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.pathvisio.model.PathwayExporter#getExtensions()
 	 */
-	public void init(PvDesktop desktop) {
-		this.desktop = desktop;
-
-		BibtexFormat bibtexFormat = new BibtexFormat();
-		desktop.getSwingEngine().getEngine().addPathwayExporter(bibtexFormat);
-
-		PubmedFormat pubmedFormat = new PubmedFormat();
-		desktop.getSwingEngine().getEngine().addPathwayExporter(pubmedFormat);
-
-		CommentFormat commentFormat = new CommentFormat();
-		desktop.getSwingEngine().getEngine().addPathwayExporter(commentFormat);
-		
+	public String[] getExtensions() {
+		return EXTENSIONS;
 	}
 
-	/* (non-Javadoc)
-	 * @see org.pathvisio.plugin.Plugin#done()
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.pathvisio.model.PathwayExporter#getName()
 	 */
-	public void done() {
+	public String getName() {
+		return "Comments";
+	}
+	
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.pathvisio.model.PathwayExporter#doExport(java.io.File,
+	 * org.pathvisio.model.Pathway)
+	 */
+	public void doExport(File file, Pathway pathway) throws ConverterException {
+		try {
+			CommentExporterHelper helper = new CommentExporterHelper(pathway);
+			helper.export(file);
+		} catch (IOException e) {
+			throw new ConverterException(e);
+		}
 	}
 }
