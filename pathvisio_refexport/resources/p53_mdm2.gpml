@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://genmapp.org/GPML/2010a" Name="p53-MDM2" Version="20110308">
+  <Graphics BoardWidth="173.0" BoardHeight="165.0" />
+  <DataNode TextLabel="p53" GraphId="ad3a1" Type="SimplePhysicalEntity">
+    <Attribute Key="NumberOfAnchors" Value="3" />
+    <Graphics CenterX="103.0" CenterY="56.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
+    <Xref Database="Entrez Gene" ID="7157" />
+  </DataNode>
+  <DataNode TextLabel="MDM2" GraphId="b16d1" Type="SimplePhysicalEntity">
+    <Attribute Key="NumberOfAnchors" Value="3" />
+    <Graphics CenterX="103.0" CenterY="125.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
+    <Xref Database="Entrez Gene" ID="4193" />
+  </DataNode>
+  <Line GraphId="id7a68c3c2">
+    <Comment>p53 transcriptionally activates MDM2 [[14757841]]</Comment>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="143.0" Y="56.0" GraphRef="ad3a1" RelX="1.0" RelY="0.0" />
+      <Point X="143.0" Y="125.0" GraphRef="b16d1" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+  </Line>
+  <Line GraphId="idab73733c">
+    <Comment>MDM2 negatively regulates p53 [[14707282]]</Comment>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="63.0" Y="125.0" GraphRef="b16d1" RelX="-1.0" RelY="0.0" />
+      <Point X="63.0" Y="56.0" GraphRef="ad3a1" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+  </Line>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+</Pathway>
+

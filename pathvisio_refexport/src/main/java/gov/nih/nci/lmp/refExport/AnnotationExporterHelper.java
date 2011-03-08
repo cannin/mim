@@ -75,7 +75,7 @@ public class AnnotationExporterHelper {
 
 	/** The Pathvisio pathway. */
 	private final Pathway pw;
-
+	
 	/** The Pathvisio annotations. */
 	private String annotations;
 
@@ -137,7 +137,7 @@ public class AnnotationExporterHelper {
 			annotations += "title: " + infobox.get(0) + "\n";
 			annotations += "version: " + infobox.get(1) + "\n";		
 		}
-	
+		
 		annotations += "lines:\n";
 		
 		Iterator commentsItr = commentsMap.keySet().iterator();
@@ -177,10 +177,12 @@ public class AnnotationExporterHelper {
 			String graphId = (String) dataSourcesItr.next(); 
 			
 			ArrayList<String> tmpList = (ArrayList<String>) dataSourcesMap.get(graphId);
-			String db = tmpList.get(0);
-			String id = tmpList.get(1);
+			String label = tmpList.get(0);
+			String db = tmpList.get(1);
+			String id = tmpList.get(2);
 			
 			annotations += "  - graphid: " + graphId + "\n";
+			annotations += "    label: " + label + "\n";
 			annotations += "    db: " + db + "\n";
 			annotations += "    id: " + id + "\n";
 	
@@ -237,6 +239,7 @@ public class AnnotationExporterHelper {
 		MultiMap dataSourceMap = new MultiValueMap();
 		
 		if (isNotBlank(pwElem.getDataSource().getFullName())) {
+			dataSourceMap.put(pwElem.getGraphId(), pwElem.getTextLabel());
 			dataSourceMap.put(pwElem.getGraphId(), pwElem.getDataSource().getFullName());
 			dataSourceMap.put(pwElem.getGraphId(), pwElem.getGeneID());
 		}
