@@ -57,6 +57,7 @@
 	<target name="build" depends="prepare">
 		<javac srcdir="src" includes="**" debug="true" destdir="build">
 			<classpath refid="mim.path" />
+			<compilerarg value="-Xlint"/>
 		</javac>
 	</target>
 
