@@ -51,6 +51,7 @@ import javax.xml.namespace.QName;
 
 import java.awt.Color;
 import java.awt.Point;
+import java.awt.geom.Point2D;
 
 import gov.nih.nci.lmp.mim.mimVisLevel1.*;
 
@@ -74,6 +75,7 @@ import org.pathvisio.model.ObjectType;
 import org.pathvisio.model.Pathway;
 import org.pathvisio.model.PathwayElement;
 import org.pathvisio.model.ShapeType;
+import org.pathvisio.model.GraphLink.GraphIdContainer;
 import org.pathvisio.model.GraphLink.GraphRefContainer;
 import org.pathvisio.model.PathwayElement.Comment;
 import org.pathvisio.model.PathwayElement.MAnchor;
@@ -86,12 +88,11 @@ import org.pathvisio.view.ShapeRegistry;
 
 import java.io.*;
 
-
 /**
  * Class for the import of MIMML.
  * 
  * @author Augustin Luna <augustin@mail.nih.gov>
- * @author Margot Sunshine 
+ * @author Margot Sunshine
  * 
  * @version 1.0
  * @since 1.0
@@ -113,11 +114,11 @@ public class ImporterHelper extends CommonHelper {
 
 	/**
 	 * Instantiates a new importer helper.
-	 */  
+	 */
 	public ImporterHelper(File file) {
 		this.file = file;
 		this.pw = new Pathway();
-		
+
 		mapDiagram();
 	}
 
@@ -130,16 +131,16 @@ public class ImporterHelper extends CommonHelper {
 	public void parseDiagramXml(File xmlFile) throws XmlException, IOException {
 
 		Logger.log.trace("Entering parseDiagramXml");
-		
-		StringBuilder contents = new StringBuilder(); 
-		
+
+		StringBuilder contents = new StringBuilder();
+
 		try {
-			
+
 			BufferedReader input = new BufferedReader(new FileReader(xmlFile));
-			
+
 			try {
-				String line = null; 
-				
+				String line = null;
+
 				while ((line = input.readLine()) != null) {
 					contents.append(line);
 					contents.append(System.getProperty("line.separator"));
@@ -147,15 +148,15 @@ public class ImporterHelper extends CommonHelper {
 			} finally {
 				input.close();
 			}
-			
-			String fileStr = contents.toString(); 
-			
+
+			String fileStr = contents.toString();
+
 			Logger.log.debug(fileStr);
-			
+
 			this.visDoc = DiagramDocument.Factory.parse(xmlFile);
 			this.dia = this.visDoc.getDiagram();
-			//System.out.println("\n\nVisDoc: ");
-			//visDoc.save(System.out, getXmlOptions());
+			// System.out.println("\n\nVisDoc: ");
+			// visDoc.save(System.out, getXmlOptions());
 		} catch (XmlException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -176,11 +177,44 @@ public class ImporterHelper extends CommonHelper {
 	}
 
 	/**
+	 * Convert point coordinates. Helps to adjust anchors on lines.
+	 *
+	 * @param pathway the pathway
+	 * @throws ConverterException the converter exception
+	 */
+	private static void convertPointCoordinates(Pathway pathway)
+			throws ConverterException {
+		for (PathwayElement pe : pathway.getDataObjects()) {
+			if (pe.getObjectType() == ObjectType.LINE) {
+				String sr = pe.getStartGraphRef();
+				String er = pe.getEndGraphRef();
+
+				GraphIdContainer idcSr = pathway.getGraphIdContainer(sr);
+				Point2D relativeSr = idcSr
+						.toRelativeCoordinate(new Point2D.Double(pe.getMStart()
+								.getX(), pe.getMStart().getY()));
+				pe.getMStart().setRelativePosition(relativeSr.getX(),
+						relativeSr.getY());
+
+				GraphIdContainer idcEr = pathway.getGraphIdContainer(er);
+				Point2D relativeEr = idcEr
+						.toRelativeCoordinate(new Point2D.Double(pe.getMEnd()
+								.getX(), pe.getMEnd().getY()));
+				pe.getMEnd().setRelativePosition(relativeEr.getX(),
+						relativeEr.getY());
+
+				((MLine) pe).getConnectorShape().recalculateShape(((MLine) pe));
+			}
+		}
+	}
+
+	/**
 	 * Gets the pathway.
 	 * 
 	 * @return the pw
 	 */
-	public Pathway getPw() {
+	public Pathway getPw() throws ConverterException {
+		convertPointCoordinates(pw);
 		return pw;
 	}
 
@@ -217,7 +251,7 @@ public class ImporterHelper extends CommonHelper {
 	 * Map diagram.
 	 */
 	private Pathway mapDiagram() {
-		
+
 		Logger.log.info("Parse diagram");
 
 		// TODO: Validate MIMML before trying to parse
@@ -230,60 +264,64 @@ public class ImporterHelper extends CommonHelper {
 		}
 
 		// Add element that contains BioPAX
-		PathwayElement biopax = PathwayElement.createPathwayElement(ObjectType.BIOPAX);
+		PathwayElement biopax = PathwayElement
+				.createPathwayElement(ObjectType.BIOPAX);
 		pw.add(biopax);
 
 		PathwayElement info = PathwayElement
-			.createPathwayElement(ObjectType.INFOBOX);
+				.createPathwayElement(ObjectType.INFOBOX);
 		pw.add(info);
-		
+
 		info.setMHeight(dia.getHeight());
 		info.setMWidth(dia.getWidth());
-		
+
 		// Check for the case where there is no MIMBio element
-		if(dia.isSetMimBio()) {
+		if (dia.isSetMimBio()) {
 			if (dia.getMimBio().isSetTitle()) {
 				pw.getMappInfo().setMapInfoName(dia.getMimBio().getTitle());
 			}
-	
+
 			if (dia.getMimBio().isSetIdentifier()) {
 				pw.getMappInfo().setVersion(dia.getMimBio().getIdentifier());
 			}
-	
+
 			if (dia.getMimBio().isSetRights()) {
 				pw.getMappInfo().setCopyright(dia.getMimBio().getRights());
 			}
-	
+
 			if (dia.getMimBio().isSetSource()) {
-				pw.getMappInfo().setMapInfoDataSource(dia.getMimBio().getSource());
+				pw.getMappInfo().setMapInfoDataSource(
+						dia.getMimBio().getSource());
 			}
-	
+
 			if (dia.getMimBio().isSetDescription()) {
-				pw.getMappInfo().addComment(dia.getMimBio().getDescription(), "");
+				pw.getMappInfo().addComment(dia.getMimBio().getDescription(),
+						"");
 			}
-	
+
 			if (dia.getMimBio().sizeOfCreatorArray() > 0) {
 				String str = "";
-	
+
 				for (String s : dia.getMimBio().getCreatorList()) {
 					str += s;
 				}
-	
+
 				pw.getMappInfo().setAuthor(str);
 			}
-	
+
 			if (dia.getMimBio().sizeOfContributorArray() > 0) {
 				String str = "";
-	
+
 				for (String s : dia.getMimBio().getContributorList()) {
 					str += s;
 				}
-	
+
 				pw.getMappInfo().setMaintainer(str);
 			}
-	
+
 			if (dia.getMimBio().getModified() != null) {
-				pw.getMappInfo().setLastModified(dia.getMimBio().getModified().toString());
+				pw.getMappInfo().setLastModified(
+						dia.getMimBio().getModified().toString());
 			}
 		}
 
@@ -341,8 +379,8 @@ public class ImporterHelper extends CommonHelper {
 				for (EntityGlyphType.GenericProperty genProp : glyph
 						.getGenericPropertyList()) {
 					if (!genProp.getKey().equals("ShapeType")) {
-						pwElem.setDynamicProperty(genProp.getKey(),
-								genProp.getValue());
+						pwElem.setDynamicProperty(genProp.getKey(), genProp
+								.getValue());
 					}
 				}
 
@@ -391,8 +429,8 @@ public class ImporterHelper extends CommonHelper {
 				for (EntityGlyphType.GenericProperty genProp : glyph
 						.getGenericPropertyList()) {
 					if (!genProp.getKey().equals("ShapeType")) {
-						pwElem.setDynamicProperty(genProp.getKey(),
-								genProp.getValue());
+						pwElem.setDynamicProperty(genProp.getKey(), genProp
+								.getValue());
 					}
 				}
 
@@ -441,8 +479,8 @@ public class ImporterHelper extends CommonHelper {
 				for (EntityGlyphType.GenericProperty genProp : glyph
 						.getGenericPropertyList()) {
 					if (!genProp.getKey().equals("ShapeType")) {
-						pwElem.setDynamicProperty(genProp.getKey(),
-								genProp.getValue());
+						pwElem.setDynamicProperty(genProp.getKey(), genProp
+								.getValue());
 					}
 				}
 
@@ -491,8 +529,8 @@ public class ImporterHelper extends CommonHelper {
 				for (EntityGlyphType.GenericProperty genProp : glyph
 						.getGenericPropertyList()) {
 					if (!genProp.getKey().equals("ShapeType")) {
-						pwElem.setDynamicProperty(genProp.getKey(),
-								genProp.getValue());
+						pwElem.setDynamicProperty(genProp.getKey(), genProp
+								.getValue());
 					}
 				}
 
@@ -539,8 +577,8 @@ public class ImporterHelper extends CommonHelper {
 				for (EntityGlyphType.GenericProperty genProp : glyph
 						.getGenericPropertyList()) {
 					if (!genProp.getKey().equals("ShapeType")) {
-						pwElem.setDynamicProperty(genProp.getKey(),
-								genProp.getValue());
+						pwElem.setDynamicProperty(genProp.getKey(), genProp
+								.getValue());
 					}
 				}
 
@@ -599,8 +637,8 @@ public class ImporterHelper extends CommonHelper {
 				for (EntityGlyphType.GenericProperty genProp : glyph
 						.getGenericPropertyList()) {
 					if (!genProp.getKey().equals("ShapeType")) {
-						pwElem.setDynamicProperty(genProp.getKey(),
-								genProp.getValue());
+						pwElem.setDynamicProperty(genProp.getKey(), genProp
+								.getValue());
 					}
 				}
 
@@ -633,9 +671,9 @@ public class ImporterHelper extends CommonHelper {
 
 			PathwayElement pwElem = PathwayElement
 					.createPathwayElement(ObjectType.LINE);
-			
+
 			pwElem.setColor(convertHexToColor(glyph.getColor()));
-		
+
 			pwElem.setGraphId(glyph.getVisId());
 			pwElem.setGroupRef(glyph.getGroupRef());
 
@@ -658,11 +696,11 @@ public class ImporterHelper extends CommonHelper {
 			for (InteractionGlyphType.GenericProperty genProp : glyph
 					.getGenericPropertyList()) {
 				if (genProp.getKey().equals("ConnectorType")) {
-					pwElem.setConnectorType(ConnectorType.getInstance(genProp
+					pwElem.setConnectorType(ConnectorType.fromName(genProp
 							.getValue()));
 				} else {
-					pwElem.setDynamicProperty(genProp.getKey(),
-							genProp.getValue());
+					pwElem.setDynamicProperty(genProp.getKey(), genProp
+							.getValue());
 				}
 			}
 
@@ -779,11 +817,11 @@ public class ImporterHelper extends CommonHelper {
 					Logger.log.debug("Imported Ec: " + mimEc.getVisId());
 				}
 			}
-			
+
 			// Map PublicationXRefs
 			List<String> mimBioRefs = mapPublicationXRefs(glyph, pwElem);
 			pwElem.setBiopaxRefs(mimBioRefs);
-			
+
 			pw.add(pwElem);
 		}
 	}
@@ -811,7 +849,7 @@ public class ImporterHelper extends CommonHelper {
 					.createPathwayElement(ObjectType.GROUP);
 
 			// No distinction is made in MIM of one ID type versus the other
-			// but in GPML they have different functions. 
+			// but in GPML they have different functions.
 			pwElem.setGroupId(grp.getVisId());
 			pwElem.setGraphId(grp.getVisId());
 
@@ -819,7 +857,8 @@ public class ImporterHelper extends CommonHelper {
 				// GroupStyle.GROUP yields "None"
 				pwElem.setGroupStyle(GroupStyle.GROUP);
 			} else if (grp.getType().equals(GroupEnumType.ENTITY_WITH_FEATURES)) {
-				pwElem.setGroupStyle(GroupStyle.create("EntityWithFeatures", true));
+				pwElem.setGroupStyle(GroupStyle.create("EntityWithFeatures",
+						true));
 			} else {
 				Logger.log.error("Unknown group type: " + grp.getType());
 			}
@@ -950,41 +989,43 @@ public class ImporterHelper extends CommonHelper {
 
 			XmlOptions opts = new XmlOptions();
 			opts.setLoadReplaceDocumentElement(null);
-			
+
 			try {
 				/**
-				 * Taken from the XMLBeans autogenerated code of a XSD complex type.
-				 * For parsing a XML fragment given the SchemaType.
+				 * Taken from the XMLBeans autogenerated code of a XSD complex
+				 * type. For parsing a XML fragment given the SchemaType.
 				 */
-				XmlObject xmlObj = XmlBeans.getContextTypeLoader().parse(o1.xmlText(),
-						objType, opts);
-	
+				XmlObject xmlObj = XmlBeans.getContextTypeLoader().parse(
+						o1.xmlText(), objType, opts);
+
 				if (xmlObj instanceof PublicationXRefType) {
-	
+
 					PublicationXRefType mimPubXRef = (PublicationXRefType) xmlObj;
 
-					SchemaType type = XmlBeans.typeForClass(PublicationXRefType.class);
+					SchemaType type = XmlBeans
+							.typeForClass(PublicationXRefType.class);
 					opts.setDocumentType(type);
-					
-					PublicationXRefType p = (PublicationXRefType) XmlObject.Factory.parse(xmlObj.xmlText(), opts);
-					
+
+					PublicationXRefType p = (PublicationXRefType) XmlObject.Factory
+							.parse(xmlObj.xmlText(), opts);
+
 					Logger.log.debug("PubXRef Idx: " + p.getId());
-					
+
 					Logger.log.debug("PubXRef xmlText: " + xmlObj.xmlText());
-					
+
 					BiopaxElementManager refMgr = pw.getBiopaxElementManager();
-										
-					//BiopaxReferenceManager refMgr = pwElem
-					//		.getBiopaxReferenceManager();
+
+					// BiopaxReferenceManager refMgr = pwElem
+					// .getBiopaxReferenceManager();
 					PublicationXref gpmlXRef = new PublicationXref();
-	
+
 					Logger.log.debug("PubXRef Id1: " + mimPubXRef.getId());
 
 					for (String author : mimPubXRef.getAuthorList()) {
 						gpmlXRef.addAuthor(author);
 						Logger.log.debug("Author: " + author);
 					}
-	
+
 					// Set publication attributes
 					gpmlXRef.setPubmedId(mimPubXRef.getId());
 					gpmlXRef.setTitle(mimPubXRef.getTitle());
@@ -992,10 +1033,10 @@ public class ImporterHelper extends CommonHelper {
 					gpmlXRef.setYear(mimPubXRef.getYear());
 
 					refMgr.addElement(gpmlXRef);
-	
+
 					mimBioRefs.add(mimBioRef);
 				}
-			} catch(XmlException e) {
+			} catch (XmlException e) {
 				Logger.log.debug(e.getMessage());
 			}
 		}
