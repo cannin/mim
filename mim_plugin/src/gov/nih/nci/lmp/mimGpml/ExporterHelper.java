@@ -606,23 +606,25 @@ public class ExporterHelper extends CommonHelper {
 
 			pt.setX(mPoint.getX());
 			pt.setY(mPoint.getY());
-
+			
 			ArrowHeadEnumType.Enum mimArrowHead = null;
 
 			// ArrowHeads can only exist on the start and end Points
 			if (i == 0) {
+			
 				String gpmlStartArrowHead = pwElem.getStartLineType().getName();
 				// System.out.println("Start: " + gpmlStartArrowHead);
 
 				mimArrowHead = convertArrowHead(gpmlStartArrowHead);
 				pt.setArrowHead(mimArrowHead);
 			} else if (i == (mPoints.size() - 1)) {
+				
 				String gpmlEndArrowHead = pwElem.getEndLineType().getName();
 				// System.out.println("End: " + gpmlEndArrowHead);
 
 				mimArrowHead = convertArrowHead(gpmlEndArrowHead);
 				pt.setArrowHead(mimArrowHead);
-			}
+			} 
 			
 			// Don't add graphRefs from groups use the GroupId.
 			// This is done to avoid using two IDs for groups. 

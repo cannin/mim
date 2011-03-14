@@ -121,7 +121,7 @@ public class MimPlugin implements Plugin, Engine.ApplicationEventListener
             }
         }
 
-        // register a lister so we get notified when a pathway is opened
+        // register a listener so we get notified when a pathway is opened
         desktop.getSwingEngine().getEngine().addApplicationEventListener(this);
 		// create MIM format plugin
         MIMFormat format = new MIMFormat();

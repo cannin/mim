@@ -177,32 +177,16 @@ public class ImporterHelper extends CommonHelper {
 	}
 
 	/**
-	 * Convert point coordinates. Helps to adjust anchors on lines.
+	 * Recalculate lines. Helps to adjust anchors on lines by clearing out cache.
 	 *
 	 * @param pathway the pathway
 	 * @throws ConverterException the converter exception
 	 */
-	private static void convertPointCoordinates(Pathway pathway)
+	private static void recalculateLines(Pathway pathway)
 			throws ConverterException {
+		
 		for (PathwayElement pe : pathway.getDataObjects()) {
-			if (pe.getObjectType() == ObjectType.LINE) {
-				String sr = pe.getStartGraphRef();
-				String er = pe.getEndGraphRef();
-
-				GraphIdContainer idcSr = pathway.getGraphIdContainer(sr);
-				Point2D relativeSr = idcSr
-						.toRelativeCoordinate(new Point2D.Double(pe.getMStart()
-								.getX(), pe.getMStart().getY()));
-				pe.getMStart().setRelativePosition(relativeSr.getX(),
-						relativeSr.getY());
-
-				GraphIdContainer idcEr = pathway.getGraphIdContainer(er);
-				Point2D relativeEr = idcEr
-						.toRelativeCoordinate(new Point2D.Double(pe.getMEnd()
-								.getX(), pe.getMEnd().getY()));
-				pe.getMEnd().setRelativePosition(relativeEr.getX(),
-						relativeEr.getY());
-
+			if (pe.getObjectType() == ObjectType.LINE) {			
 				((MLine) pe).getConnectorShape().recalculateShape(((MLine) pe));
 			}
 		}
@@ -214,7 +198,12 @@ public class ImporterHelper extends CommonHelper {
 	 * @return the pw
 	 */
 	public Pathway getPw() throws ConverterException {
-		convertPointCoordinates(pw);
+		recalculateLines(pw);
+
+		// Taken from Pathway.readFromXml()
+		pw.setSourceFile(file);
+		pw.clearChangedFlag();
+		
 		return pw;
 	}
 
