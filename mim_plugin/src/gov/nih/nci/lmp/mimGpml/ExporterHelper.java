@@ -162,13 +162,23 @@ public class ExporterHelper extends CommonHelper {
 			Logger.log.info("Pathway: " + mimBioRelXRefId);
 			dia.addMimBioRef(mimBioRelXRefId);
 		}
-
+		
 		for (PathwayElement pwElem : pw.getDataObjects()) {
+
+//			double[] tmp = pw.getMBoardSize();
+//
+//			dia.setWidth(tmp[0]);
+//			dia.setHeight(tmp[1]);
+//			
+//			Logger.log.info("BoardSize[0]: " + tmp[0]);
+//			Logger.log.info("BoardSize[1]: " + tmp[1]);
+//			Logger.log.info("BoardWidth: " + pwElem.getMBoardWidth());
+//			Logger.log.info("BoardHeight: " + pwElem.getMBoardHeight());
 
 			dia.setWidth(pwElem.getMBoardWidth());
 			dia.setHeight(pwElem.getMBoardHeight());
 
-			if (pwElem.getObjectType() == ObjectType.MAPPINFO) {
+			if (pwElem.getObjectType() == ObjectType.INFOBOX) {
 
 				if (isNotBlank(createSingleComment(info))) {
 					mb.setDescription(createSingleComment(info));
@@ -218,10 +228,6 @@ public class ExporterHelper extends CommonHelper {
 			case BIOPAX:
 				mapBiopax(pwElem);
 				break;
-			// case INFOBOX:
-			// e = new Element ("InfoBox", getGpmlNamespace());
-			// updateSimpleCenter (o, e);
-			// break;
 			}
 		}
 	}
@@ -540,10 +546,11 @@ public class ExporterHelper extends CommonHelper {
 			}
 		}
 
-		int xRefSize = mimBioRefIds.size();
-		int xRefLength = 0;
-
-		xRefLength = 9 * xRefSize;
+		// Attempt to determine coordinates of interaction labels for references
+//		int xRefSize = mimBioRefIds.size();
+//		int xRefLength = 0;
+//
+//		xRefLength = 9 * xRefSize;
 
 		// if (xRefSize < 10) {
 		// xRefLength = 3 * xRefSize;
@@ -565,17 +572,20 @@ public class ExporterHelper extends CommonHelper {
 		// annoWidth.setKey("annotationWidth");
 		// annoHeight.setKey("annotationHeight");
 
-		Point2D p = ((MLine) pwElem).getConnectorShape()
-				.fromLineCoordinate(0.7);
-		Logger.log.info("ID: " + pwElem.getGraphId() + " XRefLength: "
-				+ xRefLength + " X: " + p.getX() + " Y: " + p.getY());
-
-		int padding = 3;
-
-		double xVal = p.getX() - xRefLength / 2 - padding;
-		double yVal = p.getY() - padding;
-		double widthVal = xRefLength + 2 * padding;
-		double heightVal = 15 + 2 * padding;
+		// Location where an interaction label for references is placed 
+//		Point2D p = ((MLine) pwElem).getConnectorShape()
+//				.fromLineCoordinate(0.7);
+		
+		// Attempt to determine coordinates of interaction labels for references
+//		Logger.log.info("ID: " + pwElem.getGraphId() + " XRefLength: "
+//				+ xRefLength + " X: " + p.getX() + " Y: " + p.getY());
+//	
+//		int padding = 3;
+//
+//		double xVal = p.getX() - xRefLength / 2 - padding;
+//		double yVal = p.getY() - padding;
+//		double widthVal = xRefLength + 2 * padding;
+//		double heightVal = 15 + 2 * padding;
 
 		// annoX.setValue(Double.toString(xVal));
 		// annoY.setValue(Double.toString(yVal));
