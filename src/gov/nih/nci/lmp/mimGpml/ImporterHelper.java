@@ -234,31 +234,32 @@ public class ImporterHelper extends CommonHelper {
 		pw.add(biopax);
 
 		PathwayElement info = PathwayElement
-			.createPathwayElement(ObjectType.MAPPINFO);
-
-		info.setMHeight(dia.getWidth());
-		info.setMWidth(dia.getHeight());
-
+			.createPathwayElement(ObjectType.INFOBOX);
+		pw.add(info);
+		
+		info.setMHeight(dia.getHeight());
+		info.setMWidth(dia.getWidth());
+		
 		// Check for the case where there is no MIMBio element
 		if(dia.isSetMimBio()) {
 			if (dia.getMimBio().isSetTitle()) {
-				info.setMapInfoName(dia.getMimBio().getTitle());
+				pw.getMappInfo().setMapInfoName(dia.getMimBio().getTitle());
 			}
 	
 			if (dia.getMimBio().isSetIdentifier()) {
-				info.setVersion(dia.getMimBio().getIdentifier());
+				pw.getMappInfo().setVersion(dia.getMimBio().getIdentifier());
 			}
 	
 			if (dia.getMimBio().isSetRights()) {
-				info.setCopyright(dia.getMimBio().getRights());
+				pw.getMappInfo().setCopyright(dia.getMimBio().getRights());
 			}
 	
 			if (dia.getMimBio().isSetSource()) {
-				info.setMapInfoDataSource(dia.getMimBio().getSource());
+				pw.getMappInfo().setMapInfoDataSource(dia.getMimBio().getSource());
 			}
 	
 			if (dia.getMimBio().isSetDescription()) {
-				info.addComment(dia.getMimBio().getDescription(), "");
+				pw.getMappInfo().addComment(dia.getMimBio().getDescription(), "");
 			}
 	
 			if (dia.getMimBio().sizeOfCreatorArray() > 0) {
@@ -268,7 +269,7 @@ public class ImporterHelper extends CommonHelper {
 					str += s;
 				}
 	
-				info.setAuthor(str);
+				pw.getMappInfo().setAuthor(str);
 			}
 	
 			if (dia.getMimBio().sizeOfContributorArray() > 0) {
@@ -278,19 +279,16 @@ public class ImporterHelper extends CommonHelper {
 					str += s;
 				}
 	
-				info.setMaintainer(str);
+				pw.getMappInfo().setMaintainer(str);
 			}
 	
 			if (dia.getMimBio().getModified() != null) {
-				info.setLastModified(dia.getMimBio().getModified().toString());
+				pw.getMappInfo().setLastModified(dia.getMimBio().getModified().toString());
 			}
 		}
 
 		// TODO: Map XRefs
 		// mapXRefs(info);
-
-		// Add MappInfo
-		pw.add(info);
 
 		// Map interactions
 		mapInteractionGlyphs();
