@@ -824,7 +824,7 @@ public class ImporterHelper extends CommonHelper {
 						.createPathwayElement(ObjectType.GROUP);
 
 				pwElem.setGroupId(glyph.getVisId());
-				pwElem.setGroupStyle(GroupStyle.COMPLEX);
+				pwElem.setGroupStyle(GroupStyle.fromName("ImplicitComplex"));
 
 				pw.add(pwElem);
 			}
