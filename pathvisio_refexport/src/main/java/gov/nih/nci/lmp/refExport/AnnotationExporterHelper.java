@@ -131,7 +131,7 @@ public class AnnotationExporterHelper {
 	 */
 	@SuppressWarnings("unchecked")
 	private void formatAnnotations() {
-		annotations = "--- # Annotations\n";
+		annotations = "---\n# Annotations\n";
 		
 		if (infobox.size() > 0) {
 			annotations += "title: " + infobox.get(0) + "\n";
