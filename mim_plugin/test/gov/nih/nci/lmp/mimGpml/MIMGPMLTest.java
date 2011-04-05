@@ -276,7 +276,8 @@ public class MIMGPMLTest {
 	 */
 	@Ignore
 	@Test
-	public void testGetVisXmlObjectById() throws IOException, XmlException {
+	public void testGetVisXmlObjectById() throws IOException, XmlException,
+			ConverterException {
 		// Test if files can be exported without exceptions
 		for (File f : IMPORT_FILES) {
 			ImporterHelper importer = new ImporterHelper(f);
@@ -305,7 +306,7 @@ public class MIMGPMLTest {
 	@Ignore
 	@Test
 	public void testJDOMExport() throws IOException, JDOMException,
-			XmlException {
+			XmlException, ConverterException {
 		for (File f : IMPORT_FILES) {
 			ImporterHelper importer = new ImporterHelper(f);
 			importer.parseDiagramXml(f);
@@ -349,7 +350,8 @@ public class MIMGPMLTest {
 		assertEquals(0.0, visDoc.getDiagram().getHeight(), 0);
 
 		assertEquals("Title", visDoc.getDiagram().getMimBio().getTitle());
-		assertEquals("Identifier", visDoc.getDiagram().getMimBio().getIdentifier());
+		assertEquals("Identifier", visDoc.getDiagram().getMimBio()
+				.getIdentifier());
 
 		String[] creators = new String[1];
 		creators[0] = "Creator";
@@ -387,10 +389,13 @@ public class MIMGPMLTest {
 	 *             the jDOM exception
 	 * @throws XmlException
 	 *             the xml exception
+	 * @throws ConverterException
+	 *             the converter exception
 	 */
 	@Ignore
 	@Test
-	public void testJDOMXPath() throws IOException, JDOMException, XmlException {
+	public void testJDOMXPath() throws IOException, JDOMException,
+			XmlException, ConverterException {
 		for (File f : IMPORT_FILES) {
 			ImporterHelper importer = new ImporterHelper(f);
 			importer.parseDiagramXml(f);

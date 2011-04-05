@@ -33,7 +33,7 @@
       <Point X="107.5" Y="76.0" GraphRef="c603e" RelX="0.0" RelY="-1.0" />
     </Graphics>
   </Line>
-  <Group GroupId="c984b" GraphId="c603e" Style="Complex" />
+  <Group GroupId="c984b" GraphId="c603e" Style="ImplicitComplex" />
   <Group GroupId="e5a14" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
 </Pathway>
