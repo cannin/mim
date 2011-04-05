@@ -131,6 +131,7 @@ public class GroupExportTest {
 	}
 	
 	@Test
+	@Ignore("Probably, requires the non-MIMML part of the plugin to set the GroupStyle")
 	public void testDiagramImplicitComplexVisIdExport() {
 		EntityGlyphType ent = (EntityGlyphType) CommonHelper.getVisXmlObjectById(visDoc, "c984b");
 	

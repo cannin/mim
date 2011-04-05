@@ -9,7 +9,7 @@
     <property name="build.mimplugins.dir" value="build/mimplugins"/>
 
     <property environment="env" />
-	<property name="install.dir" value="${env.HOME}/.PathVisio/plugins" />
+	<property name="install.dir" value="${user.home}/.PathVisio/plugins" />
 	<property name="pathvisio.dir" value="../pathvisio" />
 	<property name="lib.dir" value="${pathvisio.dir}/lib" />
     <property name="mim.lib" value="lib"/>

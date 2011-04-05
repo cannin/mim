@@ -39,9 +39,6 @@
  */
 package gov.nih.nci.lmp.mimGpml;
 
-import java.io.Reader;
-import java.io.StringReader;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -49,19 +46,13 @@ import java.util.List;
 
 import javax.xml.namespace.QName;
 
-import java.awt.Color;
-import java.awt.Point;
-import java.awt.geom.Point2D;
-
 import gov.nih.nci.lmp.mim.mimVisLevel1.*;
 
 import org.apache.xmlbeans.*;
 
-import org.bridgedb.Xref;
 import org.bridgedb.DataSource;
 
 import org.apache.commons.collections.BidiMap;
-import org.apache.commons.collections.bidimap.DualHashBidiMap;
 
 import org.pathvisio.debug.Logger;
 import org.pathvisio.model.AnchorType;
@@ -75,8 +66,6 @@ import org.pathvisio.model.ObjectType;
 import org.pathvisio.model.Pathway;
 import org.pathvisio.model.PathwayElement;
 import org.pathvisio.model.ShapeType;
-import org.pathvisio.model.GraphLink.GraphIdContainer;
-import org.pathvisio.model.GraphLink.GraphRefContainer;
 import org.pathvisio.model.PathwayElement.Comment;
 import org.pathvisio.model.PathwayElement.MAnchor;
 import org.pathvisio.model.PathwayElement.MPoint;
@@ -85,8 +74,6 @@ import org.pathvisio.biopax.BiopaxElementManager;
 import org.pathvisio.biopax.reflect.PublicationXref;
 import org.pathvisio.util.FileUtils;
 import org.pathvisio.view.ShapeRegistry;
-
-import java.io.*;
 
 /**
  * Class for the import of MIMML.
@@ -115,7 +102,7 @@ public class ImporterHelper extends CommonHelper {
 	/**
 	 * Instantiates a new importer helper.
 	 */
-	public ImporterHelper(File file) {
+	public ImporterHelper(File file) throws ConverterException {
 		this.file = file;
 		this.pw = new Pathway();
 
@@ -132,36 +119,19 @@ public class ImporterHelper extends CommonHelper {
 
 		Logger.log.trace("Entering parseDiagramXml");
 
-		StringBuilder contents = new StringBuilder();
-
 		try {
 
-			BufferedReader input = new BufferedReader(new FileReader(xmlFile));
+			visDoc = DiagramDocument.Factory.parse(xmlFile);
+			Logger.log.debug("parseDiagramXml valid?: " + visDoc.validate());
 
-			try {
-				String line = null;
-
-				while ((line = input.readLine()) != null) {
-					contents.append(line);
-					contents.append(System.getProperty("line.separator"));
-				}
-			} finally {
-				input.close();
-			}
-
-			String fileStr = contents.toString();
-
-			Logger.log.debug(fileStr);
-
-			this.visDoc = DiagramDocument.Factory.parse(xmlFile);
-			this.dia = this.visDoc.getDiagram();
+			dia = visDoc.getDiagram();
 			// System.out.println("\n\nVisDoc: ");
 			// visDoc.save(System.out, getXmlOptions());
 		} catch (XmlException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		}		
 	}
 
 	/**
@@ -201,7 +171,7 @@ public class ImporterHelper extends CommonHelper {
 		recalculateLines(pw);
 
 		// Taken from Pathway.readFromXml()
-		pw.setSourceFile(file);
+		//pw.setSourceFile(file);
 		pw.clearChangedFlag();
 		
 		return pw;
@@ -239,13 +209,17 @@ public class ImporterHelper extends CommonHelper {
 	/**
 	 * Map diagram.
 	 */
-	private Pathway mapDiagram() {
+	private Pathway mapDiagram() throws ConverterException {
 
 		Logger.log.info("Parse diagram");
 
-		// TODO: Validate MIMML before trying to parse
 		try {
 			parseDiagramXml(this.file);
+			
+			//TODO: Add Junit test for invalid MIMML files
+			if(!validateXml(visDoc)) {
+				throw new ConverterException("Invalid MIMML file.");
+			}
 		} catch (XmlException e) {
 			Logger.log.error(e.getMessage());
 		} catch (IOException e) {
@@ -314,9 +288,6 @@ public class ImporterHelper extends CommonHelper {
 			}
 		}
 
-		// TODO: Map XRefs
-		// mapXRefs(info);
-
 		// Map interactions
 		mapInteractionGlyphs();
 
@@ -328,7 +299,6 @@ public class ImporterHelper extends CommonHelper {
 		mapSourceSinkGlyphs();
 		mapRestrictedCopyEntityGlyphs();
 
-		// TODO: Map Groups
 		mapGroups();
 		mapImplicitComplexEntityGlyphs();
 
@@ -810,7 +780,7 @@ public class ImporterHelper extends CommonHelper {
 			// Map PublicationXRefs
 			List<String> mimBioRefs = mapPublicationXRefs(glyph, pwElem);
 			pwElem.setBiopaxRefs(mimBioRefs);
-
+			
 			pw.add(pwElem);
 		}
 	}
@@ -951,6 +921,7 @@ public class ImporterHelper extends CommonHelper {
 						.getDb()));
 				pwElem.setGeneID(mimRelXRef.getId());
 
+				//DEBUG
 				// Logger.log.debug("RelXRef ID: " + mimRelXRef.getId());
 				// Logger.log.debug("RelXRef DB: " + mimRelXRef.getDb());
 
@@ -965,68 +936,48 @@ public class ImporterHelper extends CommonHelper {
 
 		List<String> mimBioRefs = new ArrayList<String>();
 
-		Logger.log.debug("mimBioRefs: " + glyph.sizeOfMimBioRefArray());
+		Logger.log.debug("mimBioRefs mapPubXRefs: " + glyph.sizeOfMimBioRefArray());
 
 		for (String mimBioRef : glyph.getMimBioRefList()) {
 
 			XmlObject o1 = getVisXmlObjectById(visDoc, mimBioRef);
 
-			QName objQName = new QName(MIM_VIS_NS, "PublicationXRefType");
+			Logger.log.debug("o1.class1 mapPubXRefs: " + o1.getClass());
+			Logger.log.debug("o1.text mapPubXRefs: " + o1.xmlText());
+			
+			PublicationXRefType o2 = (PublicationXRefType) o1.changeType(gov.nih.nci.lmp.mim.mimVisLevel1.PublicationXRefType.type);
 
-			SchemaTypeLoader schemaTypeLoader = XmlBeans.getContextTypeLoader();
-			SchemaType objType = schemaTypeLoader.findType(objQName);
+			Logger.log.debug("o2.class mapPubXRefs: " + o2.getClass());
+				
+			if (o2 instanceof PublicationXRefType) {
 
-			XmlOptions opts = new XmlOptions();
-			opts.setLoadReplaceDocumentElement(null);
+				PublicationXRefType mimPubXRef = (PublicationXRefType) o2;
 
-			try {
-				/**
-				 * Taken from the XMLBeans autogenerated code of a XSD complex
-				 * type. For parsing a XML fragment given the SchemaType.
-				 */
-				XmlObject xmlObj = XmlBeans.getContextTypeLoader().parse(
-						o1.xmlText(), objType, opts);
+				Logger.log.debug("PubXRef Idx: " + mimPubXRef.getId());
 
-				if (xmlObj instanceof PublicationXRefType) {
+				Logger.log.debug("PubXRef xmlText: " + mimPubXRef.xmlText());
 
-					PublicationXRefType mimPubXRef = (PublicationXRefType) xmlObj;
+				BiopaxElementManager refMgr = pw.getBiopaxElementManager();
 
-					SchemaType type = XmlBeans
-							.typeForClass(PublicationXRefType.class);
-					opts.setDocumentType(type);
+				org.pathvisio.biopax.reflect.PublicationXref gpmlXRef = new PublicationXref();
 
-					PublicationXRefType p = (PublicationXRefType) XmlObject.Factory
-							.parse(xmlObj.xmlText(), opts);
+				Logger.log.debug("PubXRef Id1: " + mimPubXRef.getId());
 
-					Logger.log.debug("PubXRef Idx: " + p.getId());
+				// Set publication attributes
+				gpmlXRef.setId(mimBioRef);
+				gpmlXRef.setPubmedId(mimPubXRef.getId());
+				gpmlXRef.setTitle(mimPubXRef.getTitle());
+				gpmlXRef.setSource(mimPubXRef.getJournal());
+				gpmlXRef.setYear(mimPubXRef.getYear());
 
-					Logger.log.debug("PubXRef xmlText: " + xmlObj.xmlText());
-
-					BiopaxElementManager refMgr = pw.getBiopaxElementManager();
-
-					// BiopaxReferenceManager refMgr = pwElem
-					// .getBiopaxReferenceManager();
-					PublicationXref gpmlXRef = new PublicationXref();
-
-					Logger.log.debug("PubXRef Id1: " + mimPubXRef.getId());
-
-					for (String author : mimPubXRef.getAuthorList()) {
-						gpmlXRef.addAuthor(author);
-						Logger.log.debug("Author: " + author);
-					}
-
-					// Set publication attributes
-					gpmlXRef.setPubmedId(mimPubXRef.getId());
-					gpmlXRef.setTitle(mimPubXRef.getTitle());
-					gpmlXRef.setSource(mimPubXRef.getJournal());
-					gpmlXRef.setYear(mimPubXRef.getYear());
-
-					refMgr.addElement(gpmlXRef);
-
-					mimBioRefs.add(mimBioRef);
+				for (String author : mimPubXRef.getAuthorList()) {
+					gpmlXRef.addAuthor(author);
+					Logger.log.debug("Author: " + author);
 				}
-			} catch (XmlException e) {
-				Logger.log.debug(e.getMessage());
+
+				refMgr.addElement(gpmlXRef);
+
+				mimBioRefs.add(mimBioRef);
 			}
 		}
 

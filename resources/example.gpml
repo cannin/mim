@@ -321,7 +321,7 @@
     </Graphics>
   </Line>
   <Group GroupId="f04c9" Style="EntityWithFeatures" />
-  <Group GroupId="ef63a" GraphId="cecc0" Style="Complex" />
+  <Group GroupId="ef63a" GraphId="cecc0" Style="ImplicitComplex" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
 </Pathway>
 
