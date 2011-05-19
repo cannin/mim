@@ -209,9 +209,13 @@ public class ExporterHelper extends CommonHelper {
 				}
 
 				if (isNotBlank(info.getLastModified())) {
-					Calendar calDate = new XmlCalendar(info.getLastModified());
+					try {
+						Calendar calDate = new XmlCalendar(info.getLastModified());
 
-					dia.getMimBio().setModified(calDate);
+						dia.getMimBio().setModified(calDate);
+					} catch (IllegalArgumentException e) {
+						Logger.log.info("Date Error: " + e.getMessage());
+					}
 				}
 			}
 
