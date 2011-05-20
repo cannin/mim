@@ -286,11 +286,13 @@ public class ExporterHelper extends CommonHelper {
 		}
 
 		// Set DataNode.Graphics@ShapeType to GenericProperty
-		EntityGlyphType.GenericProperty genProp = entGlyph
+		if(isNotBlank(pwElem.getShapeType().toString())) {
+			EntityGlyphType.GenericProperty genProp = entGlyph
 				.addNewGenericProperty();
-		genProp.setKey("ShapeType");
-		genProp.setValue(pwElem.getShapeType().toString());
-
+			genProp.setKey("ShapeType");
+			genProp.setValue(pwElem.getShapeType().toString());
+		}
+		
 		// Map comments
 		for (Comment com : pwElem.getComments()) {
 			entGlyph.addComment(com.toString());
