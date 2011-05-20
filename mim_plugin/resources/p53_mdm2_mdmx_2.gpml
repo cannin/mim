@@ -37,7 +37,7 @@
     <Graphics CenterX="192.0" CenterY="223.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="CK1-a" GraphId="b9194" Type="GeneProduct">
+  <DataNode TextLabel="CK1-a" GraphId="b9194" Type="SimplePhysicalEntity">
     <Graphics CenterX="404.0" CenterY="370.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
     <Xref Database="" ID="" />
   </DataNode>
@@ -100,7 +100,7 @@
     <Graphics CenterX="112.0" CenterY="155.0" Width="48.0" Height="20.0" ZOrder="32768" FillColor="Transparent" FontSize="10" Valign="Middle" ShapeType="None" LineThickness="0.0" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="p21" GraphId="d0b6e" Type="GeneProduct">
+  <DataNode TextLabel="p21" GraphId="d0b6e" Type="SimplePhysicalEntity">
     <Graphics CenterX="280.0" CenterY="562.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
     <Xref Database="" ID="" />
   </DataNode>
@@ -108,7 +108,7 @@
     <Graphics CenterX="26.0" CenterY="223.0" Width="15.0" Height="15.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="SourceSink" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="Promoter" GraphId="c9568" Type="GeneProduct">
+  <DataNode TextLabel="Promoter" GraphId="c9568" Type="SimplePhysicalEntity">
     <Graphics CenterX="106.0" CenterY="562.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
     <Xref Database="" ID="" />
   </DataNode>
@@ -124,7 +124,7 @@
     <Graphics CenterX="435.0" CenterY="184.0" Width="15.0" Height="15.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="SourceSink" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="DNA Damage: ATM, DNA-PK, ATR" GraphId="cd143" Type="GeneProduct">
+  <DataNode TextLabel="DNA Damage: ATM, DNA-PK, ATR" GraphId="cd143" Type="SimplePhysicalEntity">
     <Graphics CenterX="108.5" CenterY="34.0" Width="175.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
     <Xref Database="" ID="" />
   </DataNode>

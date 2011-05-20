@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Pathway xmlns="http://genmapp.org/GPML/2010a" Name="New Pathway" Version="20100401">
   <Graphics BoardWidth="577.5" BoardHeight="194.7" />
-  <DataNode TextLabel="GeneProduct" GraphId="e46ed" Type="GeneProduct">
+  <DataNode TextLabel="SimplePhysicalEntity" GraphId="e46ed" Type="SimplePhysicalEntity">
     <Graphics CenterX="301.0" CenterY="167.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="GeneProduct" GraphId="d0fec" Type="GeneProduct">
+  <DataNode TextLabel="SimplePhysicalEntity" GraphId="d0fec" Type="SimplePhysicalEntity">
     <Graphics CenterX="485.0" CenterY="124.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
