@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Pathway xmlns="http://genmapp.org/GPML/2010a" Name="New Pathway" Version="20100204">
   <Graphics BoardWidth="9735.0" BoardHeight="3036.0" />
-  <DataNode TextLabel="GeneProduct" GraphId="b4b91" Type="GeneProduct">
+  <DataNode TextLabel="SimplePhysicalEntity" GraphId="b4b91" Type="SimplePhysicalEntity">
     <Graphics CenterX="5190.0" CenterY="1500.0" Width="1200.0" Height="300.0" ZOrder="32768" FillColor="Transparent" FontSize="12" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="GeneProduct" GraphId="f38dc" Type="GeneProduct">
+  <DataNode TextLabel="SimplePhysicalEntity" GraphId="f38dc" Type="SimplePhysicalEntity">
     <Graphics CenterX="5475.0" CenterY="2610.0" Width="1200.0" Height="300.0" ZOrder="32768" FillColor="Transparent" FontSize="12" />
     <Xref Database="" ID="" />
   </DataNode>
@@ -17,11 +17,11 @@
     <Graphics CenterX="79.0" CenterY="74.0" Width="58.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="ConceptualEntity" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="GeneProduct" GraphId="b7968" Type="GeneProduct">
+  <DataNode TextLabel="SimplePhysicalEntity" GraphId="b7968" Type="SimplePhysicalEntity">
     <Graphics CenterX="104.0" CenterY="169.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="GeneProduct" GraphId="a13c5" Type="GeneProduct">
+  <DataNode TextLabel="SimplePhysicalEntity" GraphId="a13c5" Type="SimplePhysicalEntity">
     <Graphics CenterX="252.0" CenterY="168.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
     <Xref Database="" ID="" />
   </DataNode>
