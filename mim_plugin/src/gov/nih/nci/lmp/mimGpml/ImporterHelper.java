@@ -903,19 +903,25 @@ public class ImporterHelper extends CommonHelper {
 	/**
 	 * Map RelationshipXRefs.
 	 * 
-	 * 
 	 * @param pwElem
 	 *            the pw elem
 	 */
 	private void mapRelationshipXRefs(EntityGlyphType glyph,
 			PathwayElement pwElem) {
 		for (String mimBioRef : glyph.getMimBioRefList()) {
-			XmlObject xmlObj = getVisXmlObjectById(visDoc, mimBioRef);
+			XmlObject o1 = getVisXmlObjectById(visDoc, mimBioRef);
 
 			// Logger.log.debug("RelXRef xmlText: " + xmlObj.xmlText());
 
-			if (xmlObj instanceof RelationshipXRefType) {
-				RelationshipXRefType mimRelXRef = (RelationshipXRefType) xmlObj;
+			Logger.log.debug("o1.class1 mapRelXRefs: " + o1.getClass());
+			Logger.log.debug("o1.text mapRelXRefs: " + o1.xmlText());
+			
+			RelationshipXRefType o2 = (RelationshipXRefType) o1.changeType(gov.nih.nci.lmp.mim.mimVisLevel1.RelationshipXRefType.type);
+
+			Logger.log.debug("o2.class mapRelXRefs: " + o2.getClass());
+									
+			if (o2 instanceof RelationshipXRefType) {
+				RelationshipXRefType mimRelXRef = (RelationshipXRefType) o2;
 
 				pwElem.setDataSource(DataSource.getByFullName(mimRelXRef
 						.getDb()));
