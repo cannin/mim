@@ -286,7 +286,7 @@ public class ExporterHelper extends CommonHelper {
 		}
 
 		// Set DataNode.Graphics@ShapeType to GenericProperty
-		if(isNotBlank(pwElem.getShapeType().toString())) {
+		if(pwElem.getShapeType() != null) {
 			EntityGlyphType.GenericProperty genProp = entGlyph
 				.addNewGenericProperty();
 			genProp.setKey("ShapeType");
