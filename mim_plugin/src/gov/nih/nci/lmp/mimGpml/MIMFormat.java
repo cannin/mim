@@ -93,6 +93,7 @@ public class MIMFormat implements PathwayExporter, PathwayImporter {
 	public void doExport(File file, Pathway pathway) throws ConverterException {
 		try {
 			ExporterHelper helper = new ExporterHelper(pathway);
+			helper.mapPathway(); 
 			helper.export(file);
 		} catch (IOException e) {
 			throw new ConverterException(e);
