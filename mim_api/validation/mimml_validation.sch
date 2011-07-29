@@ -1,16 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Documentation uses Dublin Core terms: http://dublincore.org
+
+author: Augustin Luna (augustin@mail.nih.gov)
+modified: 07-28-11
+hasVersion: 0.1.1
+isReferencedBy: http://www.ncbi.nlm.nih.gov/pubmed/21586134
+license: 		
+					
+The information, opinions, data, and statements contained herein are not 
+necessarily those of the U.S. Government or the National Institutes of Health (NIH) 
+and should not be interpreted, acted on, or represented as such.
+
+Reference herein to any specific commercial product, process, or service by 
+trade name, trademark, manufacturer, or otherwise, does not necessarily 
+constitute or imply its endorsement, recommendation, or favoring by the U.S. 
+Government, NIH, or any of their employees and contractors.
+
+The U.S. Government, NIH and their employees and contractors do not make 
+any warranty, express or implied, including the warranties of merchantability 
+and fitness for a particular purpose with respect to this document. In addition, 
+the U.S. Government, NIH, and their employees and contractors assume no legal 
+liability for the accuracy, completeness, or usefulness of any information, 
+apparatus, product, or process disclosed herein and do not represent that use 
+of such information, apparatus, product or process would not infringe on 
+privately owned rights.
+
+This document is sponsored by the NIH, along with private companies and other 
+organizations. Accordingly, other parties may retain all rights to publish or 
+reproduce these documents or to allow others to do so. This document may be 
+protected under the U.S. and foreign Copyright laws. 
+
+Permission to reproduce may be required.
+
+Licensed under the Apache License, Version 2.0 (the "License"); 
+you may not use this file except in compliance with the License. 
+You may obtain a copy of the License at 
+
+http://www.apache.org/licenses/LICENSE-2.0 
+ 
+Unless required by applicable law or agreed to in writing, software 
+distributed under the License is distributed on an "AS IS" BASIS, 
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+See the License for the specific language governing permissions and 
+limitations under the License.
+ -->
 <iso:schema    
   xmlns="http://purl.oclc.org/dsdl/schematron"
   xmlns:iso="http://purl.oclc.org/dsdl/schematron"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   defaultPhase="attribute-validation"
-  schemaVersion="0.1">
+  schemaVersion="0.1.1>
      
 	<iso:ns prefix="mimVis" uri="http://lmp.nci.nih.gov/mim/mimVisLevel1"/>
 	<iso:ns prefix="xsi" uri="http://www.w3.org/2001/XMLSchema-instance"/>
 	
 	<iso:title>mimml_validation</iso:title>
+	<iso:p></iso:p>
 
+	<iso:phase id="basic-checks">
+		<!-- Check entity types --> 
+		<iso:active pattern="check-entity-types"/>		
+		<!-- Check interaction types --> 		
+		<iso:active pattern="check-int-types"/>		
+		<!-- Check anchor types --> 		
+		<iso:active pattern="check-anchor-types"/>		
+		<!-- Check arrowhead combinations --> 
+		<iso:active pattern="check-ncrb"/>
+		<iso:active pattern="check-cib"/>
+		<iso:active pattern="check-cvm"/>
+		<iso:active pattern="check-sti"/>
+		<iso:active pattern="check-nsti"/>
+		<iso:active pattern="check-inh"/>
+		<iso:active pattern="check-ainh"/>
+		<iso:active pattern="check-pwol"/>
+		<iso:active pattern="check-stc"/>
+		<iso:active pattern="check-tmp"/>
+		<iso:active pattern="check-cat"/>
+		<iso:active pattern="check-cle"/>
+		<iso:active pattern="check-comb"/>
+		<iso:active pattern="check-fef"/>
+		<iso:active pattern="check-nef"/>
+		<iso:active pattern="check-excluded-int"/>	
+	</iso:phase>
+	
 	<iso:phase id="attribute-validation"> 
 		<!-- Check entity attributes --> 
 		<iso:active pattern="check-spe"/>
@@ -61,14 +134,67 @@
 		<iso:active pattern="validate-branching-interaction-prohibited-sets"/>	
 		<!--<iso:active pattern="validate-sti-conn2"/>-->			
 	</iso:phase>
-
-	<iso:phase id='placement-validation'>
-	</iso:phase>
 	
 	<iso:phase id='branching-validation'>
 		<!-- Check generic property interaction start -->
 		<iso:active pattern="check-branching-interaction-start"/>	
 	</iso:phase>	
+
+	<!-- General checks -->
+	<!-- Check entity types -->
+	<iso:pattern name="check-entity-types" id="check-entity-types">
+		<iso:rule context="mimVis:EntityGlyph">
+			<iso:let name="vis-id" value="@visId"/>			
+			<iso:assert test="@type='SimplePhysicalEntity' or
+				@type='EntityFeature'
+				@type='Modifier'
+				@type='ConceptualEntity'
+				@type='SourceSink'
+				@type='RestrictedCopy'
+				@type='ExplicitComplex'
+				@type='ImplicitComplex'	
+			" diagnostics="vis-id"></iso:assert>		
+		</iso:rule>
+	</iso:pattern>
+
+	<!-- Check interaction types -->
+	<iso:pattern name="check-interaction-types" id="check-interaction-types">
+		<iso:rule context="mimVis:InteractionGlyph">
+			<iso:let name="vis-id" value="@visId"/>			
+			<iso:assert test="@type='CovalentModification' or
+				@type='NonCovalentReversibleBinding'
+				@type='CovalentIrreversibleBinding'
+				@type='Catalysis'
+				@type='SourceSink'
+				@type='Stimulation'
+				@type='NecessaryStimulation'
+				@type='ProductionWithoutLoss'
+				@type='StochiometricConversion'
+				@type='TemplateReaction'
+				@type='CovalentBondCleavage'
+				@type='Inhibition'
+				@type='AbsoluteInhibition'
+				@type='StateCombination'
+				@type='CovalentBondCleavage'
+				@type='NextFeature'
+				@type='FirstFeature'
+				@type='BranchingLeft'
+				@type='BranchingRight'
+				@type='Line'
+			" diagnostics="vis-id"></iso:assert>		
+		</iso:rule>
+	</iso:pattern>
+
+	<!-- Check anchor types -->
+	<iso:pattern name="check-anchor-types" id="check-anchor-types">
+		<iso:rule context="mimVis:Anchor">
+			<iso:let name="vis-id" value="@visId"/>			
+			<iso:assert test="@type='InTrans' or
+				@type='Annotation'
+				@type='Invisible'
+			" diagnostics="vis-id"></iso:assert>		
+		</iso:rule>
+	</iso:pattern>
 	
 	<!-- EntityGlyph attributes to be checked
 		** Optional attributes are not checked 
@@ -227,8 +353,8 @@
 					
 			<iso:assert test="matches($display-name, '^[A-Za-z]+$') or
 			matches($display-name, '^[A-Za-z]+:[A-Z]?\d+$')" 
-			diagnostics="vis-id">The display names of modifiers should have one of the following formats: X, X:YZ, or X:Z; where X is a text label, Y is a capitalized single letter amino acid abbreviation, and Z is an integer location value.</iso:assert>
-			<iso:assert test="matches($display-name, '^(Ac|G|OH|Me|My|Pa|P|Pr|H|S|Ub):?[A-Z]?\d*$')" diagnostics="vis-id" role="warning">Common modifiers have pre-defined text labels; this modifier does not use a pre-defined text label.</iso:assert>
+			diagnostics="vis-id">The display names of modifiers should have one of the following formats: X, X:YZ, or X:Z; where X is a text label, Y is a capitalized single letter amino acid abbreviation, and Z is an integer location value; for example: P, P:S1, or P:1.</iso:assert>
+			<iso:assert test="matches($display-name, '^(Ac|G|OH|Me|My|Pa|P|Pr|H|S|Ub):?[A-Z]?\d*$')" diagnostics="vis-id" role="warning">Common modifiers have pre-defined text labels; this modifier does not use a pre-defined text label; pre-defined labels include: Ac, G, OH, Me, My, Pa, P, Pr, H, S, or Ub. Refer to the MIM specification for more information.</iso:assert>
 		</iso:rule> 
 	</iso:pattern> 
 

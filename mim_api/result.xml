@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<fileset date="2011/02/18">
+<fileset date="2011/05/23">
 <file name="ca_cam_binding.mimml">
 <svrl:schematron-output xmlns:iso="http://purl.oclc.org/dsdl/schematron"
-                        xmlns:sch="http://www.ascc.net/xml/schematron"
                         xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                        xmlns:xhtml="http://www.w3.org/1999/xhtml"
                         xmlns:schold="http://www.ascc.net/xml/schematron"
                         xmlns:xs="http://www.w3.org/2001/XMLSchema"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -15,59 +15,133 @@
 		 ca_cam_binding.mimml  
 		 file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files--><svrl:ns-prefix-in-attribute-values uri="http://lmp.nci.nih.gov/mim/mimVisLevel1" prefix="mimVis"/>
    <svrl:ns-prefix-in-attribute-values uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
-   <svrl:active-pattern id="check-spe" name="check-spe"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-spe"
+                        name="check-spe"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
-   <svrl:active-pattern id="check-ef" name="check-ef"/>
-   <svrl:active-pattern id="check-mod" name="check-mod"/>
-   <svrl:active-pattern id="check-ce" name="check-ce"/>
-   <svrl:active-pattern id="check-ss" name="check-ss"/>
-   <svrl:active-pattern id="check-rc" name="check-rc"/>
-   <svrl:active-pattern id="check-ec" name="check-ec"/>
-   <svrl:active-pattern id="check-ic" name="check-ic"/>
-   <svrl:active-pattern id="check-mod-format" name="check-mod-format"/>
-   <svrl:active-pattern id="check-ef-format" name="check-ef-format"/>
-   <svrl:active-pattern id="check-int-visref" name="check-int-visref"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-ef"
+                        name="check-ef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-mod"
+                        name="check-mod"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-ce"
+                        name="check-ce"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-ss"
+                        name="check-ss"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-rc"
+                        name="check-rc"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-ec"
+                        name="check-ec"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-ic"
+                        name="check-ic"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-mod-format"
+                        name="check-mod-format"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-ef-format"
+                        name="check-ef-format"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-int-visref"
+                        name="check-int-visref"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
-   <svrl:active-pattern id="check-ncrb" name="check-ncrb"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-ncrb"
+                        name="check-ncrb"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-cib" name="check-cib"/>
-   <svrl:active-pattern id="check-cvm" name="check-cvm"/>
-   <svrl:active-pattern id="check-sti" name="check-sti"/>
-   <svrl:active-pattern id="check-nsti" name="check-nsti"/>
-   <svrl:active-pattern id="check-inh" name="check-inh"/>
-   <svrl:active-pattern id="check-ainh" name="check-ainh"/>
-   <svrl:active-pattern id="check-pwol" name="check-pwol"/>
-   <svrl:active-pattern id="check-stc" name="check-stc"/>
-   <svrl:active-pattern id="check-tmp" name="check-tmp"/>
-   <svrl:active-pattern id="check-cat" name="check-cat"/>
-   <svrl:active-pattern id="check-cle" name="check-cle"/>
-   <svrl:active-pattern id="check-comb" name="check-comb"/>
-   <svrl:active-pattern id="check-fef" name="check-fef"/>
-   <svrl:active-pattern id="check-nef" name="check-nef"/>
-   <svrl:active-pattern id="check-excluded-int" name="check-excluded-int"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-cib"
+                        name="check-cib"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-cvm"
+                        name="check-cvm"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-sti"
+                        name="check-sti"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-nsti"
+                        name="check-nsti"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-inh"
+                        name="check-inh"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-ainh"
+                        name="check-ainh"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-pwol"
+                        name="check-pwol"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-stc"
+                        name="check-stc"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-tmp"
+                        name="check-tmp"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-cat"
+                        name="check-cat"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-cle"
+                        name="check-cle"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-comb"
+                        name="check-comb"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-fef"
+                        name="check-fef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-nef"
+                        name="check-nef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-excluded-int"
+                        name="check-excluded-int"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
-   <svrl:active-pattern id="check-ec-placement" name="check-ec-placement"/>
-   <svrl:active-pattern id="check-intrans-placement" name="check-intrans-placement"/>
-   <svrl:active-pattern id="validate-ncrb-conn" name="validate-ncrb-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-ec-placement"
+                        name="check-ec-placement"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="check-intrans-placement"
+                        name="check-intrans-placement"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="validate-ncrb-conn"
+                        name="validate-ncrb-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-cvm-conn" name="validate-cvm-conn"/>
-   <svrl:active-pattern id="validate-sti-conn" name="validate-sti-conn"/>
-   <svrl:active-pattern id="validate-stc-conn" name="validate-stc-conn"/>
-   <svrl:active-pattern id="validate-pwol-conn" name="validate-pwol-conn"/>
-   <svrl:active-pattern id="validate-cat-conn" name="validate-cat-conn"/>
-   <svrl:active-pattern id="validate-cle-conn" name="validate-cle-conn"/>
-   <svrl:active-pattern id="validate-branching-interaction-sets"
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="validate-cvm-conn"
+                        name="validate-cvm-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="validate-sti-conn"
+                        name="validate-sti-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="validate-stc-conn"
+                        name="validate-stc-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="validate-pwol-conn"
+                        name="validate-pwol-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="validate-cat-conn"
+                        name="validate-cat-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="validate-cle-conn"
+                        name="validate-cle-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="validate-branching-interaction-sets"
                         name="validate-branching-interaction-sets"/>
-   <svrl:active-pattern id="validate-branching-interaction-prohibited-sets"
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/ca_cam_binding.mimml"
+                        id="validate-branching-interaction-prohibited-sets"
                         name="validate-branching-interaction-prohibited-sets"/>
 </svrl:schematron-output>
 </file>
 <file name="example.mimml">
 <svrl:schematron-output xmlns:iso="http://purl.oclc.org/dsdl/schematron"
-                        xmlns:sch="http://www.ascc.net/xml/schematron"
                         xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                        xmlns:xhtml="http://www.w3.org/1999/xhtml"
                         xmlns:schold="http://www.ascc.net/xml/schematron"
                         xmlns:xs="http://www.w3.org/2001/XMLSchema"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -79,7 +153,9 @@
 		 example.mimml  
 		 file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files--><svrl:ns-prefix-in-attribute-values uri="http://lmp.nci.nih.gov/mim/mimVisLevel1" prefix="mimVis"/>
    <svrl:ns-prefix-in-attribute-values uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
-   <svrl:active-pattern id="check-spe" name="check-spe"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-spe"
+                        name="check-spe"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
@@ -91,20 +167,32 @@
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
-   <svrl:active-pattern id="check-ef" name="check-ef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-ef"
+                        name="check-ef"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='EntityFeature']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='EntityFeature']"/>
-   <svrl:active-pattern id="check-mod" name="check-mod"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-mod"
+                        name="check-mod"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
-   <svrl:active-pattern id="check-ce" name="check-ce"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-ce"
+                        name="check-ce"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ConceptualEntity']"/>
-   <svrl:active-pattern id="check-ss" name="check-ss"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-ss"
+                        name="check-ss"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SourceSink']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SourceSink']"/>
-   <svrl:active-pattern id="check-rc" name="check-rc"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-rc"
+                        name="check-rc"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='RestrictedCopy']"/>
-   <svrl:active-pattern id="check-ec" name="check-ec"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-ec"
+                        name="check-ec"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
@@ -115,15 +203,23 @@
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
-   <svrl:active-pattern id="check-ic" name="check-ic"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-ic"
+                        name="check-ic"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ImplicitComplex']"/>
-   <svrl:active-pattern id="check-mod-format" name="check-mod-format"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-mod-format"
+                        name="check-mod-format"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
-   <svrl:active-pattern id="check-ef-format" name="check-ef-format"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-ef-format"
+                        name="check-ef-format"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='EntityFeature']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='EntityFeature']"/>
-   <svrl:active-pattern id="check-int-visref" name="check-int-visref"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-int-visref"
+                        name="check-int-visref"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
@@ -153,48 +249,80 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
-   <svrl:active-pattern id="check-ncrb" name="check-ncrb"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-ncrb"
+                        name="check-ncrb"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-cib" name="check-cib"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-cib"
+                        name="check-cib"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentIrreversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-cvm" name="check-cvm"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-cvm"
+                        name="check-cvm"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-sti" name="check-sti"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-sti"
+                        name="check-sti"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-nsti" name="check-nsti"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-nsti"
+                        name="check-nsti"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-inh" name="check-inh"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-inh"
+                        name="check-inh"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-ainh" name="check-ainh"/>
-   <svrl:active-pattern id="check-pwol" name="check-pwol"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-ainh"
+                        name="check-ainh"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-pwol"
+                        name="check-pwol"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='ProductionWithoutLoss'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-stc" name="check-stc"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-stc"
+                        name="check-stc"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StochiometricConversion'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StochiometricConversion'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-tmp" name="check-tmp"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-tmp"
+                        name="check-tmp"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='TemplateReaction'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-cat" name="check-cat"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-cat"
+                        name="check-cat"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Catalysis'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-cle" name="check-cle"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-cle"
+                        name="check-cle"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentBondCleavage'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentBondCleavage'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-comb" name="check-comb"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-comb"
+                        name="check-comb"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StateCombination'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-fef" name="check-fef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-fef"
+                        name="check-fef"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='FirstFeature'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-nef" name="check-nef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-nef"
+                        name="check-nef"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NextFeature'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-excluded-int" name="check-excluded-int"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-excluded-int"
+                        name="check-excluded-int"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
@@ -224,7 +352,9 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
-   <svrl:active-pattern id="check-ec-placement" name="check-ec-placement"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-ec-placement"
+                        name="check-ec-placement"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
@@ -235,9 +365,13 @@
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
-   <svrl:active-pattern id="check-intrans-placement" name="check-intrans-placement"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="check-intrans-placement"
+                        name="check-intrans-placement"/>
    <svrl:fired-rule context="mimVis:Anchor[@type='InTrans']"/>
-   <svrl:active-pattern id="validate-ncrb-conn" name="validate-ncrb-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="validate-ncrb-conn"
+                        name="validate-ncrb-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
@@ -249,10 +383,14 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-cvm-conn" name="validate-cvm-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="validate-cvm-conn"
+                        name="validate-cvm-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-sti-conn" name="validate-sti-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="validate-sti-conn"
+                        name="validate-sti-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
@@ -263,20 +401,30 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    )]"/>
-   <svrl:active-pattern id="validate-stc-conn" name="validate-stc-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="validate-stc-conn"
+                        name="validate-stc-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     ]"/>
-   <svrl:active-pattern id="validate-pwol-conn" name="validate-pwol-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="validate-pwol-conn"
+                        name="validate-pwol-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-cat-conn" name="validate-cat-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="validate-cat-conn"
+                        name="validate-cat-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis' and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-cle-conn" name="validate-cle-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="validate-cle-conn"
+                        name="validate-cle-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentBondCleavage'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentBondCleavage'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-branching-interaction-sets"
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="validate-branching-interaction-sets"
                         name="validate-branching-interaction-sets"/>
-   <svrl:active-pattern id="validate-branching-interaction-prohibited-sets"
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example.mimml"
+                        id="validate-branching-interaction-prohibited-sets"
                         name="validate-branching-interaction-prohibited-sets"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
@@ -285,8 +433,8 @@
 </file>
 <file name="example_with_errors.mimml">
 <svrl:schematron-output xmlns:iso="http://purl.oclc.org/dsdl/schematron"
-                        xmlns:sch="http://www.ascc.net/xml/schematron"
                         xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                        xmlns:xhtml="http://www.w3.org/1999/xhtml"
                         xmlns:schold="http://www.ascc.net/xml/schematron"
                         xmlns:xs="http://www.w3.org/2001/XMLSchema"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -298,7 +446,9 @@
 		 example_with_errors.mimml  
 		 file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files--><svrl:ns-prefix-in-attribute-values uri="http://lmp.nci.nih.gov/mim/mimVisLevel1" prefix="mimVis"/>
    <svrl:ns-prefix-in-attribute-values uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
-   <svrl:active-pattern id="check-spe" name="check-spe"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-spe"
+                        name="check-spe"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
@@ -310,20 +460,32 @@
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
-   <svrl:active-pattern id="check-ef" name="check-ef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-ef"
+                        name="check-ef"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='EntityFeature']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='EntityFeature']"/>
-   <svrl:active-pattern id="check-mod" name="check-mod"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-mod"
+                        name="check-mod"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
-   <svrl:active-pattern id="check-ce" name="check-ce"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-ce"
+                        name="check-ce"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ConceptualEntity']"/>
-   <svrl:active-pattern id="check-ss" name="check-ss"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-ss"
+                        name="check-ss"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SourceSink']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SourceSink']"/>
-   <svrl:active-pattern id="check-rc" name="check-rc"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-rc"
+                        name="check-rc"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='RestrictedCopy']"/>
-   <svrl:active-pattern id="check-ec" name="check-ec"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-ec"
+                        name="check-ec"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
@@ -334,15 +496,23 @@
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
-   <svrl:active-pattern id="check-ic" name="check-ic"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-ic"
+                        name="check-ic"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ImplicitComplex']"/>
-   <svrl:active-pattern id="check-mod-format" name="check-mod-format"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-mod-format"
+                        name="check-mod-format"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
-   <svrl:active-pattern id="check-ef-format" name="check-ef-format"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-ef-format"
+                        name="check-ef-format"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='EntityFeature']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='EntityFeature']"/>
-   <svrl:active-pattern id="check-int-visref" name="check-int-visref"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-int-visref"
+                        name="check-int-visref"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
@@ -372,14 +542,20 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
-   <svrl:active-pattern id="check-ncrb" name="check-ncrb"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-ncrb"
+                        name="check-ncrb"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-cib" name="check-cib"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-cib"
+                        name="check-cib"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentIrreversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-cvm" name="check-cvm"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-cvm"
+                        name="check-cvm"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:failed-assert test="( mimVis:Point[1][@arrowHead='CovalentModification'] and mimVis:Point[last()][@arrowHead='Line'] ) or ( mimVis:Point[last()][@arrowHead='CovalentModification'] and mimVis:Point[1][@arrowHead='Line'] )">
       <svrl:text>Non-branched interactions possessing a 'CovalentModification' arrowhead should be terminated with a 'Line' arrowhead.</svrl:text>
@@ -387,37 +563,63 @@
    </svrl:failed-assert>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-sti" name="check-sti"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-sti"
+                        name="check-sti"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-nsti" name="check-nsti"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-nsti"
+                        name="check-nsti"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-inh" name="check-inh"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-inh"
+                        name="check-inh"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-ainh" name="check-ainh"/>
-   <svrl:active-pattern id="check-pwol" name="check-pwol"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-ainh"
+                        name="check-ainh"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-pwol"
+                        name="check-pwol"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='ProductionWithoutLoss'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-stc" name="check-stc"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-stc"
+                        name="check-stc"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StochiometricConversion'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StochiometricConversion'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-tmp" name="check-tmp"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-tmp"
+                        name="check-tmp"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='TemplateReaction'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-cat" name="check-cat"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-cat"
+                        name="check-cat"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Catalysis'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-cle" name="check-cle"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-cle"
+                        name="check-cle"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentBondCleavage'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentBondCleavage'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-comb" name="check-comb"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-comb"
+                        name="check-comb"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StateCombination'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-fef" name="check-fef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-fef"
+                        name="check-fef"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='FirstFeature'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-nef" name="check-nef"/>
-   <svrl:active-pattern id="check-excluded-int" name="check-excluded-int"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-nef"
+                        name="check-nef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-excluded-int"
+                        name="check-excluded-int"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
@@ -447,7 +649,9 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
-   <svrl:active-pattern id="check-ec-placement" name="check-ec-placement"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-ec-placement"
+                        name="check-ec-placement"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:failed-assert test="$inter[mimVis:Point[@arrowHead='CovalentModification']] or $inter[mimVis:Point[@arrowHead='NonCovalentReversibleBinding']] or $inter[mimVis:Point[@arrowHead='CovalentIrreversibleBinding']] or $inter[mimVis:Point[@arrowHead='StateCombination']]">
       <svrl:text>Explicit complexes should only be placed on the following interaction types: covalent modification, non-covalent reversible binding, covalent irreversible binding, or state combination.</svrl:text>
@@ -465,9 +669,13 @@
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
-   <svrl:active-pattern id="check-intrans-placement" name="check-intrans-placement"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="check-intrans-placement"
+                        name="check-intrans-placement"/>
    <svrl:fired-rule context="mimVis:Anchor[@type='InTrans']"/>
-   <svrl:active-pattern id="validate-ncrb-conn" name="validate-ncrb-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="validate-ncrb-conn"
+                        name="validate-ncrb-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
@@ -479,7 +687,9 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-cvm-conn" name="validate-cvm-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="validate-cvm-conn"
+                        name="validate-cvm-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:failed-assert test="$start-type='Modifier'">
       <svrl:text>A covalent modification interaction should be connected to one of the following entity types: modifier.</svrl:text>
@@ -496,7 +706,9 @@
    </svrl:failed-assert>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-sti-conn" name="validate-sti-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="validate-sti-conn"
+                        name="validate-sti-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
@@ -507,20 +719,30 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    )]"/>
-   <svrl:active-pattern id="validate-stc-conn" name="validate-stc-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="validate-stc-conn"
+                        name="validate-stc-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     ]"/>
-   <svrl:active-pattern id="validate-pwol-conn" name="validate-pwol-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="validate-pwol-conn"
+                        name="validate-pwol-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-cat-conn" name="validate-cat-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="validate-cat-conn"
+                        name="validate-cat-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis' and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-cle-conn" name="validate-cle-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="validate-cle-conn"
+                        name="validate-cle-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentBondCleavage'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentBondCleavage'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-branching-interaction-sets"
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="validate-branching-interaction-sets"
                         name="validate-branching-interaction-sets"/>
-   <svrl:active-pattern id="validate-branching-interaction-prohibited-sets"
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/example_with_errors.mimml"
+                        id="validate-branching-interaction-prohibited-sets"
                         name="validate-branching-interaction-prohibited-sets"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
@@ -529,8 +751,8 @@
 </file>
 <file name="chk2-8-6-2010.mimml">
 <svrl:schematron-output xmlns:iso="http://purl.oclc.org/dsdl/schematron"
-                        xmlns:sch="http://www.ascc.net/xml/schematron"
                         xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                        xmlns:xhtml="http://www.w3.org/1999/xhtml"
                         xmlns:schold="http://www.ascc.net/xml/schematron"
                         xmlns:xs="http://www.w3.org/2001/XMLSchema"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -542,7 +764,9 @@
 		 chk2-8-6-2010.mimml  
 		 file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files--><svrl:ns-prefix-in-attribute-values uri="http://lmp.nci.nih.gov/mim/mimVisLevel1" prefix="mimVis"/>
    <svrl:ns-prefix-in-attribute-values uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
-   <svrl:active-pattern id="check-spe" name="check-spe"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-spe"
+                        name="check-spe"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
@@ -575,8 +799,12 @@
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
-   <svrl:active-pattern id="check-ef" name="check-ef"/>
-   <svrl:active-pattern id="check-mod" name="check-mod"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-ef"
+                        name="check-ef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-mod"
+                        name="check-mod"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
@@ -597,18 +825,26 @@
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
-   <svrl:active-pattern id="check-ce" name="check-ce"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-ce"
+                        name="check-ce"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ConceptualEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ConceptualEntity']"/>
-   <svrl:active-pattern id="check-ss" name="check-ss"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-ss"
+                        name="check-ss"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SourceSink']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SourceSink']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SourceSink']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SourceSink']"/>
-   <svrl:active-pattern id="check-rc" name="check-rc"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-rc"
+                        name="check-rc"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='RestrictedCopy']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='RestrictedCopy']"/>
-   <svrl:active-pattern id="check-ec" name="check-ec"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-ec"
+                        name="check-ec"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
@@ -631,8 +867,12 @@
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
-   <svrl:active-pattern id="check-ic" name="check-ic"/>
-   <svrl:active-pattern id="check-mod-format" name="check-mod-format"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-ic"
+                        name="check-ic"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-mod-format"
+                        name="check-mod-format"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
@@ -653,8 +893,12 @@
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
-   <svrl:active-pattern id="check-ef-format" name="check-ef-format"/>
-   <svrl:active-pattern id="check-int-visref" name="check-int-visref"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-ef-format"
+                        name="check-ef-format"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-int-visref"
+                        name="check-int-visref"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
@@ -763,7 +1007,9 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
-   <svrl:active-pattern id="check-ncrb" name="check-ncrb"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-ncrb"
+                        name="check-ncrb"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
@@ -772,8 +1018,12 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-cib" name="check-cib"/>
-   <svrl:active-pattern id="check-cvm" name="check-cvm"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-cib"
+                        name="check-cib"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-cvm"
+                        name="check-cvm"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
@@ -794,7 +1044,9 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-sti" name="check-sti"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-sti"
+                        name="check-sti"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
@@ -815,40 +1067,64 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Stimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-nsti" name="check-nsti"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-nsti"
+                        name="check-nsti"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-inh" name="check-inh"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-inh"
+                        name="check-inh"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-ainh" name="check-ainh"/>
-   <svrl:active-pattern id="check-pwol" name="check-pwol"/>
-   <svrl:active-pattern id="check-stc" name="check-stc"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-ainh"
+                        name="check-ainh"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-pwol"
+                        name="check-pwol"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-stc"
+                        name="check-stc"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StochiometricConversion'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StochiometricConversion'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StochiometricConversion'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StochiometricConversion'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StochiometricConversion'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-tmp" name="check-tmp"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-tmp"
+                        name="check-tmp"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='TemplateReaction'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='TemplateReaction'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-cat" name="check-cat"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-cat"
+                        name="check-cat"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Catalysis'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Catalysis'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Catalysis'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-cle" name="check-cle"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-cle"
+                        name="check-cle"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentBondCleavage'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentBondCleavage'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-comb" name="check-comb"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-comb"
+                        name="check-comb"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='StateCombination'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-fef" name="check-fef"/>
-   <svrl:active-pattern id="check-nef" name="check-nef"/>
-   <svrl:active-pattern id="check-excluded-int" name="check-excluded-int"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-fef"
+                        name="check-fef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-nef"
+                        name="check-nef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-excluded-int"
+                        name="check-excluded-int"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
@@ -957,7 +1233,9 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
-   <svrl:active-pattern id="check-ec-placement" name="check-ec-placement"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-ec-placement"
+                        name="check-ec-placement"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
@@ -980,10 +1258,14 @@
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
-   <svrl:active-pattern id="check-intrans-placement" name="check-intrans-placement"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="check-intrans-placement"
+                        name="check-intrans-placement"/>
    <svrl:fired-rule context="mimVis:Anchor[@type='InTrans']"/>
    <svrl:fired-rule context="mimVis:Anchor[@type='InTrans']"/>
-   <svrl:active-pattern id="validate-ncrb-conn" name="validate-ncrb-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="validate-ncrb-conn"
+                        name="validate-ncrb-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
@@ -1002,7 +1284,9 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-cvm-conn" name="validate-cvm-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="validate-cvm-conn"
+                        name="validate-cvm-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
@@ -1023,7 +1307,9 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-sti-conn" name="validate-sti-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="validate-sti-conn"
+                        name="validate-sti-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
@@ -1054,13 +1340,17 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-stc-conn" name="validate-stc-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="validate-stc-conn"
+                        name="validate-stc-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='StochiometricConversion'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-pwol-conn" name="validate-pwol-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="validate-pwol-conn"
+                        name="validate-pwol-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    )]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    )]"/>
@@ -1072,7 +1362,9 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    )]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    )]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='ProductionWithouLoss' or     @arrowHead='TemplateReaction'    )]"/>
-   <svrl:active-pattern id="validate-cat-conn" name="validate-cat-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="validate-cat-conn"
+                        name="validate-cat-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis' and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis' and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
@@ -1092,12 +1384,16 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
-   <svrl:active-pattern id="validate-cle-conn" name="validate-cle-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="validate-cle-conn"
+                        name="validate-cle-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentBondCleavage'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentBondCleavage'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-branching-interaction-sets"
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="validate-branching-interaction-sets"
                         name="validate-branching-interaction-sets"/>
-   <svrl:active-pattern id="validate-branching-interaction-prohibited-sets"
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/chk2-8-6-2010.mimml"
+                        id="validate-branching-interaction-prohibited-sets"
                         name="validate-branching-interaction-prohibited-sets"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
@@ -1141,8 +1437,8 @@
 </file>
 <file name="camk_phosphorylation.mimml">
 <svrl:schematron-output xmlns:iso="http://purl.oclc.org/dsdl/schematron"
-                        xmlns:sch="http://www.ascc.net/xml/schematron"
                         xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                        xmlns:xhtml="http://www.w3.org/1999/xhtml"
                         xmlns:schold="http://www.ascc.net/xml/schematron"
                         xmlns:xs="http://www.w3.org/2001/XMLSchema"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -1154,64 +1450,138 @@
 		 camk_phosphorylation.mimml  
 		 file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files--><svrl:ns-prefix-in-attribute-values uri="http://lmp.nci.nih.gov/mim/mimVisLevel1" prefix="mimVis"/>
    <svrl:ns-prefix-in-attribute-values uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
-   <svrl:active-pattern id="check-spe" name="check-spe"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-spe"
+                        name="check-spe"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
-   <svrl:active-pattern id="check-ef" name="check-ef"/>
-   <svrl:active-pattern id="check-mod" name="check-mod"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-ef"
+                        name="check-ef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-mod"
+                        name="check-mod"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
-   <svrl:active-pattern id="check-ce" name="check-ce"/>
-   <svrl:active-pattern id="check-ss" name="check-ss"/>
-   <svrl:active-pattern id="check-rc" name="check-rc"/>
-   <svrl:active-pattern id="check-ec" name="check-ec"/>
-   <svrl:active-pattern id="check-ic" name="check-ic"/>
-   <svrl:active-pattern id="check-mod-format" name="check-mod-format"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-ce"
+                        name="check-ce"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-ss"
+                        name="check-ss"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-rc"
+                        name="check-rc"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-ec"
+                        name="check-ec"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-ic"
+                        name="check-ic"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-mod-format"
+                        name="check-mod-format"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
-   <svrl:active-pattern id="check-ef-format" name="check-ef-format"/>
-   <svrl:active-pattern id="check-int-visref" name="check-int-visref"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-ef-format"
+                        name="check-ef-format"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-int-visref"
+                        name="check-int-visref"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
-   <svrl:active-pattern id="check-ncrb" name="check-ncrb"/>
-   <svrl:active-pattern id="check-cib" name="check-cib"/>
-   <svrl:active-pattern id="check-cvm" name="check-cvm"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-ncrb"
+                        name="check-ncrb"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-cib"
+                        name="check-cib"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-cvm"
+                        name="check-cvm"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-sti" name="check-sti"/>
-   <svrl:active-pattern id="check-nsti" name="check-nsti"/>
-   <svrl:active-pattern id="check-inh" name="check-inh"/>
-   <svrl:active-pattern id="check-ainh" name="check-ainh"/>
-   <svrl:active-pattern id="check-pwol" name="check-pwol"/>
-   <svrl:active-pattern id="check-stc" name="check-stc"/>
-   <svrl:active-pattern id="check-tmp" name="check-tmp"/>
-   <svrl:active-pattern id="check-cat" name="check-cat"/>
-   <svrl:active-pattern id="check-cle" name="check-cle"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-sti"
+                        name="check-sti"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-nsti"
+                        name="check-nsti"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-inh"
+                        name="check-inh"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-ainh"
+                        name="check-ainh"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-pwol"
+                        name="check-pwol"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-stc"
+                        name="check-stc"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-tmp"
+                        name="check-tmp"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-cat"
+                        name="check-cat"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-cle"
+                        name="check-cle"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentBondCleavage'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-comb" name="check-comb"/>
-   <svrl:active-pattern id="check-fef" name="check-fef"/>
-   <svrl:active-pattern id="check-nef" name="check-nef"/>
-   <svrl:active-pattern id="check-excluded-int" name="check-excluded-int"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-comb"
+                        name="check-comb"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-fef"
+                        name="check-fef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-nef"
+                        name="check-nef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-excluded-int"
+                        name="check-excluded-int"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
-   <svrl:active-pattern id="check-ec-placement" name="check-ec-placement"/>
-   <svrl:active-pattern id="check-intrans-placement" name="check-intrans-placement"/>
-   <svrl:active-pattern id="validate-ncrb-conn" name="validate-ncrb-conn"/>
-   <svrl:active-pattern id="validate-cvm-conn" name="validate-cvm-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-ec-placement"
+                        name="check-ec-placement"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="check-intrans-placement"
+                        name="check-intrans-placement"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="validate-ncrb-conn"
+                        name="validate-ncrb-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="validate-cvm-conn"
+                        name="validate-cvm-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-sti-conn" name="validate-sti-conn"/>
-   <svrl:active-pattern id="validate-stc-conn" name="validate-stc-conn"/>
-   <svrl:active-pattern id="validate-pwol-conn" name="validate-pwol-conn"/>
-   <svrl:active-pattern id="validate-cat-conn" name="validate-cat-conn"/>
-   <svrl:active-pattern id="validate-cle-conn" name="validate-cle-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="validate-sti-conn"
+                        name="validate-sti-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="validate-stc-conn"
+                        name="validate-stc-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="validate-pwol-conn"
+                        name="validate-pwol-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="validate-cat-conn"
+                        name="validate-cat-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="validate-cle-conn"
+                        name="validate-cle-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentBondCleavage'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-branching-interaction-sets"
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="validate-branching-interaction-sets"
                         name="validate-branching-interaction-sets"/>
-   <svrl:active-pattern id="validate-branching-interaction-prohibited-sets"
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk_phosphorylation.mimml"
+                        id="validate-branching-interaction-prohibited-sets"
                         name="validate-branching-interaction-prohibited-sets"/>
 </svrl:schematron-output>
 </file>
 <file name="camk.mimml">
 <svrl:schematron-output xmlns:iso="http://purl.oclc.org/dsdl/schematron"
-                        xmlns:sch="http://www.ascc.net/xml/schematron"
                         xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                        xmlns:xhtml="http://www.w3.org/1999/xhtml"
                         xmlns:schold="http://www.ascc.net/xml/schematron"
                         xmlns:xs="http://www.w3.org/2001/XMLSchema"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -1223,7 +1593,9 @@
 		 camk.mimml  
 		 file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files--><svrl:ns-prefix-in-attribute-values uri="http://lmp.nci.nih.gov/mim/mimVisLevel1" prefix="mimVis"/>
    <svrl:ns-prefix-in-attribute-values uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
-   <svrl:active-pattern id="check-spe" name="check-spe"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-spe"
+                        name="check-spe"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
@@ -1231,23 +1603,43 @@
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']"/>
-   <svrl:active-pattern id="check-ef" name="check-ef"/>
-   <svrl:active-pattern id="check-mod" name="check-mod"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-ef"
+                        name="check-ef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-mod"
+                        name="check-mod"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
-   <svrl:active-pattern id="check-ce" name="check-ce"/>
-   <svrl:active-pattern id="check-ss" name="check-ss"/>
-   <svrl:active-pattern id="check-rc" name="check-rc"/>
-   <svrl:active-pattern id="check-ec" name="check-ec"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-ce"
+                        name="check-ce"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-ss"
+                        name="check-ss"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-rc"
+                        name="check-rc"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-ec"
+                        name="check-ec"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
-   <svrl:active-pattern id="check-ic" name="check-ic"/>
-   <svrl:active-pattern id="check-mod-format" name="check-mod-format"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-ic"
+                        name="check-ic"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-mod-format"
+                        name="check-mod-format"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='Modifier']"/>
-   <svrl:active-pattern id="check-ef-format" name="check-ef-format"/>
-   <svrl:active-pattern id="check-int-visref" name="check-int-visref"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-ef-format"
+                        name="check-ef-format"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-int-visref"
+                        name="check-int-visref"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
@@ -1261,33 +1653,65 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
-   <svrl:active-pattern id="check-ncrb" name="check-ncrb"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-ncrb"
+                        name="check-ncrb"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NonCovalentReversibleBinding'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-cib" name="check-cib"/>
-   <svrl:active-pattern id="check-cvm" name="check-cvm"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-cib"
+                        name="check-cib"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-cvm"
+                        name="check-cvm"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentModification'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-sti" name="check-sti"/>
-   <svrl:active-pattern id="check-nsti" name="check-nsti"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-sti"
+                        name="check-sti"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-nsti"
+                        name="check-nsti"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NecessaryStimulation'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-inh" name="check-inh"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-inh"
+                        name="check-inh"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Inhibition'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-ainh" name="check-ainh"/>
-   <svrl:active-pattern id="check-pwol" name="check-pwol"/>
-   <svrl:active-pattern id="check-stc" name="check-stc"/>
-   <svrl:active-pattern id="check-tmp" name="check-tmp"/>
-   <svrl:active-pattern id="check-cat" name="check-cat"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-ainh"
+                        name="check-ainh"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-pwol"
+                        name="check-pwol"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-stc"
+                        name="check-stc"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-tmp"
+                        name="check-tmp"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-cat"
+                        name="check-cat"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='Catalysis'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-cle" name="check-cle"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-cle"
+                        name="check-cle"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='CovalentBondCleavage'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-comb" name="check-comb"/>
-   <svrl:active-pattern id="check-fef" name="check-fef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-comb"
+                        name="check-comb"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-fef"
+                        name="check-fef"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='FirstFeature'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-nef" name="check-nef"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-nef"
+                        name="check-nef"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph[mimVis:Point[@arrowHead='NextFeature'] and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="check-excluded-int" name="check-excluded-int"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-excluded-int"
+                        name="check-excluded-int"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
@@ -1301,35 +1725,55 @@
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph"/>
-   <svrl:active-pattern id="check-ec-placement" name="check-ec-placement"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-ec-placement"
+                        name="check-ec-placement"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
    <svrl:fired-rule context="mimVis:EntityGlyph[@type='ExplicitComplex']"/>
-   <svrl:active-pattern id="check-intrans-placement" name="check-intrans-placement"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="check-intrans-placement"
+                        name="check-intrans-placement"/>
    <svrl:fired-rule context="mimVis:Anchor[@type='InTrans']"/>
-   <svrl:active-pattern id="validate-ncrb-conn" name="validate-ncrb-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="validate-ncrb-conn"
+                        name="validate-ncrb-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='NonCovalentReversibleBinding' or     @arrowHead='CovalentIrreversibleBinding'    ) and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-cvm-conn" name="validate-cvm-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="validate-cvm-conn"
+                        name="validate-cvm-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentModification'    and not(mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-sti-conn" name="validate-sti-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="validate-sti-conn"
+                        name="validate-sti-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    (    @arrowHead='Stimulation' or     @arrowHead='NecessaryStimulation' or     @arrowHead='Inhibition' or     @arrowHead='AbsoluteInhibition'    ) and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-stc-conn" name="validate-stc-conn"/>
-   <svrl:active-pattern id="validate-pwol-conn" name="validate-pwol-conn"/>
-   <svrl:active-pattern id="validate-cat-conn" name="validate-cat-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="validate-stc-conn"
+                        name="validate-stc-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="validate-pwol-conn"
+                        name="validate-pwol-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="validate-cat-conn"
+                        name="validate-cat-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis' and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='Catalysis'    ]"/>
-   <svrl:active-pattern id="validate-cle-conn" name="validate-cle-conn"/>
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="validate-cle-conn"
+                        name="validate-cle-conn"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[    @arrowHead='CovalentBondCleavage'     and not(../mimVis:Point[starts-with(@arrowHead,'Branching')])]"/>
-   <svrl:active-pattern id="validate-branching-interaction-sets"
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="validate-branching-interaction-sets"
                         name="validate-branching-interaction-sets"/>
-   <svrl:active-pattern id="validate-branching-interaction-prohibited-sets"
+   <svrl:active-pattern document="file:/C:/Users/Default.Default-PC/Desktop/workspace/mim_api_ncisvn/test-files/camk.mimml"
+                        id="validate-branching-interaction-prohibited-sets"
                         name="validate-branching-interaction-prohibited-sets"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>
    <svrl:fired-rule context="mimVis:InteractionGlyph/mimVis:Point[starts-with(@arrowHead,'Branching')]"/>

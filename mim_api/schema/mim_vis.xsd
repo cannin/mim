@@ -3,8 +3,9 @@
 Documentation uses Dublin Core terms: http://dublincore.org
 
 author: Augustin Luna (augustin@mail.nih.gov)
-modified: 10-20-10
-hasVersion: 0.7.1
+modified: 07-28-11
+hasVersion: 0.7.2
+isReferencedBy: http://www.ncbi.nlm.nih.gov/pubmed/21586134
 license: 		
 					
 The information, opinions, data, and statements contained herein are not 
