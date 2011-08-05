@@ -153,7 +153,7 @@ limitations under the License.
 				@type='RestrictedCopy'
 				@type='ExplicitComplex'
 				@type='ImplicitComplex'	
-			" diagnostics="vis-id"></iso:assert>		
+			" diagnostics="vis-id" role="error"></iso:assert>		
 		</iso:rule>
 	</iso:pattern>
 
@@ -181,7 +181,7 @@ limitations under the License.
 				@type='BranchingLeft'
 				@type='BranchingRight'
 				@type='Line'
-			" diagnostics="vis-id"></iso:assert>		
+			" diagnostics="vis-id" role="error"></iso:assert>		
 		</iso:rule>
 	</iso:pattern>
 
@@ -192,7 +192,7 @@ limitations under the License.
 			<iso:assert test="@type='InTrans' or
 				@type='Annotation'
 				@type='Invisible'
-			" diagnostics="vis-id"></iso:assert>		
+			" diagnostics="vis-id" role="error"></iso:assert>		
 		</iso:rule>
 	</iso:pattern>
 	
@@ -213,16 +213,16 @@ limitations under the License.
 	<iso:pattern name="check-spe" id="check-spe">
 		<iso:rule context="mimVis:EntityGlyph[@type='SimplePhysicalEntity']">
 			<iso:let name="vis-id" value="@visId"/>			
-			<iso:assert test="@width" diagnostics="vis-id">Entity should possess a width attribute.</iso:assert>
-			<iso:assert test="@height" diagnostics="vis-id">Entity should possess a height attribute.</iso:assert>
-			<iso:assert test="not(@position)" diagnostics="vis-id">Entity should not possess a position attribute.</iso:assert> 			
-			<iso:assert test="@displayName" diagnostics="vis-id">Entity should possess a displayName attribute.</iso:assert>
-			<iso:assert test="@centerX" diagnostics="vis-id">Entity should possess a centerX attribute.</iso:assert>
-			<iso:assert test="@centerY" diagnostics="vis-id">Entity should possess a centerY attribute.</iso:assert>
-			<iso:assert test="not(@startLocationLabel)" diagnostics="vis-id">Entity should not possess a startLocationLabel attribute.</iso:assert> 			
-			<iso:assert test="not(@endLocationLabel)" diagnostics="vis-id">Entity should not possess an endLocationLabel attribute.</iso:assert> 			
-			<iso:assert test="not(@locationLabel)" diagnostics="vis-id">Entity should not possess a locationLabel attribute.</iso:assert> 
-			<!--<iso:assert test="@groupRef" diagnostics="vis-id">Entity should not possess a groupRef attribute.</iso:assert>-->				
+			<iso:assert test="@width" diagnostics="vis-id" role="error">Entity should possess a width attribute.</iso:assert>
+			<iso:assert test="@height" diagnostics="vis-id" role="error">Entity should possess a height attribute.</iso:assert>
+			<iso:assert test="not(@position)" diagnostics="vis-id" role="error">Entity should not possess a position attribute.</iso:assert> 			
+			<iso:assert test="@displayName" diagnostics="vis-id" role="error">Entity should possess a displayName attribute.</iso:assert>
+			<iso:assert test="@centerX" diagnostics="vis-id" role="error">Entity should possess a centerX attribute.</iso:assert>
+			<iso:assert test="@centerY" diagnostics="vis-id" role="error">Entity should possess a centerY attribute.</iso:assert>
+			<iso:assert test="not(@startLocationLabel)" diagnostics="vis-id" role="error">Entity should not possess a startLocationLabel attribute.</iso:assert> 			
+			<iso:assert test="not(@endLocationLabel)" diagnostics="vis-id" role="error">Entity should not possess an endLocationLabel attribute.</iso:assert> 			
+			<iso:assert test="not(@locationLabel)" diagnostics="vis-id" role="error">Entity should not possess a locationLabel attribute.</iso:assert> 
+			<!--<iso:assert test="@groupRef" diagnostics="vis-id" role="error">Entity should not possess a groupRef attribute.</iso:assert>-->				
 		</iso:rule> 
 	</iso:pattern> 
 	
@@ -230,16 +230,16 @@ limitations under the License.
 	<iso:pattern name="check-ef" id="check-ef">
 		<iso:rule context="mimVis:EntityGlyph[@type='EntityFeature']">
 			<iso:let name="vis-id" value="@visId"/>			
-			<iso:assert test="@width" diagnostics="vis-id">Entity should possess a width attribute.</iso:assert>
-			<iso:assert test="@height" diagnostics="vis-id">Entity should possess a height attribute.</iso:assert>
-			<iso:assert test="not(@position)" diagnostics="vis-id">Entity should not possess a position attribute.</iso:assert> 			
-			<iso:assert test="@displayName" diagnostics="vis-id">Entity should possess a displayName attribute.</iso:assert>
-			<iso:assert test="@centerX" diagnostics="vis-id">Entity should possess a centerX attribute.</iso:assert>
-			<iso:assert test="@centerY" diagnostics="vis-id">Entity should possess a centerY attribute.</iso:assert>
-			<!--<iso:assert test="@startLocationLabel" role="warning" diagnostics="vis-id" >Entity should possess a startLocationLabel attribute.</iso:assert>--> 			
-			<!--<iso:assert test="@endLocationLabel" role="warning" diagnostics="vis-id">Entity should possess an endLocationLabel attribute.</iso:assert>-->
-			<iso:assert test="not(@locationLabel)" diagnostics="vis-id">Entity should not possess a locationLabel attribute.</iso:assert> 	
-			<!--<iso:assert test="@groupRef" diagnostics="vis-id">Entity should not possess a groupRef attribute.</iso:assert>-->				
+			<iso:assert test="@width" diagnostics="vis-id" role="error">Entity should possess a width attribute.</iso:assert>
+			<iso:assert test="@height" diagnostics="vis-id" role="error">Entity should possess a height attribute.</iso:assert>
+			<iso:assert test="not(@position)" diagnostics="vis-id" role="error">Entity should not possess a position attribute.</iso:assert> 			
+			<iso:assert test="@displayName" diagnostics="vis-id" role="error">Entity should possess a displayName attribute.</iso:assert>
+			<iso:assert test="@centerX" diagnostics="vis-id" role="error">Entity should possess a centerX attribute.</iso:assert>
+			<iso:assert test="@centerY" diagnostics="vis-id" role="error">Entity should possess a centerY attribute.</iso:assert>
+			<!--<iso:assert test="@startLocationLabel" diagnostics="vis-id" role="warning">Entity should possess a startLocationLabel attribute.</iso:assert>--> 			
+			<!--<iso:assert test="@endLocationLabel" diagnostics="vis-id" role="warning">Entity should possess an endLocationLabel attribute.</iso:assert>-->
+			<iso:assert test="not(@locationLabel)" diagnostics="vis-id" role="error">Entity should not possess a locationLabel attribute.</iso:assert> 	
+			<!--<iso:assert test="@groupRef" diagnostics="vis-id" role="error">Entity should not possess a groupRef attribute.</iso:assert>-->				
 		</iso:rule> 
 	</iso:pattern> 
 	
@@ -247,16 +247,16 @@ limitations under the License.
 	<iso:pattern name="check-mod" id="check-mod">
 		<iso:rule context="mimVis:EntityGlyph[@type='Modifier']">
 			<iso:let name="vis-id" value="@visId"/>			
-			<iso:assert test="@width" diagnostics="vis-id">Entity should possess a width attribute.</iso:assert>
-			<iso:assert test="@height" diagnostics="vis-id">Entity should possess a height attribute.</iso:assert>
-			<iso:assert test="not(@position)" diagnostics="vis-id">Entity should not possess a position attribute.</iso:assert> 			
-			<iso:assert test="@displayName" diagnostics="vis-id">Entity should possess a displayName attribute.</iso:assert>
-			<iso:assert test="@centerX" diagnostics="vis-id">Entity should possess a centerX attribute.</iso:assert>
-			<iso:assert test="@centerY" diagnostics="vis-id">Entity should possess a centerY attribute.</iso:assert>
-			<iso:assert test="not(@startLocationLabel)" diagnostics="vis-id">Entity should not possess a startLocationLabel attribute.</iso:assert> 			
-			<iso:assert test="not(@endLocationLabel)" diagnostics="vis-id">Entity should not possess an endLocationLabel attribute.</iso:assert> 	
-			<!--<iso:assert test="@locationLabel" role="warning" diagnostics="vis-id">Entity should possess a locationLabel attribute.</iso:assert>-->
-			<!--<iso:assert test="@groupRef" diagnostics="vis-id">Entity should not possess a groupRef attribute.</iso:assert>-->				
+			<iso:assert test="@width" diagnostics="vis-id" role="error">Entity should possess a width attribute.</iso:assert>
+			<iso:assert test="@height" diagnostics="vis-id" role="error">Entity should possess a height attribute.</iso:assert>
+			<iso:assert test="not(@position)" diagnostics="vis-id" role="error">Entity should not possess a position attribute.</iso:assert> 			
+			<iso:assert test="@displayName" diagnostics="vis-id" role="error">Entity should possess a displayName attribute.</iso:assert>
+			<iso:assert test="@centerX" diagnostics="vis-id" role="error">Entity should possess a centerX attribute.</iso:assert>
+			<iso:assert test="@centerY" diagnostics="vis-id" role="error">Entity should possess a centerY attribute.</iso:assert>
+			<iso:assert test="not(@startLocationLabel)" diagnostics="vis-id" role="error">Entity should not possess a startLocationLabel attribute.</iso:assert> 			
+			<iso:assert test="not(@endLocationLabel)" diagnostics="vis-id" role="error">Entity should not possess an endLocationLabel attribute.</iso:assert> 	
+			<!--<iso:assert test="@locationLabel" diagnostics="vis-id" role="warning" >Entity should possess a locationLabel attribute.</iso:assert>-->
+			<!--<iso:assert test="@groupRef" diagnostics="vis-id" role="error">Entity should not possess a groupRef attribute.</iso:assert>-->				
 		</iso:rule> 
 	</iso:pattern> 
 	
@@ -264,16 +264,16 @@ limitations under the License.
 	<iso:pattern name="check-ce" id="check-ce">
 		<iso:rule context="mimVis:EntityGlyph[@type='ConceptualEntity']"> 		
 			<iso:let name="vis-id" value="@visId"/>			
-			<iso:assert test="@width" diagnostics="vis-id">Entity should possess a width attribute.</iso:assert>
-			<iso:assert test="@height" diagnostics="vis-id">Entity should possess a height attribute.</iso:assert>
-			<iso:assert test="not(@position)" diagnostics="vis-id">Entity should not possess a position attribute.</iso:assert> 			
-			<iso:assert test="@displayName" diagnostics="vis-id">Entity should possess a displayName attribute.</iso:assert>
-			<iso:assert test="@centerX" diagnostics="vis-id">Entity should possess a centerX attribute.</iso:assert>
-			<iso:assert test="@centerY" diagnostics="vis-id">Entity should possess a centerY attribute.</iso:assert>
-			<iso:assert test="not(@startLocationLabel)" diagnostics="vis-id">Entity should not possess a startLocationLabel attribute.</iso:assert> 			
-			<iso:assert test="not(@endLocationLabel)" diagnostics="vis-id">Entity should not possess an endLocationLabel attribute.</iso:assert> 	
-			<iso:assert test="not(@locationLabel)" diagnostics="vis-id">Entity should not possess a locationLabel attribute.</iso:assert>		
-			<!--<iso:assert test="@groupRef" diagnostics="vis-id">Entity should not possess a groupRef attribute.</iso:assert>-->				
+			<iso:assert test="@width" diagnostics="vis-id" role="error">Entity should possess a width attribute.</iso:assert>
+			<iso:assert test="@height" diagnostics="vis-id" role="error">Entity should possess a height attribute.</iso:assert>
+			<iso:assert test="not(@position)" diagnostics="vis-id" role="error">Entity should not possess a position attribute.</iso:assert> 			
+			<iso:assert test="@displayName" diagnostics="vis-id" role="error">Entity should possess a displayName attribute.</iso:assert>
+			<iso:assert test="@centerX" diagnostics="vis-id" role="error">Entity should possess a centerX attribute.</iso:assert>
+			<iso:assert test="@centerY" diagnostics="vis-id" role="error">Entity should possess a centerY attribute.</iso:assert>
+			<iso:assert test="not(@startLocationLabel)" diagnostics="vis-id" role="error">Entity should not possess a startLocationLabel attribute.</iso:assert> 			
+			<iso:assert test="not(@endLocationLabel)" diagnostics="vis-id" role="error">Entity should not possess an endLocationLabel attribute.</iso:assert> 	
+			<iso:assert test="not(@locationLabel)" diagnostics="vis-id" role="error">Entity should not possess a locationLabel attribute.</iso:assert>		
+			<!--<iso:assert test="@groupRef" diagnostics="vis-id" role="error">Entity should not possess a groupRef attribute.</iso:assert>-->				
 		</iso:rule> 
 	</iso:pattern> 
 	
@@ -281,16 +281,16 @@ limitations under the License.
 	<iso:pattern name="check-ss" id="check-ss">
 		<iso:rule context="mimVis:EntityGlyph[@type='SourceSink']">
 			<iso:let name="vis-id" value="@visId"/>			
-			<iso:assert test="@width" diagnostics="vis-id">Entity should possess a width attribute.</iso:assert>
-			<iso:assert test="@height" diagnostics="vis-id">Entity should possess a height attribute.</iso:assert>
-			<iso:assert test="not(@position)" diagnostics="vis-id">Entity should not possess a position attribute.</iso:assert> 			
-			<iso:assert test="not(@displayName)" diagnostics="vis-id">Entity should not possess a displayName attribute.</iso:assert>
-			<iso:assert test="@centerX" diagnostics="vis-id">Entity should possess a centerX attribute.</iso:assert>
-			<iso:assert test="@centerY" diagnostics="vis-id">Entity should possess a centerY attribute.</iso:assert>
-			<iso:assert test="not(@startLocationLabel)" diagnostics="vis-id">Entity should not possess a startLocationLabel attribute.</iso:assert> 			
-			<iso:assert test="not(@endLocationLabel)" diagnostics="vis-id">Entity should not possess an endLocationLabel attribute.</iso:assert> 	
-			<iso:assert test="not(@locationLabel)" diagnostics="vis-id">Entity should not possess a locationLabel attribute.</iso:assert>		
-			<!--<iso:assert test="@groupRef" diagnostics="vis-id">Entity should not possess a groupRef attribute.</iso:assert>-->				
+			<iso:assert test="@width" diagnostics="vis-id" role="error">Entity should possess a width attribute.</iso:assert>
+			<iso:assert test="@height" diagnostics="vis-id" role="error">Entity should possess a height attribute.</iso:assert>
+			<iso:assert test="not(@position)" diagnostics="vis-id" role="error">Entity should not possess a position attribute.</iso:assert> 			
+			<iso:assert test="not(@displayName)" diagnostics="vis-id" role="error">Entity should not possess a displayName attribute.</iso:assert>
+			<iso:assert test="@centerX" diagnostics="vis-id" role="error">Entity should possess a centerX attribute.</iso:assert>
+			<iso:assert test="@centerY" diagnostics="vis-id" role="error">Entity should possess a centerY attribute.</iso:assert>
+			<iso:assert test="not(@startLocationLabel)" diagnostics="vis-id" role="error">Entity should not possess a startLocationLabel attribute.</iso:assert> 			
+			<iso:assert test="not(@endLocationLabel)" diagnostics="vis-id" role="error">Entity should not possess an endLocationLabel attribute.</iso:assert> 	
+			<iso:assert test="not(@locationLabel)" diagnostics="vis-id" role="error">Entity should not possess a locationLabel attribute.</iso:assert>		
+			<!--<iso:assert test="@groupRef" diagnostics="vis-id" role="error">Entity should not possess a groupRef attribute.</iso:assert>-->				
 		</iso:rule> 
 	</iso:pattern> 
 	
@@ -298,16 +298,16 @@ limitations under the License.
 	<iso:pattern name="check-rc" id="check-rc">
 		<iso:rule context="mimVis:EntityGlyph[@type='RestrictedCopy']">
 			<iso:let name="vis-id" value="@visId"/>			
-			<iso:assert test="@width" diagnostics="vis-id">Entity should possess a width attribute.</iso:assert>
-			<iso:assert test="@height" diagnostics="vis-id">Entity should possess a height attribute.</iso:assert>
-			<iso:assert test="not(@position)" diagnostics="vis-id">Entity should not possess a position attribute.</iso:assert> 			
-			<iso:assert test="not(@displayName)" diagnostics="vis-id">Entity should not possess a displayName attribute.</iso:assert>
-			<iso:assert test="@centerX" diagnostics="vis-id">Entity should possess a centerX attribute.</iso:assert>
-			<iso:assert test="@centerY" diagnostics="vis-id">Entity should possess a centerY attribute.</iso:assert>
-			<iso:assert test="not(@startLocationLabel)" diagnostics="vis-id">Entity should not possess a startLocationLabel attribute.</iso:assert> 			
-			<iso:assert test="not(@endLocationLabel)" diagnostics="vis-id">Entity should not possess an endLocationLabel attribute.</iso:assert> 	
-			<iso:assert test="not(@locationLabel)" diagnostics="vis-id">Entity should not possess a locationLabel attribute.</iso:assert>		
-			<!--<iso:assert test="@groupRef" diagnostics="vis-id">Entity should not possess a groupRef attribute.</iso:assert>-->				
+			<iso:assert test="@width" diagnostics="vis-id" role="error">Entity should possess a width attribute.</iso:assert>
+			<iso:assert test="@height" diagnostics="vis-id" role="error">Entity should possess a height attribute.</iso:assert>
+			<iso:assert test="not(@position)" diagnostics="vis-id" role="error">Entity should not possess a position attribute.</iso:assert> 			
+			<iso:assert test="not(@displayName)" diagnostics="vis-id" role="error">Entity should not possess a displayName attribute.</iso:assert>
+			<iso:assert test="@centerX" diagnostics="vis-id" role="error">Entity should possess a centerX attribute.</iso:assert>
+			<iso:assert test="@centerY" diagnostics="vis-id" role="error">Entity should possess a centerY attribute.</iso:assert>
+			<iso:assert test="not(@startLocationLabel)" diagnostics="vis-id" role="error">Entity should not possess a startLocationLabel attribute.</iso:assert> 			
+			<iso:assert test="not(@endLocationLabel)" diagnostics="vis-id" role="error">Entity should not possess an endLocationLabel attribute.</iso:assert> 	
+			<iso:assert test="not(@locationLabel)" diagnostics="vis-id" role="error">Entity should not possess a locationLabel attribute.</iso:assert>		
+			<!--<iso:assert test="@groupRef" diagnostics="vis-id" role="error">Entity should not possess a groupRef attribute.</iso:assert>-->				
 		</iso:rule> 
 	</iso:pattern> 	
 	
@@ -315,16 +315,16 @@ limitations under the License.
 	<iso:pattern name="check-ec" id="check-ec">
 		<iso:rule context="mimVis:EntityGlyph[@type='ExplicitComplex']">
 			<iso:let name="vis-id" value="@visId"/>			
-			<iso:assert test="not(@width)" diagnostics="vis-id">Entity should not possess a width attribute.</iso:assert>
-			<iso:assert test="not(@height)" diagnostics="vis-id">Entity should not possess a height attribute.</iso:assert>
-			<iso:assert test="@position" diagnostics="vis-id">Entity should possess a position attribute.</iso:assert> 			
-			<iso:assert test="not(@displayName)" diagnostics="vis-id">Entity should not possess a displayName attribute.</iso:assert>
-			<iso:assert test="not(@centerX)" diagnostics="vis-id">Entity should possess a centerX attribute.</iso:assert>
-			<iso:assert test="not(@centerY)" diagnostics="vis-id">Entity should possess a centerY attribute.</iso:assert>
-			<iso:assert test="not(@startLocationLabel)" diagnostics="vis-id">Entity should not possess a startLocationLabel attribute.</iso:assert> 			
-			<iso:assert test="not(@endLocationLabel)" diagnostics="vis-id">Entity should not possess an endLocationLabel attribute.</iso:assert> 	
-			<iso:assert test="not(@locationLabel)" diagnostics="vis-id">Entity should not possess a locationLabel attribute.</iso:assert>		
-			<!--<iso:assert test="@groupRef" diagnostics="vis-id">Entity should not possess a groupRef attribute.</iso:assert>-->				
+			<iso:assert test="not(@width)" diagnostics="vis-id" role="error">Entity should not possess a width attribute.</iso:assert>
+			<iso:assert test="not(@height)" diagnostics="vis-id" role="error">Entity should not possess a height attribute.</iso:assert>
+			<iso:assert test="@position" diagnostics="vis-id" role="error">Entity should possess a position attribute.</iso:assert> 			
+			<iso:assert test="not(@displayName)" diagnostics="vis-id" role="error">Entity should not possess a displayName attribute.</iso:assert>
+			<iso:assert test="not(@centerX)" diagnostics="vis-id" role="error">Entity should possess a centerX attribute.</iso:assert>
+			<iso:assert test="not(@centerY)" diagnostics="vis-id" role="error">Entity should possess a centerY attribute.</iso:assert>
+			<iso:assert test="not(@startLocationLabel)" diagnostics="vis-id" role="error">Entity should not possess a startLocationLabel attribute.</iso:assert> 			
+			<iso:assert test="not(@endLocationLabel)" diagnostics="vis-id" role="error">Entity should not possess an endLocationLabel attribute.</iso:assert> 	
+			<iso:assert test="not(@locationLabel)" diagnostics="vis-id" role="error">Entity should not possess a locationLabel attribute.</iso:assert>		
+			<!--<iso:assert test="@groupRef" diagnostics="vis-id" role="error">Entity should not possess a groupRef attribute.</iso:assert>-->				
 		</iso:rule> 
 	</iso:pattern> 
 	
@@ -332,16 +332,16 @@ limitations under the License.
 	<iso:pattern name="check-ic" id="check-ic">
 		<iso:rule context="mimVis:EntityGlyph[@type='ImplicitComplex']">
 			<iso:let name="vis-id" value="@visId"/>			
-			<iso:assert test="not(@width)" diagnostics="vis-id">Entity should not possess a width attribute.</iso:assert>
-			<iso:assert test="not(@height)" diagnostics="vis-id">Entity should not possess a height attribute.</iso:assert>
-			<iso:assert test="not(@position)" diagnostics="vis-id">Entity should not possess a position attribute.</iso:assert> 			
-			<!--<iso:assert test="@displayName" role="warning" diagnostics="vis-id">Entity should not possess a displayName attribute.</iso:assert>-->
-			<iso:assert test="not(@centerX)" diagnostics="vis-id">Entity should not possess a centerX attribute.</iso:assert>
-			<iso:assert test="not(@centerY)" diagnostics="vis-id">Entity should not possess a centerY attribute.</iso:assert>
-			<iso:assert test="not(@startLocationLabel)" diagnostics="vis-id">Entity should not possess a startLocationLabel attribute.</iso:assert> 			
-			<iso:assert test="not(@endLocationLabel)" diagnostics="vis-id">Entity should not possess an endLocationLabel attribute.</iso:assert> 	
-			<iso:assert test="not(@locationLabel)" diagnostics="vis-id">Entity should not possess a locationLabel attribute.</iso:assert>		
-			<iso:assert test="not(@groupRef)" diagnostics="vis-id">Entity should not possess a groupRef attribute.</iso:assert>					
+			<iso:assert test="not(@width)" diagnostics="vis-id" role="error">Entity should not possess a width attribute.</iso:assert>
+			<iso:assert test="not(@height)" diagnostics="vis-id" role="error">Entity should not possess a height attribute.</iso:assert>
+			<iso:assert test="not(@position)" diagnostics="vis-id" role="error">Entity should not possess a position attribute.</iso:assert> 			
+			<!--<iso:assert test="@displayName" diagnostics="vis-id" role="warning">Entity should not possess a displayName attribute.</iso:assert>-->
+			<iso:assert test="not(@centerX)" diagnostics="vis-id" role="error">Entity should not possess a centerX attribute.</iso:assert>
+			<iso:assert test="not(@centerY)" diagnostics="vis-id" role="error">Entity should not possess a centerY attribute.</iso:assert>
+			<iso:assert test="not(@startLocationLabel)" diagnostics="vis-id" role="error">Entity should not possess a startLocationLabel attribute.</iso:assert> 			
+			<iso:assert test="not(@endLocationLabel)" diagnostics="vis-id" role="error">Entity should not possess an endLocationLabel attribute.</iso:assert> 	
+			<iso:assert test="not(@locationLabel)" diagnostics="vis-id" role="error">Entity should not possess a locationLabel attribute.</iso:assert>		
+			<iso:assert test="not(@groupRef)" diagnostics="vis-id" role="error">Entity should not possess a groupRef attribute.</iso:assert>					
 		</iso:rule> 
 	</iso:pattern> 
 	
@@ -353,7 +353,7 @@ limitations under the License.
 					
 			<iso:assert test="matches($display-name, '^[A-Za-z]+$') or
 			matches($display-name, '^[A-Za-z]+:[A-Z]?\d+$')" 
-			diagnostics="vis-id">The display names of modifiers should have one of the following formats: X, X:YZ, or X:Z; where X is a text label, Y is a capitalized single letter amino acid abbreviation, and Z is an integer location value; for example: P, P:S1, or P:1.</iso:assert>
+			diagnostics="vis-id" role="error">The display names of modifiers should have one of the following formats: X, X:YZ, or X:Z; where X is a text label, Y is a capitalized single letter amino acid abbreviation, and Z is an integer location value; for example: P, P:S1, or P:1.</iso:assert>
 			<iso:assert test="matches($display-name, '^(Ac|G|OH|Me|My|Pa|P|Pr|H|S|Ub):?[A-Z]?\d*$')" diagnostics="vis-id" role="warning">Common modifiers have pre-defined text labels; this modifier does not use a pre-defined text label; pre-defined labels include: Ac, G, OH, Me, My, Pa, P, Pr, H, S, or Ub. Refer to the MIM specification for more information.</iso:assert>
 		</iso:rule> 
 	</iso:pattern> 
@@ -368,7 +368,7 @@ limitations under the License.
 			matches($display-name, '^\d+:[A-Za-z]+$') or 
 			matches($display-name, '^[A-Za-z]+:\d+$') or 
 			matches($display-name, '^\d+:[A-Za-z]+:\d+$')"
-			diagnostics="vis-id">The display names of entity features should have one of the following formats: X, Y:X, Y:X:Z, or X:Z; where X is a text label, Y is an integer start location value, and Z is an integer end location value.</iso:assert>
+			diagnostics="vis-id" role="error">The display names of entity features should have one of the following formats: X, Y:X, Y:X:Z, or X:Z; where X is a text label, Y is an integer start location value, and Z is an integer end location value.</iso:assert>
 		</iso:rule> 
 	</iso:pattern> 
 	
@@ -376,8 +376,8 @@ limitations under the License.
 	<iso:pattern name="check-int-visref" id="check-int-visref">
 		<iso:rule context="mimVis:InteractionGlyph">
 			<iso:let name="vis-id" value="@visId"/>			
-			<iso:assert test="mimVis:Point[1]/@visRef" diagnostics="vis-id">The start of an interaction should be possess a visRef attribute.</iso:assert>
-			<iso:assert test="mimVis:Point[last()]/@visRef" diagnostics="vis-id">The end of an interaction should be possess a visRef attribute.</iso:assert>			
+			<iso:assert test="mimVis:Point[1]/@visRef" diagnostics="vis-id" role="error">The start of an interaction should be possess a visRef attribute.</iso:assert>
+			<iso:assert test="mimVis:Point[last()]/@visRef" diagnostics="vis-id" role="error">The end of an interaction should be possess a visRef attribute.</iso:assert>			
 		</iso:rule> 
 	</iso:pattern> 
 	
@@ -409,7 +409,7 @@ limitations under the License.
 			test="
 			mimVis:Point[1][@arrowHead='NonCovalentReversibleBinding'] and 
 			mimVis:Point[last()][@arrowHead='NonCovalentReversibleBinding']" 
- 			diagnostics="vis-id inter-start-arrowhead inter-end-arrowhead"
+ 			diagnostics="vis-id inter-start-arrowhead inter-end-arrowhead" role="error"
 			>Non-branched interactions should not possess a single 'NonCovalentReversibleBinding' arrowhead.</iso:assert> 		
 		</iso:rule> 
 	</iso:pattern> 
@@ -422,7 +422,7 @@ limitations under the License.
 			test="
 			mimVis:Point[1][@arrowHead='CovalentIrreversibleBinding'] and 
 			mimVis:Point[last()][@arrowHead='CovalentIrreversibleBinding']" 
-			diagnostics="vis-id"
+			diagnostics="vis-id" role="error"
 			>Non-branched interactions should not possess a single 'CovalentIrreversibleBinding' arrowhead.</iso:assert>  			
 		</iso:rule> 
 	</iso:pattern> 	
@@ -440,7 +440,7 @@ limitations under the License.
 			mimVis:Point[last()][@arrowHead='CovalentModification'] and 
 			mimVis:Point[1][@arrowHead='Line']
 			)"
-			diagnostics="vis-id"
+			diagnostics="vis-id" role="error"
 			>Non-branched interactions possessing a 'CovalentModification' arrowhead should be terminated with a 'Line' arrowhead.</iso:assert> 		
 		</iso:rule> 
 	</iso:pattern> 	
@@ -457,7 +457,7 @@ limitations under the License.
 			mimVis:Point[last()][@arrowHead='Stimulation'] and 
 			mimVis:Point[1][@arrowHead='Line']
 			)"
-			diagnostics="vis-id"
+			diagnostics="vis-id" role="error"
 			>Non-branched interactions possessing a 'Stimulation' arrowhead should be terminated with a 'Line' arrowhead.</iso:assert> 		
 		</iso:rule> 
 	</iso:pattern> 
@@ -474,7 +474,7 @@ limitations under the License.
 			mimVis:Point[last()][@arrowHead='NecessaryStimulation'] and 
 			mimVis:Point[1][@arrowHead='Line']
 			)"			
-			diagnostics="vis-id"
+			diagnostics="vis-id" role="error"
 			>Non-branched interactions possessing a 'NecessaryStimulation' arrowhead should be terminated with a 'Line' arrowhead.</iso:assert> 		
 		</iso:rule> 
 	</iso:pattern> 	
@@ -491,7 +491,7 @@ limitations under the License.
 			mimVis:Point[last()][@arrowHead='Inhibition'] and 
 			mimVis:Point[1][@arrowHead='Line']
 			)"
-			diagnostics="vis-id"
+			diagnostics="vis-id" role="error"
 			>Non-branched interactions possessing a 'Inhibition' arrowhead should be terminated with a 'Line' arrowhead.</iso:assert> 
 		</iso:rule> 
 	</iso:pattern> 	
@@ -508,7 +508,7 @@ limitations under the License.
 			mimVis:Point[last()][@arrowHead='AbsoluteInhibition'] and 
 			mimVis:Point[1][@arrowHead='Line']
 			)"
-			diagnostics="vis-id"
+			diagnostics="vis-id" role="error"
 			>Non-branched interactions possessing a 'AbsoluteInhibition' arrowhead should be terminated with a 'Line' arrowhead.</iso:assert> 
 		</iso:rule> 
 	</iso:pattern> 	
@@ -525,7 +525,7 @@ limitations under the License.
 			mimVis:Point[last()][@arrowHead='ProductionWithoutLoss'] and 
 			mimVis:Point[1][@arrowHead='Line']
 			)"
-			diagnostics="vis-id"
+			diagnostics="vis-id" role="error"
 			>Non-branched interactions possessing a 'ProductionWithoutLoss' arrowhead should be terminated with a 'Line' arrowhead.</iso:assert> 
 		</iso:rule> 
 	</iso:pattern> 	
@@ -542,7 +542,7 @@ limitations under the License.
 			mimVis:Point[last()][@arrowHead='StochiometricConversion'] and 
 			mimVis:Point[1][@arrowHead='Line']
 			)"
-			diagnostics="vis-id"
+			diagnostics="vis-id" role="error"
 			>Non-branched interactions possessing a 'StochiometricConversion' arrowhead should be terminated with a 'Line' arrowhead.</iso:assert> 
 		</iso:rule> 
 	</iso:pattern> 	
@@ -559,7 +559,7 @@ limitations under the License.
 			mimVis:Point[last()][@arrowHead='TemplateReaction'] and 
 			mimVis:Point[1][@arrowHead='Line']
 			)"
-			diagnostics="vis-id"
+			diagnostics="vis-id" role="error"
 			>Non-branched interactions possessing a 'TemplateReaction' arrowhead should be terminated with a 'Line' arrowhead.</iso:assert> 
 		</iso:rule> 
 	</iso:pattern> 	
@@ -576,7 +576,7 @@ limitations under the License.
 			mimVis:Point[last()][@arrowHead='Catalysis'] and 
 			mimVis:Point[1][@arrowHead='Line']
 			)"
-			diagnostics="vis-id"
+			diagnostics="vis-id" role="error"
 			>Non-branched interactions possessing a 'Catalysis' arrowhead should be terminated with a 'Line' arrowhead.</iso:assert> 
 		</iso:rule> 
 	</iso:pattern> 	
@@ -593,7 +593,7 @@ limitations under the License.
 			mimVis:Point[last()][@arrowHead='CovalentBondCleavage'] and 
 			mimVis:Point[1][@arrowHead='Line']
 			)"
-			diagnostics="vis-id"
+			diagnostics="vis-id" role="error"
 			>Non-branched interactions possessing a 'CovalentBondCleavage' arrowhead should be terminated with a 'Line' arrowhead.</iso:assert> 			
 		</iso:rule> 
 	</iso:pattern> 		
@@ -606,7 +606,7 @@ limitations under the License.
 			mimVis:Point[1][@arrowHead='StateCombination'] and 
 			mimVis:Point[last()][@arrowHead='StateCombination']
 			"			
-			diagnostics="vis-id"
+			diagnostics="vis-id" role="error"
 			>Non-branched interactions should not possess a single 'StateCombination' arrowhead.</iso:assert> 			
 		</iso:rule> 
 	</iso:pattern> 	
@@ -623,7 +623,7 @@ limitations under the License.
 			mimVis:Point[last()][@arrowHead='FirstFeature'] and 
 			mimVis:Point[1][@arrowHead='Line']
 			)"
-			diagnostics="vis-id"
+			diagnostics="vis-id" role="error"
 			>Non-branched interactions possessing a 'FirstFeature' arrowhead should be terminated with a 'Line' arrowhead.</iso:assert> 				
 		</iso:rule> 
 	</iso:pattern> 		
@@ -640,7 +640,7 @@ limitations under the License.
 			mimVis:Point[last()][@arrowHead='NextFeature'] and 
 			mimVis:Point[1][@arrowHead='Line']
 			)"
-			diagnostics="vis-id"
+			diagnostics="vis-id" role="error"
 			>Non-branched interactions should not possess a single 'NextFeature' arrowhead.</iso:assert> 				
 		</iso:rule> 
 	</iso:pattern> 	
@@ -653,7 +653,7 @@ limitations under the License.
 			not(mimVis:Point[1][@arrowHead='Line'] and 
 			mimVis:Point[last()][@arrowHead='Line'])
 			"
-			diagnostics="vis-id"
+			diagnostics="vis-id" role="error"
 			>An interaction should not start and end with Line arrowheads.</iso:assert> 				
 		</iso:rule> 
 		<iso:rule context="mimVis:InteractionGlyph">
@@ -662,7 +662,7 @@ limitations under the License.
 			not(mimVis:Point[1][starts-with(@arrowHead,'Branching')] and 
 			mimVis:Point[last()][starts-with(@arrowHead,'Branching')])
 			"
-			diagnostics="vis-id"
+			diagnostics="vis-id" role="error"
 			>An interaction should not start and end with branching arrowheads.</iso:assert> 				
 		</iso:rule> 
 	</iso:pattern> 	
@@ -684,7 +684,7 @@ limitations under the License.
 			$inter[mimVis:Point[@arrowHead='CovalentIrreversibleBinding']] or
 			$inter[mimVis:Point[@arrowHead='StateCombination']]
 			"
-			diagnostics="vis-id inter-vis-id inter-start-arrowhead inter-end-arrowhead">Explicit complexes should only be placed on the following interaction types: covalent modification, non-covalent reversible binding, covalent irreversible binding, or state combination.</iso:assert> 		
+			diagnostics="inter-vis-id vis-id inter-start-arrowhead inter-end-arrowhead" role="error">Explicit complexes should only be placed on the following interaction types: covalent modification, non-covalent reversible binding, covalent irreversible binding, or state combination.</iso:assert> 		
 		</iso:rule> 
 	</iso:pattern>
 	
@@ -705,7 +705,7 @@ limitations under the License.
 			$inter[mimVis:Point[@arrowHead='Catalysis']] or
 			$inter[mimVis:Point[@arrowHead='Cleavage']]
 			"			
-			diagnostics="vis-id inter-vis-id inter-start-arrowhead inter-end-arrowhead">The intermolecular glyph should only placed on the following interaction types: non-covalent reversible binding, covalent irreversible binding, stimulation, necessary stimulation, inhibition, absolute inhibition, catalysis, or cleavage.
+			diagnostics="inter-vis-id vis-id inter-start-arrowhead inter-end-arrowhead" role="error">The intermolecular glyph should only placed on the following interaction types: non-covalent reversible binding, covalent irreversible binding, stimulation, necessary stimulation, inhibition, absolute inhibition, catalysis, or cleavage.
 			</iso:assert> 	
 		</iso:rule> 
 	</iso:pattern>
@@ -752,7 +752,7 @@ limitations under the License.
 			$type='RestrictedCopy' or
 			$type='ExplicitComplex' 
 			"
-			diagnostics="inter-vis-id entity-vis-id arrowhead entity-type"
+			diagnostics="inter-vis-id entity-vis-id arrowhead entity-type" role="error"
 			>Non-covalent reversible binding and covalent irreversible binding interactions should only be connected to the following entity types: entity feature, simple physical entity, implicit complex, restricted copy or explicit complex.</iso:assert> 
 		</iso:rule> 
 	</iso:pattern>	
@@ -779,7 +779,7 @@ limitations under the License.
 			<iso:assert test="
 			$start-type='Modifier'
 			"
-			diagnostics="inter-vis-id entity-start-vis-id start-type"
+			diagnostics="inter-vis-id entity-start-vis-id start-type" role="error"
 			>A covalent modification interaction should be connected to one of the following entity types: modifier.</iso:assert> 
 
 			<iso:assert test="
@@ -787,7 +787,7 @@ limitations under the License.
 			$end-type='SimplePhysicalEntity' or 
 			$end-type='ImplicitComplex'
 			"
-			diagnostics="inter-vis-id entity-end-vis-id end-type"
+			diagnostics="inter-vis-id entity-end-vis-id end-type" role="error"
 			>A covalent modification interaction should be connected to one of the following entity types: entity feature, simple physical entity, implicit complex.</iso:assert> 
 		</iso:rule> 
 	</iso:pattern>
@@ -824,7 +824,7 @@ limitations under the License.
 			$start-type='ConceptualEntity' or 
 			$start-type='ExplicitComplex' 
 			"
-			diagnostics="inter-vis-id entity-start-vis-id start-type"
+			diagnostics="inter-vis-id entity-start-vis-id start-type" role="error"
 			>Stimulation, necessary stimulation, inhibition, and absolute inhibition interactions should be connected to one of the following entity types: entity feature, simple physical entity, implicit complex, conceptual entity, or explicit complex.</iso:assert> 
 		</iso:rule> 
 		<iso:rule context="mimVis:InteractionGlyph/mimVis:Point[
@@ -866,7 +866,7 @@ limitations under the License.
 			$end-type='Invisible' or
 			$end-type='ConceptualEntity'			
 			"
-			diagnostics="inter-vis-id conn-inter-vis-id arrowhead node-vis-id end-type"
+			diagnostics="inter-vis-id conn-inter-vis-id arrowhead node-vis-id end-type" role="error"
 			>Stimulation, necessary stimulation, inhibition, and absolute inhibition interactions should be connected to one of the following interaction types: non-covalent reversible binding, covalent irreversible binding, covalent modification, stochiometric conversion, production without loss, template reaction, stimulation, necessary stimulation, inhibition, absolute inhibition, catalysis, or covalent bond cleavage.</iso:assert> 
 		</iso:rule> 
 	</iso:pattern>
@@ -894,7 +894,7 @@ limitations under the License.
 			$start-type='SourceSink' or
 			$start-type='ExplicitComplex'
 			"
-			diagnostics="inter-vis-id entity-start-vis-id start-type"
+			diagnostics="inter-vis-id entity-start-vis-id start-type" role="error"
 			>A stochiometric conversion interaction should be connected to one of the following entity types: simple physical entity, implicit complex, source/sink, or explicit complex.</iso:assert> 			
 		</iso:rule> 
 		<iso:rule context="mimVis:InteractionGlyph/mimVis:Point[
@@ -918,7 +918,7 @@ limitations under the License.
 			$end-type='SourceSink' or 
 			$end-type='ExplicitComplex' 			
 			"			
-			diagnostics="inter-vis-id entity-end-vis-id end-type"
+			diagnostics="inter-vis-id entity-end-vis-id end-type" role="error"
 			>A stochiometric conversion interaction should be connected to one of the following entity types: simple physical entity, implicit complex, source/sink, or explicit complex.</iso:assert> 
 		</iso:rule> 
 	</iso:pattern>
@@ -948,7 +948,7 @@ limitations under the License.
 			$start-type='SourceSink' or
 			$start-type='ExplicitComplex'
 			"
-			diagnostics="inter-vis-id entity-start-vis-id start-type"
+			diagnostics="inter-vis-id entity-start-vis-id start-type" role="error"
 			>A production without loss or template reaction interaction should be connected to one of the following entity types: simple physical entity, implicit complex, source/sink, or explicit complex.</iso:assert> 		
 		</iso:rule> 
 		<iso:rule context="mimVis:InteractionGlyph/mimVis:Point[
@@ -973,7 +973,7 @@ limitations under the License.
 			$end-type='ImplicitComplex' or 
 			$end-type='SourceSink'
 			"
-			diagnostics="inter-vis-id entity-end-vis-id end-type"
+			diagnostics="inter-vis-id entity-end-vis-id end-type" role="error"
 			>A production without loss or template reaction interaction should be connected to one of the following entity types: simple physical entity, implicit complex, source/sink, or explicit complex.</iso:assert> 				
 		</iso:rule> 
 	</iso:pattern>	
@@ -1003,7 +1003,7 @@ limitations under the License.
 			$start-type='ImplicitComplex' or 
 			$start-type='ExplicitComplex' 
 			"			
-			diagnostics="inter-vis-id entity-start-vis-id start-type"
+			diagnostics="inter-vis-id entity-start-vis-id start-type" role="error"
 			>A catalysis interaction should be connected to one of the following entity types: entity feature, simple physical entity, implicit complex, conceptual entity, or explicit complex.</iso:assert> 	
 		</iso:rule> 
 		<iso:rule context="mimVis:InteractionGlyph/mimVis:Point[
@@ -1032,7 +1032,7 @@ limitations under the License.
 			$conn-inter/@arrowHead='ProductionWithoutLoss' or
 			$conn-inter/@arrowHead='TemplateReaction'
 			"
-			diagnostics="inter-vis-id conn-inter-vis-id arrowhead"
+			diagnostics="inter-vis-id conn-inter-vis-id arrowhead" role="error"
 			>A catalysis interaction should be connected to one of the following interaction types: non-covalent reversible binding, covalent irreversible binding, covalent modification, stochiometric conversion, production without loss, or template reaction.</iso:assert> 			
 		</iso:rule> 
 	</iso:pattern>
@@ -1063,7 +1063,7 @@ limitations under the License.
 			$start-type='ImplicitComplex' or 
 			$start-type='ExplicitComplex' 
 			"
-			diagnostics="inter-vis-id entity-start-vis-id start-type"
+			diagnostics="inter-vis-id entity-start-vis-id start-type" role="error"
 			>A covalent bond cleavage interaction should be connected to one of the following entity types: entity feature, simple physical entity, implicit complex, conceptual entity, or explicit complex.</iso:assert> 			
 		</iso:rule> 
 		<iso:rule context="mimVis:InteractionGlyph/mimVis:Point[
@@ -1089,7 +1089,7 @@ limitations under the License.
 			$conn-inter/@arrowHead='CovalentModification' or 
 			$conn-inter/@arrowHead='NextFeature'
 			"
-			diagnostics="inter-vis-id conn-inter-vis-id arrowhead"
+			diagnostics="inter-vis-id conn-inter-vis-id arrowhead" role="error"
 			>A covalent bond cleavage interaction should be connected to one of the following interaction types: covalent irreversible binding, covalent modification, or next feature.</iso:assert> 				
 		</iso:rule> 
 	</iso:pattern>
@@ -1102,7 +1102,7 @@ limitations under the License.
 			
 			<iso:assert test="$inter/mimVis:GenericProperty[@key='InteractionStart']"
 			role="warning"
-			diagnostics="inter-vis-id"
+			diagnostics="inter-vis-id" role="error"
 			>'InteractionStart' generic properties should be included with branching interactions.</iso:assert> 					
 		</iso:rule> 
 	</iso:pattern>	
@@ -1140,7 +1140,7 @@ limitations under the License.
 			@arrowHead='TemplateReaction' or 
 			$arrowhead='Line'
 			"
-			diagnostics="inter-vis-id arrowhead"
+			diagnostics="inter-vis-id arrowhead" role="error"
 			>Interactions of type stimulation, necessary stimulation, inhibition, absolute inhibition, catalysis, covalent bond cleavage, production without loss, and template reaction should only branch to interactions of the aforementioned set.</iso:assert> 						
 		</iso:rule> 
 	</iso:pattern>
@@ -1163,7 +1163,7 @@ limitations under the License.
 			<iso:assert test="
 			$arrowhead='StochiometricConversion'
 			"
-			diagnostics="inter-vis-id arrowhead"
+			diagnostics="inter-vis-id arrowhead" role="error"
 			>Stochiometric conversion interactions should not be branched into other interaction types.</iso:assert> 						
 		</iso:rule> 
 	</iso:pattern>
@@ -1186,7 +1186,7 @@ limitations under the License.
 			<iso:assert test="
 			$arrowhead='CovalentIrreversibleBinding'
 			"
-			diagnostics="inter-vis-id arrowhead"
+			diagnostics="inter-vis-id arrowhead" role="error"
 			>Covalent irreversible binding interactions should not be branched into other interaction types.</iso:assert> 						
 		</iso:rule> 
 	</iso:pattern>
@@ -1209,7 +1209,7 @@ limitations under the License.
 			<iso:assert test="
 			$arrowhead='CovalentIrreversibleBinding'
 			"
-			diagnostics="inter-vis-id arrowhead"
+			diagnostics="inter-vis-id arrowhead" role="error"
 			>Covalent irreversible binding interactions should not be branched into other interaction types.</iso:assert> 						
 		</iso:rule> 
 	</iso:pattern>
@@ -1227,7 +1227,7 @@ limitations under the License.
 			../mimVis:Point[not(@arrowhead='CovalentModification')] or 
 			../mimVis:Point[not(@arrowhead='StateCombination')] 
 			"
-			diagnostics="inter-vis-id"
+			diagnostics="inter-vis-id" role="error"
 			>First feature connector, next feature connector, state combination, or covalent modification interactions should not be branched.</iso:assert> 						
 		</iso:rule> 
 	</iso:pattern>
