@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mimVis:Diagram width="84.7" height="146.3" xmlns:mimVis="http://lmp.nci.nih.gov/mim/mimVisLevel1">
+    <mimVis:EntityGlyph visId="b4357" centerX="47.0" centerY="38.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="Ca++">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:EntityGlyph visId="a6fc4" centerX="47.0" centerY="123.0" width="60.0" height="20.0" color="000000" type="SimplePhysicalEntity" displayName="CaM">
+        <mimVis:GenericProperty key="NumberOfAnchors" value="3"/>
+        <mimVis:GenericProperty key="ShapeType" value="RoundedRectangle"/>
+    </mimVis:EntityGlyph>
+    <mimVis:InteractionGlyph visId="id4f7e9fd7" color="000000">
+        <mimVis:GenericProperty key="ConnectorType" value="Elbow"/>
+        <mimVis:Point x="47.0" y="48.0" arrowHead="NonCovalentReversibleBinding" visRef="b4357" relX="0.0" relY="1.0"/>
+        <mimVis:Point x="47.0" y="113.0" arrowHead="NonCovalentReversibleBinding" visRef="a6fc4" relX="0.0" relY="-1.0"/>
+        <mimVis:mimBioRef>b8e</mimVis:mimBioRef>
+    </mimVis:InteractionGlyph>
+    <mimVis:MimBio>
+        <mimVis:title>Ca++/CaM Binding</mimVis:title>
+        <mimVis:identifier>20101117</mimVis:identifier>
+        <mimVis:PublicationXRef visId="b8e">
+            <mimVis:db>PubMed</mimVis:db>
+            <mimVis:id>16267266</mimVis:id>
+            <mimVis:title>Molecular interaction maps of bioregulatory networks: a general rubric for systems biology.</mimVis:title>
+            <mimVis:author>Kohn KW</mimVis:author>
+            <mimVis:author>Aladjem MI</mimVis:author>
+            <mimVis:author>Weinstein JN</mimVis:author>
+            <mimVis:author>Pommier Y</mimVis:author>
+            <mimVis:year>2006</mimVis:year>
+            <mimVis:journal>Mol Biol Cell</mimVis:journal>
+        </mimVis:PublicationXRef>
+    </mimVis:MimBio>
+</mimVis:Diagram>

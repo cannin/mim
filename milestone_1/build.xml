@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!-- 
+@author Augustin Luna
+@version 20 October 2010
+-->
+<project name="MIMAPI" default="schematron-validate" basedir="..">
+	<!-- always be java 1.5 compatible -->
+	<property name="ant.build.javac.target" value="1.5" />
+	<property name="ant.build.javac.source" value="1.5" />
+
+	<property name="project.dir" value="${basedir}${file.separator}mim_api_ncisvn${file.separator}" />
+	<property name="output.dir" value="${project.dir}" />
+	<property name="lib.dir" value="${project.dir}lib${file.separator}" />
+	<property name="schema.dir" value="${project.dir}schema${file.separator}" />
+	<property name="src.dir" value="${project.dir}src${file.separator}" />
+	<property name="doc.dir" value="${project.dir}doc${file.separator}" />
+	<property name="javadoc.dir" value="${doc.dir}javadoc${file.separator}" />
+	<property name="xsl.dir" value="${project.dir}xsl${file.separator}" />
+	<property name="validation.dir" value="${project.dir}validation${file.separator}" />
+	<property name="test-files.dir" value="${project.dir}test-files${file.separator}" />
+
+	<path id="project.class.path">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<target name="clean">
+		<delete dir="${project.dir}build" />
+	</target>
+	
+	<target name="compile-example" depends="clean">
+		<mkdir dir="${project.dir}build" />
+		<property name="project.class.path" refid="project.class.path"/>
+		<javac 
+			srcdir="${project.dir}src/gov/nih/nci/lmp/mim/mimExample/" 
+			includes="**/*.java" 
+			debug="true" 
+			destdir="${project.dir}build" 
+			classpath="${project.dir}mimVis.jar"
+			classpathref="project.class.path"
+			source="1.5"/>
+	</target>
+	
+	<taskdef name="xmlbean" classname="org.apache.xmlbeans.impl.tool.XMLBean" classpathref="project.class.path" />
+
+	<target name="build-apis" depends="javadoc, xml-docs">
+		<delete file="${output.dir}mimVis.jar" />
+		<xmlbean 
+			schema="${schema.dir}mim_vis.xsd" 
+			javasource="1.5" 
+			destfile="${output.dir}mimVis.jar" 
+			srcgendir="${src.dir}" 
+			classpathref="project.class.path" />
+	</target>
+
+	<target name="javadoc">
+		<javadoc 
+			sourcepath="${src.dir}" 
+			destdir="${javadoc.dir}" 
+			windowtitle="MIM API 1.0">
+			<doctitle>
+				<![CDATA[
+				<h1>MIM API Version 1.0</h1>]]>
+			</doctitle>
+			<classpath>  
+				<path refid="project.class.path"/>  
+			</classpath>  
+		</javadoc>
+	</target>
+	
+	<taskdef name="schematron" classname="com.schematron.ant.SchematronTask" classpath="${lib.dir}ant-schematron.jar:${lib.dir}saxon9he.jar" />
+
+	<target name="schema-validate">
+		<schemavalidate>
+			<schema 
+				namespace="http://lmp.nci.nih.gov/mim/mimVisLevel1" 
+				file="${schema.dir}mim_vis.xsd" />
+			<fileset dir="${test-files.dir}" includes="*.mimml" />
+		</schemavalidate>
+	</target>
+
+	<!--
+	Note: Ant and Saxon do not seem to work well together. 
+	Saxon needs to be added to the invocation of Ant. 
+	http://sourceforge.net/apps/mediawiki/saxon/index.php?title=Calling_Saxon_from_Ant
+	http://en.wikibooks.org/wiki/Apache_Ant/Running_Saxon
+	-->
+	<target name="schematron-validate" depends="schema-validate">
+		<schematron 
+			schema="${validation.dir}mimml_validation.sch" 
+			format="svrl" 
+			failonerror="false" 
+			diagnose="yes" 
+			generate_paths="false" 
+			queryLanguageBinding="xslt2" 
+			outputFilename="${output.dir}result.xml" >
+			<fileset dir="${test-files.dir}" includes="*.mimml" />
+		</schematron>
+	</target>
+
+	<target name="xml-docs">
+		<xslt 
+			basedir="." 
+			style="${xsl.dir}XSD_Readable.xsl" 
+			in="${schema.dir}mim_vis.xsd" 
+			out="${doc.dir}mim_vis.html" 
+			classpath="${lib.dir}saxon9he.jar" />
+	</target>
+</project>
