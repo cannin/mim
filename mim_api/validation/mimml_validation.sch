@@ -782,7 +782,7 @@ limitations under the License.
 				see="mim-L1V1.0-9.2.8"
 				test="matches($display-name, '^[A-Za-z]+$') or
 				matches($display-name, '^[A-Za-z]+:.*\d$')" 
-				diagnostics="vis-id">The display names of modifiers should have one of the following formats: X, X:YZ, or X:Z; where X is a text label, Y is a capitalized single letter amino acid abbreviation, and Z is an integer location value; for example: P, P:S1, or P:1.</iso:assert>
+				diagnostics="vis-id">The display names of modifiers should have one of the following formats: X, X:YZ, or X:Z; where X is a text label, Y is a capitalized single letter amino acid abbreviation, and Z is an integer location value; for example: P, P:S1, or P:1. Modifier display names should be on a single line without trailing unnecessary newlines.</iso:assert>
 			<iso:assert 
 				id="check-mod-vocabulary"
 				role="warning"
