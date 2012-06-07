@@ -81,7 +81,7 @@ public class CaCamExample {
 		ca.setHeight(20.0);
 		ca.setColor("000000");
 		// This shows the way to access enumerated sets from the schema.
-		ca.setType(EntityGlyphType.Type.SIMPLE_PHYSICAL_ENTITY);
+		ca.setType("SimplePhysicalEntity");
 		ca.setDisplayName("Ca++");
 
 		EntityGlyphType cam = dia.addNewEntityGlyph();
@@ -91,7 +91,7 @@ public class CaCamExample {
 		cam.setWidth(60.0);
 		cam.setHeight(20.0);
 		cam.setColor("000000");
-		cam.setType(EntityGlyphType.Type.SIMPLE_PHYSICAL_ENTITY);
+		cam.setType("SimplePhysicalEntity");
 		cam.setDisplayName("CaM");
 
 		InteractionGlyphType binding = dia.addNewInteractionGlyph();
@@ -102,7 +102,7 @@ public class CaCamExample {
 		InteractionGlyphType.Point pt1 = binding.addNewPoint();
 		pt1.setX(47.0);
 		pt1.setY(48.0);
-		pt1.setArrowHead(ArrowHeadEnumType.NON_COVALENT_REVERSIBLE_BINDING);
+		pt1.setArrowHead("NonCovalentReversibleBinding");
 		pt1.setVisRef("b4357");
 		//
 		pt1.setRelX(0.0);
@@ -111,7 +111,7 @@ public class CaCamExample {
 		InteractionGlyphType.Point pt2 = binding.addNewPoint();
 		pt2.setX(47.0);
 		pt2.setY(113.0);
-		pt2.setArrowHead(ArrowHeadEnumType.NON_COVALENT_REVERSIBLE_BINDING);
+		pt2.setArrowHead("NonCovalentReversibleBinding");
 		pt2.setVisRef("a6fc4");
 		pt2.setRelX(0.0);
 		pt2.setRelY(-1.0);
