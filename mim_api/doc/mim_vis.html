@@ -11,12 +11,9 @@
             </tr>
          </table>
       </td>
-      <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">
-         			The MIM Visual (MIM-Vis) XML schema. The schema represents 
-         			components of MIM diagrams and provides additional components to 
-         			support metadata related to MIM diagrams. This schema is based on the GPML 2008/2010 XSD schemas with modifications 
-         			primarily for validation purposes. 
-         		
+      <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">The MIM Visual (MIM-Vis) XML schema. The schema represents components of MIM diagrams and provides additional components to
+         support metadata related to MIM diagrams. This schema is based on the GPML 2008/2010 XSD schemas with modifications primarily
+         for validation purposes.
       </td>
    </tr>
 </table><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><table xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" frame="box" rules="all" align="centre" cellpadding="4" class="small">
@@ -45,15 +42,11 @@
    <tr>
       <td width="500" bgcolor="#FFFFFF" class="small"><b>Simple Types</b></td>
       <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">
-         <a href="#ArrowHeadEnumType">ArrowHeadEnumType</a>&nbsp;&nbsp;
-         
          <a href="#ColorType">ColorType</a>&nbsp;&nbsp;
          
          <a href="#DimensionType">DimensionType</a>&nbsp;&nbsp;
          
          <a href="#DisplayNameType">DisplayNameType</a>&nbsp;&nbsp;
-         
-         <a href="#GroupEnumType">GroupEnumType</a>&nbsp;&nbsp;
          
       </td>
    </tr>
@@ -118,10 +111,7 @@
    <tr>
       <td width="25%" bgcolor="#FFFFFF" colspan="2" class="small">
          <p><a href="http://www.w3schools.com/schema/el_simpletype.asp#">Simple Type:</a> <b>DimensionType</b></p>
-         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">
-               	Use DimensionType for mimVis:width and mimVis:height. 
-               	Values cannot be negative
-               </span></p>
+         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">Use DimensionType for mimVis:width and mimVis:height. Values cannot be negative.</span></p>
       </td>
    </tr>
    <tr>
@@ -149,9 +139,7 @@
    <tr>
       <td width="25%" bgcolor="#FFFFFF" colspan="2" class="small">
          <p><a href="http://www.w3schools.com/schema/el_simpletype.asp#">Simple Type:</a> <b>ColorType</b></p>
-         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">
-               				Colors should be retained as hex values (e.g. web color values)
-               			</span></p>
+         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">Colors should be retained as hex values (e.g. web color values).</span></p>
       </td>
    </tr>
    <tr>
@@ -160,103 +148,14 @@
          <a href="http://www.w3schools.com/schema/schema_dtypes_string.asp">xsd:string</a>
          <br/>
          
-      </td>
-   </tr>
-</table><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><a xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" href="#topOfPage">Top</a><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><a name="ArrowHeadEnumType"></a><table xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" frame="box" rules="all" align="centre" cellpadding="4" width="100%">
-   <tr>
-      <td width="25%" bgcolor="#FFFFFF" colspan="2" class="small">
-         <p><a href="http://www.w3schools.com/schema/el_simpletype.asp#">Simple Type:</a> <b>ArrowHeadEnumType</b></p>
-         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">
-               				"Line" represents not having an arrowhead at the end of a line. 
-               </span></p>
-      </td>
-   </tr>
-   <tr>
-      <td width="500" bgcolor="#FFFFFF" class="small"><a href="http://www.w3schools.com/schema/schema_facets.asp">Restriction:</a> </td>
-      <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">Base:   
-         <a href="http://www.w3schools.com/schema/schema_dtypes_string.asp">xsd:string</a>
-         <br/>
-         
-      </td>
-   </tr>
-   <tr>
-      <td width="500" bgcolor="#FFFFFF" class="small">Allowed values:</td>
-      <td width="75%" class="small" bgcolor="#FFFFFF" valign="top"><table>
-         <tr><td class="small">CovalentModification</td>
-         
-         <tr><td class="small">NonCovalentReversibleBinding</td>
-         
-         <tr><td class="small">CovalentIrreversibleBinding</td>
-         
-         <tr><td class="small">Catalysis</td>
-         
-         <tr><td class="small">Stimulation</td>
-         
-         <tr><td class="small">NecessaryStimulation</td>
-         
-         <tr><td class="small">ProductionWithoutLoss</td>
-         
-         <tr><td class="small">StochiometricConversion</td>
-         
-         <tr><td class="small">TemplateReaction</td>
-         
-         <tr><td class="small">CovalentBondCleavage</td>
-         
-         <tr><td class="small">Inhibition</td>
-         
-         <tr><td class="small">AbsoluteInhibition</td>
-         
-         <tr><td class="small">StateCombination</td>
-         
-         <tr><td class="small">NextFeature</td>
-         
-         <tr><td class="small">FirstFeature</td>
-         
-         <tr><td class="small">BranchingLeft</td>
-         
-         <tr><td class="small">BranchingRight</td>
-         
-         <tr><td class="small">Line</td>
-         </table>
-      </td>
-   </tr>
-</table><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><a xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" href="#topOfPage">Top</a><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><a name="GroupEnumType"></a><table xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" frame="box" rules="all" align="centre" cellpadding="4" width="100%">
-   <tr>
-      <td width="25%" bgcolor="#FFFFFF" colspan="2" class="small">
-         <p><a href="http://www.w3schools.com/schema/el_simpletype.asp#">Simple Type:</a> <b>GroupEnumType</b></p>
-         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">
-               				Possible group types 
-               				EntityWithFeatures may be removed in the future
-               				Generic is provided for "other" grouping needs by developers 
-               				Entities may only participate in one group
-               			</span></p>
-      </td>
-   </tr>
-   <tr>
-      <td width="500" bgcolor="#FFFFFF" class="small"><a href="http://www.w3schools.com/schema/schema_facets.asp">Restriction:</a> </td>
-      <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">Base:   
-         <a href="http://www.w3schools.com/schema/schema_dtypes_string.asp">xsd:string</a>
-         <br/>
-         
-      </td>
-   </tr>
-   <tr>
-      <td width="500" bgcolor="#FFFFFF" class="small">Allowed values:</td>
-      <td width="75%" class="small" bgcolor="#FFFFFF" valign="top"><table>
-         <tr><td class="small">EntityWithFeatures</td>
-         
-         <tr><td class="small">Generic</td>
-         </table>
       </td>
    </tr>
 </table><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><a xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" href="#topOfPage">Top</a><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><h3 xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema">Groups</h3><a name="CommentGroup"></a><table xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" frame="box" rules="all" align="centre" cellpadding="4" width="100%">
    <tr>
       <td width="25%" bgcolor="#FFFFFF" colspan="2" class="small">
          <p><a href="http://www.w3schools.com/schema/el_group.asp#">Group:</a> <b>CommentGroup</b></p>
-         <p><span style="color:#a0a0a0;font-style: italic;font-size: 85%">
-               				Comments should not be used for MIM annotations. 
-               				CommentGroup should be used for all content not included by this schema. 
-               				GenericProperty allows non-MIM content key-value pairings for this schema
+         <p><span style="color:#a0a0a0;font-style: italic;font-size: 85%">Comments should not be used for MIM annotations. CommentGroup should be used for all content not included by this schema.
+               GenericProperty allows non-MIM content key-value pairings for this schema
                </span></p>
       </td>
    </tr>
@@ -303,9 +202,7 @@
    <tr>
       <td width="25%" bgcolor="#FFFFFF" colspan="2" class="small">
          <p><a href="http://www.w3schools.com/schema/el_complextype.asp#">Complex Type:</a> <b>DiagramType</b></p>
-         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">
-               				Main document element type for an XML dataset using this schema 
-               			</span></p>
+         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">Main document element type for an XML dataset using this schema.</span></p>
       </td>
    </tr>
    <tr>
@@ -468,9 +365,7 @@
    <tr>
       <td width="25%" bgcolor="#FFFFFF" colspan="2" class="small">
          <p><a href="http://www.w3schools.com/schema/el_complextype.asp#">Complex Type:</a> <b>EntityGlyphType</b></p>
-         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">
-               	All entity glyphs are based on this element type.  
-               </span></p>
+         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">All entity glyphs are based on this element type.</span></p>
       </td>
    </tr>
    <tr>
@@ -518,17 +413,11 @@
                <td colspan="2" class="small">Attributes</td>
             </tr>
             <tr>
-               <td width="500" bgcolor="#FFFFFF" class="small">
-                  <table>
-                     <tr>
-                        <td class="small"><b>type</b></td>
-                     </tr>
-                     <tr>
-                        <td><span style="color:#a0a0a0;font-style: italic;font-size: 90%">?</span></td>
-                     </tr>
-                  </table>
+               <td width="500" bgcolor="#FFFFFF" class="small"><b>type</b></td>
+               <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">Type:   
+                  <a href="http://www.w3schools.com/schema/schema_dtypes_string.asp">xsd:string</a>
+                  , Use: required
                </td>
-               <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">Type: <a href="#"></a>, Use: required</td>
             </tr>
             <tr>
                <td width="500" bgcolor="#FFFFFF" class="small"><b>visId</b></td>
@@ -644,10 +533,7 @@
    <tr>
       <td width="25%" bgcolor="#FFFFFF" colspan="2" class="small">
          <p><a href="http://www.w3schools.com/schema/el_complextype.asp#">Complex Type:</a> <b>InteractionGlyphType</b></p>
-         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">
-               	Line glyphs capable of having multiple changes in direction and 
-               	two arrowheads.
-               </span></p>
+         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">Line glyphs capable of having multiple changes in direction and two arrowheads.</span></p>
       </td>
    </tr>
    <tr>
@@ -679,7 +565,16 @@
                   
                </td>
             </tr><a name="Point"></a><tr>
-               <td width="500" bgcolor="#FFFFFF" class="small"><b>Point</b></td>
+               <td width="500" bgcolor="#FFFFFF" class="small">
+                  <table>
+                     <tr>
+                        <td class="small"><b>Point</b></td>
+                     </tr>
+                     <tr>
+                        <td><span style="color:#a0a0a0;font-style: italic;font-size: 90%">More information regarding the usage of relx and rely can be found here: http://svn.bigcat.unimaas.nl/pathvisio/trunk/rfc/002-connectors.txt</span></td>
+                     </tr>
+                  </table>
+               </td>
                <td width="75%" class="small" bgcolor="#FFFFFF" valign="top"><table><tr><td  class="small">Type : <a href="#InteractionGlyphType_Point">Point</a></td></tr>
                   <tr><td  class="small">  
                   
@@ -751,7 +646,16 @@
    </tr>
 </table><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><a name="InteractionGlyphType_Point"></a><a name="Point"></a><table xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" class="bold" frame="box" rules="all" align="centre" cellpadding="4" width="100%">
    <tr>
-      <td width="500" bgcolor="#FFFFFF" class="small">Element: <b>Point</b></td>
+      <td width="500" bgcolor="#FFFFFF" class="small">
+         <table>
+            <tr>
+               <td class="small">Element: <b>Point</b></td>
+            </tr>
+            <tr>
+               <td><span style="color:#a0a0a0;font-style: italic;font-size: 90%">More information regarding the usage of relx and rely can be found here: http://svn.bigcat.unimaas.nl/pathvisio/trunk/rfc/002-connectors.txt</span></td>
+            </tr>
+         </table>
+      </td>
       <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">&nbsp</td>
    </tr>
    <tr>
@@ -787,13 +691,8 @@
    </tr>
    <tr>
       <td width="500" bgcolor="#FFFFFF" class="small"><b>arrowHead</b></td>
-      <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">Type: 
-         
-         <a href="&xslFile=NeuroMLFiles/Schemata/XSD_Readable.xsl#ArrowHeadEnumType">mimVis:ArrowHeadEnumType</a> 
-         
-         </a>
-         
-         
+      <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">Type:   
+         <a href="http://www.w3schools.com/schema/schema_dtypes_string.asp">xsd:string</a>
          , Use: optional, default: <b>Line</b>
       </td>
    </tr>
@@ -814,11 +713,8 @@
    <tr>
       <td width="25%" bgcolor="#FFFFFF" colspan="2" class="small">
          <p><a href="http://www.w3schools.com/schema/el_complextype.asp#">Complex Type:</a> <b>AnchorGlyphType</b></p>
-         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">
-               				Sizing and exact drawing implementation information should be 
-               				described in-software for MIM-specific anchors according to 
-               				the MIM graphical notation specification. 
-               			</span></p>
+         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">Sizing and exact drawing implementation information should be described in-software for MIM-specific anchors according to
+               the MIM graphical notation specification.</span></p>
       </td>
    </tr>
    <tr>
@@ -859,22 +755,11 @@
                </td>
             </tr>
             <tr>
-               <td width="500" bgcolor="#FFFFFF" class="small">
-                  <table>
-                     <tr>
-                        <td class="small"><b>type</b></td>
-                     </tr>
-                     <tr>
-                        <td><span style="color:#a0a0a0;font-style: italic;font-size: 85%">
-                              					Only two anchor types are MIM-specific "InTrans" and "Outcome"
-                              					Annotation anchor allows for the placement of a interaction 
-                              					annotation label. 
-                              					Invisible is being used Pathvisio as part of the user interaction.
-                              				</span></td>
-                     </tr>
-                  </table>
+               <td width="500" bgcolor="#FFFFFF" class="small"><b>type</b></td>
+               <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">Type:   
+                  <a href="http://www.w3schools.com/schema/schema_dtypes_string.asp">xsd:string</a>
+                  , Use: required
                </td>
-               <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">Type: <a href="#"></a>, Use: required</td>
             </tr>
          </table>
       </td>
@@ -883,9 +768,7 @@
    <tr>
       <td width="25%" bgcolor="#FFFFFF" colspan="2" class="small">
          <p><a href="http://www.w3schools.com/schema/el_complextype.asp#">Complex Type:</a> <b>GroupType</b></p>
-         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">
-               				A grouping of entities 
-               			</span></p>
+         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">A grouping of entities.</span></p>
       </td>
    </tr>
    <tr>
@@ -941,13 +824,8 @@
             </tr>
             <tr>
                <td width="500" bgcolor="#FFFFFF" class="small"><b>type</b></td>
-               <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">Type: 
-                  
-                  <a href="&xslFile=NeuroMLFiles/Schemata/XSD_Readable.xsl#GroupEnumType">mimVis:GroupEnumType</a> 
-                  
-                  </a>
-                  
-                  
+               <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">Type:   
+                  <a href="http://www.w3schools.com/schema/schema_dtypes_string.asp">xsd:string</a>
                   , Use: optional, default: <b>Generic</b>
                </td>
             </tr>
@@ -958,15 +836,9 @@
    <tr>
       <td width="25%" bgcolor="#FFFFFF" colspan="2" class="small">
          <p><a href="http://www.w3schools.com/schema/el_complextype.asp#">Complex Type:</a> <b>MimBioType</b></p>
-         <p><span style="color:#a0a0a0;font-style: italic;font-size: 85%">
-               				Information about cross-references, comments dealing with biology, 
-               				semantic information about the interactions should be stored in 
-               				MIM Bio using the IDs as the linking mechanism. 
-               				Content in this container unlike the Comment or mimVis:GenericProperty
-               				will be strictly validated. 
-               				
-               				The first version will not reference a seperate MIM Bio document. 
-               			</span></p>
+         <p><span style="color:#a0a0a0;font-style: italic;font-size: 85%">Information about cross-references, comments dealing with biology, semantic information about the interactions should be stored
+               in MIM Bio using the IDs as the linking mechanism. Content in this container unlike the Comment or mimVis:GenericProperty
+               will be strictly validated. The first version will not reference a seperate MIM Bio document.</span></p>
       </td>
    </tr>
    <tr>
@@ -1385,7 +1257,10 @@
             </tr>
             <tr>
                <td width="500" bgcolor="#FFFFFF" class="small"><b>type</b></td>
-               <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">Type: <a href="#"></a>, Use: required</td>
+               <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">Type:   
+                  <a href="http://www.w3schools.com/schema/schema_dtypes_string.asp">xsd:string</a>
+                  , Use: required
+               </td>
             </tr>
          </table>
       </td>
@@ -1406,12 +1281,15 @@
                </td>
             </tr><a name="type"></a><tr>
                <td width="500" bgcolor="#FFFFFF" class="small"><b>type</b></td>
-               <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">
+               <td width="75%" class="small" bgcolor="#FFFFFF" valign="top"><table><tr><td  class="small">Type :   
+                  <a href="http://www.w3schools.com/schema/schema_dtypes_string.asp">xsd:string</a>
+                  </td></tr>
+                  <tr><td  class="small">  
+                  
+                  Occurances: 0 
+                  ...
+                  1    </td></tr>
                   </td></tr></table>
-                  
-                  
-                  
-                  
                </td>
             </tr>
             <tr>
@@ -1425,17 +1303,6 @@
                </td>
             </tr>
          </table>
-      </td>
-   </tr>
-</table><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><a name="EntityControlledVocabularyType_type"></a><a name="type"></a><table xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" class="bold" frame="box" rules="all" align="centre" cellpadding="4" width="100%">
-   <tr>
-      <td width="500" bgcolor="#FFFFFF" class="small">Element: <b>type</b></td>
-      <td width="75%" class="small" bgcolor="#FFFFFF" valign="top">&nbsp</td>
-   </tr>
-   <tr>
-      <td width="25%" bgcolor="#FFFFFF" colspan="2" class="small">
-         <p>type is used by: <a href="#EntityControlledVocabularyType">EntityControlledVocabularyType</a> (xsd:complexType)</p>
-         <p><span style="color:#a0a0a0;font-style: italic;font-size: 90%">Instances of this element which are used by other elements in this document</span></p>
       </td>
    </tr>
 </table><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><a xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" href="#topOfPage">Top</a><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><br xmlns:meta="http://morphml.org/metadata/schema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
