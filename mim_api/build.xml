@@ -27,6 +27,10 @@
 
 	<target name="clean">
 		<delete dir="${project.dir}build" />
+		<delete dir="${project.dir}bin" />
+		
+		<!-- Make sure not to delete the example directory -->
+		<delete dir="${src.dir}gov/nih/nci/lmp/mim/mimVisLevel1" />
 	</target>
 	
 	<target name="compile-example" depends="clean">
@@ -44,7 +48,7 @@
 	
 	<taskdef name="xmlbean" classname="org.apache.xmlbeans.impl.tool.XMLBean" classpathref="project.class.path" />
 
-	<target name="build-apis" depends="javadoc, xml-docs">
+	<target name="build-apis" depends="xml-docs">
 		<delete file="${output.dir}mimVis.jar" />
 		<xmlbean 
 			schema="${schema.dir}mim_vis.xsd" 
@@ -54,7 +58,8 @@
 			classpathref="project.class.path" />
 	</target>
 
-	<target name="javadoc">
+	<target name="javadoc" depends="build-apis">
+		<mkdir dir="${javadoc.dir}" />
 		<javadoc 
 			sourcepath="${src.dir}" 
 			destdir="${javadoc.dir}" 
