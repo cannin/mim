@@ -131,47 +131,6 @@ limitations under the License.
 		</xsd:restriction>
 	</xsd:simpleType>
 	<!-- End: ColorType -->
-	
-	<!--  Start: ArrowHeadEnumType -->
-	<xsd:simpleType name="ArrowHeadEnumType">
-		<xsd:annotation>
-            <xsd:documentation>"Line" represents not having an arrowhead at the end of a line.</xsd:documentation>
-        </xsd:annotation>	
-		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="CovalentModification"/>
-			<xsd:enumeration value="NonCovalentReversibleBinding"/>
-			<xsd:enumeration value="CovalentIrreversibleBinding"/>
-			<xsd:enumeration value="Catalysis"/>
-			<xsd:enumeration value="Stimulation"/>
-			<xsd:enumeration value="NecessaryStimulation"/>			
-			<xsd:enumeration value="ProductionWithoutLoss"/>
-			<xsd:enumeration value="StochiometricConversion"/>
-			<xsd:enumeration value="TemplateReaction"/>			
-			<xsd:enumeration value="CovalentBondCleavage"/>
-			<xsd:enumeration value="Inhibition"/>
-			<xsd:enumeration value="AbsoluteInhibition"/>			
-			<xsd:enumeration value="StateCombination"/>
-			<xsd:enumeration value="NextFeature"/>
-			<xsd:enumeration value="FirstFeature"/>
-			<xsd:enumeration value="BranchingLeft"/>
-			<xsd:enumeration value="BranchingRight"/>
-			<xsd:enumeration value="Line"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<!--  End: ArrowHeadEnumType -->
-
-	<!--  Start: GroupEnumType -->
-	<xsd:simpleType name="GroupEnumType">
-	    <xsd:annotation>
-            <xsd:documentation>Possible group types: 1) EntityWithFeatures may be removed in the future, 2) Generic is provided for "other" grouping needs by developers, and 3) Entities may only participate in one group
-			</xsd:documentation>
-        </xsd:annotation>
-		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="EntityWithFeatures"/>
-			<xsd:enumeration value="Generic"/>			
-		</xsd:restriction>
-	</xsd:simpleType>
-	<!--  End: GroupEnumType -->
 
 	<!-- XML GROUPS -->
 	<!--  Start: CommentGroup -->
@@ -221,23 +180,7 @@ limitations under the License.
 			<xsd:group ref="mimVis:CommentGroup"/>	
 			<xsd:element maxOccurs="unbounded" minOccurs="0" name="mimBioRef" type="xsd:string"/>
 		</xsd:sequence>
-		<xsd:attribute name="type" use="required">
-			<xsd:annotation>
-				<xsd:documentation>Entity types are taken from the formal MIM specification.</xsd:documentation>
-       		</xsd:annotation>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:string">
-					<xsd:enumeration value="SimplePhysicalEntity"/>
-					<xsd:enumeration value="EntityFeature"/>
-					<xsd:enumeration value="Modifier"/>
-					<xsd:enumeration value="ConceptualEntity"/>
-					<xsd:enumeration value="SourceSink"/>
-					<xsd:enumeration value="RestrictedCopy"/>
-					<xsd:enumeration value="ExplicitComplex"/>
-					<xsd:enumeration value="ImplicitComplex"/>
-				</xsd:restriction>
-			</xsd:simpleType>
-		</xsd:attribute>
+		<xsd:attribute name="type" type="xsd:string" use="required"/>
 		<xsd:attribute name="visId" type="xsd:string" use="required"/>
 		<xsd:attribute name="color" type="mimVis:ColorType" default="000000"/>
         
@@ -273,7 +216,7 @@ limitations under the License.
 					<xsd:attribute name="y" type="xsd:double" use="required"/>
 					<xsd:attribute name="relX" type="xsd:double" use="optional"/>
 					<xsd:attribute name="relY" type="xsd:double" use="optional"/>
-					<xsd:attribute name="arrowHead" type="mimVis:ArrowHeadEnumType" default="Line"/>
+					<xsd:attribute name="arrowHead" type="xsd:string" default="Line"/>
 					<xsd:attribute name="visRef" type="xsd:string" use="optional"/>
 				</xsd:complexType>
 			</xsd:element>
@@ -299,18 +242,7 @@ limitations under the License.
 		<xsd:attribute name="position" type="xsd:double" use="required"/>
 		
 		<!-- Only two anchor types are MIM-specific "intrans" and "circle" -->  			
-		<xsd:attribute name="type" use="required">
-			<xsd:annotation>
-           		<xsd:documentation>Only two anchor types are MIM-specific "InTrans" and "Outcome". Annotation anchor allows for the placement of a interaction annotation label. Invisible is being used Pathvisio as part of the user interaction.</xsd:documentation>
-       		</xsd:annotation>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:string">
-					<xsd:enumeration value="InTrans"/>
-					<xsd:enumeration value="Annotation"/>
-					<xsd:enumeration value="Invisible"/>
-				</xsd:restriction>
-			</xsd:simpleType>
-		</xsd:attribute>
+		<xsd:attribute name="type" type="xsd:string" use="required"/>
 		
 		<!-- POSTPONED: A label attribute is necessary for customized Annotation labels -->
 		<!-- <xsd:attribute name="annotationLabel" type="xsd:string" use="optional" /> --> 
@@ -327,7 +259,7 @@ limitations under the License.
 			<xsd:element name="mimBioRef" type="xsd:string" maxOccurs="unbounded" minOccurs="0"/>
 		</xsd:sequence>
 		<xsd:attribute name="visId" type="xsd:string" use="required"/>
-		<xsd:attribute name="type" type="mimVis:GroupEnumType" default="Generic"/>
+		<xsd:attribute name="type" type="xsd:string" default="Generic"/>
 	</xsd:complexType>
 	<!-- End: Group -->
 	
@@ -396,24 +328,7 @@ limitations under the License.
         </xsd:annotation>  
         <xsd:complexContent>
             <xsd:extension base="mimVis:XRefType">
-				<xsd:attribute name="type" use="required">
-					<xsd:simpleType>
-						<xsd:restriction base="xsd:string">
-							<xsd:enumeration value="is"/>
-							<xsd:enumeration value="isPartOf"/>
-							<xsd:enumeration value="hasPart"/>
-							<xsd:enumeration value="isIsomerOf"/>
-							<xsd:enumeration value="isHomologTo"/>
-							<xsd:enumeration value="encodes"/>
-							<xsd:enumeration value="isEncodedBy"/>
-							<xsd:enumeration value="hasVersion"/>
-							<xsd:enumeration value="isVersionOf"/>
-							<xsd:enumeration value="occursIn"/>
-							<xsd:enumeration value="isDescribedBy"/>
-							<xsd:enumeration value="other"/>
-						</xsd:restriction>
-					</xsd:simpleType>
-				</xsd:attribute>                
+				<xsd:attribute name="type" type="xsd:string" use="required"/>                
             </xsd:extension>
         </xsd:complexContent>
     </xsd:complexType>
@@ -422,19 +337,7 @@ limitations under the License.
             <xsd:documentation>A metadata container to link MIM nodes to BioPAX 3 classes.</xsd:documentation>
         </xsd:annotation>
 		<xsd:sequence>
-			<xsd:element name="type" minOccurs="0">
-				<xsd:simpleType>
-					<xsd:restriction base="xsd:string">
-						<xsd:enumeration value="Complex"/>
-						<xsd:enumeration value="RNA"/>
-						<xsd:enumeration value="RNARegion"/>
-						<xsd:enumeration value="DNA"/>
-						<xsd:enumeration value="DNARegion"/>                                
-						<xsd:enumeration value="Protein"/>
-						<xsd:enumeration value="SmallMolecule"/>
-					</xsd:restriction>
-				</xsd:simpleType>
-			</xsd:element>
+			<xsd:element name="type" type="xsd:string" minOccurs="0"/>
 		</xsd:sequence>
 		<xsd:attribute name="visId" type="xsd:string" use="required"/>
     </xsd:complexType>
