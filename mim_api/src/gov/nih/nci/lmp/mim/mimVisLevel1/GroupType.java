@@ -16,7 +16,7 @@ package gov.nih.nci.lmp.mim.mimVisLevel1;
 public interface GroupType extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(GroupType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s4964F7551A6A586059F075CAABFFF94D").resolveHandle("grouptype8f57type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(GroupType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9A8540D1A1572E107109C11FF48E20A6").resolveHandle("grouptype8f57type");
     
     /**
      * Gets a List of "Comment" elements
@@ -256,12 +256,12 @@ public interface GroupType extends org.apache.xmlbeans.XmlObject
     /**
      * Gets the "type" attribute
      */
-    gov.nih.nci.lmp.mim.mimVisLevel1.GroupEnumType.Enum getType();
+    java.lang.String getType();
     
     /**
      * Gets (as xml) the "type" attribute
      */
-    gov.nih.nci.lmp.mim.mimVisLevel1.GroupEnumType xgetType();
+    org.apache.xmlbeans.XmlString xgetType();
     
     /**
      * True if has "type" attribute
@@ -271,12 +271,12 @@ public interface GroupType extends org.apache.xmlbeans.XmlObject
     /**
      * Sets the "type" attribute
      */
-    void setType(gov.nih.nci.lmp.mim.mimVisLevel1.GroupEnumType.Enum type);
+    void setType(java.lang.String type);
     
     /**
      * Sets (as xml) the "type" attribute
      */
-    void xsetType(gov.nih.nci.lmp.mim.mimVisLevel1.GroupEnumType type);
+    void xsetType(org.apache.xmlbeans.XmlString type);
     
     /**
      * Unsets the "type" attribute
@@ -291,7 +291,7 @@ public interface GroupType extends org.apache.xmlbeans.XmlObject
     public interface GenericProperty extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(GenericProperty.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s4964F7551A6A586059F075CAABFFF94D").resolveHandle("genericpropertya46felemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(GenericProperty.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9A8540D1A1572E107109C11FF48E20A6").resolveHandle("genericpropertya46felemtype");
         
         /**
          * Gets the "key" attribute

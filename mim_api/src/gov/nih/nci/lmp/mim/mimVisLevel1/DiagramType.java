@@ -16,7 +16,7 @@ package gov.nih.nci.lmp.mim.mimVisLevel1;
 public interface DiagramType extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DiagramType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s4964F7551A6A586059F075CAABFFF94D").resolveHandle("diagramtype11ebtype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DiagramType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9A8540D1A1572E107109C11FF48E20A6").resolveHandle("diagramtype11ebtype");
     
     /**
      * Gets a List of "Comment" elements
@@ -494,7 +494,7 @@ public interface DiagramType extends org.apache.xmlbeans.XmlObject
     public interface GenericProperty extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(GenericProperty.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s4964F7551A6A586059F075CAABFFF94D").resolveHandle("genericproperty4103elemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(GenericProperty.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9A8540D1A1572E107109C11FF48E20A6").resolveHandle("genericproperty4103elemtype");
         
         /**
          * Gets the "key" attribute

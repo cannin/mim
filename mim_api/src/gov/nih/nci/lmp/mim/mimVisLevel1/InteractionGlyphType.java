@@ -16,7 +16,7 @@ package gov.nih.nci.lmp.mim.mimVisLevel1;
 public interface InteractionGlyphType extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(InteractionGlyphType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s4964F7551A6A586059F075CAABFFF94D").resolveHandle("interactionglyphtype2504type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(InteractionGlyphType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9A8540D1A1572E107109C11FF48E20A6").resolveHandle("interactionglyphtype2504type");
     
     /**
      * Gets a List of "Comment" elements
@@ -452,7 +452,7 @@ public interface InteractionGlyphType extends org.apache.xmlbeans.XmlObject
     public interface GenericProperty extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(GenericProperty.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s4964F7551A6A586059F075CAABFFF94D").resolveHandle("genericproperty70ecelemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(GenericProperty.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9A8540D1A1572E107109C11FF48E20A6").resolveHandle("genericproperty70ecelemtype");
         
         /**
          * Gets the "key" attribute
@@ -519,7 +519,7 @@ public interface InteractionGlyphType extends org.apache.xmlbeans.XmlObject
     public interface Point extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Point.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s4964F7551A6A586059F075CAABFFF94D").resolveHandle("point1da8elemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Point.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9A8540D1A1572E107109C11FF48E20A6").resolveHandle("point1da8elemtype");
         
         /**
          * Gets the "x" attribute
@@ -624,12 +624,12 @@ public interface InteractionGlyphType extends org.apache.xmlbeans.XmlObject
         /**
          * Gets the "arrowHead" attribute
          */
-        gov.nih.nci.lmp.mim.mimVisLevel1.ArrowHeadEnumType.Enum getArrowHead();
+        java.lang.String getArrowHead();
         
         /**
          * Gets (as xml) the "arrowHead" attribute
          */
-        gov.nih.nci.lmp.mim.mimVisLevel1.ArrowHeadEnumType xgetArrowHead();
+        org.apache.xmlbeans.XmlString xgetArrowHead();
         
         /**
          * True if has "arrowHead" attribute
@@ -639,12 +639,12 @@ public interface InteractionGlyphType extends org.apache.xmlbeans.XmlObject
         /**
          * Sets the "arrowHead" attribute
          */
-        void setArrowHead(gov.nih.nci.lmp.mim.mimVisLevel1.ArrowHeadEnumType.Enum arrowHead);
+        void setArrowHead(java.lang.String arrowHead);
         
         /**
          * Sets (as xml) the "arrowHead" attribute
          */
-        void xsetArrowHead(gov.nih.nci.lmp.mim.mimVisLevel1.ArrowHeadEnumType arrowHead);
+        void xsetArrowHead(org.apache.xmlbeans.XmlString arrowHead);
         
         /**
          * Unsets the "arrowHead" attribute

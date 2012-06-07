@@ -16,7 +16,7 @@ package gov.nih.nci.lmp.mim.mimVisLevel1;
 public interface AnchorGlyphType extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(AnchorGlyphType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s4964F7551A6A586059F075CAABFFF94D").resolveHandle("anchorglyphtype0f0ftype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(AnchorGlyphType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9A8540D1A1572E107109C11FF48E20A6").resolveHandle("anchorglyphtype0f0ftype");
     
     /**
      * Gets a List of "mimBioRef" elements
@@ -145,112 +145,22 @@ public interface AnchorGlyphType extends org.apache.xmlbeans.XmlObject
     /**
      * Gets the "type" attribute
      */
-    gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type.Enum getType();
+    java.lang.String getType();
     
     /**
      * Gets (as xml) the "type" attribute
      */
-    gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type xgetType();
+    org.apache.xmlbeans.XmlString xgetType();
     
     /**
      * Sets the "type" attribute
      */
-    void setType(gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type.Enum type);
+    void setType(java.lang.String type);
     
     /**
      * Sets (as xml) the "type" attribute
      */
-    void xsetType(gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type type);
-    
-    /**
-     * An XML type(@).
-     *
-     * This is an atomic type that is a restriction of gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType$Type.
-     */
-    public interface Type extends org.apache.xmlbeans.XmlString
-    {
-        public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Type.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s4964F7551A6A586059F075CAABFFF94D").resolveHandle("typef3e9attrtype");
-        
-        org.apache.xmlbeans.StringEnumAbstractBase enumValue();
-        void set(org.apache.xmlbeans.StringEnumAbstractBase e);
-        
-        static final Enum IN_TRANS = Enum.forString("InTrans");
-        static final Enum ANNOTATION = Enum.forString("Annotation");
-        static final Enum INVISIBLE = Enum.forString("Invisible");
-        
-        static final int INT_IN_TRANS = Enum.INT_IN_TRANS;
-        static final int INT_ANNOTATION = Enum.INT_ANNOTATION;
-        static final int INT_INVISIBLE = Enum.INT_INVISIBLE;
-        
-        /**
-         * Enumeration value class for gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType$Type.
-         * These enum values can be used as follows:
-         * <pre>
-         * enum.toString(); // returns the string value of the enum
-         * enum.intValue(); // returns an int value, useful for switches
-         * // e.g., case Enum.INT_IN_TRANS
-         * Enum.forString(s); // returns the enum value for a string
-         * Enum.forInt(i); // returns the enum value for an int
-         * </pre>
-         * Enumeration objects are immutable singleton objects that
-         * can be compared using == object equality. They have no
-         * public constructor. See the constants defined within this
-         * class for all the valid values.
-         */
-        static final class Enum extends org.apache.xmlbeans.StringEnumAbstractBase
-        {
-            /**
-             * Returns the enum value for a string, or null if none.
-             */
-            public static Enum forString(java.lang.String s)
-                { return (Enum)table.forString(s); }
-            /**
-             * Returns the enum value corresponding to an int, or null if none.
-             */
-            public static Enum forInt(int i)
-                { return (Enum)table.forInt(i); }
-            
-            private Enum(java.lang.String s, int i)
-                { super(s, i); }
-            
-            static final int INT_IN_TRANS = 1;
-            static final int INT_ANNOTATION = 2;
-            static final int INT_INVISIBLE = 3;
-            
-            public static final org.apache.xmlbeans.StringEnumAbstractBase.Table table =
-                new org.apache.xmlbeans.StringEnumAbstractBase.Table
-            (
-                new Enum[]
-                {
-                    new Enum("InTrans", INT_IN_TRANS),
-                    new Enum("Annotation", INT_ANNOTATION),
-                    new Enum("Invisible", INT_INVISIBLE),
-                }
-            );
-            private static final long serialVersionUID = 1L;
-            private java.lang.Object readResolve() { return forInt(intValue()); } 
-        }
-        
-        /**
-         * A factory class with static methods for creating instances
-         * of this type.
-         */
-        
-        public static final class Factory
-        {
-            public static gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type newValue(java.lang.Object obj) {
-              return (gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type) type.newValue( obj ); }
-            
-            public static gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type newInstance() {
-              return (gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().newInstance( type, null ); }
-            
-            public static gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type newInstance(org.apache.xmlbeans.XmlOptions options) {
-              return (gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().newInstance( type, options ); }
-            
-            private Factory() { } // No instance of this class allowed
-        }
-    }
+    void xsetType(org.apache.xmlbeans.XmlString type);
     
     /**
      * A factory class with static methods for creating instances

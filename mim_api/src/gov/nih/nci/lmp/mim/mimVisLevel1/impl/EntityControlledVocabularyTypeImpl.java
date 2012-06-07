@@ -29,7 +29,7 @@ public class EntityControlledVocabularyTypeImpl extends org.apache.xmlbeans.impl
     /**
      * Gets the "type" element
      */
-    public gov.nih.nci.lmp.mim.mimVisLevel1.EntityControlledVocabularyType.Type.Enum getType()
+    public java.lang.String getType()
     {
         synchronized (monitor())
         {
@@ -40,20 +40,20 @@ public class EntityControlledVocabularyTypeImpl extends org.apache.xmlbeans.impl
             {
                 return null;
             }
-            return (gov.nih.nci.lmp.mim.mimVisLevel1.EntityControlledVocabularyType.Type.Enum)target.getEnumValue();
+            return target.getStringValue();
         }
     }
     
     /**
      * Gets (as xml) the "type" element
      */
-    public gov.nih.nci.lmp.mim.mimVisLevel1.EntityControlledVocabularyType.Type xgetType()
+    public org.apache.xmlbeans.XmlString xgetType()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            gov.nih.nci.lmp.mim.mimVisLevel1.EntityControlledVocabularyType.Type target = null;
-            target = (gov.nih.nci.lmp.mim.mimVisLevel1.EntityControlledVocabularyType.Type)get_store().find_element_user(TYPE$0, 0);
+            org.apache.xmlbeans.XmlString target = null;
+            target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(TYPE$0, 0);
             return target;
         }
     }
@@ -73,7 +73,7 @@ public class EntityControlledVocabularyTypeImpl extends org.apache.xmlbeans.impl
     /**
      * Sets the "type" element
      */
-    public void setType(gov.nih.nci.lmp.mim.mimVisLevel1.EntityControlledVocabularyType.Type.Enum type)
+    public void setType(java.lang.String type)
     {
         synchronized (monitor())
         {
@@ -84,23 +84,23 @@ public class EntityControlledVocabularyTypeImpl extends org.apache.xmlbeans.impl
             {
                 target = (org.apache.xmlbeans.SimpleValue)get_store().add_element_user(TYPE$0);
             }
-            target.setEnumValue(type);
+            target.setStringValue(type);
         }
     }
     
     /**
      * Sets (as xml) the "type" element
      */
-    public void xsetType(gov.nih.nci.lmp.mim.mimVisLevel1.EntityControlledVocabularyType.Type type)
+    public void xsetType(org.apache.xmlbeans.XmlString type)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            gov.nih.nci.lmp.mim.mimVisLevel1.EntityControlledVocabularyType.Type target = null;
-            target = (gov.nih.nci.lmp.mim.mimVisLevel1.EntityControlledVocabularyType.Type)get_store().find_element_user(TYPE$0, 0);
+            org.apache.xmlbeans.XmlString target = null;
+            target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(TYPE$0, 0);
             if (target == null)
             {
-                target = (gov.nih.nci.lmp.mim.mimVisLevel1.EntityControlledVocabularyType.Type)get_store().add_element_user(TYPE$0);
+                target = (org.apache.xmlbeans.XmlString)get_store().add_element_user(TYPE$0);
             }
             target.set(type);
         }
@@ -183,25 +183,6 @@ public class EntityControlledVocabularyTypeImpl extends org.apache.xmlbeans.impl
                 target = (org.apache.xmlbeans.XmlString)get_store().add_attribute_user(VISID$2);
             }
             target.set(visId);
-        }
-    }
-    /**
-     * An XML type(@http://lmp.nci.nih.gov/mim/mimVisLevel1).
-     *
-     * This is an atomic type that is a restriction of gov.nih.nci.lmp.mim.mimVisLevel1.EntityControlledVocabularyType$Type.
-     */
-    public static class TypeImpl extends org.apache.xmlbeans.impl.values.JavaStringEnumerationHolderEx implements gov.nih.nci.lmp.mim.mimVisLevel1.EntityControlledVocabularyType.Type
-    {
-        private static final long serialVersionUID = 1L;
-        
-        public TypeImpl(org.apache.xmlbeans.SchemaType sType)
-        {
-            super(sType, false);
-        }
-        
-        protected TypeImpl(org.apache.xmlbeans.SchemaType sType, boolean b)
-        {
-            super(sType, b);
         }
     }
 }

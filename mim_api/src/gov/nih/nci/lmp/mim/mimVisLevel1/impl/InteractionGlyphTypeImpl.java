@@ -2025,7 +2025,7 @@ public class InteractionGlyphTypeImpl extends org.apache.xmlbeans.impl.values.Xm
         /**
          * Gets the "arrowHead" attribute
          */
-        public gov.nih.nci.lmp.mim.mimVisLevel1.ArrowHeadEnumType.Enum getArrowHead()
+        public java.lang.String getArrowHead()
         {
             synchronized (monitor())
             {
@@ -2040,23 +2040,23 @@ public class InteractionGlyphTypeImpl extends org.apache.xmlbeans.impl.values.Xm
                 {
                     return null;
                 }
-                return (gov.nih.nci.lmp.mim.mimVisLevel1.ArrowHeadEnumType.Enum)target.getEnumValue();
+                return target.getStringValue();
             }
         }
         
         /**
          * Gets (as xml) the "arrowHead" attribute
          */
-        public gov.nih.nci.lmp.mim.mimVisLevel1.ArrowHeadEnumType xgetArrowHead()
+        public org.apache.xmlbeans.XmlString xgetArrowHead()
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                gov.nih.nci.lmp.mim.mimVisLevel1.ArrowHeadEnumType target = null;
-                target = (gov.nih.nci.lmp.mim.mimVisLevel1.ArrowHeadEnumType)get_store().find_attribute_user(ARROWHEAD$8);
+                org.apache.xmlbeans.XmlString target = null;
+                target = (org.apache.xmlbeans.XmlString)get_store().find_attribute_user(ARROWHEAD$8);
                 if (target == null)
                 {
-                    target = (gov.nih.nci.lmp.mim.mimVisLevel1.ArrowHeadEnumType)get_default_attribute_value(ARROWHEAD$8);
+                    target = (org.apache.xmlbeans.XmlString)get_default_attribute_value(ARROWHEAD$8);
                 }
                 return target;
             }
@@ -2077,7 +2077,7 @@ public class InteractionGlyphTypeImpl extends org.apache.xmlbeans.impl.values.Xm
         /**
          * Sets the "arrowHead" attribute
          */
-        public void setArrowHead(gov.nih.nci.lmp.mim.mimVisLevel1.ArrowHeadEnumType.Enum arrowHead)
+        public void setArrowHead(java.lang.String arrowHead)
         {
             synchronized (monitor())
             {
@@ -2088,23 +2088,23 @@ public class InteractionGlyphTypeImpl extends org.apache.xmlbeans.impl.values.Xm
                 {
                     target = (org.apache.xmlbeans.SimpleValue)get_store().add_attribute_user(ARROWHEAD$8);
                 }
-                target.setEnumValue(arrowHead);
+                target.setStringValue(arrowHead);
             }
         }
         
         /**
          * Sets (as xml) the "arrowHead" attribute
          */
-        public void xsetArrowHead(gov.nih.nci.lmp.mim.mimVisLevel1.ArrowHeadEnumType arrowHead)
+        public void xsetArrowHead(org.apache.xmlbeans.XmlString arrowHead)
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                gov.nih.nci.lmp.mim.mimVisLevel1.ArrowHeadEnumType target = null;
-                target = (gov.nih.nci.lmp.mim.mimVisLevel1.ArrowHeadEnumType)get_store().find_attribute_user(ARROWHEAD$8);
+                org.apache.xmlbeans.XmlString target = null;
+                target = (org.apache.xmlbeans.XmlString)get_store().find_attribute_user(ARROWHEAD$8);
                 if (target == null)
                 {
-                    target = (gov.nih.nci.lmp.mim.mimVisLevel1.ArrowHeadEnumType)get_store().add_attribute_user(ARROWHEAD$8);
+                    target = (org.apache.xmlbeans.XmlString)get_store().add_attribute_user(ARROWHEAD$8);
                 }
                 target.set(arrowHead);
             }

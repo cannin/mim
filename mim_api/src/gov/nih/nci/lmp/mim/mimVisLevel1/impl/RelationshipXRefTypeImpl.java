@@ -27,7 +27,7 @@ public class RelationshipXRefTypeImpl extends gov.nih.nci.lmp.mim.mimVisLevel1.i
     /**
      * Gets the "type" attribute
      */
-    public gov.nih.nci.lmp.mim.mimVisLevel1.RelationshipXRefType.Type.Enum getType()
+    public java.lang.String getType()
     {
         synchronized (monitor())
         {
@@ -38,20 +38,20 @@ public class RelationshipXRefTypeImpl extends gov.nih.nci.lmp.mim.mimVisLevel1.i
             {
                 return null;
             }
-            return (gov.nih.nci.lmp.mim.mimVisLevel1.RelationshipXRefType.Type.Enum)target.getEnumValue();
+            return target.getStringValue();
         }
     }
     
     /**
      * Gets (as xml) the "type" attribute
      */
-    public gov.nih.nci.lmp.mim.mimVisLevel1.RelationshipXRefType.Type xgetType()
+    public org.apache.xmlbeans.XmlString xgetType()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            gov.nih.nci.lmp.mim.mimVisLevel1.RelationshipXRefType.Type target = null;
-            target = (gov.nih.nci.lmp.mim.mimVisLevel1.RelationshipXRefType.Type)get_store().find_attribute_user(TYPE$0);
+            org.apache.xmlbeans.XmlString target = null;
+            target = (org.apache.xmlbeans.XmlString)get_store().find_attribute_user(TYPE$0);
             return target;
         }
     }
@@ -59,7 +59,7 @@ public class RelationshipXRefTypeImpl extends gov.nih.nci.lmp.mim.mimVisLevel1.i
     /**
      * Sets the "type" attribute
      */
-    public void setType(gov.nih.nci.lmp.mim.mimVisLevel1.RelationshipXRefType.Type.Enum type)
+    public void setType(java.lang.String type)
     {
         synchronized (monitor())
         {
@@ -70,44 +70,25 @@ public class RelationshipXRefTypeImpl extends gov.nih.nci.lmp.mim.mimVisLevel1.i
             {
                 target = (org.apache.xmlbeans.SimpleValue)get_store().add_attribute_user(TYPE$0);
             }
-            target.setEnumValue(type);
+            target.setStringValue(type);
         }
     }
     
     /**
      * Sets (as xml) the "type" attribute
      */
-    public void xsetType(gov.nih.nci.lmp.mim.mimVisLevel1.RelationshipXRefType.Type type)
+    public void xsetType(org.apache.xmlbeans.XmlString type)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            gov.nih.nci.lmp.mim.mimVisLevel1.RelationshipXRefType.Type target = null;
-            target = (gov.nih.nci.lmp.mim.mimVisLevel1.RelationshipXRefType.Type)get_store().find_attribute_user(TYPE$0);
+            org.apache.xmlbeans.XmlString target = null;
+            target = (org.apache.xmlbeans.XmlString)get_store().find_attribute_user(TYPE$0);
             if (target == null)
             {
-                target = (gov.nih.nci.lmp.mim.mimVisLevel1.RelationshipXRefType.Type)get_store().add_attribute_user(TYPE$0);
+                target = (org.apache.xmlbeans.XmlString)get_store().add_attribute_user(TYPE$0);
             }
             target.set(type);
-        }
-    }
-    /**
-     * An XML type(@).
-     *
-     * This is an atomic type that is a restriction of gov.nih.nci.lmp.mim.mimVisLevel1.RelationshipXRefType$Type.
-     */
-    public static class TypeImpl extends org.apache.xmlbeans.impl.values.JavaStringEnumerationHolderEx implements gov.nih.nci.lmp.mim.mimVisLevel1.RelationshipXRefType.Type
-    {
-        private static final long serialVersionUID = 1L;
-        
-        public TypeImpl(org.apache.xmlbeans.SchemaType sType)
-        {
-            super(sType, false);
-        }
-        
-        protected TypeImpl(org.apache.xmlbeans.SchemaType sType, boolean b)
-        {
-            super(sType, b);
         }
     }
 }

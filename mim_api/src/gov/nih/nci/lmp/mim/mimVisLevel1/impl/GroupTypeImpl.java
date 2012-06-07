@@ -864,7 +864,7 @@ public class GroupTypeImpl extends org.apache.xmlbeans.impl.values.XmlComplexCon
     /**
      * Gets the "type" attribute
      */
-    public gov.nih.nci.lmp.mim.mimVisLevel1.GroupEnumType.Enum getType()
+    public java.lang.String getType()
     {
         synchronized (monitor())
         {
@@ -879,23 +879,23 @@ public class GroupTypeImpl extends org.apache.xmlbeans.impl.values.XmlComplexCon
             {
                 return null;
             }
-            return (gov.nih.nci.lmp.mim.mimVisLevel1.GroupEnumType.Enum)target.getEnumValue();
+            return target.getStringValue();
         }
     }
     
     /**
      * Gets (as xml) the "type" attribute
      */
-    public gov.nih.nci.lmp.mim.mimVisLevel1.GroupEnumType xgetType()
+    public org.apache.xmlbeans.XmlString xgetType()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            gov.nih.nci.lmp.mim.mimVisLevel1.GroupEnumType target = null;
-            target = (gov.nih.nci.lmp.mim.mimVisLevel1.GroupEnumType)get_store().find_attribute_user(TYPE$8);
+            org.apache.xmlbeans.XmlString target = null;
+            target = (org.apache.xmlbeans.XmlString)get_store().find_attribute_user(TYPE$8);
             if (target == null)
             {
-                target = (gov.nih.nci.lmp.mim.mimVisLevel1.GroupEnumType)get_default_attribute_value(TYPE$8);
+                target = (org.apache.xmlbeans.XmlString)get_default_attribute_value(TYPE$8);
             }
             return target;
         }
@@ -916,7 +916,7 @@ public class GroupTypeImpl extends org.apache.xmlbeans.impl.values.XmlComplexCon
     /**
      * Sets the "type" attribute
      */
-    public void setType(gov.nih.nci.lmp.mim.mimVisLevel1.GroupEnumType.Enum type)
+    public void setType(java.lang.String type)
     {
         synchronized (monitor())
         {
@@ -927,23 +927,23 @@ public class GroupTypeImpl extends org.apache.xmlbeans.impl.values.XmlComplexCon
             {
                 target = (org.apache.xmlbeans.SimpleValue)get_store().add_attribute_user(TYPE$8);
             }
-            target.setEnumValue(type);
+            target.setStringValue(type);
         }
     }
     
     /**
      * Sets (as xml) the "type" attribute
      */
-    public void xsetType(gov.nih.nci.lmp.mim.mimVisLevel1.GroupEnumType type)
+    public void xsetType(org.apache.xmlbeans.XmlString type)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            gov.nih.nci.lmp.mim.mimVisLevel1.GroupEnumType target = null;
-            target = (gov.nih.nci.lmp.mim.mimVisLevel1.GroupEnumType)get_store().find_attribute_user(TYPE$8);
+            org.apache.xmlbeans.XmlString target = null;
+            target = (org.apache.xmlbeans.XmlString)get_store().find_attribute_user(TYPE$8);
             if (target == null)
             {
-                target = (gov.nih.nci.lmp.mim.mimVisLevel1.GroupEnumType)get_store().add_attribute_user(TYPE$8);
+                target = (org.apache.xmlbeans.XmlString)get_store().add_attribute_user(TYPE$8);
             }
             target.set(type);
         }

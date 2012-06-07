@@ -16,7 +16,7 @@ package gov.nih.nci.lmp.mim.mimVisLevel1;
 public interface MimBioType extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MimBioType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s4964F7551A6A586059F075CAABFFF94D").resolveHandle("mimbiotype1781type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MimBioType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9A8540D1A1572E107109C11FF48E20A6").resolveHandle("mimbiotype1781type");
     
     /**
      * Gets the "title" element

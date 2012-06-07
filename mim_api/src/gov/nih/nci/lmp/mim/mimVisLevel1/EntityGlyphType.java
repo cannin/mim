@@ -16,7 +16,7 @@ package gov.nih.nci.lmp.mim.mimVisLevel1;
 public interface EntityGlyphType extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(EntityGlyphType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s4964F7551A6A586059F075CAABFFF94D").resolveHandle("entityglyphtypee7a1type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(EntityGlyphType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9A8540D1A1572E107109C11FF48E20A6").resolveHandle("entityglyphtypee7a1type");
     
     /**
      * Gets a List of "Comment" elements
@@ -236,22 +236,22 @@ public interface EntityGlyphType extends org.apache.xmlbeans.XmlObject
     /**
      * Gets the "type" attribute
      */
-    gov.nih.nci.lmp.mim.mimVisLevel1.EntityGlyphType.Type.Enum getType();
+    java.lang.String getType();
     
     /**
      * Gets (as xml) the "type" attribute
      */
-    gov.nih.nci.lmp.mim.mimVisLevel1.EntityGlyphType.Type xgetType();
+    org.apache.xmlbeans.XmlString xgetType();
     
     /**
      * Sets the "type" attribute
      */
-    void setType(gov.nih.nci.lmp.mim.mimVisLevel1.EntityGlyphType.Type.Enum type);
+    void setType(java.lang.String type);
     
     /**
      * Sets (as xml) the "type" attribute
      */
-    void xsetType(gov.nih.nci.lmp.mim.mimVisLevel1.EntityGlyphType.Type type);
+    void xsetType(org.apache.xmlbeans.XmlString type);
     
     /**
      * Gets the "visId" attribute
@@ -611,7 +611,7 @@ public interface EntityGlyphType extends org.apache.xmlbeans.XmlObject
     public interface GenericProperty extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(GenericProperty.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s4964F7551A6A586059F075CAABFFF94D").resolveHandle("genericpropertycab9elemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(GenericProperty.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9A8540D1A1572E107109C11FF48E20A6").resolveHandle("genericpropertycab9elemtype");
         
         /**
          * Gets the "key" attribute
@@ -665,116 +665,6 @@ public interface EntityGlyphType extends org.apache.xmlbeans.XmlObject
             
             public static gov.nih.nci.lmp.mim.mimVisLevel1.EntityGlyphType.GenericProperty newInstance(org.apache.xmlbeans.XmlOptions options) {
               return (gov.nih.nci.lmp.mim.mimVisLevel1.EntityGlyphType.GenericProperty) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().newInstance( type, options ); }
-            
-            private Factory() { } // No instance of this class allowed
-        }
-    }
-    
-    /**
-     * An XML type(@).
-     *
-     * This is an atomic type that is a restriction of gov.nih.nci.lmp.mim.mimVisLevel1.EntityGlyphType$Type.
-     */
-    public interface Type extends org.apache.xmlbeans.XmlString
-    {
-        public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Type.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s4964F7551A6A586059F075CAABFFF94D").resolveHandle("typecc7battrtype");
-        
-        org.apache.xmlbeans.StringEnumAbstractBase enumValue();
-        void set(org.apache.xmlbeans.StringEnumAbstractBase e);
-        
-        static final Enum SIMPLE_PHYSICAL_ENTITY = Enum.forString("SimplePhysicalEntity");
-        static final Enum ENTITY_FEATURE = Enum.forString("EntityFeature");
-        static final Enum MODIFIER = Enum.forString("Modifier");
-        static final Enum CONCEPTUAL_ENTITY = Enum.forString("ConceptualEntity");
-        static final Enum SOURCE_SINK = Enum.forString("SourceSink");
-        static final Enum RESTRICTED_COPY = Enum.forString("RestrictedCopy");
-        static final Enum EXPLICIT_COMPLEX = Enum.forString("ExplicitComplex");
-        static final Enum IMPLICIT_COMPLEX = Enum.forString("ImplicitComplex");
-        
-        static final int INT_SIMPLE_PHYSICAL_ENTITY = Enum.INT_SIMPLE_PHYSICAL_ENTITY;
-        static final int INT_ENTITY_FEATURE = Enum.INT_ENTITY_FEATURE;
-        static final int INT_MODIFIER = Enum.INT_MODIFIER;
-        static final int INT_CONCEPTUAL_ENTITY = Enum.INT_CONCEPTUAL_ENTITY;
-        static final int INT_SOURCE_SINK = Enum.INT_SOURCE_SINK;
-        static final int INT_RESTRICTED_COPY = Enum.INT_RESTRICTED_COPY;
-        static final int INT_EXPLICIT_COMPLEX = Enum.INT_EXPLICIT_COMPLEX;
-        static final int INT_IMPLICIT_COMPLEX = Enum.INT_IMPLICIT_COMPLEX;
-        
-        /**
-         * Enumeration value class for gov.nih.nci.lmp.mim.mimVisLevel1.EntityGlyphType$Type.
-         * These enum values can be used as follows:
-         * <pre>
-         * enum.toString(); // returns the string value of the enum
-         * enum.intValue(); // returns an int value, useful for switches
-         * // e.g., case Enum.INT_SIMPLE_PHYSICAL_ENTITY
-         * Enum.forString(s); // returns the enum value for a string
-         * Enum.forInt(i); // returns the enum value for an int
-         * </pre>
-         * Enumeration objects are immutable singleton objects that
-         * can be compared using == object equality. They have no
-         * public constructor. See the constants defined within this
-         * class for all the valid values.
-         */
-        static final class Enum extends org.apache.xmlbeans.StringEnumAbstractBase
-        {
-            /**
-             * Returns the enum value for a string, or null if none.
-             */
-            public static Enum forString(java.lang.String s)
-                { return (Enum)table.forString(s); }
-            /**
-             * Returns the enum value corresponding to an int, or null if none.
-             */
-            public static Enum forInt(int i)
-                { return (Enum)table.forInt(i); }
-            
-            private Enum(java.lang.String s, int i)
-                { super(s, i); }
-            
-            static final int INT_SIMPLE_PHYSICAL_ENTITY = 1;
-            static final int INT_ENTITY_FEATURE = 2;
-            static final int INT_MODIFIER = 3;
-            static final int INT_CONCEPTUAL_ENTITY = 4;
-            static final int INT_SOURCE_SINK = 5;
-            static final int INT_RESTRICTED_COPY = 6;
-            static final int INT_EXPLICIT_COMPLEX = 7;
-            static final int INT_IMPLICIT_COMPLEX = 8;
-            
-            public static final org.apache.xmlbeans.StringEnumAbstractBase.Table table =
-                new org.apache.xmlbeans.StringEnumAbstractBase.Table
-            (
-                new Enum[]
-                {
-                    new Enum("SimplePhysicalEntity", INT_SIMPLE_PHYSICAL_ENTITY),
-                    new Enum("EntityFeature", INT_ENTITY_FEATURE),
-                    new Enum("Modifier", INT_MODIFIER),
-                    new Enum("ConceptualEntity", INT_CONCEPTUAL_ENTITY),
-                    new Enum("SourceSink", INT_SOURCE_SINK),
-                    new Enum("RestrictedCopy", INT_RESTRICTED_COPY),
-                    new Enum("ExplicitComplex", INT_EXPLICIT_COMPLEX),
-                    new Enum("ImplicitComplex", INT_IMPLICIT_COMPLEX),
-                }
-            );
-            private static final long serialVersionUID = 1L;
-            private java.lang.Object readResolve() { return forInt(intValue()); } 
-        }
-        
-        /**
-         * A factory class with static methods for creating instances
-         * of this type.
-         */
-        
-        public static final class Factory
-        {
-            public static gov.nih.nci.lmp.mim.mimVisLevel1.EntityGlyphType.Type newValue(java.lang.Object obj) {
-              return (gov.nih.nci.lmp.mim.mimVisLevel1.EntityGlyphType.Type) type.newValue( obj ); }
-            
-            public static gov.nih.nci.lmp.mim.mimVisLevel1.EntityGlyphType.Type newInstance() {
-              return (gov.nih.nci.lmp.mim.mimVisLevel1.EntityGlyphType.Type) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().newInstance( type, null ); }
-            
-            public static gov.nih.nci.lmp.mim.mimVisLevel1.EntityGlyphType.Type newInstance(org.apache.xmlbeans.XmlOptions options) {
-              return (gov.nih.nci.lmp.mim.mimVisLevel1.EntityGlyphType.Type) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().newInstance( type, options ); }
             
             private Factory() { } // No instance of this class allowed
         }

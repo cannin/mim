@@ -16,7 +16,7 @@ package gov.nih.nci.lmp.mim.mimVisLevel1;
 public interface PublicationXRefType extends gov.nih.nci.lmp.mim.mimVisLevel1.XRefType
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(PublicationXRefType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s4964F7551A6A586059F075CAABFFF94D").resolveHandle("publicationxreftypee95ftype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(PublicationXRefType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9A8540D1A1572E107109C11FF48E20A6").resolveHandle("publicationxreftypee95ftype");
     
     /**
      * Gets the "title" element

@@ -16,7 +16,7 @@ package gov.nih.nci.lmp.mim.mimVisLevel1;
 public interface DimensionType extends org.apache.xmlbeans.XmlDouble
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DimensionType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s4964F7551A6A586059F075CAABFFF94D").resolveHandle("dimensiontype643etype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DimensionType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9A8540D1A1572E107109C11FF48E20A6").resolveHandle("dimensiontype643etype");
     
     /**
      * A factory class with static methods for creating instances

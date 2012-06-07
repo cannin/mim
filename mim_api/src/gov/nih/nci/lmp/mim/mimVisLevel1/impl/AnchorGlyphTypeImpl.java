@@ -470,7 +470,7 @@ public class AnchorGlyphTypeImpl extends org.apache.xmlbeans.impl.values.XmlComp
     /**
      * Gets the "type" attribute
      */
-    public gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type.Enum getType()
+    public java.lang.String getType()
     {
         synchronized (monitor())
         {
@@ -481,20 +481,20 @@ public class AnchorGlyphTypeImpl extends org.apache.xmlbeans.impl.values.XmlComp
             {
                 return null;
             }
-            return (gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type.Enum)target.getEnumValue();
+            return target.getStringValue();
         }
     }
     
     /**
      * Gets (as xml) the "type" attribute
      */
-    public gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type xgetType()
+    public org.apache.xmlbeans.XmlString xgetType()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type target = null;
-            target = (gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type)get_store().find_attribute_user(TYPE$6);
+            org.apache.xmlbeans.XmlString target = null;
+            target = (org.apache.xmlbeans.XmlString)get_store().find_attribute_user(TYPE$6);
             return target;
         }
     }
@@ -502,7 +502,7 @@ public class AnchorGlyphTypeImpl extends org.apache.xmlbeans.impl.values.XmlComp
     /**
      * Sets the "type" attribute
      */
-    public void setType(gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type.Enum type)
+    public void setType(java.lang.String type)
     {
         synchronized (monitor())
         {
@@ -513,44 +513,25 @@ public class AnchorGlyphTypeImpl extends org.apache.xmlbeans.impl.values.XmlComp
             {
                 target = (org.apache.xmlbeans.SimpleValue)get_store().add_attribute_user(TYPE$6);
             }
-            target.setEnumValue(type);
+            target.setStringValue(type);
         }
     }
     
     /**
      * Sets (as xml) the "type" attribute
      */
-    public void xsetType(gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type type)
+    public void xsetType(org.apache.xmlbeans.XmlString type)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type target = null;
-            target = (gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type)get_store().find_attribute_user(TYPE$6);
+            org.apache.xmlbeans.XmlString target = null;
+            target = (org.apache.xmlbeans.XmlString)get_store().find_attribute_user(TYPE$6);
             if (target == null)
             {
-                target = (gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type)get_store().add_attribute_user(TYPE$6);
+                target = (org.apache.xmlbeans.XmlString)get_store().add_attribute_user(TYPE$6);
             }
             target.set(type);
-        }
-    }
-    /**
-     * An XML type(@).
-     *
-     * This is an atomic type that is a restriction of gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType$Type.
-     */
-    public static class TypeImpl extends org.apache.xmlbeans.impl.values.JavaStringEnumerationHolderEx implements gov.nih.nci.lmp.mim.mimVisLevel1.AnchorGlyphType.Type
-    {
-        private static final long serialVersionUID = 1L;
-        
-        public TypeImpl(org.apache.xmlbeans.SchemaType sType)
-        {
-            super(sType, false);
-        }
-        
-        protected TypeImpl(org.apache.xmlbeans.SchemaType sType, boolean b)
-        {
-            super(sType, b);
         }
     }
 }
