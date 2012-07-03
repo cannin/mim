@@ -95,26 +95,6 @@ Schematron validation for MIM Curation Best Practices
 		</iso:rule> 
 	</iso:pattern> 
 	
-	<!-- Check that lines have comments, except modification and feature lines -->
-	<iso:pattern name="check-line-comments" id="check-line-comments">
-		<!-- Check "Line" elements -->
-		<iso:rule context="gpml:Line[gpml:Graphics[
-			not(gpml:Point[position()=1]/@ArrowHead='mim-modification') and 
-			not(gpml:Point[last()]/@ArrowHead='mim-modification') and 
-			not(gpml:Point[position()=1]/@ArrowHead='mim-next-feature') and
-			not(gpml:Point[last()]/@ArrowHead='mim-next-feature') and 
-			not(gpml:Point[position()=1]/@ArrowHead='mim-first-feature') and
-			not(gpml:Point[last()]/@ArrowHead='mim-first-feature')]]">
-			<!-- Get the unique identifier for the line -->
-			<iso:let name="graph-id" value="@GraphId"/>
-			<iso:let name="first-arrowhead" value="gpml:Graphics/gpml:Point[position()=1]/@ArrowHead"/>
-			<iso:let name="last-arrowhead" value="gpml:Graphics/gpml:Point[last()]/@ArrowHead"/>
-						
-			<!-- Assert that all lines have comments -->
-			<iso:assert test="./gpml:Comment" role="error" diagnostics="graph-id first-arrowhead last-arrowhead">Lines should have comments.</iso:assert>
-		</iso:rule> 
-	</iso:pattern> 
-	
 	<!-- Check that nodes have comments; these will be glossary entries -->
 	<!-- Ignore the following node types: RestrictedCopy, ConceptualEntity, SourceSink, and Modifier -->	
 	<iso:pattern name="check-datanode-comments" id="check-datanode-comments">
@@ -133,10 +113,12 @@ Schematron validation for MIM Curation Best Practices
 			<iso:assert test="./gpml:Comment" role="error" diagnostics="graph-id type">Datanodes should have comments.</iso:assert>
 		</iso:rule> 
 	</iso:pattern> 		
+
+	<!-- Having multiple rules in a pattern will enforce only one is matched -->
+	<!-- ASSUMPTION: There are no literature references without comments -->
+	<iso:pattern name="check-comments-and-lit-ref" id="check-comments-and-lit-ref">
 	
-	<!-- Check that all lines have literature references -->
-	<iso:pattern name="check-lit-ref" id="check-lit-ref">
-		<!-- Check "Line" elements -->
+		<!-- Check that lines have comments, except modification and feature lines -->
 		<iso:rule context="gpml:Line[gpml:Graphics[
 			not(gpml:Point[position()=1]/@ArrowHead='mim-modification') and 
 			not(gpml:Point[last()]/@ArrowHead='mim-modification') and 
@@ -144,17 +126,23 @@ Schematron validation for MIM Curation Best Practices
 			not(gpml:Point[last()]/@ArrowHead='mim-next-feature') and 
 			not(gpml:Point[position()=1]/@ArrowHead='mim-first-feature') and
 			not(gpml:Point[last()]/@ArrowHead='mim-first-feature')]]">
+			
 			<!-- Get the unique identifier for the line -->
 			<iso:let name="graph-id" value="@GraphId"/>
-			
+			<iso:let name="first-arrowhead" value="gpml:Graphics/gpml:Point[position()=1]/@ArrowHead"/>
+			<iso:let name="last-arrowhead" value="gpml:Graphics/gpml:Point[last()]/@ArrowHead"/>
+						
 			<!-- Assert that all lines have comments -->
+			<iso:assert test="./gpml:Comment" role="error" diagnostics="graph-id first-arrowhead last-arrowhead">Lines should have comments.</iso:assert>
+			
+			<!-- Assert that all lines have literature references -->
 			<iso:assert test="./gpml:BiopaxRef" role="error" diagnostics="graph-id">Lines should have literature references.</iso:assert>
 		</iso:rule> 
-	</iso:pattern> 		
+	</iso:pattern> 					
 	
-	<!-- Check that all lines have comments -->
-	<iso:pattern name="check-comment-prefix" id="check-comment-prefix">
-		<!-- Check "Line" elements -->
+	<!-- Check that comments have the right format --> 
+	<iso:pattern name="check-comment-format" id="check-comment-format">		
+		<!-- Check that all lines have comments -->
 		<iso:rule context="gpml:Line[gpml:Comment[not(text()='')]]">
 			<!-- Get the unique identifier for the line -->
 			<iso:let name="graph-id" value="@GraphId"/>
@@ -163,7 +151,7 @@ Schematron validation for MIM Curation Best Practices
 			<!-- Assert that all lines have comments -->
 			<iso:assert test="matches($comment-text, '^[A-Za-z]?\d+[a-z]?:\s?')" role="error" diagnostics="graph-id comment-text">Each comment should have a alphanumeric identifier followed a colon; any letter should be lowercase. For example: 1: TEXT or 1a: TEXT</iso:assert>
 		</iso:rule> 
-	</iso:pattern> 			
+	</iso:pattern>	
 
 	<!-- List of diagnostics and their values used with the rules -->
 	<iso:diagnostics>
