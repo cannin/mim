@@ -4,3 +4,8 @@ providing MIM-specific glyphs and support for the MIMML file format which can be
 used for exchange diagrams with other MIM-compatible tools. Users have the 
 ability to annotate diagram elements with comments, literature references, and 
 links to external databases. 
+
+Version 2.0.11_011114
+
+* Includes a validator plugin (PathVisio-Validator) by Kumar Chandan
+* Includes the search plugin by Martijn Van Iersel 
