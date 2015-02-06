@@ -1,5 +1,6 @@
-# mim
-Software for the Molecular Interaction Map (MIM) notation.
+# Software for the Molecular Interaction Map (MIM) notation
+
+The Molecular Interaction Map (MIM) notation is a graphical notation for depicting diagrams of biochemical and cellular processes designed to alleviate ambiguity that exists in many pathway diagrams currently found in scientific publications about biomedical research.
 
 ## MIM API
 
